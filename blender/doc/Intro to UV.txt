@@ -1,0 +1,68 @@
+ Intro to UV
+ 
+ https://all3dp.com/2/blender-uv-mapping-simply-explained/
+ 
+ 
+ Step 1: Add “UV sphere” 
+    
+ Step 2: Marking the UV Seam 
+        
+     a:  select an initial vertex  at  the equator of the sphere.
+     b:  Alt + left mouse button, on the vertex just beside the previously
+         selected vertex. This selects the whole edge.
+     c:  Ctrl + E and select “Mark Seam”. 
+         If you accidentally mark the  wrong seam, you can simply clear 
+         that seam by pressing Ctrl + E  and then selecting “Clear Seam”.
+
+
+ Step 3: Unwrapping the Object 
+ 
+      a: Move to  “UV Editing”  mode. 
+      b: Select the whole object(Press A on the keyboard) .
+      c: Press U on the keyboard to unwrap the object.
+
+  In the UV Editor, you’ll now see the unwrapped version of your object
+   as distinct   pieces, which are called UV islands.
+
+
+ Step 4: Adding the Texture 
+
+      a: Download a texture to your device
+      b: Load the texture by clicking on “Image” followed by “Open Image” 
+        in the top bar of the UV Editor  ( Alt + O   ).
+      c: Select the UV islands by clicking on one vertex of the island 
+        and then hitting L on the keyboard.
+      d:Align the UV islands to the added images by using the scale, move, 
+      and rotate tools, which can be found in the left side column of the 
+      UV Editor.
+
+ 
+ Step 5: Checking the Unwrap 
+ 
+      a: Click on the small arrow at the top right corner of the UV Editor 
+       (left window)
+      b: Click on the   “Display Stretch” option. This will show a heat map over the 
+      image editor, and thus show where the UV is being stretched.
+
+       If the UV is completely blue, that means it’s not stretched. 
+       If you find the UV is stretched, you’ll have to add more seams 
+       and unwrap the UV again by following steps 2 and 3.
+ 
+ 
+ Step 6: Finalizing the Image 
+ 
+       
+      a: Go to Material Properties in the 3D Viewport and click on 
+         the small circle beside the Base Color.
+      b: Click “Image Texture”.  Selecting the image file from the device.
+
+ 
+ 
+  
+ 
+ https://www.youtube.com/watch?v=19xQO6mJiJY&list=PLAQgUiom5TwMFGEhzyVHSoTFt590y19lY&index=11
+ 
+ 7:00
+
+
+ Merge Objects – Simply Explained:  https://all3dp.com/2/blender-how-to-merge-objects/
