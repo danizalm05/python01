@@ -2,7 +2,8 @@ import cv2
 import numpy as np
 import getpass
 
-frontalface ="D:/a/python/openCV with python by example/Chapter04/haarcascade_frontalface_alt.xml"
+frontalface = "C:/Users/"+ getpass.getuser() +"/Documents/books/python by example/Chapter04/cascade_files/haarcascade_frontalface_alt.xml "
+#frontalface ="D:/a/python/openCV with python by example/Chapter04/haarcascade_frontalface_alt.xml"
 face_cascade = cv2.CascadeClassifier(frontalface)
 
 if face_cascade.empty():
@@ -14,7 +15,7 @@ BASE_FOLDER = 'C:/Users/' + getpass.getuser() +'/Videos/Captures/'
 path = BASE_FOLDER + img_name
 print(path)
 
-cap = cv2.VideoCapture(path)
+cap = cv2.VideoCapture(0)
 #cap = cv2.VideoCapture(0)# use  video   camera
 #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
