@@ -7,10 +7,13 @@ OpenCV Course - Full Tutorial with Python
 import cv2 as cv
 import numpy as np
 
+import getpass
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
+     # "modrain.jpg"#"grains.jpg" #
 
-BASE_FOLDER = 'C:/Users/rockman/Pictures/Saved Pictures/'
-mimg = "bz.JPG"
-path = BASE_FOLDER +  mimg
+mimg = "b1.jpg"
+path = BASE_FOLDER + mimg
+ 
 
 img   = cv.imread(path)
 cv.imshow('Original', img)
