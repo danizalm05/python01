@@ -4,10 +4,11 @@ Created on Thu Jul 22 11:41:50 2021
 OpenCV with Python By Example/ Prateek Joshi
 page 100 - 110
 """
-import getpass
 import cv2
 import matplotlib.pyplot as plt 
-import numpy as np 
+import numpy as np
+import getpass
+
 
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
      # "modrain.jpg"#"grains.jpg" #

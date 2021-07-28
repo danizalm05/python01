@@ -1,6 +1,8 @@
 import cv2 
 import numpy as np 
-
+'''
+page 152
+'''
 def print_howto(): 
     print("""
         Change cartoonizing mode of image:
@@ -25,13 +27,16 @@ def cartoonize_image(img, ksize=5, sketch_mode=False):
         return cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR) 
  
     # Resize the image to a smaller size for faster computation 
-    img_small = cv2.resize(img, None, fx=1.0/ds_factor, fy=1.0/ds_factor, interpolation=cv2.INTER_AREA)
+    img_small = cv2.resize(img, None, fx=1.0/ds_factor, fy=1.0/ds_factor,
+                           interpolation=cv2.INTER_AREA)
  
     # Apply bilateral filter the image multiple times 
     for i in range(num_repetitions): 
-        img_small = cv2.bilateralFilter(img_small, ksize, sigma_color, sigma_space) 
+        img_small = cv2.bilateralFilter(img_small, ksize, sigma_color,
+                                        sigma_space)
  
-    img_output = cv2.resize(img_small, None, fx=ds_factor, fy=ds_factor, interpolation=cv2.INTER_LINEAR) 
+    img_output = cv2.resize(img_small, None, fx=ds_factor, fy=ds_factor,
+                            interpolation=cv2.INTER_LINEAR)
  
     dst = np.zeros(img_gray.shape) 
  
@@ -46,7 +51,8 @@ if __name__=='__main__':
     cur_mode = None
     while True: 
         ret, frame = cap.read() 
-        frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA) 
+        frame = cv2.resize(frame, None, fx=0.8, fy=0.8,
+                                    interpolation=cv2.INTER_AREA)
  
         c = cv2.waitKey(1) 
         if c == 27: 
@@ -56,9 +62,11 @@ if __name__=='__main__':
             cur_mode = c 
  
         if cur_mode == ord('s'): 
-            cv2.imshow('Cartoonize', cartoonize_image(frame, ksize=5, sketch_mode=True)) 
+            cv2.imshow('Cartoonize',
+                       cartoonize_image(frame, ksize=5, sketch_mode=True))
         elif cur_mode == ord('c'): 
-            cv2.imshow('Cartoonize', cartoonize_image(frame, ksize=5, sketch_mode=False)) 
+            cv2.imshow('Cartoonize',
+                       cartoonize_image(frame, ksize=5, sketch_mode=False))
         else: 
             cv2.imshow('Cartoonize', frame) 
  

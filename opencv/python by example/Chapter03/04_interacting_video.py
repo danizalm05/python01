@@ -33,7 +33,8 @@ if __name__=='__main__':
  
     while True: 
         ret, frame = cap.read() 
-        img = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA) 
+        img = cv2.resize(frame, None, fx=0.9, fy=0.9,
+                                 interpolation=cv2.INTER_AREA)
         (x0,y0), (x1,y1) = event_params["top_left_pt"], event_params["bottom_right_pt"]
         img[y0:y1, x0:x1] = 255 - img[y0:y1, x0:x1] 
         cv2.imshow('Webcam', img) 

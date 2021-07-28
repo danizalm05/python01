@@ -1,7 +1,21 @@
-import cv2 
-import numpy as np 
- 
-input_image = cv2.imread('images/tool.png')
+'''
+page 226
+
+'''
+
+import cv2
+import numpy as np
+import getpass
+
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
+# "modrain.jpg"#"grains.jpg" "fishing_house.jpg"#
+mimg = "tool.png"
+path = BASE_FOLDER + mimg
+scaling_factor = 1.9
+img   = cv2.imread(path)
+input_image = cv2.resize(img, None, fx=scaling_factor,
+                         fy=scaling_factor, interpolation=cv2.INTER_AREA)
+
 gray_image = cv2.cvtColor(input_image, cv2.COLOR_BGR2GRAY)
  
 # Version under opencv 3.0.0 cv2.FastFeatureDetector()

@@ -7,23 +7,30 @@ def print_howto():
             1. Grayscale - press 'g'
             2. YUV - press 'y'
             3. HSV - press 'h'
+            4. RGB - press 'q'
     """)
  
 if __name__=='__main__': 
     print_howto() 
-    cap = cv2.VideoCapture(0) 
- 
+    cap = cv2.VideoCapture(0)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
+
+
+
     # Check if the webcam is opened correctly 
     if not cap.isOpened(): 
         raise IOError("Cannot open webcam") 
  
     cur_mode = None
-    while True: 
+    while True:
+
         # Read the current frame from webcam 
         ret, frame = cap.read() 
  
         # Resize the captured image 
-        frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA) 
+        frame = cv2.resize(frame, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_AREA)
  
         c = cv2.waitKey(1)
         if c == 27: 

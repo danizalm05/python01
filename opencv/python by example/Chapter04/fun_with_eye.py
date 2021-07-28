@@ -14,7 +14,8 @@ sunglasses_img = cv2.imread('images/sunglasses.png')
 
 while True:
     ret, frame = cap.read() 
-    frame = cv2.resize(frame, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_AREA)
+    frame = cv2.resize(frame, None, fx=0.9, fy=0.9,
+                        interpolation=cv2.INTER_AREA)
     vh, vw = frame.shape[:2]
     vh, vw = int(vh), int(vw)
 
@@ -27,7 +28,8 @@ while True:
         roi_color = frame[y:y+h, x:x+w] 
         eyes = eye_cascade.detectMultiScale(roi_gray) 
         for (x_eye,y_eye,w_eye,h_eye) in eyes: 
-            centers.append((x + int(x_eye + 0.5*w_eye), y + int(y_eye + 0.5*h_eye))) 
+            centers.append((x + int(x_eye + 0.5*w_eye), y +
+                                         int(y_eye + 0.5*h_eye)))
     
     if len(centers) > 1: # if detects both eyes
         h, w = sunglasses_img.shape[:2]
@@ -42,8 +44,8 @@ while True:
         x = centers[0][0] if centers[0][0] < centers[1][0] else centers[1][0] 
      
         # customizable X and Y locations; depends on the size of the face 
-        x -= int(0.26*overlay_sunglasses.shape[1])
-        y += int(0.26*overlay_sunglasses.shape[0])
+        x -= int(0.341*overlay_sunglasses.shape[1])
+        y += int(0.46*overlay_sunglasses.shape[0])
         
         h, w = overlay_sunglasses.shape[:2]
         h, w = int(h), int(w)

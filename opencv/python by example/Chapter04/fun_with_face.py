@@ -9,8 +9,8 @@ h_mask, w_mask = face_mask.shape[:2]
 if face_cascade.empty(): 
     raise IOError('Unable to load the face cascade classifier xml file') 
  
-cap = cv2.VideoCapture(1) 
-scaling_factor = 0.5 
+cap = cv2.VideoCapture(0)
+scaling_factor = 0.9
  
 while True: 
     ret, frame = cap.read() 
@@ -27,7 +27,8 @@ while True:
         
         # Extract the region of interest from the image 
         frame_roi = frame[y:y+h, x:x+w] 
-        face_mask_small = cv2.resize(face_mask, (w, h), interpolation=cv2.INTER_AREA) 
+        face_mask_small = cv2.resize(face_mask, (w, h),
+                                           interpolation=cv2.INTER_AREA)
 
         # Convert color image to grayscale and threshold it 
         gray_mask = cv2.cvtColor(face_mask_small, cv2.COLOR_BGR2GRAY) 

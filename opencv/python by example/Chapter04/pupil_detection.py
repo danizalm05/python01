@@ -20,7 +20,8 @@ while True:
     pupil_frame = gray[y_eye:y_eye + h_eye, x_eye:x_eye + w_eye]
     ret, thresh = cv2.threshold(pupil_frame, 80, 255, cv2.THRESH_BINARY)
     cv2.imshow("threshold", thresh)
-    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    im2, contours, hierarchy = cv2.findContours(thresh,
+                                    cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     print(contours)
 
     for contour in contours:

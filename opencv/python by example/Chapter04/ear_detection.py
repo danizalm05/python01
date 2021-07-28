@@ -1,4 +1,11 @@
-import cv2 
+'''
+
+Opencv with   python  by  example
+page  162
+
+'''
+
+import cv2
 import numpy as np 
  
 left_ear_cascade = cv2.CascadeClassifier('./cascade_files/haarcascade_mcs_leftear.xml') 
@@ -10,11 +17,12 @@ if left_ear_cascade.empty():
 if right_ear_cascade.empty(): 
   raise IOError('Unable to load the right ear cascade classifier xml file') 
  
-cap = cv2.VideoCapture(1)
-scaling_factor = 0.5
+cap = cv2.VideoCapture(0)
+scaling_factor = 0.8
 while True:
   ret, frame = cap.read() 
-  frame = cv2.resize(frame, None, fx=scaling_factor, fy=scaling_factor, interpolation=cv2.INTER_AREA) 
+  frame = cv2.resize(frame, None, fx=scaling_factor, fy=scaling_factor,
+                     interpolation=cv2.INTER_AREA)
   gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
 
   left_ear = left_ear_cascade.detectMultiScale(gray, scaleFactor=1.7, minNeighbors=3) 

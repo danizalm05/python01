@@ -1,8 +1,18 @@
 import cv2 
-import numpy as np 
- 
-img = cv2.imread('./images/box.png') 
-gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) 
+import numpy as np
+import getpass
+
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
+# "modrain.jpg"#"grains.jpg" #
+mimg = "b1.jpg"
+path = BASE_FOLDER + mimg
+scaling_factor =0.5
+img   = cv2.imread(path)
+img = cv2.resize(img, None, fx=scaling_factor,
+                   fy=scaling_factor, interpolation=cv2.INTER_AREA)
+cv2.imshow('Original', img)
+
+gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
  
 gray = np.float32(gray) 
  

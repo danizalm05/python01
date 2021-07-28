@@ -7,7 +7,7 @@ if mouth_cascade.empty():
   raise IOError('Unable to load the mouth cascade classifier xml file') 
  
 cap = cv2.VideoCapture(0) 
-ds_factor = 0.5 
+ds_factor = 1.1
  
 while True: 
     ret, frame = cap.read() 
@@ -16,7 +16,8 @@ while True:
  
     mouth_rects = mouth_cascade.detectMultiScale(gray, scaleFactor=1.7, minNeighbors=11) 
     for (x,y,w,h) in mouth_rects: 
-        y = int(y - 0.15*h) 
+        y = int(y - 0.2*h)
+        w = int(0.8* w)
         cv2.rectangle(frame, (x,y), (x+w,y+h), (0,255,0), 3) 
         break 
  

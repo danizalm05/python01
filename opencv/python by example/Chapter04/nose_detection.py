@@ -7,7 +7,7 @@ if nose_cascade.empty():
   raise IOError('Unable to load the nose cascade classifier xml file') 
  
 cap = cv2.VideoCapture(0) 
-ds_factor = 0.5 
+ds_factor = 1.5
  
 while True: 
     ret, frame = cap.read() 
