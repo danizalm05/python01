@@ -1,7 +1,18 @@
+'''
+page 280
+'''
 import sys
 import cv2 
-import numpy as np 
- 
+import numpy as np
+import getpass
+
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
+# "modrain.jpg"#"grains.jpg" "fishing_house.jpg"#
+mimg = "beach.jpg"
+path = BASE_FOLDER + mimg
+scaling_factor = 1.1
+
+
 # Draw rectangle on top of the input image 
 def draw_rectangle(event, x, y, flags, params): 
     global x_init, y_init, drawing, top_left_pt, bottom_right_pt, img_orig 
@@ -158,8 +169,9 @@ def remove_object(img, rect_roi):
     cv2.imshow('Output', img_output) 
     cv2.waitKey() 
  
-if __name__=='__main__': 
-    img_input = cv2.imread(sys.argv[1])
+if __name__=='__main__':
+    path
+    img_input = cv2.imread(path)#sys.argv[1])
     drawing = False 
     img = np.copy(img_input) 
     img_orig = np.copy(img_input) 

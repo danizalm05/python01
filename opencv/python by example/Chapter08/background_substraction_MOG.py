@@ -28,7 +28,7 @@ if __name__=='__main__':
  
     # Iterate until the user presses the ESC key 
     while True: 
-        frame = get_frame(cap, 0.5) 
+        frame = get_frame(cap, 0.8)
  
         # Apply the background subtraction model to the input frame        
         mask = bgSubtractor.apply(frame, learningRate=1.0/history)

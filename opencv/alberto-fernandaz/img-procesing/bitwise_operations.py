@@ -3,7 +3,7 @@ Sobel operator example in order to see how this operator works and how
  cv2.addWeighted() can be used
 
 
-Mastering-OpenCV-4-with-Python Chapter05 page 151
+Mastering-OpenCV-4-with-Python Chapter05 page 151/167
 Alberto Fernández Villán
 https://github.com/PacktPublishing/Mastering-OpenCV-4-with-Python/blob/master/Chapter05/01-chapter-content/
 """

@@ -1,5 +1,6 @@
-import cv2 
- 
+import cv2
+
+scaling_factor = 1.5
 # Compute the frame difference 
 def frame_diff(prev_frame, cur_frame, next_frame): 
     # Absolute difference between current frame and next frame 
@@ -26,7 +27,7 @@ def get_frame(cap, scaling_factor):
  
 if __name__=='__main__': 
     cap = cv2.VideoCapture(0)   
-    scaling_factor = 0.5
+    #scaling_factor = 0.5
  
     cur_frame, prev_frame, next_frame = None, None, None
     while True:

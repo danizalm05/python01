@@ -16,7 +16,7 @@ import getpass
 import imutils
 
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Videos/'
-vid_name = "movie.mp4"   #"cars.mp4" "dog.mp4"
+vid_name = "w1.mp4"   #"cars.mp4" "dog.mp4"
 input_file = BASE_FOLDER + vid_name
 print(input_file)
 frame_name = 'frame_%d.jpg'
@@ -24,8 +24,8 @@ frame_name = 'frame_%d.jpg'
 # method 1: scan the video up to the wanted frame.
 
 
-frame_no = 20 # number  of first  frame
-frame_jump = 10
+frame_no = 7500 # number  of first  frame
+frame_jump = 100
 
 vidcap = cv2.VideoCapture(input_file)
 totalframecount = int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -51,7 +51,7 @@ while success:
 ## go to the frame    
 
 
-scaling_factor = 1.2
+scaling_factor = 2.1
 ##############
 #cv2.waitKey(0)
 while True:

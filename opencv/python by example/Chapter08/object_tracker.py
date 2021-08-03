@@ -1,4 +1,8 @@
-import sys 
+'''
+page 380
+'''
+
+import sys
 import cv2 
 import numpy as np 
  
@@ -13,7 +17,7 @@ class ObjectTracker():
         ret, self.frame = self.cap.read() 
  
         # Downsampling factor for the input frame 
-        self.scaling_factor = 0.8 
+        self.scaling_factor = 1.4
         self.frame = cv2.resize(self.frame, None, fx=self.scaling_factor, fy=self.scaling_factor, interpolation=cv2.INTER_AREA) 
  
         cv2.namedWindow('Object Tracker') 
@@ -93,7 +97,7 @@ class ObjectTracker():
                 term_crit = ( cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 1 ) 
  
                 # Apply CAMShift on 'prob' 
-                track_box, self.track_window = cv2.CamShift(prob, self.track_window, term_crit) 
+                track_box, self.track_window = cv2.CamShift(prob, self.track_window, term_crit)
  
                 # Draw an ellipse around the object 
                 cv2.ellipse(vis, track_box, (0, 255, 0), 2) 
@@ -105,6 +109,7 @@ class ObjectTracker():
                 break 
  
         cv2.destroyAllWindows() 
- 
+
+
 if __name__ == '__main__': 
-    ObjectTracker().start_tracking() 
+    ObjectTracker().start_tracking()

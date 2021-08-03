@@ -1,8 +1,19 @@
-import sys 
- 
-import cv2 
-import numpy as np 
- 
+"""
+page 272
+
+"""
+
+import sys
+import cv2
+import numpy as np
+import getpass
+
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
+# "modrain.jpg"#"grains.jpg" "fishing_house.jpg"#
+mimg = "beach.jpg"
+path = BASE_FOLDER + mimg
+scaling_factor = 1.1
+
 # Draw vertical seam on top of the image 
 def overlay_vertical_seam(img, seam): 
     img_seam_overlay = np.copy(img)
@@ -82,24 +93,24 @@ if __name__=='__main__':
     # Make sure the size of the input image is reasonable. 
     # Large images take a lot of time to be processed. 
     # Recommended size is 640x480. 
-    img_input = cv2.imread(sys.argv[1]) 
- 
+    #img_input = cv2.imread(sys.argv[1])
+    img_input   = cv2.imread(path)
     # Use a small number to get started. Once you get an 
     # idea of the processing time, you can use a bigger number. 
     # To get started, you can set it to 20. 
-    num_seams = int(sys.argv[2]) 
+    num_seams = 12 #int(sys.argv[2])
  
     img = np.copy(img_input) 
     img_overlay_seam = np.copy(img_input) 
-    energy = compute_energy_matrix(img) 
- 
+    energy = compute_energy_matrix(img)
+    cv2.imshow('energy', energy)
     for i in range(num_seams): 
         seam = find_vertical_seam(img, energy) 
         img_overlay_seam = overlay_vertical_seam(img_overlay_seam, seam)
         img = remove_vertical_seam(img, seam) 
         energy = compute_energy_matrix(img) 
-        print('Number of seams removed = ', i+1) 
- 
+        print('Number of seams removed = ', i+1)
+
     cv2.imshow('Input', img_input) 
     cv2.imshow('Seams', img_overlay_seam) 
     cv2.imshow('Output', img) 

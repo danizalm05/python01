@@ -1,7 +1,17 @@
-import sys 
+"""
+page 275
+
+"""
+import sys
 import cv2 
-import numpy as np 
- 
+import numpy as np
+import getpass
+
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
+# "modrain.jpg"#"grains.jpg" "fishing_house.jpg"#
+mimg = "beach.jpg"
+path = BASE_FOLDER + mimg
+scaling_factor = 1.1
 # Draw vertical seam on top of the image 
 def overlay_vertical_seam(img, seam): 
     img_seam_overlay = np.copy(img)
@@ -91,9 +101,9 @@ def remove_vertical_seam(img, seam):
     return img 
  
 if __name__=='__main__': 
-    img_input = cv2.imread(sys.argv[1]) 
-    num_seams = int(sys.argv[2]) 
-    
+    img_input = cv2.imread(path)
+    num_seams = 45 #int(sys.argv[2])
+
     img = np.copy(img_input) 
     img_output = np.copy(img_input) 
     img_overlay_seam = np.copy(img_input) 

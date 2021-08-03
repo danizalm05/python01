@@ -1,7 +1,7 @@
 """
 cartoonizing.py
 
-Mastering-OpenCV-4-with-Python Chapter05 page 147
+Mastering-OpenCV-4-with-Python Chapter05 page 147 162
 
 Alberto Fernández Villán
 https://github.com/PacktPublishing/Mastering-OpenCV-4-with-Python/blob/master/Chapter05/01-chapter-content/geometric_image_transformations.py

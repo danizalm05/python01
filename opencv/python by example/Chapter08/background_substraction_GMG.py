@@ -13,7 +13,7 @@ def get_frame(cap, scaling_factor=0.5):
  
 if __name__=='__main__': 
     # Initialize the video capture object 
-    cap = cv2.VideoCapture(1) 
+    cap = cv2.VideoCapture(0)
  
     # Create the background subtractor object 
     bgSubtractor= cv2.bgsegm.createBackgroundSubtractorGMG()
@@ -21,7 +21,7 @@ if __name__=='__main__':
 
     # Iterate until the user presses the ESC key 
     while True: 
-        frame = get_frame(cap, 0.5) 
+        frame = get_frame(cap, 0.8)
  
         # Apply the background subtraction model to the input frame
         mask = bgSubtractor.apply(frame)
