@@ -6,6 +6,14 @@ Example to introduce how to read a video file and get all properties
 import cv2
 import argparse
 
+import getpass
+ 
+
+ 
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Videos/Captures/'
+vid_name = "highway.mp4" #"w1.mp4"   #"cars.mp4" "dog.mp4"
+input_file = BASE_FOLDER + vid_name
+print(input_file)
 
 def decode_fourcc(fourcc):
     """Decodes the fourcc value to get the four chars identifying it"""
@@ -26,19 +34,10 @@ def decode_fourcc(fourcc):
         fourcc_decode += chr(int_value)
     return fourcc_decode
 
-
-# We first create the ArgumentParser object
-# The created object 'parser' will have the necessary information
-# to parse the command-line arguments into data types.
-parser = argparse.ArgumentParser()
-
-# We add 'video_path' argument using add_argument() including a help.
-parser.add_argument("video_path", help="path to the video file")
-args = parser.parse_args()
-
+ 
 # Create a VideoCapture object and read from input file
 # If the input is the camera, pass 0 instead of the video file name
-capture = cv2.VideoCapture(args.video_path)
+capture = cv2.VideoCapture(input_file)
 
 # Get and print these values:
 print("CV_CAP_PROP_FRAME_WIDTH: '{}'".format(capture.get(cv2.CAP_PROP_FRAME_WIDTH)))

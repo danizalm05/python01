@@ -6,26 +6,25 @@ Example to introduce how to read a video file backwards
 import cv2
 import argparse
 
+import getpass
 
-# We first create the ArgumentParser object
-# The created object 'parser' will have the necessary information
-# to parse the command-line arguments into data types.
-parser = argparse.ArgumentParser()
 
-# We add 'video_path' argument using add_argument() including a help.
-parser.add_argument("video_path", help="path to the video file")
-args = parser.parse_args()
 
-# Create a VideoCapture object and read from input file
-# If the input is the camera, pass 0 instead of the video file name
-capture = cv2.VideoCapture(args.video_path)
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Videos/Captures/'
+vid_name = "highway.mp4" #"w1.mp4"   #"cars.mp4" "dog.mp4"
+input_file = BASE_FOLDER + vid_name
+print(input_file)
+
+
+capture = cv2.VideoCapture(input_file)
 
 # Check if camera opened successfully:
 if capture.isOpened()is False:
     print("Error opening video stream or file")
 
 # We get the index of the last frame of the video file:
-frame_index = capture.get(cv2.CAP_PROP_FRAME_COUNT) - 1
+#  Don't start form the end  but a few frame  before
+frame_index = capture.get(cv2.CAP_PROP_FRAME_COUNT) - 106
 print("starting in frame: '{}'".format(frame_index))
 
 # Read until video is completed:
@@ -36,6 +35,7 @@ while capture.isOpened() and frame_index >= 0:
 
     # Capture frame-by-frame from the video file:
     ret, frame = capture.read()
+    print("Frame number : '{}'".format(frame_index))
 
     if ret is True:
 

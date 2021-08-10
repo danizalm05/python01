@@ -2,7 +2,7 @@
 imageRotation.py
 
 Mastering-OpenCV-4-with-Python Chapter05 page 144
-
+C:\Users\gilfm\Documents\d\python01
 Alberto Fernández Villán
 https://github.com/PacktPublishing/Mastering-OpenCV-4-with-Python/blob/master/Chapter05/01-chapter-content/geometric_image_transformations.py
 """
@@ -31,7 +31,7 @@ def show_with_matplotlib(color_img, title, pos):
 
 # Read the input image:
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
-img_name = 'cat-face.png'  #"lena.png"     # "modrain.jpg"#"grains.jpg" #
+img_name = 'lena.png'  #"lena.png"     # "modrain.jpg"#"grains.jpg" #
 path = BASE_FOLDER + img_name
 print(path)
 

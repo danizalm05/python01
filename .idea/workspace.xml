@@ -1,78 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4359a48-ed41-4dc8-8a39-7a724cd410c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/color_histogram_equalization_hsv.py.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms_equ.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_all.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/skin_segmentation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/basic/mouse_events_matplotlib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/basic/mouse_events_text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/video/video_file_all_properties.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/video/video_file_backwards.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/video/video_frames.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/bitwise_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/bitwise_operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/cartoonizing.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/cartoonizing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/basic/video_frames.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/basic/video_frames.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/01_reading_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/02_saving_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/03_convert_image_format.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/04_image_color_split.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/05_image_color_merge.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/06_image_translation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/07_image_rotation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/08_image_scaling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/09_affine_transformation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/10_projective_transformation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/11_image_warping.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter01/images/input.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/geometrics_input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/house_input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/image_02_008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/sign_input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/text_input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/train_input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter02/images/tree_input.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter03/images/blue_carpet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter03/images/green_dots.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter05/images/box.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter05/images/fishing_house.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter05/images/house.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter05/images/tool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter06/expand_image_by_seam_carving.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter06/expand_image_by_seam_carving.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter06/reduce_image_by_seam_carving.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter06/reduce_image_by_seam_carving.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter06/remove_element_by_seam_carving.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter06/remove_element_by_seam_carving.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/best_contour_matching.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/censor_shapes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/convexity_defects.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/convexity_defects_smoothen.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/image_segmentation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/images/boomerang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/images/convex_shapes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/images/hand_pen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/images/random_shapes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/images/road.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/images/shapes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/smoothen contour_polygon.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter07/watershed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter08/background_substraction_GMG.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter08/background_substraction_GMG.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter08/background_substraction_MOG.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter08/background_substraction_MOG.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter08/colorspace_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter08/colorspace_tracking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter08/detect_movement.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter08/detect_movement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter08/feature_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter08/feature_tracking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter08/object_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/python by example/Chapter08/object_tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter09/classify_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter09/create_features.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter09/feature_detector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter09/training.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter10/augmented_reality_piramide.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter10/augmented_reality_piramide_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter10/pose_estimation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/classify_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/create_features.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/feature_extractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/images/multiclass_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/images/multiclass_image_features.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/images/test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/python by example/Chapter11/training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_load_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_load_processing_save_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_minimal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_positional_arguments.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_sum_two_numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_camera.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_camera_capture.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_camera_fps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_ip_camera.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_video_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_video_file_all_properties.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_video_file_backwards.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/sysargv_python.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/test.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/test_back.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/write_video_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/02-exercices/read_video_file_backwards_save_video.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/morphological_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/morphological_operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/smoothing_techniques..py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/smoothing_techniques..py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,18 +45,51 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1wD9uD8giwnisZpRghoVCLP2REO" />
+  <component name="ProjectId" id="1wDbgU2aBxIkz2pDRqQ50vvOqbo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.cartoonizing">
-    <configuration name="cartoonizing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\alberto-fernandaz\Histograms" />
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\alberto-fernandaz\img-procesing" />
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\basic" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.color_histogram_equalization_hsv.py">
+    <configuration name="color_histogram_equalization_hsv.py" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/color_histogram_equalization_hsv.py.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="color_map_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,7 +101,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/cartoonizing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_all.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -114,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex35" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="color_map_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,11 +118,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/p1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/p1/ex35.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="grayscale_histograms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="grayscale_histograms_equ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms_equ.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,20 +175,26 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.cartoonizing" />
-        <item itemvalue="Python.ex35" />
+        <item itemvalue="Python.color_histogram_equalization_hsv.py" />
+        <item itemvalue="Python.grayscale_histograms_equ" />
+        <item itemvalue="Python.grayscale_histograms" />
+        <item itemvalue="Python.color_map_example" />
+        <item itemvalue="Python.color_map_all" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a4359a48-ed41-4dc8-8a39-7a724cd410c6" name="Changes" comment="" />
-      <created>1627982516544</created>
+      <changelist id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="" />
+      <created>1627996220414</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1627982516544</updated>
+      <updated>1627996220414</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
