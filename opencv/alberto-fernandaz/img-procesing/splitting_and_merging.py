@@ -11,7 +11,7 @@ import getpass
 
 # Read the input image:
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
-img_name = "color_spaces.png"  #"lena.png"     # "modrain.jpg"#"grains.jpg" #
+img_name = "p1.jpg"  #"lena.png"     # "modrain.jpg"#"grains.jpg" #
 path = BASE_FOLDER + img_name
 print(path)
 

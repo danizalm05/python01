@@ -2,40 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/color_histogram_equalization_hsv.py.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms_equ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_all.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/skin_segmentation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/basic/mouse_events_matplotlib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/basic/mouse_events_text.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/video/video_file_all_properties.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/video/video_file_backwards.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/video/video_frames.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_adaptive_filter_noise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_introduction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_simple_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_load_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_load_processing_save_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_minimal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_positional_arguments.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/argparse_sum_two_numbers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_camera.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_camera_capture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_camera_fps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_ip_camera.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_video_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_video_file_all_properties.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/read_video_file_backwards.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/sysargv_python.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/test.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/test_back.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/01-chapter-content/write_video_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/Chapter03/02-exercices/read_video_file_backwards_save_video.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/morphological_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/morphological_operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/smoothing_techniques..py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/smoothing_techniques..py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/splitting_and_merging.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/splitting_and_merging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/face/threshold.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/face/threshold.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,39 +33,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\opencv\alberto-fernandaz\thresholding" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\alberto-fernandaz\Histograms" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\alberto-fernandaz\img-procesing" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\basic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.color_histogram_equalization_hsv.py">
-    <configuration name="color_histogram_equalization_hsv.py" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/color_histogram_equalization_hsv.py.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="color_map_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.thresholding_adaptive_filter_noise">
+    <configuration name="splitting_and_merging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -101,7 +57,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_all.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/splitting_and_merging.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +66,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="color_map_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="thresholding_adaptive_filter_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,11 +74,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/color_map_example.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_adaptive_filter_noise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,7 +87,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="grayscale_histograms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="thresholding_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,11 +95,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="grayscale_histograms_equ" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="thresholding_introduction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -160,11 +116,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/grayscale_histograms_equ.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_introduction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="thresholding_simple_types" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_simple_types.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.color_histogram_equalization_hsv.py" />
-        <item itemvalue="Python.grayscale_histograms_equ" />
-        <item itemvalue="Python.grayscale_histograms" />
-        <item itemvalue="Python.color_map_example" />
-        <item itemvalue="Python.color_map_all" />
+        <item itemvalue="Python.thresholding_adaptive_filter_noise" />
+        <item itemvalue="Python.thresholding_example" />
+        <item itemvalue="Python.thresholding_simple_types" />
+        <item itemvalue="Python.thresholding_introduction" />
+        <item itemvalue="Python.splitting_and_merging" />
       </list>
     </recent_temporary>
   </component>
