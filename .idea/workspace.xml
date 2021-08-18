@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_adaptive_filter_noise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_introduction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_simple_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_bgr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_otsu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_otsu_filter_noise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_otsu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_techniques.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_triangle_filter_noise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/splitting_and_merging.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/splitting_and_merging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/face/threshold.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/face/threshold.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,29 +41,8 @@
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\basic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.thresholding_adaptive_filter_noise">
-    <configuration name="splitting_and_merging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/img-procesing/splitting_and_merging.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="thresholding_adaptive_filter_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.thresholding_scikit_image_techniques">
+    <configuration name="thresholding_bgr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,7 +54,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_adaptive_filter_noise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_bgr.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -87,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="thresholding_otsu_filter_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_example.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_otsu_filter_noise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_introduction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="thresholding_scikit_image_otsu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_introduction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_otsu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_simple_types" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="thresholding_scikit_image_techniques" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,7 +117,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_simple_types.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_techniques.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="thresholding_triangle_filter_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_triangle_filter_noise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.thresholding_adaptive_filter_noise" />
-        <item itemvalue="Python.thresholding_example" />
-        <item itemvalue="Python.thresholding_simple_types" />
-        <item itemvalue="Python.thresholding_introduction" />
-        <item itemvalue="Python.splitting_and_merging" />
+        <item itemvalue="Python.thresholding_scikit_image_techniques" />
+        <item itemvalue="Python.thresholding_scikit_image_otsu" />
+        <item itemvalue="Python.thresholding_bgr" />
+        <item itemvalue="Python.thresholding_triangle_filter_noise" />
+        <item itemvalue="Python.thresholding_otsu_filter_noise" />
       </list>
     </recent_temporary>
   </component>
