@@ -8,7 +8,7 @@ import numpy as np
 import getpass
 import matplotlib.pyplot as plt
 
-qqqqq
+
 img_name = "bb.jpg"#"hickory.jpg"#
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() +'/Pictures/Saved Pictures/'
 path = BASE_FOLDER + img_name

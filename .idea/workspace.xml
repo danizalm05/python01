@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_bgr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_otsu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_otsu_filter_noise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_otsu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_techniques.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_triangle_filter_noise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/orange/12-global-warming.ows" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/orange/Framingham.ows" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/orange/climate_change.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/orange/housing.ows" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/orange/titttt.ows" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/orange/wine (1).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask/hello.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask/hello_external.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask/hello_routes_external.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/contours/contours_introduction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/alberto-fernandaz/contours/contours_introduction_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/face/feature_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/sreeni/061Gabor_Filter_Banks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/sreeni/58Gabor filters01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/sreeni/GaborFilter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/BASE_FOLDER0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/face/threshold.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/face/threshold.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/sreeni/30registration_homography .py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/sreeni/30registration_homography .py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +44,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flask/hello_external.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\opencv\sreeni" />
+      <recent name="D:\python\opencv\face" />
+      <recent name="D:\python\opencv\alberto-fernandaz\contours" />
+      <recent name="D:\prog\linux\linux-prog\overthewire\natas" />
       <recent name="D:\python\opencv\alberto-fernandaz\thresholding" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\alberto-fernandaz\Histograms" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\alberto-fernandaz\img-procesing" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\basic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.thresholding_scikit_image_techniques">
-    <configuration name="thresholding_bgr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.hello">
+    <configuration name="061Gabor_Filter_Banks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,11 +65,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/sreeni" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_bgr.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/sreeni/061Gabor_Filter_Banks.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -63,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_otsu_filter_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="58Gabor filters01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,11 +86,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/sreeni" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_otsu_filter_noise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/sreeni/58Gabor filters01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_scikit_image_otsu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Gabor_banks_texture" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -92,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/sreeni" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_otsu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/sreeni/Gabor_banks_texture.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,7 +120,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_scikit_image_techniques" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Gabor_matplotlib" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,11 +128,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/sreeni" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_scikit_image_techniques.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/sreeni/Gabor_matplotlib.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thresholding_triangle_filter_noise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,11 +149,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/alberto-fernandaz/thresholding/thresholding_triangle_filter_noise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask/hello.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.thresholding_scikit_image_techniques" />
-        <item itemvalue="Python.thresholding_scikit_image_otsu" />
-        <item itemvalue="Python.thresholding_bgr" />
-        <item itemvalue="Python.thresholding_triangle_filter_noise" />
-        <item itemvalue="Python.thresholding_otsu_filter_noise" />
+        <item itemvalue="Python.hello" />
+        <item itemvalue="Python.Gabor_matplotlib" />
+        <item itemvalue="Python.58Gabor filters01" />
+        <item itemvalue="Python.Gabor_banks_texture" />
+        <item itemvalue="Python.061Gabor_Filter_Banks" />
       </list>
     </recent_temporary>
   </component>
