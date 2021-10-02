@@ -7,3 +7,9 @@
 https://drive.google.com/drive/folders/1Ju0j66KmezqA7CxG4S2fGACwGc52Nnz4
  
 https://www.youtube.com/playlist?list=PLUfHxBkkFMSepi4ID_UyG6h4bSO7WV514
+
+נתוני   מוות   קורנה
+
+ 
+https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv
+https://github.com/CSSEGISandData
