@@ -2,40 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/datasci/orange/corona.ows" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/02_add_noise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/03_filter_signal_LP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/05_butterworth filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/05_butterworth filter2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/LPf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/file.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dsp/lpf2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/orange/orange.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datasci/orange/orange.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/sreeni/plt_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/sreeni/plt_basic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/.~lock.art.htm#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/getting_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/headerhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/headerhtml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/inmates.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/morifix.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/morifix.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/scape.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/scrape-js.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/scrape.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/share_price.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/simple1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/soupp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/table-xml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/trump-lies.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/trumplies.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/gen/yahooshare.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/singh/first.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/singh/first.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/singh/treenavig.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrap/singh/warpeach.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsp/05_butterworth filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/dsp/05_butterworth filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dsp/05_butterworth filter2.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +29,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dsp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dsp/05_butterworth filter.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
