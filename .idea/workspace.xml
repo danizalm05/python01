@@ -2,12 +2,111 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/.ipynb_checkpoints/opencv01-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/StartCamera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/basic-fun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/bitwise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/blurring.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/color-detect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/color.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/contours.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/convolation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/convolation02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/edge-detect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/faces0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/haarcascade_russian_plate_number.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/histogram.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/joining-images.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/masking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/mouse_events_matplotlib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/mouse_events_text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/num_detect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/opencv01.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/opencv01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/perspective.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/piano.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/pillowImg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/resize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/scandoc01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/shape-detect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/shape.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/shapesText.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/splitmerger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/t81_558_class_06_1_python_images.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/thresh.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/transformations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/video_frames.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/virtualPaint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/Murtaza/basic/virtualpainter01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/01-ReadImg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/02-BasicFunctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/03-Resizing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/04-text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/05-Perspctive.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/06-ImgsInOneWindow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/07-DetectColor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/08-ContorsShape.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dsp/05_butterworth filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/dsp/05_butterworth filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dsp/05_butterworth filter2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/hello.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/hello_external.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/hello_routes_external.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/.ipynb_checkpoints/opencv01-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/StartCamera.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/basic-fun.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/bitwise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/blurring.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/color-detect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/color.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/contours.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/convolation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/convolation02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/edge-detect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/faces0.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/haarcascade_frontalface_default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/haarcascade_russian_plate_number.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/histogram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/joining-images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/masking.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/mouse_events_matplotlib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/mouse_events_text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/num_detect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/opencv01.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/opencv01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/perspective.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/piano.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/pillowImg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/resize.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/scandoc01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/shape-detect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/shape.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/shapesText.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/splitmerger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/t81_558_class_06_1_python_images.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/thresh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/transformations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/video_frames.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/virtualPaint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/virtualpainter01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/FingerCounter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/HandTrackingMin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/HandTrackingModuleN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/ImageTable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/LogoLiveStream.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/VirtualPainter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/handtractDemo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/moveCount.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/noise-motion-detet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/oilPainting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/pic/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/pic/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/pic/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/pic/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/Virtual Painter/pic/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/docscan/BASE_FOLDER0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/docscan/doc_scan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/prj/docscan/utlis.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +128,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dsp/05_butterworth filter.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/murtazaNew" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\murtazaNew" />
       <recent name="D:\python\dsp" />
       <recent name="D:\python\opencv\sreeni" />
       <recent name="D:\python\opencv\face" />
       <recent name="D:\python\opencv\alberto-fernandaz\contours" />
-      <recent name="D:\prog\linux\linux-prog\overthewire\natas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.05_butterworth filter">
-    <configuration name="03_filter_signal_LP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.08-ContorsShape">
+    <configuration name="04-text " type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,11 +149,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dsp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dsp/03_filter_signal_LP.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/04-text .py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -63,7 +162,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="05_butterworth filter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="05-Perspctive" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,11 +170,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dsp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dsp/05_butterworth filter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/05-Perspctive.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +183,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="05_butterworth filter2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="06-ImgsInOneWindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -92,11 +191,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dsp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dsp/05_butterworth filter2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/06-ImgsInOneWindow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,7 +204,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="LPf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="07-DetectColor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,11 +212,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dsp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dsp/LPf.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/07-DetectColor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,7 +225,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lpf2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="08-ContorsShape" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,11 +233,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dsp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dsp/lpf2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/08-ContorsShape.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.05_butterworth filter" />
-        <item itemvalue="Python.05_butterworth filter2" />
-        <item itemvalue="Python.lpf2" />
-        <item itemvalue="Python.LPf" />
-        <item itemvalue="Python.03_filter_signal_LP" />
+        <item itemvalue="Python.08-ContorsShape" />
+        <item itemvalue="Python.07-DetectColor" />
+        <item itemvalue="Python.06-ImgsInOneWindow" />
+        <item itemvalue="Python.05-Perspctive" />
+        <item itemvalue="Python.04-text " />
       </list>
     </recent_temporary>
   </component>
