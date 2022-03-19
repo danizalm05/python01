@@ -2,7 +2,7 @@
 08-ContorsShape.py
 Load Inmages in one window
 https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s   1:15:00  1:28
-https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter9.py
+https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter8.py
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/contours.py
 '''
 

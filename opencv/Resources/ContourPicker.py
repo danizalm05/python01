@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import getpass
 
 image_source = "image"
 #image_source = "camera"
@@ -7,11 +8,15 @@ frameWidth = 640
 frameHeight = 480
 
 ##########
+
+
+
+################
 if image_source == "image":
-   BASE_FOLDER = 'C:/Users/rockman/Pictures/Saved Pictures/'
-   mimg = "p3.JPG"
-   path = BASE_FOLDER +  mimg
-   img = cv2.imread(path)
+    BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
+    BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
+    path = BASE_FOLDER +  'shapes01.png'  # 'cards.jpg'
+    img = cv2.imread(path)
 
 if image_source == "camera":
    camera_num = 0

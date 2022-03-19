@@ -12,7 +12,6 @@ https://www.youtube.com/watch?v=ZiwZaAVbXQo
 """
 import cv2
 import numpy as np
-import time
 import os
 import HandTrackingModuleN as htm
 #######################
