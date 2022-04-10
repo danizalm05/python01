@@ -15,9 +15,9 @@ faceCascade = cv2.CascadeClassifier(xml_file)
 
 
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
-BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/faces/'
+BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'# faces/'
 
-path = BASE_FOLDER +  'test3.jpg'  # 'bb.jpg' 'b1.jpg'
+path = BASE_FOLDER +  'lena.png' #'test3.jpg'  # 'bb.jpg' 'b1.jpg'
 print(path)
 
 img00 = cv2.imread(path)
