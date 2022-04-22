@@ -1,6 +1,6 @@
 '''
 Facial Landmarks
-
+Using 'haarcascade_frontalface_alt2.xml'
 https://medium.com/analytics-vidhya/facial-landmarks-and-face-detection-in-python-with-opencv-73979391f30e
 '''
 

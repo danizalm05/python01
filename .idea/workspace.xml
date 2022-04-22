@@ -2,46 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/09-FaceDetection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/FingerCounter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/HandTrackingMin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/HandTrackingModuleN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/ImageTable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/LogoLiveStream.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/VirtualPainter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/handtractDemo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/moveCount.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/noise-motion-detet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/oilPainting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/pic/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/pic/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/pic/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/pic/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Virtual Painter/pic/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/project1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/ComputerVision/BackgRemov/facePhotoLM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/numpy/03_Numpy_Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/datasci/numpy/03_Numpy_Notebook.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/FingerCounter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/HandTrackingMin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/HandTrackingModuleN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/ImageTable.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/LogoLiveStream.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/VirtualPainter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/handtractDemo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/moveCount.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/noise-motion-detet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/oilPainting.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/pic/0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/pic/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/pic/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/pic/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Murtaza/Virtual Painter/pic/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/Resources/ContourPicker.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/Resources/ContourPicker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/murtazaNew/01-ReadImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/murtazaNew/01-ReadImg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/murtazaNew/08-ContorsShape.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/murtazaNew/08-ContorsShape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/BackgRemov/FaceFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/BackgRemov/FaceMeshBasics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/BackgRemov/FaceLndMrk.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/BackgRemov/FaceLndMrk.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/murtazaNew/01-ReadImg.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/segmentation_mask.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -85,28 +52,7 @@
       <recent name="D:\python\opencv\alberto-fernandaz\contours" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.project1">
-    <configuration name="01-ReadImg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/01-ReadImg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.segmentation_mask">
     <configuration name="08-ContorsShape" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,6 +116,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="segmentation_mask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/segmentation_mask.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.segmentation_mask" />
         <item itemvalue="Python.project1" />
         <item itemvalue="Python.09-FaceDetection" />
         <item itemvalue="Python.08-ContorsShape" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.01-ReadImg" />
       </list>
     </recent_temporary>
   </component>
