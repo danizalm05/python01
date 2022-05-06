@@ -5,18 +5,21 @@ from time import sleep
 import numpy as np
 
 btList = [] #List of button
-GapX  = 45 # Gap of Button from left side
-GapY  = 210 # Gap of Button from   Up side
+GapX  = 200 # Gap of Button from left side
+GapY  = 290 # Gap of Button from   Up side
 KeyGap = 10 #Gap between buttons vertical horizontal
-ButtonSize =60
-KeysInLine = 10
+ButtonSize =68
+KeysInLine = 12
 
 final_text = "-"
 
 
-keyboard_keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
-                  ["A", "S", "D", "F", "G", "H", "J", "K", "L", ";"],
-                  ["Z", "X", "C", "V", "B", "N", "M", ",", ".", "/"]]
+keyboard_keys = [
+                  ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0","-","="],
+                  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[","]"],
+                  ["A", "S", "D", "F", "G", "H", "J", "K", "L", ";","'","Entr"],
+                  ["sft","Z", "X", "C", "V", "B", "N", "M", ",", ".", "/","sft"]
+               ]
 
 
 def nothing(self):
@@ -37,9 +40,7 @@ class  KeyBoard:
 
       self.kbd = kbd
       self.msg = msg
-
-
-
+      #self.GapY = 65
 
 
   def GetKey(self,i):
@@ -48,9 +49,11 @@ class  KeyBoard:
       #print("self.GapXY = [ ", self.GapX, self.GapY, "]")
       m = int((x - GapX) / (KeyGap + ButtonSize))
       n = int((y - GapY) / (KeyGap + ButtonSize))
-      #print('Column=', m)
-      #print('line=', n)
-      i = KeysInLine * n + m
+
+      print(m,n)
+
+      i = (KeysInLine) * n + m
+      print('line=', n, i, len(btList))
       if (i<len(btList)):
         print(btList[i].text)
         self.msg = self.msg + btList[i].text
@@ -60,13 +63,16 @@ class  KeyBoard:
   def key_clk(self ,event, x, y, flags, param):
 
     if event ==  cv2.EVENT_LBUTTONDOWN:
-          self.GetKey( x, y)
+          point = [x, y]
+          self.GetKey(point)
 
   def DrawKeyBoard0(self ,img, buttonList):
 
       for button in buttonList:
           x, y = button.pos
           w, h = button.size
+
+
           cvzone.cornerRect(img, (button.pos[0], button.pos[1],
                                   button.size[0], button.size[0]), 20, rt=0)
           cv2.rectangle(img, button.pos, (int(x + w), int(y + h)), (255, 144, 30), cv2.FILLED)
@@ -121,11 +127,11 @@ def main():
 
     success, img = cap.read()
     buttonL = keybrd.CreateBtnlList()
-    img01 = keybrd.DrawKeyBoard0(img, buttonL)
+    img01 = keybrd.DrawKeyBoard(img, buttonL)
 
-    cv2.rectangle(img01, (25,350), (800, 410),
+    cv2.rectangle(img01, (25,30), (1100, 180),
                   (255, 255, 255), cv2.FILLED) #output Window
-    cv2.putText(img01, keybrd.msg , (40, 400),
+    cv2.putText(img01, keybrd.msg , (40, 90),
                 cv2.FONT_HERSHEY_PLAIN, 4, (0, 0, 0), 4)
 
     cv2.imshow("output", img01)
