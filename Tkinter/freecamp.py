@@ -1,8 +1,8 @@
 """
+Using Icons, Images, and Exit Buttons - Python Tkinter GUI Tutorial #8
+https://www.youtube.com/watch?v=NoTM8JciWaQ&list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV&index=8
 https://www.youtube.com/watch?v=YXPyB4XeYLA&t=3s 34:19
 https://github.com/flatplanet/Intro-To-TKinter-Youtube-Course
-https://github.com/flatplanet/Intro-To-TKinter-Youtube-Course/blob/master/hello.py
-https://github.com/flatplanet/Intro-To-TKinter-Youtube-Course/blob/master/grid.py
 """
 
 from tkinter import *

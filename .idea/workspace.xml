@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tkinter/calculator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tkinter/freecamp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/sock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tkinter/ImageExitBtns.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tkinter/neton.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tkinter/smile.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tkinter/smile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tkinter/viewer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/KeyBoardModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/KeyBoardModule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/NoseEyeBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/NoseEyeBoard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tkinter/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tkinter/calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tkinter/freecamp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tkinter/freecamp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/ComputerVision/BackgRemov/BackRemove02.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tkinter" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -52,8 +53,8 @@
       <recent name="D:\python\opencv\face" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.calculator">
-    <configuration name="17Read_img" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.viewer">
+    <configuration name="ImageExitBtns" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,11 +62,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/sreeni" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tkinter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/sreeni/17Read_img.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tkinter/ImageExitBtns.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,7 +138,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="segmentation_mask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="viewer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,11 +146,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tkinter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/segmentation_mask.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tkinter/viewer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.viewer" />
+        <item itemvalue="Python.ImageExitBtns" />
         <item itemvalue="Python.calculator" />
         <item itemvalue="Python.readImage" />
         <item itemvalue="Python.freecamp" />
-        <item itemvalue="Python.17Read_img" />
-        <item itemvalue="Python.segmentation_mask" />
       </list>
     </recent_temporary>
   </component>
