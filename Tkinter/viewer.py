@@ -10,7 +10,8 @@ from tkinter import *
 from PIL import ImageTk, Image
 import getpass
 
-
+from kivy.app import App
+from kivy.clock import Clock
 imgName = 'p1.jpg'  #"cat-face.png"
 def readImagePath(imgName):
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()

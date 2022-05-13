@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Tkinter/ImageExitBtns.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tkinter/neton.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tkinter/smile.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tkinter/smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tkinter/viewer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kivy/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tkinter/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tkinter/calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tkinter/freecamp.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tkinter/freecamp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tkinter/viewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tkinter/viewer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,19 +40,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tkinter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Kivy/hello.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\Kivy" />
       <recent name="D:\python\Tkinter" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\murtazaNew" />
       <recent name="D:\python\dsp" />
       <recent name="D:\python\opencv\sreeni" />
-      <recent name="D:\python\opencv\face" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.viewer">
+  <component name="RunManager" selected="Python.hello">
     <configuration name="ImageExitBtns" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,7 +95,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="freecamp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,11 +103,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tkinter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Kivy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tkinter/freecamp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Kivy/hello.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hello" />
         <item itemvalue="Python.viewer" />
         <item itemvalue="Python.ImageExitBtns" />
         <item itemvalue="Python.calculator" />
         <item itemvalue="Python.readImage" />
-        <item itemvalue="Python.freecamp" />
       </list>
     </recent_temporary>
   </component>
