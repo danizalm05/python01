@@ -4,7 +4,7 @@ Return the coordinate of the tip of node. Close your lips to select
 https://medium.com/@asadullah92c/eyes-blink-detector-and-counter-mediapipe-a66254eb002c
 
 '''
-#from tkinter import Tk, Text
+
 import KeyBoardModule as Kb
 import cv2 as cv
 import numpy as np

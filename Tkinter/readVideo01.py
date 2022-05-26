@@ -26,10 +26,13 @@ class App:
     def __init__(self, window, window_title, image_path="cat-face.png"):
         self.window = window
         self.window.title(window_title)
-
+        label = tkinter.Label(window)
+        cap = cv2.VideoCapture(0)
         # Load an image using OpenCV
-        self.cv_img = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2RGB)
-
+        success, img = cap.read()
+        #self.cv_img = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2RGB)
+        self.cv_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        self.gray = cv2.cvtColor(self.cv_img, cv2.COLOR_BGR2GRAY)
         # Get the image dimensions (OpenCV stores image data as NumPy ndarray)
         self.height, self.width, no_channels = self.cv_img.shape
 
@@ -39,7 +42,7 @@ class App:
         self.canvas.pack()
 
     # Use PIL (Pillow) to convert the NumPy ndarray to a PhotoImage
-        self.photo = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(self.cv_img))
+        self.photo = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(self.gray))
 
     # Add a PhotoImage to the Canvas
         self.canvas.create_image(0, 0, image=self.photo, anchor=tkinter.NW)
