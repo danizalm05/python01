@@ -1,6 +1,6 @@
 """
 How To Set The Height And Width of Widgets - Python Kivy GUI Tutorial #4
-2:14
+
 https://github.com/flatplanet/kivy-youtube-playlist/blob/main/height_width.py
 https://www.youtube.com/watch?v=AxKksRhcmOA&list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg&index=4
 """
