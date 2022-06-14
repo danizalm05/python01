@@ -5,39 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Kivy/builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/color.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/color.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/design.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/my.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/whatever.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/combo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/hello.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/QtOpencv.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/contours.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/masking.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/qtopencv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/qtopencv02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/readImg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/image/staticLabel2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/spin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/textbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/Video00.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/Video01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/Videomp41.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/framePyQt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/process_version1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/readFrame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/video03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/videoMp4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/ComputerVision/video/extract_frames.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kivy/height_width.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kivy/height_width.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/QtOpencv.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/qtopencv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/qtopencv02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/video/video_frames.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/alberto-fernandaz/Histograms/aa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/video/readFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,28 +50,7 @@
       <recent name="C:\Users\gilfm\Documents\d\python01\Kivy" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.readFrame">
-    <configuration name="Videomp41" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/Videomp41.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.noiseuse (1)">
     <configuration name="framePyQt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="readFrame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="noiseuse (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -136,7 +84,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/readFrame.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/noiseuse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="noiseuse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.readFrame" />
+        <item itemvalue="Python.noiseuse (1)" />
+        <item itemvalue="Python.noiseuse" />
         <item itemvalue="Python.textbox" />
         <item itemvalue="Python.readImg" />
         <item itemvalue="Python.framePyQt" />
-        <item itemvalue="Python.Videomp41" />
       </list>
     </recent_temporary>
   </component>

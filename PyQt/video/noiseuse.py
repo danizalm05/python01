@@ -16,6 +16,11 @@ vid_name = "l.mkv" #"l.mkv"
 class App(QWidget):
     def __init__(self):
         super().__init__()
+        #Initilize  Video file
+        video_file = self.readImagePath() + vid_name#Create path to the video
+        self.cap = cv2.VideoCapture(video_file)
+        self.intVideo()
+
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
         self.frameNum =34500
         self.fps = 1
@@ -101,35 +106,31 @@ class App(QWidget):
         self.frameNumber.setPlainText(t)
         self.readVideoImage()
 
-    def readVideoImage (self):
-        # load the   image
-        video_file = self.readImagePath() + vid_name#Create path to the video
-        #########
-        cap = cv2.VideoCapture(video_file)
+    def intVideo(self):
         wd = 1800
         hg = 1000
-        cap.set(3, wd)
-        cap.set(4, hg)
-        cap.set(1,  self.frameNum)
-        ret, frame = cap.read()
+        self.cap.set(3, wd)
+        self.cap.set(4, hg)
+
+        #  Video file data
+        dim = 'Width: ' + str(self.cap.get(3)) + ' Height:' + str(self.cap.get(4))
+        print(dim)
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS)
+        print("FPS : '{}'".format(int(self.cap.get(cv2.CAP_PROP_FPS))))
+        totalframecount = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        print(f'Total frame count = {totalframecount} ')
+
+    def readVideoImage (self):
+
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS)
+        self.cap.set(1,  self.frameNum)
+        ret, frame = self.cap.read()
         self.currentFrame = frame
-        self.vidData(cap)
 
         qt_img = self.convert_cv_qt(frame)
         self.image_label.setPixmap(qt_img)
 
 
-
-    def vidData(self,cap0):
-        #  Video file data
-        dim = 'Width: ' + str(cap0.get(3)) + ' Height:' + str(cap0.get(4))
-        print(dim)
-
-        self.fps = cap0.get(cv2.CAP_PROP_FPS)
-
-        print("FPS : '{}'".format(int(cap0.get(cv2.CAP_PROP_FPS))))
-        totalframecount = int(cap0.get(cv2.CAP_PROP_FRAME_COUNT))
-        print(f'Total frame count = {totalframecount} ')
 
     def readImagePath(self):
         BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
