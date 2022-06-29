@@ -11,19 +11,21 @@ import sys
 import cv2
 import getpass
 
-vid_name = "l.mkv" #"l.mkv"
+vid_name = "n.mp4" #"r.mp4"
 
 class App(QWidget):
     def __init__(self):
         super().__init__()
         #Initilize  Video file
         video_file = self.readImagePath() + vid_name#Create path to the video
+        print(video_file)
         self.cap = cv2.VideoCapture(video_file)
         self.intVideo()
 
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
-        self.frameNum =34500
+        self.frameNum =34
         self.fps = 1
+        ##############################################
         self.setWindowTitle("Read Frame Operation")
         self.disply_width = 2640
         self.display_height = 1480
@@ -77,7 +79,7 @@ class App(QWidget):
 
         frame  = cv2.resize(self.currentFrame, None, fx=4,
                              fy=4, interpolation=cv2.INTER_AREA)
-        cv2.imshow(vid_name, frame)
+
         cv2.imwrite(video_file_name, frame)
         print("Save image to  " + video_file_name)
 
@@ -125,6 +127,8 @@ class App(QWidget):
         self.fps = self.cap.get(cv2.CAP_PROP_FPS)
         self.cap.set(1,  self.frameNum)
         ret, frame = self.cap.read()
+
+
         self.currentFrame = frame
 
         qt_img = self.convert_cv_qt(frame)
@@ -137,11 +141,12 @@ class App(QWidget):
 
         BASE_FOLDER = BASE_FOLDER +'/Videos/Captures/'
         path = BASE_FOLDER
-        #print("readImagePath  ",path)
+        print("readImagePath  ",path)
         return path
 
     def convert_cv_qt(self, cv_img):
         """Convert from an opencv image to QPixmap"""
+
         rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
         h, w, ch = rgb_image.shape
         bytes_per_line = ch * w
