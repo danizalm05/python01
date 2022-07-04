@@ -67,26 +67,28 @@ class VideoThread(QThread):
             imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             results = self.face_mesh.process(imgRGB)
             face_number = 0
-            #Store the facial landmarks information of the first face
 
              ## if at least one face is in the frame
             if (results.multi_face_landmarks):
                landmarks = results.multi_face_landmarks[face_number]
-               for landmark in range(90, 128, 1):
+               for landmark in range(0, 22, 1):
                  (xx1,yy1) =self.getLandMark(landmarks.landmark[landmark], img)
-                 cv2.circle(img, (xx1,yy1), 8, (234,  0, 255), -1)
-               up_lips = 12
-               low_lips =15
+                 cv2.circle(img, (xx1,yy1), 8, (234,  250, 255), -1)
+               (up_lips, low_lips)= (12,15)
                (xx1,yy1)= self.getLandMark(landmarks.landmark[up_lips], img)
                cv2.circle(img, (xx1,yy1), 10, (0, 200, 255), -1)
 
                (xx2,yy2)=self.getLandMark(landmarks.landmark[low_lips], img)
                cv2.circle(img, (xx2,yy2), 10, (0, 200, 255), -1)
-
+               dm = pow(pow((yy2-yy1),2) + pow((xx2-xx1),2),0.5)
+               print(dm)
                cv2.line(img,(xx1,yy1),(xx2,yy2),(255,255,255),5)
                img01 = cv2.resize(frame, None, fx=scaling_factor,
                                fy=scaling_factor, interpolation=cv2.INTER_AREA)
                img01 = self.keybrd.DrawKeyBoard(img01, self.buttonL)
+               (xx3,yy3) =self.getLandMark(landmarks.landmark[landmark], img)
+               cv2.circle(img01, (xx3,yy3), 8, (234,  250, 255), -1)
+               cv2.line(img01,(xx1,yy1),(xx2,yy2),(255,255,255),6)
                cv2.imshow("output", img01)
                global massage
                massage = self.keybrd.msg
