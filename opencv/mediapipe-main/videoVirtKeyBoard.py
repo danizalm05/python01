@@ -7,7 +7,7 @@ from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread
 import numpy as np
 import KeyBoardModule as Kb
 
-scaling_factor = 2.8
+scaling_factor = 2.5
 massage = "--"
 
 class VideoThread(QThread):

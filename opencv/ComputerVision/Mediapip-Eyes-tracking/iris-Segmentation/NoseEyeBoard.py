@@ -2,7 +2,8 @@
 Virtual keyboard
 Return the coordinate of the tip of node. Close your lips to select
 https://medium.com/@asadullah92c/eyes-blink-detector-and-counter-mediapipe-a66254eb002c
-
+if import mediapipe as mp   cuses error try  to  run
+     pip install 'protobuf~=3.19.0'
 '''
 
 import KeyBoardModule as Kb
@@ -29,7 +30,7 @@ WHITE =(255, 255, 255)
 cameraNum = 0  # -1 : image     0: video
 frameWidth = 980
 frameHeight = 480
-scaling_factor = 2.5
+scaling_factor = 1.5
 Delay =  0.35
 cap = cv.VideoCapture(0)
 
@@ -41,13 +42,13 @@ img_h, img_w = frame.shape[:2]
 mask = np.zeros((img_h, img_w), dtype=np.uint8)
 
 
-with mp_face_mesh.FaceMesh(
+face_mesh = mp_face_mesh.FaceMesh(
         max_num_faces=1,
         refine_landmarks=True,
         min_detection_confidence=0.5,
         min_tracking_confidence=0.5
-) as face_mesh:
-    while True:
+      )
+while True:
         ret, frame = cap.read()
         frame = cv.flip(frame, 1)
 
@@ -60,6 +61,11 @@ with mp_face_mesh.FaceMesh(
         #frame = keybrd.DrawKeyBoard(frame, buttonL)
         img_h, img_w = frame.shape[:2]
         results = face_mesh.process(rgb_frame)
+
+        '''
+        Results store the facial landmarks information. It is a python
+         list  length of number of faces in the image. 
+          '''
         mask = np.zeros((img_h, img_w), dtype=np.uint8)
         mask = keybrd.DrawKeyBoard(mask, buttonL)
         if results.multi_face_landmarks:
