@@ -7,7 +7,7 @@ from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread
 import numpy as np
 import KeyBoardModule as Kb
 import mediapipe
-
+import dip
 
 scaling_factor = 2.3
 
