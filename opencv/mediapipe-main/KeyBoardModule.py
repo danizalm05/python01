@@ -1,5 +1,5 @@
 import cv2
-import cvzone
+#import cvzone
 from tkinter import Tk, Text
 from time import sleep
 import numpy as np
@@ -75,8 +75,8 @@ class  KeyBoard:
             w, h = button.size
 
 
-            cvzone.cornerRect(img, (button.pos[0], button.pos[1],
-                                    button.size[0], button.size[0]), 20, rt=0)
+            #cvzone.cornerRect(img, (button.pos[0], button.pos[1],
+            #                        button.size[0], button.size[0]), 20, rt=0)
             cv2.rectangle(img, button.pos, (int(x + w), int(y + h)), (255, 144, 30), cv2.FILLED)
             cv2.putText(img, button.text, (x + 20, y + 65),
                         cv2.FONT_HERSHEY_PLAIN, 4, (0, 0, 0), 4)
@@ -87,8 +87,8 @@ class  KeyBoard:
         imgNew = np.zeros_like(img, np.uint8)
         for button in buttonList:
             x, y = button.pos
-            cvzone.cornerRect(imgNew, (button.pos[0], button.pos[1],
-                                       button.size[0],button.size[0]), 20 ,rt=0)
+            #cvzone.cornerRect(imgNew, (button.pos[0], button.pos[1],
+             #                          button.size[0],button.size[0]), 20 ,rt=0)
             cv2.rectangle(imgNew, button.pos, (x + button.size[0], y + button.size[1]),
                           (255, 194, 230), cv2.FILLED)
             cv2.putText(imgNew, button.text, (x + 15, y + 60),
