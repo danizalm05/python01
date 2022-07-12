@@ -53,9 +53,9 @@ class  KeyBoard:
       print(m,n)
 
       i = (KeysInLine) * n + m
-      print('line=', n, i, len(btList))
+      #print('line=', n, i, len(btList))
       if (i<len(btList)):
-        print(btList[i].text)
+        #print(btList[i].text)
         self.msg = self.msg + btList[i].text
         #print('pos  x, y = [', btList[i].pos[0], btList[i].pos[1], ']')
       print(self.msg)

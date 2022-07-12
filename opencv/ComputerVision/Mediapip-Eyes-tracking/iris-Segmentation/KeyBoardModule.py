@@ -1,12 +1,10 @@
 import cv2
 import cvzone
-from tkinter import Tk, Text
-from time import sleep
 import numpy as np
 
 btList = [] #List of button
-GapX  = 200 # Gap of Button from left side
-GapY  = 290 # Gap of Button from   Up side
+GapX  = 50 # Gap of Button from left side
+GapY  =  290 # Gap of Button from   Up side
 KeyGap = 10 #Gap between buttons vertical horizontal
 ButtonSize =68
 KeysInLine = 12
@@ -129,7 +127,7 @@ def main():
     buttonL = keybrd.CreateBtnlList()
     img01 = keybrd.DrawKeyBoard(img, buttonL)
 
-    cv2.rectangle(img01, (25,30), (1100, 180),
+    cv2.rectangle(img01, (25,60), (1100, 180),
                   (255, 255, 255), cv2.FILLED) #output Window
     cv2.putText(img01, keybrd.msg , (40, 90),
                 cv2.FONT_HERSHEY_PLAIN, 4, (0, 0, 0), 4)

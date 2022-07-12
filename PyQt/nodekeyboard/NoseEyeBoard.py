@@ -82,7 +82,7 @@ with mp_face_mesh.FaceMesh(
                            4, (255, 255, 255), 3)
                 #cv.circle(mask, center_right, int(l_radius), (250, 250, 255), 6, cv.LINE_AA)
                 keybrd.GetKey(targetPoint)
-                time.sleep(Delay)
+                #time.sleep(Delay)
 
 
         # output Window

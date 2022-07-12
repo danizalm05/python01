@@ -9,10 +9,10 @@ import cv2
 's'  115    save
 'u'  117    forward 'frame_jump' frames
 '''
-scaling_factor = 2.1
-vid_name = "l.mkv"    # l.mkv "m.mp4"
+scaling_factor = 1
+vid_name = "14.mov"    # l.mkv "m.mp4"
 frame_jump = 100
-frame_no = 177465
+frame_no = 65
 frame_name = 'frame_%d.jpg'
 BASE_FOLDER = 'C:/Users/' +  getpass.getuser() +'/Videos/Captures/'
 
@@ -49,9 +49,9 @@ while True:
        print("Save imge to  " + BASE_FOLDER+(frame_name) % frame_no)
        #cv2.imwrite(os.path.join(pathOut, "frame{:d}.jpg".format(count)), frame)
        # save frame as JPEG file
-       frame01 = cv2.resize(frame, None, fx=2,
-                          fy=2, interpolation=cv2.INTER_AREA)
-       cv2.imwrite(BASE_FOLDER+(frame_name) % frame_no, frame01)
+       frame01 = cv2.resize(frame, None, fx=1,
+                          fy=1, interpolation=cv2.INTER_AREA)
+       cv2.imwrite(BASE_FOLDER+'/frame/'+(frame_name) % frame_no, frame01)
 
    elif c==117: #  ('u')  move up
        frame_no += frame_jump

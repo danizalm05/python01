@@ -5,13 +5,13 @@ from time import sleep
 import numpy as np
 
 btList = [] #List of button
-GapX  = 35 # Gap of Button from left side
-GapY  = 40 # Gap of Button from   Up side
+GapX  = 40 # Gap of Button from left side
+GapY  = 125 # Gap of Button from   UperS side
 KeyGap = 10 #Gap between buttons vertical horizontal
-ButtonSize =90
+ButtonSize = 55
 KeysInLine = 12
 
-final_text = "-"
+final_text = ""
 
 
 keyboard_keys = [
@@ -45,22 +45,14 @@ class  KeyBoard:
 
     def GetKey(self,i):
         x ,y = i[0], i[1]
-        #print("pos = [ ", x, y, "]")
-        #print("self.GapXY = [ ", self.GapX, self.GapY, "]")
         m = int((x - GapX) / (KeyGap + ButtonSize))
         n = int((y - GapY) / (KeyGap + ButtonSize))
-
-        print(m,n)
-
         i = (KeysInLine) * n + m
-        #print('line=', n, i, len(btList))
-        if (i<len(btList)):
-            print(btList[i].text)
-            self.last_char = btList[i].text
-            self.msg = self.msg +  self.last_char
 
-            #print('pos  x, y = [', btList[i].pos[0], btList[i].pos[1], ']')
-        #print(self.msg ,'self.last_char  ',self.last_char)
+        if (i<len(btList)):
+             self.last_char = btList[i].text
+             #self.msg = self.msg +  self.last_char
+
 
     def key_clk(self ,event, x, y, flags, param):
 

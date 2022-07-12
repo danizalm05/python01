@@ -12,27 +12,20 @@ import numpy as np
 import mediapipe as mp
 import time
 
-''' 
-root = Tk()
-root.resizable(False, False)
-root.title("Text Widget Example")
 
-text = Text(root, height=8)
-text.pack()
-text.insert('1.0', 'This is a Text widget demo')
-root.mainloop()
-'''
 
 mp_face_mesh = mp.solutions.face_mesh
 
 WHITE =(255, 255, 255)
 
 cameraNum = 0  # -1 : image     0: video
-frameWidth = 980
+frameWidth = 1380
 frameHeight = 480
-scaling_factor = 1.5
+scaling_factor = 1.8
 Delay =  0.35
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(0, cv.CAP_DSHOW)
+cap.set(3, frameHeight)
+cap.set(4, frameWidth)
 
 keybrd = Kb.KeyBoard(Kb.keyboard_keys, '')# Initialize the virtual keyboard
 buttonL = keybrd.CreateBtnlList()
@@ -52,7 +45,7 @@ while True:
         ret, frame = cap.read()
         frame = cv.flip(frame, 1)
 
-        frame = frame[20:320, 10:480]
+        frame = frame[ 0:420,  0:1080]
         frame = cv.resize(frame, None, fx=scaling_factor,
                           fy=scaling_factor, interpolation=cv.INTER_AREA)
         if not ret:
@@ -101,12 +94,12 @@ while True:
 
 
         # output Window
-        cv.rectangle(mask, (35, 70), (800, 120),
+        cv.rectangle(mask, ( 5, 30), (800,80),
                       (255, 255, 255), cv.FILLED)
-        cv.putText(mask, keybrd.msg, (37, 121),
-                    cv.FONT_HERSHEY_PLAIN, 4, (0, 0, 0), 3)
+        cv.putText(mask, keybrd.msg, (37, 80),
+                    cv.FONT_HERSHEY_PLAIN, 3, (0, 0, 0), 3)
 
-        #cv.imshow('img', frame)
+        cv.imshow('img', frame)
         cv.imshow('Mask', mask)
 
         key = cv.waitKey(1)

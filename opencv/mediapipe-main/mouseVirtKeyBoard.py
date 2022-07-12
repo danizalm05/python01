@@ -1,3 +1,4 @@
+#virtual keboard using mouse
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QVBoxLayout, QTextEdit
 from PyQt5.QtGui import QPixmap

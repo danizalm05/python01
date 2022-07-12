@@ -9,7 +9,7 @@ import getpass
 
 from PyQt5.QtGui import QPixmap
 
-vid_name = "n.mp4" #"n.mp4" "l.mkv"
+vid_name = "14.mov" #"n.mp4" "l.mkv"
 
 class Ui_MainWindow(object):
     def __init__(self):
@@ -22,8 +22,8 @@ class Ui_MainWindow(object):
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
         self.frameNum =30
         self.fps = 1
-        self.disply_width = 2640
-        self.display_height = 1480
+        self.disply_width = 640
+        self.display_height = 480
 
 
 
