@@ -8,7 +8,7 @@ btList = [] #List of button
 GapX  = 40 # Gap of Button from left side
 GapY  = 125 # Gap of Button from   UperS side
 KeyGap = 10 #Gap between buttons vertical horizontal
-ButtonSize = 55
+ButtonSize = 45
 KeysInLine = 12
 
 final_text = ""

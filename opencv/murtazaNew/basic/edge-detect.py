@@ -2,7 +2,7 @@
 edge detetion
   2:26:00
 OpenCV Course - Full Tutorial with Python
-www.youtube.com/watch?v=oXlwWbU8l2o
+https://www.youtube.com/watch?v=oXlwWbU8l2o
   threshold = minimum intensity   that will produce a  specified effect
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%232%20-%20Advanced/gradients.py
 

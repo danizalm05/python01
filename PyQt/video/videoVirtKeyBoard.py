@@ -7,7 +7,7 @@ from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QThread
 import numpy as np
 import KeyBoardModule as Kb
 
-scaling_factor = 2.8
+scaling_factor = 2.3
 massage = "--"
 
 class VideoThread(QThread):
@@ -32,8 +32,8 @@ class VideoThread(QThread):
         mask = np.zeros((img_h, img_w), dtype=np.uint8)
         cap.set(3, 1280)
         cap.set(4, 720)
-        cv2.namedWindow('output')
-        cv2.setMouseCallback('output', self.keybrd.key_clk)
+        cv2.namedWindow('keybrd')
+        cv2.setMouseCallback('keybrd', self.keybrd.key_clk)
        #########
         while self._run_flag:
             ######### Read keybord commands here
@@ -52,7 +52,7 @@ class VideoThread(QThread):
             img01 = self.keybrd.DrawKeyBoard(img01, self.buttonL)
 
             if ret:
-                cv2.imshow("output", img01)
+                cv2.imshow("keybrd", img01)
                 key = cv2.waitKey(1)
                 global massage
                 massage = self.keybrd.msg
@@ -76,16 +76,16 @@ class App(QWidget):
         self.setWindowTitle("Qt live Virtual keyboard")
 
 
-        self.disply_width = 1640
-        self.display_height = 1480
+        self.disply_width = 220
+        self.display_height = 118
         # create the label that holds the image
         self.image_label = QLabel(self)
-        self.image_label.resize(self.disply_width, self.display_height)
+        #self.image_label.resize(self.disply_width, self.display_height)
         # create a text label
         #self.textLabel = QLabel('Webcam')
         font = QtGui.QFont()
         font.setPointSize(24)
-        #self.textLabel.setFont(font)
+
 
         self.msgEdit = QTextEdit()
         self.msgEdit.setFont(font)
@@ -93,7 +93,7 @@ class App(QWidget):
         # create a vertical box layout and add the two labels
         vbox = QVBoxLayout()
         vbox.addWidget(self.image_label)
-        #vbox.addWidget(self.textLabel)
+
         vbox.addWidget(self.msgEdit)
         # set the vbox layout as the widgets layout
         self.setLayout(vbox)
@@ -122,7 +122,7 @@ class App(QWidget):
 
     def convert_cv_qt(self, cv_img):
         """Convert from an opencv image to QPixmap"""
-        #rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
+
         rgb_image = cv2.cvtColor( cv_img, cv2.COLOR_BGR2RGB)
 
 

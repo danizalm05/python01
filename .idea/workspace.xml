@@ -5,18 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PyQt/intro/tabber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Contents.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/basic_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/read.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/rescaleVideo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Eye Blink Counter/EyeBlinkKbd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/Eye Blink Counter/KeyBoardModule.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/nodekeyboard/KeyBoardModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/nodekeyboard/KeyBoardModule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/nodekeyboard/NoseEyeBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/nodekeyboard/NoseEyeBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse01.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/EyeKeyBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/EyeKeyBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/KeyBoardModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/KeyBoardModule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/.idea/PyQt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/.idea/PyQt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/image/readImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/image/readImg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/toolbox.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/NoseEyeBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/NoseEyeBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/video/extract_frames.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/ComputerVision/video/extract_frames.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/KeyBoardModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/mediapipe-main/KeyBoardModule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/videoVirtKeyBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/mediapipe-main/mouseVirtKeyBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/videoVirtKeyBoard01.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/mediapipe-main/noseVirtKeyBoard01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/keypadTinker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/sock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/KeyBoardModule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/mouseVirtKeyBoard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/noseVirtKeyBoard01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/mediapipe-main/virtual seek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/murtazaNew/basic/edge-detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/murtazaNew/basic/edge-detect.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,41 +58,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/KeyBoardModule.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PyQt/video/KeyBoardModule.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\opencv\freeCodeCamp\Section #1 - Basics" />
+      <recent name="D:\python\opencv\murtazaNew\Eye Blink Counter" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\ComputerVision\video" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\image" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\Kivy" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.EyeBlink">
-    <configuration name="EyeBlink" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/Eye Blink Counter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/Eye Blink Counter/EyeBlink.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="KeyBoardModule" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.videoVirtKeyBoard">
+    <configuration name="FaceMeshModule" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,7 +83,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/KeyBoardModule.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/ComputerVision/Mediapip-Eyes-tracking/iris-Segmentation/FaceMeshModule.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="NoseEyeBoard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/nodekeyboard" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/nodekeyboard/NoseEyeBoard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extract_frames" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="read" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,11 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/ComputerVision/video" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/ComputerVision/video/extract_frames.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/read.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="noiseuse01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="videoVirtKeyBoard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,7 +167,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/noiseuse01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/videoVirtKeyBoard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.EyeBlink" />
+        <item itemvalue="Python.videoVirtKeyBoard" />
+        <item itemvalue="Python.NoseEyeBoard (1)" />
         <item itemvalue="Python.NoseEyeBoard" />
-        <item itemvalue="Python.KeyBoardModule" />
-        <item itemvalue="Python.extract_frames" />
-        <item itemvalue="Python.noiseuse01" />
+        <item itemvalue="Python.FaceMeshModule" />
+        <item itemvalue="Python.read" />
       </list>
     </recent_temporary>
   </component>

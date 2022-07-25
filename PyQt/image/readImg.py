@@ -10,7 +10,7 @@ import getpass
 
 
 
-imgName = 'n2.jpg'  #"cat-face.png"
+imgName = 'a1.jpg'  #"cat-face.png"
 
 
 
@@ -39,7 +39,7 @@ class App(QWidget):
         img_name = self.readImagePath(imgName)#Create pathe to the image file
         cv_img = cv2.imread(img_name)
 
-        print("Top left pixel",  cv_img[0,0])    #Top left pixel
+        print("Top left pixel",  cv_img[1,1])    #Top left pixel
 
         # convert the image to Qt format
         qt_img = self.convert_cv_qt(cv_img)
