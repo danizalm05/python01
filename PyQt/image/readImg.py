@@ -10,7 +10,7 @@ import getpass
 
 
 
-imgName = 'a1.jpg'  #"cat-face.png"
+imgName = 'b.jpg'  #"cat-face.png"
 
 
 
