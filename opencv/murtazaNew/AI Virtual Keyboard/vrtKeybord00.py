@@ -10,7 +10,9 @@ from cvzone.HandTrackingModule import HandDetector
 from time import sleep
 import numpy as np
 import cvzone
-from pynput.keyboard import Controller
+import pynput
+# c:\users\rockman\appdata\local\programs\python\python310\lib\site-packages\pynput-1.7.6.dist-info\*
+#from pynput.keyboard import Controller
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 1280)
