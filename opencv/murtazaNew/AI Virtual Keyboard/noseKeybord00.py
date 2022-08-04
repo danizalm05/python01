@@ -9,10 +9,13 @@ https://google.github.io/mediapipe/solutions/hands.html
 
 import cv2
 from cvzone.HandTrackingModule import HandDetector
+#import mediapipe as mp
+
 from time import sleep
 import numpy as np
 import cvzone
-from pynput.keyboard import Controller
+from cvzone.FaceMeshModule import FaceMeshDetector
+# from pynput.keyboard import Controller
 
 # c:\users\rockman\appdata\local\programs\python\python310\lib\site-packages\pynput-1.7.6.dist-info\*
 
@@ -29,7 +32,7 @@ keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
         ]
 finalText = ""
 
-keyboard = Controller()
+#keyboard = Controller()
 
 
 def drawAll(img, buttonList):
@@ -58,48 +61,57 @@ for i in range(len(keys)):
 
 ###################################
 
-
+faceDetector = FaceMeshDetector(maxFaces=1)
 while True:
 
     success, img = cap.read()
     img = cv2.flip(img, 1)
-    hands, img = detector.findHands(img, flipType=False)
+    ####  face ###
+    img, faces = faceDetector.findFaceMesh(img, draw=False)
+    if faces:
+        nose = faces[0][1]# landMark number 1 in face number
+        print ("node = ",nose)
 
+        lipup = faces[0][11]  # landMark  of upper lips
+        lipdown = faces[0][16]  # landMark
+        cv2.circle(img, nose, 12, [255, 250, 0], cv2.FILLED)
+        cv2.circle(img, lipup, 12, [0, 250, 0], cv2.FILLED)
+        cv2.circle(img, lipdown, 12, [0, 250, 0], cv2.FILLED)
+        lpd, _, _ = detector.findDistance(lipup, lipdown, img)
+        print("lpd ",lpd)
+    ###  face ####
+
+    hands, img = detector.findHands(img, flipType=False)
     if hands:
         # Hand 1
         hand1 = hands[0]
         lmList1 = hand1["lmList"]  # List of 21 Landmarks points
-        #bbox1 = hand1["bbox"]  # Bounding Box info x,y,w,h
-        #centerPoint1 = hand1["center"]  # center of the hand cx,cy
-        #handType1 = hand1["type"]  # Hand Type Left or Right
-
         img = drawAll(img, buttonList)
 
         if lmList1: # If we can see   a hand
+            ##########
             for button in buttonList: # Loop all  the buttons
                 x, y = button.pos
                 w, h = button.size
+                (lmx, lmy) = nose
                 # Change  background color of the specific button
-
-                lmx, lmy, _ = (hand1["lmList"][8])
-                lm8 = (lmx, lmy)
-
                 if ( x < lmx < x + w and y < lmy < y + h ):
                     cv2.rectangle(img, (x - 5, y - 5), (x + w + 5, y + h + 5), (175, 0, 175), cv2.FILLED)
                     cv2.putText(img, button.text, (x + 20, y + 65),
                                 cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
-
-
+            ######
+                    lmx, lmy, _ = (hand1["lmList"][8])
+                    lm8 = (lmx, lmy)
                     lmx, lmy, _ = (hand1["lmList"][12])
                     lm12 = (lmx, lmy)
 
-                    print(lm8,' ',button.text)
+                    #print(lm8,' ',button.text)
                     l, _, _ = detector.findDistance(lm8, lm12, img)  # , draw=False)
 
 
                     # If clicked  (distance between two fingers is smaller )
                     if l < 80:
-                        keyboard.press(button.text)# Output the text to the notepad
+                        #keyboard.press(button.text)# Output the text to the notepad
                         cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                         cv2.putText(img, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
