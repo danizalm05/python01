@@ -66,7 +66,7 @@ while True:
 
     success, img = cap.read()
     img = cv2.flip(img, 1)
-    ####  face ###
+
     img, faces = faceDetector.findFaceMesh(img, draw=False)
     if faces:
         nose = faces[0][1]# landMark number 1 in face number
@@ -78,19 +78,10 @@ while True:
         cv2.circle(img, lipup, 12, [0, 250, 0], cv2.FILLED)
         cv2.circle(img, lipdown, 12, [0, 250, 0], cv2.FILLED)
         lpd, _, _ = detector.findDistance(lipup, lipdown, img)
-        print("lpd ",lpd)
-    ###  face ####
 
-    hands, img = detector.findHands(img, flipType=False)
-    if hands:
-        # Hand 1
-        hand1 = hands[0]
-        lmList1 = hand1["lmList"]  # List of 21 Landmarks points
-        img = drawAll(img, buttonList)
+    img = drawAll(img, buttonList)
 
-        if lmList1: # If we can see   a hand
-            ##########
-            for button in buttonList: # Loop all  the buttons
+    for button in buttonList: # Loop all  the buttons
                 x, y = button.pos
                 w, h = button.size
                 (lmx, lmy) = nose
@@ -99,31 +90,26 @@ while True:
                     cv2.rectangle(img, (x - 5, y - 5), (x + w + 5, y + h + 5), (175, 0, 175), cv2.FILLED)
                     cv2.putText(img, button.text, (x + 20, y + 65),
                                 cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
-            ######
-                    lmx, lmy, _ = (hand1["lmList"][8])
-                    lm8 = (lmx, lmy)
-                    lmx, lmy, _ = (hand1["lmList"][12])
-                    lm12 = (lmx, lmy)
 
-                    #print(lm8,' ',button.text)
-                    l, _, _ = detector.findDistance(lm8, lm12, img)  # , draw=False)
-
-
-                    # If clicked  (distance between two fingers is smaller )
-                    if l < 80:
+                      # If clicked  (distance between two fingers is smaller )
+                    print("lpd ", lpd)
+                    if lpd < 35:
+                        print("click lpd =  ", lpd)
                         #keyboard.press(button.text)# Output the text to the notepad
                         cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                         cv2.putText(img, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
                         finalText += button.text
                         sleep(0.45)
-        y1 = 550
-        y2 = y1 + 60
-        y3 = y1 + 52
-        cv2.rectangle(img, (50, y1), (700, y2), (175, 0, 175), cv2.FILLED)
-        cv2.putText(img, finalText, (60, y3),
+
+
+    y1 = 550
+    y2 = y1 + 60
+    y3 = y1 + 52
+    cv2.rectangle(img, (50, y1), (700, y2), (175, 0, 175), cv2.FILLED)
+    cv2.putText(img, finalText, (60, y3),
                     cv2.FONT_HERSHEY_PLAIN, 5, (255, 255, 255), 5)
 
-        cv2.imshow("Image", img)
+    cv2.imshow("Image", img)
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break

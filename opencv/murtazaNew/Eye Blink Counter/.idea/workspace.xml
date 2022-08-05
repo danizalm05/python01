@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b002be-c37f-48e1-9bf5-bf260a14d82e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../freeCodeCamp/Section #1 - Basics/transformations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../freeCodeCamp/Section #1 - Basics/transformations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AI Virtual Keyboard/vrtKeybord00.py" beforeDir="false" afterPath="$PROJECT_DIR$/../AI Virtual Keyboard/vrtKeybord00.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AI Virtual Keyboard/noseKeybord00.py" beforeDir="false" afterPath="$PROJECT_DIR$/../AI Virtual Keyboard/noseKeybord00.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
