@@ -19,10 +19,15 @@ from cvzone.FaceMeshModule import FaceMeshDetector
 
 # c:\users\rockman\appdata\local\programs\python\python310\lib\site-packages\pynput-1.7.6.dist-info\*
 
+(img_w, img_h) = (1280 ,  620)
+WHITE = (255, 255, 255)
+font = cv2.FONT_HERSHEY_SIMPLEX
+fontScale = 1
+
 
 cap = cv2.VideoCapture(0)
-cap.set(3, 1280)
-cap.set(4, 720)
+cap.set(3, img_w)
+cap.set(4, img_h)
 
 detector = HandDetector(detectionCon=0.8)
 keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
@@ -31,8 +36,6 @@ keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
         ["ctr", "X", "C", "V", "spc", "N", "M", ",", ".", "/"]
         ]
 finalText = ""
-
-#keyboard = Controller()
 
 
 def drawAll(img, buttonList):
@@ -48,7 +51,7 @@ def drawAll(img, buttonList):
 
 
 class Button():
-    def __init__(self, pos, text, size=[85, 85]):
+    def __init__(self, pos, text, size=[75, 75]):
         self.pos = pos  # [ i,j ]
         self.size = size  # [width ,height]
         self.text = text
@@ -57,21 +60,21 @@ class Button():
 buttonList = []
 for i in range(len(keys)):
     for j, key in enumerate(keys[i]):  # Scan one line in  'keys[[]]'
-        buttonList.append(Button([100 * j + 50, 100 * i + 50], key))
+        buttonList.append(Button([90 * j + 150, 90 * i + 150], key))
 
-###################################
 
 faceDetector = FaceMeshDetector(maxFaces=1)
 while True:
 
     success, img = cap.read()
     img = cv2.flip(img, 1)
+    #img = rescaleFrame(img, 0.7)
+    mask = np.zeros((img_h, img_w), dtype=np.uint8)
 
     img, faces = faceDetector.findFaceMesh(img, draw=False)
+    img = drawAll(img, buttonList)
     if faces:
         nose = faces[0][1]# landMark number 1 in face number
-        print ("node = ",nose)
-
         lipup = faces[0][11]  # landMark  of upper lips
         lipdown = faces[0][16]  # landMark
         cv2.circle(img, nose, 12, [255, 250, 0], cv2.FILLED)
@@ -79,37 +82,38 @@ while True:
         cv2.circle(img, lipdown, 12, [0, 250, 0], cv2.FILLED)
         lpd, _, _ = detector.findDistance(lipup, lipdown, img)
 
-    img = drawAll(img, buttonList)
 
     for button in buttonList: # Loop all  the buttons
-                x, y = button.pos
-                w, h = button.size
-                (lmx, lmy) = nose
-                # Change  background color of the specific button
-                if ( x < lmx < x + w and y < lmy < y + h ):
-                    cv2.rectangle(img, (x - 5, y - 5), (x + w + 5, y + h + 5), (175, 0, 175), cv2.FILLED)
-                    cv2.putText(img, button.text, (x + 20, y + 65),
+        x, y = button.pos
+        w, h = button.size
+        (lmx, lmy) = nose
+        # Change  background color of the specific button
+        if ( x < lmx < x + w and y < lmy < y + h ):
+            cv2.rectangle(img, (x - 5, y - 5), (x + w + 5, y + h + 5), (75, 0, 75), cv2.FILLED)
+            cv2.putText(img, button.text, (x + 20, y + 65),
                                 cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
 
-                      # If clicked  (distance between two fingers is smaller )
-                    print("lpd ", lpd)
-                    if lpd < 35:
-                        print("click lpd =  ", lpd)
-                        #keyboard.press(button.text)# Output the text to the notepad
-                        cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
-                        cv2.putText(img, button.text, (x + 20, y + 65),
+            # If clicked  (distance between two fingers is smaller )
+            print("lpd ", lpd)
+            if lpd < 35:
+                print("click lpd =  ", lpd)
+                #keyboard.press(button.text)# Output the text to the notepad
+                cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
+                cv2.putText(img, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
-                        finalText += button.text
-                        sleep(0.45)
+                finalText += button.text
+                sleep(0.45)
 
 
-    y1 = 550
-    y2 = y1 + 60
-    y3 = y1 + 52
-    cv2.rectangle(img, (50, y1), (700, y2), (175, 0, 175), cv2.FILLED)
-    cv2.putText(img, finalText, (60, y3),
-                    cv2.FONT_HERSHEY_PLAIN, 5, (255, 255, 255), 5)
+    #y1 = 550
+    #y2 = y1 + 60
+    #y3 = y1 + 52
 
-    cv2.imshow("Image", img)
+    cv2.putText(mask, finalText, (37, 80), font, 1, WHITE, 2)
+
+    imgList = [img, mask]
+    stackedImg = cvzone.stackImages(imgList, 1, 0.6)
+
+    cv2.imshow("stackedImg", stackedImg)
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break
