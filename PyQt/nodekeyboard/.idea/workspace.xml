@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d7f5bd5-61d8-467e-a886-acd3cae3f0ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nodekeyboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nodekeyboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro/tab.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../intro/tab.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intro/tabber.py" beforeDir="false" afterPath="$PROJECT_DIR$/../intro/tabber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv/freeCodeCamp/Section #1 - Basics/contours.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencv/freeCodeCamp/Section #1 - Basics/contours.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/NoseEyeBoard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/vrtKeybord00.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/vrtKeybord00.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/vrtKeybord01.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/videoVirtKeyBoard.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../intro/tabber.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -38,28 +34,7 @@
       <recent name="D:\python\opencv\murtazaNew\AI Virtual Keyboard" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.noseKeybord00">
-    <configuration name="NoseEyeBoard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="nodekeyboard" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\rockman\anaconda3\envs\python\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/NoseEyeBoard.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.tabber">
     <configuration name="contours" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nodekeyboard" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,6 +69,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tabber" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nodekeyboard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../intro" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../intro/tabber.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tabber" />
         <item itemvalue="Python.noseKeybord00" />
         <item itemvalue="Python.videoVirtKeyBoard (1)" />
         <item itemvalue="Python.vrtKeybord00" />
         <item itemvalue="Python.contours" />
-        <item itemvalue="Python.NoseEyeBoard (1)" />
       </list>
     </recent_temporary>
   </component>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>921</width>
-    <height>691</height>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>4</x>
-      <y>9</y>
-      <width>781</width>
-      <height>531</height>
+      <x>-10</x>
+      <y>20</y>
+      <width>911</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -44,6 +44,25 @@
       </property>
       <property name="pixmap">
        <pixmap>C:/Users/rockman/Pictures/backGround/img_6407.jpg</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>881</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>C:/Users/rockman/Pictures/Saved Pictures/a4.jpg</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
