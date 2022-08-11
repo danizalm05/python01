@@ -12,7 +12,7 @@ from cvzone.HandTrackingModule import HandDetector
 from time import sleep
 import numpy as np
 import cvzone
-from pynput.keyboard import Controller
+
 
 # c:\users\rockman\appdata\local\programs\python\python310\lib\site-packages\pynput-1.7.6.dist-info\*
 
@@ -29,7 +29,7 @@ keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
         ]
 finalText = ""
 
-keyboard = Controller()
+
 
 
 def drawAll(img, buttonList):
@@ -99,7 +99,7 @@ while True:
 
                     # If clicked  (distance between two fingers is smaller )
                     if l < 80:
-                        keyboard.press(button.text)# Output the text to the notepad
+
                         cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                         cv2.putText(img, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
