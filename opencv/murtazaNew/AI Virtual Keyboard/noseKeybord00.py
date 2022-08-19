@@ -1,5 +1,5 @@
 '''
-AI Virtual Keyboard using OpenCV  with  two   fingers
+AI Virtual Keyboard using OpenCV  with  your nose.  Close your moush to chose
 https://www.youtube.com/watch?v=jzXZVFqEE2I&t=26s
 https://www.computervision.zone/lessons/code-files-18/
 https://google.github.io/mediapipe/solutions/solutions.html
@@ -9,7 +9,7 @@ https://google.github.io/mediapipe/solutions/hands.html
 
 import cv2
 from cvzone.HandTrackingModule import HandDetector
-#import mediapipe as mp
+
 
 from time import sleep
 import numpy as np
@@ -33,9 +33,22 @@ detector = HandDetector(detectionCon=0.8)
 keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
         ["A", "S", "D", "F", "G", "H", "J", "K", "L", ";"],
         ["Z", "X", "C", "V", "B", "N", "M", ",", ".", "/"],
-        ["ctr", "X", "C", "V", "spc", "N", "M", ",", ".", "/"]
+        ["ctr", "X", "C", "V", " ", "N", "M", ",", ".", "exe"]
         ]
-finalText = ""
+
+
+finalText = ["1","2","3","4"]
+
+def keyOp(key):
+
+    if key == 'ex':
+        print("exe pressed")
+
+    elif key == "Suzuki":
+        print("letter is Suzuki")
+
+    else:
+        finalText[0] += key
 
 
 def drawAll(img, buttonList):
@@ -51,7 +64,7 @@ def drawAll(img, buttonList):
 
 
 class Button():
-    def __init__(self, pos, text, size=[75, 75]):
+    def __init__(self, pos, text, size=[95, 75]):
         self.pos = pos  # [ i,j ]
         self.size = size  # [width ,height]
         self.text = text
@@ -93,23 +106,21 @@ while True:
             cv2.putText(img, button.text, (x + 20, y + 65),
                                 cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
 
-            # If clicked  (distance between two fingers is smaller )
+            # If clicked  (distance between two lips is smaller )
             print("lpd ", lpd)
+            cv2.putText(mask, "lpd=" + str(lpd), (37, 200), font, 1, WHITE, 2)
             if lpd < 35:
                 print("click lpd =  ", lpd)
                 #keyboard.press(button.text)# Output the text to the notepad
                 cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                 cv2.putText(img, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
-                finalText += button.text
-                sleep(0.45)
 
+                keyOp(button.text)
+                sleep(0.85)
 
-    #y1 = 550
-    #y2 = y1 + 60
-    #y3 = y1 + 52
-
-    cv2.putText(mask, finalText, (37, 80), font, 1, WHITE, 2)
+    for i in range(4):
+        cv2.putText(mask, finalText[i], (37, 160-i*40), font, 1, WHITE, 2)
 
     imgList = [img, mask]
     stackedImg = cvzone.stackImages(imgList, 1, 0.6)
