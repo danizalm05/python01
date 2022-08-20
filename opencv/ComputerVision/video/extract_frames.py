@@ -1,6 +1,7 @@
 import getpass
 import sys
 import cv2
+import matplotlib.pyplot as plt
 ''' 
 
 'b'   98    backward 1 frame
@@ -9,8 +10,8 @@ import cv2
 's'  115    save
 'u'  117    forward 'frame_jump' frames
 '''
-scaling_factor = 1
-vid_name = "14.mov"    # l.mkv "m.mp4"
+scaling_factor = 0.7
+vid_name = "dog.mp4"    # l.mkv "m.mp4"
 frame_jump = 100
 frame_no = 65
 frame_name = 'frame_%d.jpg'
@@ -41,6 +42,7 @@ while True:
    frame = cv2.resize(frame, None, fx=scaling_factor,
                    fy=scaling_factor, interpolation=cv2.INTER_AREA)
    cv2.imshow(vid_name, frame)
+
 
    c = cv2.waitKey(1)
    if c ==27: #esc
