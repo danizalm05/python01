@@ -29,6 +29,7 @@ cap = cv2.VideoCapture(0)
 cap.set(3, img_w)
 cap.set(4, img_h)
 
+#detector = FaceMeshDetector(maxFaces=1)
 detector = HandDetector(detectionCon=0.8)
 keys = [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
         ["A", "S", "D", "F", "G", "H", "J", "K", "L", ";"],
@@ -117,7 +118,7 @@ while True:
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
 
                 keyOp(button.text)
-                sleep(0.85)
+                sleep(0.75)
 
     for i in range(4):
         cv2.putText(mask, finalText[i], (37, 160-i*40), font, 1, WHITE, 2)

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/textedit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/splitmerge.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/tab.ui" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/tab.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/tabber.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/tabber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/colorSpace.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/colorSpace.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,20 +41,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/textedit.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PyQt/video/noiseuse.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\freeCodeCamp\Section #1 - Basics" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\murtazaNew\AI Virtual Keyboard" />
       <recent name="D:\python\opencv\freeCodeCamp\Section #1 - Basics" />
       <recent name="D:\python\opencv\murtazaNew\Eye Blink Counter" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\PyQt" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.noseKeybord00">
-    <configuration name="MultipleHand" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.noiseuse">
+    <configuration name="EyeBlink" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,11 +62,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/Eye Blink Counter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/MultipleHand.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/Eye Blink Counter/EyeBlink.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="colorSpace" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/colorSpace.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="noiseuse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/noiseuse.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,7 +138,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tabbber" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="splitmerge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,53 +146,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/intro" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/intro/tabbber.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="textedit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/textedit.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="vrtKeybord00" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/vrtKeybord00.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/splitmerge.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.noiseuse" />
         <item itemvalue="Python.noseKeybord00" />
-        <item itemvalue="Python.textedit" />
-        <item itemvalue="Python.tabbber" />
-        <item itemvalue="Python.vrtKeybord00" />
-        <item itemvalue="Python.MultipleHand" />
+        <item itemvalue="Python.EyeBlink" />
+        <item itemvalue="Python.splitmerge" />
+        <item itemvalue="Python.colorSpace" />
       </list>
     </recent_temporary>
   </component>

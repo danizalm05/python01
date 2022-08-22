@@ -1,8 +1,10 @@
 """
-contours
+ colorspace
 https://www.youtube.com/watch?v=oXlwWbU8l2o
-https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/contours.py
-1:12:00  1:20:00
+
+https://github.com/jasmcaus/opencv-course/blob/master/Section%20%232%20-%20Advanced/colour_spaces.py
+
+ 1:12:00  1:23:00
 """
 
 import getpass
@@ -11,7 +13,7 @@ import numpy as np
 import cvzone
 import matplotlib.pyplot as plt
 
-file_name = 'lady.jpg'
+file_name = '1.jpg'
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
@@ -30,12 +32,15 @@ hsv  = cv.cvtColor(img, cv.COLOR_BGR2HSV)
 lab  = cv.cvtColor(img, cv.COLOR_BGR2LAB)
 rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 
-imgList = [img, gray,hsv, lab,rgb, gray]
-stackedImg = cvzone.stackImages(imgList, 3, 0.4)
+hsv_bgr = cv.cvtColor(hsv, cv.COLOR_HSV2BGR)
+cv.imshow('HSV', hsv)
+
+imgList = [img, gray,hsv, lab,rgb, hsv_bgr]
+stackedImg = cvzone.stackImages(imgList, 3, 0.8)
 cv.imshow("Color spaces", stackedImg)
 
 
-plt.imshow(img)
+plt.imshow(stackedImg)
 plt.show()
 
 
