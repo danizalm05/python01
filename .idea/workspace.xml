@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PyQt/intro/todo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/blurr.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/splitmerge.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/splitmerge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/todo.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/todo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
