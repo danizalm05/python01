@@ -15,7 +15,7 @@ frameHeight = 480
 if image_source == "image":
     BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
     BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
-    path = BASE_FOLDER +  'shapes01.png'  # 'cards.jpg'
+    path = BASE_FOLDER +  '1.jpg'  # 'cards.jpg'
     img = cv2.imread(path)
 
 if image_source == "camera":

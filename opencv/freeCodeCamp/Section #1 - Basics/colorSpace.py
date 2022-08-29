@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=oXlwWbU8l2o
 
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%232%20-%20Advanced/colour_spaces.py
 
- 1:12:00  1:23:00
+ 1:12:00  1:30:00
 """
 
 import getpass
