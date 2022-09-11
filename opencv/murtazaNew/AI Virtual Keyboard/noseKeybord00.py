@@ -91,7 +91,23 @@ while True:
         nose = faces[0][1]# landMark number 1 in face number
         lipup = faces[0][11]  # landMark  of upper lips
         lipdown = faces[0][16]  # landMark
-        cv2.circle(img, nose, 12, [255, 250, 0], cv2.FILLED)
+        '''
+        leu = faces[0][159]#385 # left eye up side
+        led = faces[0][23]  # 145 # left eye updown side
+        leftLeft = faces[0][130]
+        leftRight = faces[0][112]
+        '''
+        leftUp = faces[0][159]  # 2 index  coordinate
+        leftDown = faces[0][23]
+        leftLeft = faces[0][130]
+        leftRight = faces[0][243]
+        eyeVer, _ = detector.findDistance(leftUp, leftDown)
+        eyeHor, _ = detector.findDistance(leftLeft, leftRight)
+        ratio = int((eyeVer / eyeHor) * 100)
+        cv2.line(img, leftUp, leftDown, (0, 200, 0), 3)
+        cv2.line(img, leftLeft, leftRight, (0, 200, 0), 3)
+
+
         cv2.circle(img, lipup, 12, [0, 250, 0], cv2.FILLED)
         cv2.circle(img, lipdown, 12, [0, 250, 0], cv2.FILLED)
         lpd, _, _ = detector.findDistance(lipup, lipdown, img)
@@ -109,7 +125,7 @@ while True:
 
             # If clicked  (distance between two lips is smaller )
             print("lpd ", lpd)
-            cv2.putText(mask, "lpd=" + str(lpd), (37, 200), font, 1, WHITE, 2)
+            cv2.putText(mask, "lpd =" + str(lpd)+" eyeratio = "+ str(ratio), (37, 200), font, 1, WHITE, 2)
             if lpd < 35:
                 print("click lpd =  ", lpd)
                 #keyboard.press(button.text)# Output the text to the notepad
@@ -118,14 +134,21 @@ while True:
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
 
                 keyOp(button.text)
-                sleep(0.75)
+                sleep(0.55)
 
+
+    cv2.circle(img, nose, 12, [255, 250, 0], cv2.FILLED)
     for i in range(4):
         cv2.putText(mask, finalText[i], (37, 160-i*40), font, 1, WHITE, 2)
 
     imgList = [img, mask]
     stackedImg = cvzone.stackImages(imgList, 1, 0.6)
 
+
+
+
     cv2.imshow("stackedImg", stackedImg)
+
+
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break

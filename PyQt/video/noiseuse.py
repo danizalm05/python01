@@ -11,7 +11,7 @@ import sys
 import cv2
 import getpass
 
-vid_name = "w.mp4"#"l.mkv"#"dog.mp4" #"r.mp4"
+vid_name = "3.mov"#"l.mkv"#"dog.mp4" #"r.mp4"
 
 class App(QWidget):
     def __init__(self):
@@ -27,8 +27,8 @@ class App(QWidget):
         self.fps = 1
         ##############################################
         self.setWindowTitle("Read Frame Operation")
-        self.disply_width = 2640
-        self.display_height = 1480
+        self.disply_width = 1980
+        self.display_height = 980
         # create the label that holds the image
         self.image_label = QLabel(self)
         self.image_label.resize(self.disply_width, self.display_height)
@@ -75,7 +75,7 @@ class App(QWidget):
     def saveframe(self):
         base = os.path.splitext(vid_name)[0] + '-'
         t = self.frameNumber.toPlainText()
-        video_file_name = self.readImagePath()+'/pic/' + base +t+'.jpg'
+        video_file_name = self.readImagePath()+'frame/' + base +t+'.jpg'
 
         frame  = cv2.resize(self.currentFrame, None, fx=4,
                              fy=4, interpolation=cv2.INTER_AREA)
