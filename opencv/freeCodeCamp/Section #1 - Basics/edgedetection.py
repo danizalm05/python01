@@ -23,6 +23,7 @@ fontScale = 3
 file_name = 'p3.jpg'
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
+    #
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
     path = BASE_FOLDER
 

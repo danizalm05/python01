@@ -7,15 +7,21 @@ translate ui file  to python file:
 pyuic55
 
 
-from PyQt5 import uic
-if the error meassage is:
-    Cannot find reference 'uic' in '__init__.pyi'  
-Write :
-    # noinspection PyUnresolvedReferences
-    from PyQt5 import uic# Add the above line so uic is imported
+
 
 c:\users\gilfm\appdata\local\programs\python\python310\lib\site-packages
 C:\Users\gilfm\AppData\Local\Programs\Python\Python310\Scripts\pyuic5.exe
 
 
- 
+
+ self.precentBtn = QtWidgets.QPushButton(self.centralwidget, clicked = lambda:self.press_it("%"))
+      
+	  
+##############
+    def press_it(self,pressed):
+        print(pressed)
+        self.outputLabel.setText(pressed)
+    #########
+   
+
+   def retranslateUi(self, MainWindow):	  

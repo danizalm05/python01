@@ -15,12 +15,16 @@ from time import sleep
 import numpy as np
 import cvzone
 from cvzone.FaceMeshModule import FaceMeshDetector
-# from pynput.keyboard import Controller
+
 
 # c:\users\rockman\appdata\local\programs\python\python310\lib\site-packages\pynput-1.7.6.dist-info\*
 
 (img_w, img_h) = (1280 ,  620)
 WHITE = (255, 255, 255)
+RED =  (0,0, 255)
+GREEN = (0,255, 0)
+CLOSE_EYE =35
+CLOSE_MOUTH =35
 font = cv2.FONT_HERSHEY_SIMPLEX
 fontScale = 1
 
@@ -91,12 +95,7 @@ while True:
         nose = faces[0][1]# landMark number 1 in face number
         lipup = faces[0][11]  # landMark  of upper lips
         lipdown = faces[0][16]  # landMark
-        '''
-        leu = faces[0][159]#385 # left eye up side
-        led = faces[0][23]  # 145 # left eye updown side
-        leftLeft = faces[0][130]
-        leftRight = faces[0][112]
-        '''
+        #left eye
         leftUp = faces[0][159]  # 2 index  coordinate
         leftDown = faces[0][23]
         leftLeft = faces[0][130]
@@ -125,16 +124,22 @@ while True:
 
             # If clicked  (distance between two lips is smaller )
             print("lpd ", lpd)
-            cv2.putText(mask, "lpd =" + str(lpd)+" eyeratio = "+ str(ratio), (37, 200), font, 1, WHITE, 2)
-            if lpd < 35:
+            cv2.putText(img, "lpd =" + str(int(lpd)) , (30, 100), font, 3, RED, 5)
+            cv2.putText(img, "eye = "+ str(int(ratio)), (550, 100), font, 3, RED, 5)
+            if ratio < CLOSE_EYE:
+                cv2.putText(img, "eye = "+ str(int(ratio)), (550, 100), font, 3, GREEN, 5)
+
+            if lpd < CLOSE_MOUTH:
                 print("click lpd =  ", lpd)
-                #keyboard.press(button.text)# Output the text to the notepad
+                cv2.putText(img, "lpd =" + str(int(lpd)) , (30, 100), font, 3, GREEN, 5)
+
+
                 cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                 cv2.putText(img, button.text, (x + 20, y + 65),
                                     cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
 
                 keyOp(button.text)
-                sleep(0.55)
+                sleep(0.35)
 
 
     cv2.circle(img, nose, 12, [255, 250, 0], cv2.FILLED)

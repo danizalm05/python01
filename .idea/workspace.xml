@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt/intro/loadui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt/intro/loadui.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt/pyqt5.txt.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt/video/CapFrame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/face/facedetect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/face/haar_face.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/cb.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/menu2.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/menus.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/status.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/todolist.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/todolist2.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/pyqt5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/pyqt5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +55,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PyQt/video/noiseuse.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\python\opencv\freeCodeCamp\Section #1 - Basics" />
+      <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse" />
+      <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\intro" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\freeCodeCamp\Section #1 - Basics" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\murtazaNew\AI Virtual Keyboard" />
-      <recent name="D:\python\opencv\murtazaNew\Eye Blink Counter" />
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\freeCodeCamp\face" />
+      <recent name="D:\python\opencv\freeCodeCamp\Section #1 - Basics" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.noseKeybord00">
-    <configuration name="edgedetection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.frameGrab (1)">
+    <configuration name="VideoAudio  (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,11 +76,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/VideoAudio .py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,7 +89,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="histogram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="frameGrab (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,11 +97,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video/noiseuse" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/histogram.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="frameGrab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video/noiseuse" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse\frameGrab.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="loadui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/intro" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/intro/loadui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,55 +173,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="noseKeybord00" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="thresholding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/thresholding.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.noseKeybord00" />
-        <item itemvalue="Python.edgedetection" />
-        <item itemvalue="Python.thresholding" />
+        <item itemvalue="Python.frameGrab (1)" />
         <item itemvalue="Python.noiseuse" />
-        <item itemvalue="Python.histogram" />
+        <item itemvalue="Python.frameGrab" />
+        <item itemvalue="Python.loadui" />
+        <item itemvalue="Python.VideoAudio  (1)" />
       </list>
     </recent_temporary>
   </component>

@@ -11,7 +11,7 @@ import sys
 import cv2
 import getpass
 
-vid_name = "3.mov"#"l.mkv"#"dog.mp4" #"r.mp4"
+vid_name = "l.mkv"#"l.mkv"#"dog.mp4" #"r.mp4"
 
 class App(QWidget):
     def __init__(self):
