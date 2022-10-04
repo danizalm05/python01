@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PyQt/intro/loadui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/intro/loadui.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/pyqt5.txt.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/CapFrame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/face/facedetect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/face/haar_face.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/cb.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/menu2.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/menus.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/status.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/todolist.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/todolist2.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/pyqt5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/pyqt5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/murtazaNew/AI Virtual Keyboard/noseKeybord00.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse/framegrab.ui" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse/framegrab.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -67,9 +67,16 @@
          </widget>
         </item>
         <item row="3" column="4">
-         <widget class="QPushButton" name="pushButton_4">
+         <widget class="QPushButton" name="saveFrameButton">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>SaveFrame</string>
           </property>
          </widget>
         </item>

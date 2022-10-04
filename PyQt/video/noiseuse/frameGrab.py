@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=p6Q2-m9i4Fg&list=PLCC34OHNcOtpmCA8s_dpPMvQLyHbvx
 How To Load PYQT5 Designer UI File
 9:42
 '''
+import os
+
 import numpy as np
 
 
@@ -38,21 +40,14 @@ class UI(QMainWindow):
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
         self.frameNum =155334
         self.fps = 1
-        self.disply_width = 1980
-        self.display_height = 980
+        self.disply_width = 2180
+        self.display_height = 1180
         # create the label that holds the image
-
-
-
-
 
         # Load the ui file framegrab.ui
         uic.loadUi("framegrab.ui", self)
 
         # Define Our Widgets
-
-
-        #<widget class="QPushButton" name="upButton">
         self.upButton = self.findChild(QPushButton, "upButton")
         self.imageLabel = self.findChild(QLabel, "imageLabel")
         self.imageLabel.resize(self.disply_width, self.display_height)
@@ -60,8 +55,8 @@ class UI(QMainWindow):
         self.up100 = self.findChild(QPushButton, "up100Button")
         # <widget class="QPushButton" name="loadFrameButton">
         self.loadFrame = self.findChild(QPushButton, "loadFrameButton")
-
-        #Time  spinners">
+        self.saveFrame = self.findChild(QPushButton, "saveFrameButton")
+        #Time  spinners
         self.hourFrame = self.findChild(QSpinBox, "hourSpin")
         self.minFrame = self.findChild(QSpinBox, "minSpin")
         self.minFrame.setMaximum(59)
@@ -72,14 +67,28 @@ class UI(QMainWindow):
         self.upButton.clicked.connect(self.upButtonClk)
         self.up100.clicked.connect(self.up100Clk)
         self.loadFrame.clicked.connect(self.loadFrameclk)
+        self.saveFrame.clicked.connect(self.saveFrameclk)
         self.readVideoImage()
         self.show()
 
+    def saveFrameclk(self):
+        base = os.path.splitext(vid_name)[0] + '-'
+        t = str(int(self.frameNum))
+        video_file_name = self.readImagePath()+'frame/' + base +t+'.jpg'
+        frame  = cv2.resize(self.currentFrame, None, fx=4,
+                            fy=4, interpolation=cv2.INTER_AREA)
+        cv2.imwrite(video_file_name, frame)
+        print("Save image to  " + video_file_name)
+
     def loadFrameclk(self):
-        h = str(self.hourFrame.value())
-        m = str(self.minFrame.value())
-        s = str(self.secFrame.value())
-        print(h,m,s)
+        #Read Frame time from spinBoxs
+        frameTime = self.hourFrame.value()*3600 + self.minFrame.value()*60 + self.secFrame.value()
+        totalframecount =  self.cap.get(cv2.CAP_PROP_FRAME_COUNT)
+        self.frameNum =  frameTime/self.duration * totalframecount
+
+
+        self.readVideoImage()
+
     def up100Clk(self):
         self.frameNum =   self.frameNum +100
         seconds = int(self.frameNum/int(self.fps))
@@ -106,9 +115,9 @@ class UI(QMainWindow):
         print("FPS : '{}'".format(int(self.cap.get(cv2.CAP_PROP_FPS))))
         totalframecount = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
         print(f'Total frame count = {totalframecount} ')
-        duration = totalframecount/self.fps
-        print('duration (S) = ' + str(int(duration))+' [sec]')
-        hour = duration/60/60
+        self.duration = totalframecount/self.fps
+        print('duration (S) = ' + str(int(self.duration))+' [sec]')
+        hour = self.duration/60/60
         print('duration (h) = ' + str(hour)+' [h]')
 
 
@@ -148,14 +157,4 @@ class UI(QMainWindow):
 app = QApplication(sys.argv)
 UIWindow = UI()
 app.exec_()
-'''
 
-
-    def readImagePath(self):
-        BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
-
-        BASE_FOLDER = BASE_FOLDER +'/Videos/Captures/'
-        path = BASE_FOLDER
-        print("readImagePath  ",path)
-        return path
- '''
