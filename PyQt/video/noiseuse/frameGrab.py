@@ -10,9 +10,9 @@ import numpy as np
 
 
 
-from PyQt5 import  QtGui
+from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication, QLabel, QVBoxLayout, QTextEdit, QPushButton, QLineEdit, \
-    QSpinBox
+    QSpinBox, QStatusBar
 from PyQt5.QtGui import QPixmap,  QFont
 from PyQt5.QtCore import Qt
 
@@ -47,13 +47,19 @@ class UI(QMainWindow):
         # Load the ui file framegrab.ui
         uic.loadUi("framegrab.ui", self)
 
+        self.statusBar = QStatusBar()
+        self.setStatusBar(self.statusBar)
+        #self.statusBar.setFont()
+
         # Define Our Widgets
-        self.upButton = self.findChild(QPushButton, "upButton")
+
         self.imageLabel = self.findChild(QLabel, "imageLabel")
         self.imageLabel.resize(self.disply_width, self.display_height)
-
+        self.upButton = self.findChild(QPushButton, "upButton")
+        self.downButton = self.findChild(QPushButton, "downButton")
         self.up100 = self.findChild(QPushButton, "up100Button")
-        # <widget class="QPushButton" name="loadFrameButton">
+        self.down100 = self.findChild(QPushButton, "down100Button")
+
         self.loadFrame = self.findChild(QPushButton, "loadFrameButton")
         self.saveFrame = self.findChild(QPushButton, "saveFrameButton")
         #Time  spinners
@@ -65,7 +71,9 @@ class UI(QMainWindow):
         # Do something
 
         self.upButton.clicked.connect(self.upButtonClk)
+        self.downButton.clicked.connect(self.downButtonClk)
         self.up100.clicked.connect(self.up100Clk)
+        self.down100.clicked.connect(self.down100Clk)
         self.loadFrame.clicked.connect(self.loadFrameclk)
         self.saveFrame.clicked.connect(self.saveFrameclk)
         self.readVideoImage()
@@ -91,17 +99,16 @@ class UI(QMainWindow):
 
     def up100Clk(self):
         self.frameNum =   self.frameNum +100
-        seconds = int(self.frameNum/int(self.fps))
-        m, s = divmod(seconds, 60)
-        h, m = divmod(m, 60)
-        t = f'{h:d}_{m:02d}_{s:02d}'
-        print(t)
-        #self.frameNumber.setPlainText(t)
         self.readVideoImage()
-
+    def down100Clk(self):
+        self.frameNum =   self.frameNum -100
+        self.readVideoImage()
     def upButtonClk(self):
-        print("up  clicked")
-
+        self.frameNum =   self.frameNum +1
+        self.readVideoImage()
+    def downButtonClk(self):
+        self.frameNum =   self.frameNum -1
+        self.readVideoImage()
     def intVideo(self):
         wd = 1800
         hg = 1000
@@ -152,6 +159,13 @@ class UI(QMainWindow):
 
         qt_img = self.convert_cv_qt(frame)
         self.imageLabel.setPixmap(qt_img)
+
+
+        seconds = int(self.frameNum/int(self.fps))
+        m, s = divmod(seconds, 60)
+        h, m = divmod(m, 60)
+        t = f'Time = {h:d}:{m:02d}:{s:02d} Frame={self.frameNum}'
+        self.statusBar.showMessage(t)
 
 # Initialize The App
 app = QApplication(sys.argv)
