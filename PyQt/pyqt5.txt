@@ -17,5 +17,8 @@ Write :
 c:\users\gilfm\appdata\local\programs\python\python310\lib\site-packages
 C:\Users\gilfm\AppData\Local\Programs\Python\Python310\Scripts\pyuic5.exe
 
+auto-py-to-exe  # translate python  to exe 
+pip install auto-py-to-exe
+
 
  

@@ -27,7 +27,7 @@ def readImagePath():
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
     path = BASE_FOLDER
 
-    return path+file_name
+    return path
 
 
 
@@ -39,7 +39,7 @@ trackbar_type = 'Type: \n 0: Binary \n 1: Binary Inverted \n 2: Truncate \n 3: T
 trackbar_value = 'Value'
 window_name = 'Threshold Demo'
 
-file_path = readImagePath()
+file_path = readImagePath()+file_name
 img0 = cv.imread(file_path)
 gray = cv.cvtColor(img0, cv.COLOR_BGR2GRAY)
 

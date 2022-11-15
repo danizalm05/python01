@@ -21,7 +21,7 @@ fontScale = 3
 
 
 
-file_name = 'g1.jpg'
+file_name = '1.jpg'
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
     # /Pictures/22

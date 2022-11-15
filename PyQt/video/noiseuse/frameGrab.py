@@ -3,6 +3,13 @@ Grabe a frame from a video  file
 https://www.youtube.com/watch?v=p6Q2-m9i4Fg&list=PLCC34OHNcOtpmCA8s_dpPMvQLyHbvxocY&index=28
 How To Load PYQT5 Designer UI File
 9:42
+ PyShine
+menu actions
+https://www.youtube.com/watch?v=Vz0s-w4hksY&list=PLjPKPFvkBtZqKg8ugYihcxkWfnIDcwR4K&index=2
+
+Control GUI Widgets: PyQt5 tutorial - Part 03
+https://www.youtube.com/watch?v=co4ymeb3FRc&list=PLjPKPFvkBtZqKg8ugYihcxkWfnIDcwR4K&index=3
+4:40 Edit Signalss  slots
 '''
 import os
 
@@ -12,7 +19,7 @@ import numpy as np
 
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication, QLabel, QVBoxLayout, QTextEdit, QPushButton, QLineEdit, \
-    QSpinBox, QStatusBar
+    QSpinBox, QStatusBar,QSlider
 from PyQt5.QtGui import QPixmap,  QFont
 from PyQt5.QtCore import Qt
 
@@ -26,7 +33,7 @@ import cv2
 
 
 
-vid_name = "l.mkv"#"l.mkv"#"dog.mp4" #"r.mp4"
+vid_name = "6.mkv" #"5.mkv"#"dog.mp4" #"4.mp4"
 
 
 class UI(QMainWindow):
@@ -38,18 +45,17 @@ class UI(QMainWindow):
         self.cap = cv2.VideoCapture(video_file)
         self.intVideo()
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
-        self.frameNum =155334
+        self.frameNum =15
         self.fps = 1
-        self.disply_width = 2180
-        self.display_height = 1180
-        # create the label that holds the image
+        self.disply_width = 1040
+        self.display_height = 680
 
         # Load the ui file framegrab.ui
         uic.loadUi("framegrab.ui", self)
 
         self.statusBar = QStatusBar()
         self.setStatusBar(self.statusBar)
-        #self.statusBar.setFont()
+
 
         # Define Our Widgets
 
@@ -60,6 +66,10 @@ class UI(QMainWindow):
         self.up100 = self.findChild(QPushButton, "up100Button")
         self.down100 = self.findChild(QPushButton, "down100Button")
 
+        self.scanSlider = self.findChild(QSlider, "scan_Slider")
+        self.frameScanLabel = self.findChild(QLabel, "frame_scan_label")
+
+
         self.loadFrame = self.findChild(QPushButton, "loadFrameButton")
         self.saveFrame = self.findChild(QPushButton, "saveFrameButton")
         #Time  spinners
@@ -68,17 +78,29 @@ class UI(QMainWindow):
         self.minFrame.setMaximum(59)
         self.secFrame = self.findChild(QSpinBox, "secSpin")
         self.secFrame.setMaximum(59)
+
         # Do something
+
 
         self.upButton.clicked.connect(self.upButtonClk)
         self.downButton.clicked.connect(self.downButtonClk)
         self.up100.clicked.connect(self.up100Clk)
         self.down100.clicked.connect(self.down100Clk)
+
+        self.scanSlider.valueChanged.connect(self.scanSliderClk)
         self.loadFrame.clicked.connect(self.loadFrameclk)
         self.saveFrame.clicked.connect(self.saveFrameclk)
+
         self.readVideoImage()
         self.show()
 
+    def scanSliderClk(self):
+        scanPr = int(self.frameScanLabel.text())/100
+
+        totalframecount = self.cap.get(cv2.CAP_PROP_FRAME_COUNT)
+        self.frameNum = scanPr * totalframecount
+
+        self.readVideoImage()
     def saveFrameclk(self):
         base = os.path.splitext(vid_name)[0] + '-'
         t = str(int(self.frameNum))
@@ -120,9 +142,9 @@ class UI(QMainWindow):
         print(dim)
         self.fps = self.cap.get(cv2.CAP_PROP_FPS)
         print("FPS : '{}'".format(int(self.cap.get(cv2.CAP_PROP_FPS))))
-        totalframecount = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
-        print(f'Total frame count = {totalframecount} ')
-        self.duration = totalframecount/self.fps
+        self.totalframecount = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        print(f'Total frame count = {self.totalframecount} ')
+        self.duration = self.totalframecount/self.fps
         print('duration (S) = ' + str(int(self.duration))+' [sec]')
         hour = self.duration/60/60
         print('duration (h) = ' + str(hour)+' [h]')
@@ -144,8 +166,9 @@ class UI(QMainWindow):
         h, w, ch = rgb_image.shape
         bytes_per_line = ch * w
 
-        convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
-        p = convert_to_Qt_format.scaled(self.disply_width, self.display_height, Qt.KeepAspectRatio)
+        Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
+        keep_aspect_ratio = 2
+        p = Qt_format.scaled(self.disply_width, self.display_height,keep_aspect_ratio)
 
         return QPixmap.fromImage(p)
 
@@ -164,7 +187,7 @@ class UI(QMainWindow):
         seconds = int(self.frameNum/int(self.fps))
         m, s = divmod(seconds, 60)
         h, m = divmod(m, 60)
-        t = f'Time = {h:d}:{m:02d}:{s:02d} Frame={self.frameNum}'
+        t = f'Time = {h:d}:{m:02d}:{s:02d}  Frame={int(self.frameNum)} / {self.totalframecount}'
         self.statusBar.showMessage(t)
 
 # Initialize The App
