@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1277</width>
+    <height>940</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1277</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuColor">
+    <property name="title">
+     <string>Color</string>
+    </property>
+    <addaction name="actionWhite"/>
+    <addaction name="actionBlack"/>
+    <addaction name="actionRed"/>
+   </widget>
+   <addaction name="menuColor"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionWhite">
+   <property name="text">
+    <string>white</string>
+   </property>
+  </action>
+  <action name="actionBlack">
+   <property name="text">
+    <string>black</string>
+   </property>
+  </action>
+  <action name="actionRed">
+   <property name="text">
+    <string>red</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

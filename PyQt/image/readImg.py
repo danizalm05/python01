@@ -20,8 +20,8 @@ imgName = '1.jpg'
 class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
-        self.disply_width = 740
-        self.display_height = 580
+        self.disply_width = 1740
+        self.display_height = 1580
         # Load the ui file
         uic.loadUi("loadImage.ui", self)
 

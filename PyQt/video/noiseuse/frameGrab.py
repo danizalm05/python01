@@ -33,7 +33,7 @@ import cv2
 
 
 
-vid_name = "6.mkv" #"5.mkv"#"dog.mp4" #"4.mp4"
+vid_name = "m.mkv" #"5.mkv"#"dog.mp4" #"4.mp4"
 
 
 class UI(QMainWindow):
@@ -47,8 +47,8 @@ class UI(QMainWindow):
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
         self.frameNum =15
         self.fps = 1
-        self.disply_width = 1040
-        self.display_height = 680
+        self.disply_width = 2040
+        self.display_height = 980
 
         # Load the ui file framegrab.ui
         uic.loadUi("framegrab.ui", self)
