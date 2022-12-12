@@ -33,7 +33,7 @@ import cv2
 
 
 
-vid_name = "m.mkv" #"5.mkv"#"dog.mp4" #"4.mp4"
+vid_name = "a.mkv" #"5.mkv"#"dog.mp4" #"4.mp4"
 
 
 class UI(QMainWindow):
