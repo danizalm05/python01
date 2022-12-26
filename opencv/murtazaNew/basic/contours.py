@@ -10,7 +10,7 @@ import numpy as np
 import getpass
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
      # "modrain.jpg"#"grains.jpg" #
-mimg = "b1.jpg"
+mimg = "1.jpg"
 path = BASE_FOLDER + mimg
 
 img   = cv.imread(path)

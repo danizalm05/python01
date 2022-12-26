@@ -27,6 +27,21 @@ List Installed Packages with Pip
 
 
 Convert Python Script to .exe File
+Method 1
+----------------------------
+https://www.youtube.com/watch?v=JjtqLPbh9-o&list=PLjPKPFvkBtZqKg8ugYihcxkWfnIDcwR4K&index=21
+
+1. Download Inno Setup 6 from   'https://jrsoftware.org/isdl.php'
+2. pip install pyinstaller
+3. pyinstaller     <filename.py>
+4. All the files needed are located in the  '/dist' directory
+5. Add a '/data' directory and move all  directorys to this new directory
+6. Create new script file from 'Welcom' window
+
+
+
+Method 2
+-----------------------
  1. pip install pyinstaller
  2. Go into the directory where your ‘.py’ file is located. 
  3. Press the shift+right click 
