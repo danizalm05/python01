@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1b002be-c37f-48e1-9bf5-bf260a14d82e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../PyQt/intro/basic01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../PyQt/intro/styleTransfer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../PyQt/intro/tictac.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../PyQt/video/noiseuse/twoVideo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../freeCodeCamp/Section #1 - Basics/trackbarColor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/python01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/image/readImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PyQt/image/readImg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/intro/.idea/intro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PyQt/intro/.idea/intro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/intro/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PyQt/intro/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/pyqt5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PyQt/pyqt5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/pyqt5.txt.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/video/CapFrame.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/video/noiseuse.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/video/noiseuse/frameGrab.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PyQt/video/noiseuse/frameGrab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../PyQt/video/noiseuse/framegrab.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PyQt/video/noiseuse/framegrab.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../alberto-fernandaz/thresholding/thresholding00.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../freeCodeCamp/Section #1 - Basics/edgedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../freeCodeCamp/Section #1 - Basics/edgedetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../freeCodeCamp/face/facedetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../freeCodeCamp/face/facedetect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Eye Blink Counter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Eye Blink Counter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f1b002be-c37f-48e1-9bf5-bf260a14d82e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
