@@ -1,6 +1,6 @@
 """
 Contours & Masks using Python & OpenCV -
-How to separate object from image background?
+https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
 https://www.youtube.com/watch?v=JOxebvuRpyo
 https://github.com/maksimKorzh/open-cv-tutorials/blob/main/src/contours/contours.py
 
@@ -11,13 +11,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import getpass
 
-
-
 def empty(a):
     pass
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 # "modrain.jpg"#"grains.jpg" #
-mimg = "chess.jpg"#"basketball.jpg"
+mimg ="chess.jpg"#"basketball.jpg"  "image.png"#
 path = BASE_FOLDER + mimg
 
 def stackImages(scale,imgArray):
@@ -89,8 +87,6 @@ inpImage = PutTextOnImage(inpImage,'Coountor3')
 scale = 0.2
 
 while True:
-
-
    T_lower = cv2.getTrackbarPos("T_lower","Input")
    T_upper = cv2.getTrackbarPos("T_upper","Input")
    scale = cv2.getTrackbarPos("scale","Input")/10
@@ -99,20 +95,27 @@ while True:
    ContourID = cv2.getTrackbarPos("Contour ID","Input")
    blurred_image = cv2.GaussianBlur(original_image.copy(),(5,5),0)
    edges = cv2.Canny(blurred_image,  T_lower, T_upper)
-   contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+   # cv2.RETR_EXTERNAL: Retrive only external countours
+   # cv2.RETR_LIST:retrieves all  contours  without  hierarchical
+   # cv2.RETR_TREE:retrieves all contours and constructs a full hierarchy of nested contours.
+   contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL,
+                                                cv2.CHAIN_APPROX_SIMPLE)
+
    cntr = original_image.copy()
    cv2.drawContours(cntr, contours, -1, (0, 255, 0), 2)
-   # Select a contour
-
-   contour_selected = contours[ContourID]
-   print("ContourID =", ContourID)
-   cv2.drawContours(cntr, contour_selected, -1, (0, 0, 255), 5)
 
 
+   print("Number of Contours Returned: {}".format(len(contours)),"ContourID =", ContourID)
 
-   imgStack = stackImages(scale, (
-        [original_image,cntr, edges  ],
-        [ edges , edges,  edges ]))
+   if(ContourID < (len(contours) )):
+       contour_selected = contours[ContourID]
+       cv2.drawContours(cntr, contour_selected, -1, (0, 0, 255), 5)
+
+
+
+   imgStack = stackImages(scale,
+        [original_image,cntr   ]
+        )
 
    cv2.imshow("ImageStack",imgStack)
 

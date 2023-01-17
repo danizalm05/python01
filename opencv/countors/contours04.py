@@ -1,7 +1,7 @@
 """
 Contours & Masks using Python & OpenCV -
 How to separate object from image background?
-https://www.youtube.com/watch?v=JOxebvuRpyo
+https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
 https://github.com/maksimKorzh/open-cv-tutorials/blob/main/src/contours/contours.py
 
 
@@ -72,11 +72,10 @@ imageGray = cv2.cvtColor(image1_copy,cv2.COLOR_BGR2GRAY)
 #cv2.imshow("ImageStack",imageGray)
 # Find all contours in the image
 contours, hierarchy = cv2.findContours(imageGray, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+
+print("Number of Contours Returned: {}".format(len(contours)))
 for i,cont in enumerate(contours):
 
-   # Draw the ith contour
-   print(i )
-   ##
    index = i
    contour_selected = contours[index]
    image1_copy = original_image.copy()
