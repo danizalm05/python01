@@ -8,7 +8,7 @@ https://github.com/flatplanet/pyqt5_youtube_playlist
 
 4:20
 """
-
+ 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QLabel
 from PyQt5 import uic
 import sys

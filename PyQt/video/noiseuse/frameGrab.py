@@ -33,7 +33,7 @@ import cv2
 
 
 
-vid_name = "a.mkv" #"5.mkv"#"dog.mp4" #"4.mp4"
+vid_name = "1.mp4" #"5.mkv"#"dog.mp4" #"4.mp4"
 
 
 class UI(QMainWindow):
@@ -47,8 +47,8 @@ class UI(QMainWindow):
         self.currentFrame= np.zeros((3, 3, 3), np.uint8)
         self.frameNum =15
         self.fps = 1
-        self.disply_width = 2040
-        self.display_height = 980
+        self.disply_width = 640 #2040
+        self.display_height = 480#980
 
         # Load the ui file framegrab.ui
         uic.loadUi("framegrab.ui", self)
@@ -105,6 +105,8 @@ class UI(QMainWindow):
         base = os.path.splitext(vid_name)[0] + '-'
         t = str(int(self.frameNum))
         video_file_name = self.readImagePath()+'frame/' + base +t+'.jpg'
+        print(video_file_name)
+           
         frame  = cv2.resize(self.currentFrame, None, fx=4,
                             fy=4, interpolation=cv2.INTER_AREA)
         cv2.imwrite(video_file_name, frame)

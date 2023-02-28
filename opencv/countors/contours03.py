@@ -15,7 +15,7 @@ def empty(a):
     pass
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 # "modrain.jpg"#"grains.jpg" #
-mimg ="chess.jpg"#"basketball.jpg"  "image.png"#
+mimg ="1.jpg"#"basketball.jpg"  "image.png"#
 path = BASE_FOLDER + mimg
 
 def stackImages(scale,imgArray):
@@ -82,7 +82,8 @@ image_gray = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 
 
 inpImage = np.zeros((50,200,3), np.uint8)
-inpImage = PutTextOnImage(inpImage,'Coountor3')
+ 
+#inpImage = PutTextOnImage(inpImage,'Coountor3')
 
 scale = 0.2
 

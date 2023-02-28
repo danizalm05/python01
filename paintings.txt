@@ -1,7 +1,7 @@
 This PC\Galaxy S20 FE \אחסון פנימי\Android\data\org.telegram.messenger\files\Telegram\Telegram Files
 
 
-https://boredhumans.com/text-to-image.php
+https://boredhumans.com/text-to-image.php 
 
 lunapic
 https://www1.lunapic.com/editor/?action=delaunay
@@ -12,13 +12,28 @@ https://www1.lunapic.com/editor/?action=psychedelic
 https://www1.lunapic.com/editor/index.php?action=explode
 https://www3.lunapic.com/editor/?action=resize
 
+voice
+https://beta.elevenlabs.io/speech-synthesis
 
+
+ 
+
+https://labs.openai.com/
+
+https://beta.dreamstudio.ai/dream   discord  dani   Pa
 https://www.craiyon.com/
 
 befunky
 https://www.befunky.com/create/
 
+---------  -------------------
 https://deepdreamgenerator.com/
+https://dezgo.com/
+
+https://stablediffusionweb.com/#demo
+-----------------------------
+
+
 
 replicate
 https://replicate.com/explore 
@@ -30,7 +45,7 @@ https://hotpot.ai/art-generator
 
 https://useum.org/ 
 
-
+mythological painting
 dali oil painting 
 Giorgio de Chirico 
  Jacopo Amigoni Rembrandt
@@ -51,8 +66,8 @@ Edward Hopper
 de hoogh, hals 
 bloemaert, Andrew Wyeth
 Magritte
-  
-
+Jeremiah looking to Jerusalem , Auguste Rodin  
+The Madonna of Bruges , Sculpture Michelangelo 
 
 Paulina Góra
 Catherine Abel  
@@ -72,7 +87,7 @@ Many white rolling hills and leafless trees.
 Canaletto style,
 
 5. old man holding a flower  Gediminas Pranckevicius Impressionist 
-
+55.Auschwitz concentration camp Gediminas Pranckevicius Impressionist hyperdetailed charcoal drawing
 6. Catherine Abel  Impressionist Oil painting, colorful, bright, painted impasto with thick palette knife.
 
 
@@ -86,3 +101,7 @@ Canaletto style,
   Gediminas Pranckevicius Impressionist 
   
   30%
+8.  The Mad Hatter  , Caspar David Friedrich, Dan Seagrave, , oil painting  
+  
+9. face - monochrome  style of Ralph Steadman  
+  

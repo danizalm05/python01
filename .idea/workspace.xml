@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/campus/מבוא למדעי הנתונים .txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/מבוא למדעי הנתונים .txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/countors/rectange.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/'translate.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/translate.spec" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/translate.spec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/pyqt5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/pyqt5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/pyqt5.txt.bak" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/pyqt5.txt.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/intro/basic01.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/basic01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Download Stocks.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/European Soccer Regression Analysis using scikit-learn.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Introduction to Pandas.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda1-basic.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda2-ridx .ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda3-string.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda4-idx.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda5-nan.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda6-concat.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda7-catg.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/panda8-IOTools .ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_1_python_pandas.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_2_pandas_cat.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_3_pandas_grouping.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_4_pandas_functional.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_5_pandas_features.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/contours02.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/contours03.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/contours04.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours04.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +76,8 @@
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\freeCodeCamp\face" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.readImg">
-    <configuration name="LCD_Clock " type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.WebAPI">
+    <configuration name="WebAPI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,11 +85,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/intro" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/intro/LCD_Clock .py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/WebAPI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,9 +147,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\rockman\anaconda3\envs\python\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/image" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/image/readImg.py" />
@@ -161,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.readImg" />
+        <item itemvalue="Python.WebAPI" />
         <item itemvalue="Python.frameGrab (1)" />
+        <item itemvalue="Python.readImg" />
         <item itemvalue="Python.translate" />
         <item itemvalue="Python.newWin" />
-        <item itemvalue="Python.LCD_Clock " />
       </list>
     </recent_temporary>
   </component>

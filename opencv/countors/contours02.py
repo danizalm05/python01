@@ -108,9 +108,13 @@ while True:
 
 
 
-   imgStack = stackImages(scale, (
-        [original_image,image_gray,gray_inverted , gray_inverted],
-        [image_edges , original_copy,  original_copy, original_copy]))
+   imgStack = stackImages(scale, 
+        (
+         [original_image,image_gray,gray_inverted , gray_inverted],
+         [image_edges , original_copy,  original_copy, original_copy]
+        )
+       
+       )
 
    cv2.imshow("ImageStack",imgStack)
 
