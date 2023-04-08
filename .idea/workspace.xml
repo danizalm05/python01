@@ -5,34 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/campus/מבוא למדעי הנתונים .txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/מבוא למדעי הנתונים .txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/countors/rectange.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/intro/basic01.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/intro/basic01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Download Stocks.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/European Soccer Regression Analysis using scikit-learn.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Introduction to Pandas.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda1-basic.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda2-ridx .ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda3-string.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda4-idx.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda5-nan.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda6-concat.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda7-catg.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/panda8-IOTools .ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_1_python_pandas.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_2_pandas_cat.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_3_pandas_grouping.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_4_pandas_functional.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/t81_558_class_02_5_pandas_features.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/contours02.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours02.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/contours03.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus/Selenium.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/opencv/countors/contours04.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paintings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/paintings.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,20 +44,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/murtazaNew" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/campus/bsoup/Scraping-BSoup.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\countors" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\intro" />
       <recent name="D:\python\PyQt\video\noiseuse" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\opencv\freeCodeCamp\face" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.WebAPI">
-    <configuration name="WebAPI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Scraping-BSoup">
+    <configuration name="ConvexHull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,11 +65,74 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/ConvexHull.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scraping-BSoup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/campus/bsoup" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/campus/bsoup/Scraping-BSoup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WebAPI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/WebAPI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="contours04" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/contours04.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,76 +162,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="newWin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/intro" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/intro/newWin.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="readImg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\rockman\anaconda3\envs\python\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/image" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/image/readImg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="translate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/intro" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/intro/translate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Scraping-BSoup" />
+        <item itemvalue="Python.ConvexHull" />
+        <item itemvalue="Python.contours04" />
         <item itemvalue="Python.WebAPI" />
         <item itemvalue="Python.frameGrab (1)" />
-        <item itemvalue="Python.readImg" />
-        <item itemvalue="Python.translate" />
-        <item itemvalue="Python.newWin" />
       </list>
     </recent_temporary>
   </component>

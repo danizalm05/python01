@@ -15,7 +15,7 @@ def empty(a):
     pass
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 # "modrain.jpg"#"grains.jpg" #
-mimg ="1.jpg"#"basketball.jpg"  "tree.jpg"#
+mimg =   "image.png" #"tree.jpg" #"basketball.jpg"  "tree.jpg"#  "image.png"
 path = BASE_FOLDER + mimg
 
 def stackImages(scale,imgArray):
@@ -160,19 +160,11 @@ while True:
        cv2.drawContours(image11_copy,[box],0,(0,255,0),3)
        
        
-       # Drawing Convex Hull
-       # Get the required hull
-       hull_img = original_image.copy()
-       cv = contours[ContourID]
-       
-       hull = cv2.convexHull(cv)
-       # draw the hull
-       cv2.drawContours(hull_img, [hull], 0 , (0,0,220), 3) 
-       hull_img = PutTextOnImage(hull_img,'hull_img')
+
    imgStack = stackImages( scale,
         (  
            [original_image,cntr ,image1_copy ,image0_copy  ], 
-           [image10_copy,image10_copy ,hull_img ,image0_copy  ]
+           [image10_copy,image10_copy ,image0_copy ,image0_copy  ]
         ) 
         )
 

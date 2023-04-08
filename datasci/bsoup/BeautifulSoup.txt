@@ -1,0 +1,27 @@
+ 
+ מבוא למדעי הנתונים
+								   
+								   
+courses.campus.gov.il
+
+https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/c879b1b9aeb5499cbe13bcd14bc0a5a7/7bb496a7bbc540f09c927cdfefe2c783/?child=first
+
+song_soup = BeautifulSoup(open("./lyrics.html"), "html.parser")
+
+titletab = song_soup.title #<title> Lyrics </title>
+title = song_soup.title.string  # Lyrics  
+
+print(song_soup.div.string)#Print content of first div
+print(song_soup.find(id="zep"))# find a specific element 
+print(text = song_soup.find(id="zep").get_text())# get only text
+
+
+
+h1s = song_soup.find_all("h1")#Get all instances of a tag 
+print(type(h1s))
+print(len(h1s))
+tables =stable("table",attrs={"class":"wikitable"})
+
+string_h1s = [tag.get_text() for tag in h1s]#get the text 
+ 
+ print(song_soup("div"))# print all div

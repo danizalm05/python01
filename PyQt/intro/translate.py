@@ -5,19 +5,27 @@
 https://www.youtube.com/watch?v=9FfxQvQMlg8&list=PLCC34OHNcOtpmCA8s_dpPMvQLyHbvxocY&index=38
 https://github.com/flatplanet/pyqt5_youtube_playlist/blob/main/translate.py
 
+39 How To Add Text To Speech
+------------------------------------
+https://www.youtube.com/watch?v=qDGbxYjLJoQ&list=PLCC34OHNcOtpmCA8s_dpPMvQLyHbvxocY&index=39
+https://github.com/flatplanet/pyqt5_youtube_playlist/commit/e0c53b089395c61a221aab429e08e51be16872a2
+
+
 install
 1. pip install googletrans
 2. pip install  textblob
-"""
-from PyQt5.QtWidgets import QMainWindow, QApplication, \
-    QPushButton, QComboBox, QTextEdit, QMessageBox
 
-# noinspection PyUnresolvedReferences
-from PyQt5 import uic  # Add the above line so uic is imported
+3. pip install pyttsx3 #to add text to speech
+4. pip install  pywin32
+"""
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QComboBox, QTextEdit, QMessageBox
 
 import sys
 import googletrans
 import textblob
+import pyttsx3
+# noinspection PyUnresolvedReferences
+from PyQt5 import uic  # Add the above line so uic is imported
 
 
 # ----------------------------------
@@ -87,7 +95,21 @@ class UI(QMainWindow):
 
             # Output to text_2
             self.text_2.setText(str(words))
+            # Initialize the speech engine
+            engine = pyttsx3.init()
 
+            # Play with voices
+            voices = engine.getProperty("voices")
+            for voice in voices:
+             	engine.setProperty("voice", voice.id)
+             	engine.say(words)
+             	print(voice)
+
+            # Pass words to speak
+            engine.say(words)
+
+            # Run the engine
+            engine.runAndWait()
         except Exception as e:
             QMessageBox.about(self, "Translator", str(e))
 
