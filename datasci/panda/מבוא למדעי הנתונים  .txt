@@ -164,5 +164,11 @@ def select_rows_w_vals_in_range(dataframe, col_name, lower_range, higher_range):
     con1 =  (dataframe[col_name] <=  higher_range)
     con2 =  (dataframe[col_name] >=  lower_range) 
     filtered_df = dataframe.loc[con1 & con2]
-    return filtered_df	 
+    return filtered_df
+
+סולם שמי: אין משמעות לסדר(שפת אם)
+(רע טוב טוב מאד)סולם סדור :יש משמעות לסדר
+(טמפרטורה)סולם רווח: יש משמעות גם לסדר וגם להפרש
+סולם מנה : יש משמעות לסדר הפרש  ויחס (משקל)
+	
 	 

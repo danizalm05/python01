@@ -5,12 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/bsoup/fa-03-scraping_crawling.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/BikeSharing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/data/Bike_sharing_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/data/day.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus/Selenium.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apeermicro/my_plot.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Apeermicro/my_plot.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Natural Language Processing of Movie Reviews using nltk -checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Using Tweepy for Tweet Analysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Using the Twitter API for Tweet Analysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Weather Data Classification using Decision Trees-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Weather Data Clustering using k-Means-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Working with Databases-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.jovianrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Natural Language Processing of Movie Reviews using nltk .ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Using Tweepy for Tweet Analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Weather Data Classification using Decision Trees.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Weather Data Clustering using k-Means.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Working with Databases.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/database.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/temp.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/temp2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/מבוא למדעי הנתונים .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/מבוא למדעי הנתונים .txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/setupt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/openai/setupt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opencv/countors/contours04.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours04.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paintings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/paintings.txt" afterDir="false" />
     </list>
@@ -44,19 +66,40 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/campus/bsoup/Scraping-BSoup.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/countors/Contour-Detection-101-Part-1-Files" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\datasci\panda" />
       <recent name="C:\Users\gilfm\Documents\d\python01\opencv\countors" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\intro" />
       <recent name="D:\python\PyQt\video\noiseuse" />
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse" />
-      <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Scraping-BSoup">
+  <component name="RunManager" selected="Python.ConvexHull">
+    <configuration name="BikeSharing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/BikeSharing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ConvexHull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,7 +121,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Scraping-BSoup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="basic-fun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,32 +129,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/campus/bsoup" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/basic" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/campus/bsoup/Scraping-BSoup.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="WebAPI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/WebAPI.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/basic/basic-fun.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,9 +149,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/contours04.py" />
@@ -141,19 +163,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="frameGrab (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="rectange" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\PyQt\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PyQt/video/noiseuse" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyQt/video/noiseuse/frameGrab.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/rectange.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Scraping-BSoup" />
         <item itemvalue="Python.ConvexHull" />
+        <item itemvalue="Python.rectange" />
         <item itemvalue="Python.contours04" />
-        <item itemvalue="Python.WebAPI" />
-        <item itemvalue="Python.frameGrab (1)" />
+        <item itemvalue="Python.BikeSharing" />
+        <item itemvalue="Python.basic-fun" />
       </list>
     </recent_temporary>
   </component>

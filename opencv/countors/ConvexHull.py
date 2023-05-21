@@ -48,7 +48,7 @@ def empty(a):
     pass
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 # "modrain.jpg"#"grains.jpg" #
-mimg =  "tree.jpg" #"basketball.jpg"  "tree.jpg"#  "image.png"
+mimg = "1.jpg" #"basketball.jpg"  "tree.jpg"#  "image.png"
 path = BASE_FOLDER + mimg
 
 def stackImages(scale,imgArray):
