@@ -5,36 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/datasci/bsoup/fa-03-scraping_crawling.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/BikeSharing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/data/Bike_sharing_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/data/day.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/Titanic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/data/titanic.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/gpt01.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apeermicro/my_plot.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Apeermicro/my_plot.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Natural Language Processing of Movie Reviews using nltk -checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Using Tweepy for Tweet Analysis-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Using the Twitter API for Tweet Analysis-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Weather Data Classification using Decision Trees-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Weather Data Clustering using k-Means-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.ipynb_checkpoints/Working with Databases-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/.jovianrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Natural Language Processing of Movie Reviews using nltk .ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Using Tweepy for Tweet Analysis.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Weather Data Classification using Decision Trees.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Weather Data Clustering using k-Means.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/Working with Databases.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Week-8-NLP-Databases/Week-8-NLP-Databases/database.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/temp.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/temp2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/מבוא למדעי הנתונים .txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/מבוא למדעי הנתונים .txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/setupt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/openai/setupt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/chat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/embedding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/hello_world.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/prompt_chat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openai/setupt.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/contours04.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/contours04.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paintings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/paintings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/contours04.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/inpOpenCV.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paintings.txt.bak" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +38,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,7 +61,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/countors/Contour-Detection-101-Part-1-Files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/countors/contours04.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -78,28 +73,7 @@
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ConvexHull">
-    <configuration name="BikeSharing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/BikeSharing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.contours04">
     <configuration name="ConvexHull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,7 +95,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="basic-fun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Titanic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,11 +103,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/murtazaNew/basic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/murtazaNew/basic/basic-fun.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/Titanic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="color_detection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/projects/ColorDetct" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/projects/ColorDetct/color_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ConvexHull" />
-        <item itemvalue="Python.rectange" />
         <item itemvalue="Python.contours04" />
-        <item itemvalue="Python.BikeSharing" />
-        <item itemvalue="Python.basic-fun" />
+        <item itemvalue="Python.ConvexHull" />
+        <item itemvalue="Python.Titanic" />
+        <item itemvalue="Python.color_detection" />
+        <item itemvalue="Python.rectange" />
       </list>
     </recent_temporary>
   </component>

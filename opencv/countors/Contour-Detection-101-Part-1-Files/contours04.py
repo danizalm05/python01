@@ -1,10 +1,11 @@
 """
+Contour Detection In OpenCV 101 (1/3): The Basics
 Find Nax Contours & sort -
 https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
 https://www.youtube.com/watch?v=JOxebvuRpyo
 https://github.com/maksimKorzh/open-cv-tutorials/blob/main/src/contours/contours.py
 https://colab.research.google.com/drive/1QeXAHV3-BNaIoidWhSK3MJyVElNv3FLN#scrollTo=qF-0ptmAzxUv
-
+20:40
 """
 import cv2
 import numpy as np
@@ -25,7 +26,7 @@ cv2.namedWindow("ImageStack")
 inpWinName = "Input"
 inpTrackbar(inpWinName)
 
-mimg =   "1.jpg" #"tree.jpg" #"basketball.jpg"  "tree.jpg"#  "image.png"
+mimg =   "tree.jpg" #"tree.jpg" #"basketball.jpg"  "tree.jpg"#  "image.png" "1.jpg"
 path = BASE_FOLDER + mimg
 
 ################## Main ####################
@@ -35,8 +36,13 @@ image_gray = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 ret,binary = cv2.threshold(image_gray,127,255,cv2.THRESH_BINARY) 
 #contours, hierarchy = cv2.findContours(binary, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 # Find the contours from the thresholded image
+'''
+mode:retrieval mode, (RETR_EXTERNAL, RETR_LIST, RETR_CCOMP, RETR_TREE )
+method:approximation method. (CHAIN_APPROX_NONE, CHAIN_APPROX_SIMPLE, CHAIN_APPROX_TC89_L1 )
+'''
 contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 print("Number of contours:" + str(len(contours)))
+
 # Get the bounding rectangle
 
 # Retreive the biggest contour
@@ -48,6 +54,8 @@ image0_copy = original_image.copy()
 image1_copy = original_image.copy()
 
 # Draw the biggest contour
+#cv2.drawContours(image, contours, contourIdx, color, thickness, lineType, hierarchy, maxLevel, offset)
+#contourIdx: indicating a contour to draw. If it is negative, all the contours are drawn.
 cv2.drawContours(image0_copy, biggest_contour, -1, (255,255,170),8);
 image0_copy = PutTextOnImage(image0_copy,'Max contour')
 
@@ -58,11 +66,11 @@ inpImage = np.zeros((50,200,3), np.uint8)
 for i, cont in enumerate(sorted_contours[:4],1):
     #print( i ,cont[0,0,0], cont[0,0,1]-10)
     # Draw the contour
-    cv2.drawContours(image1_copy, cont, -1, (0,255,255), 3)
+    cv2.drawContours(image1_copy, cont, -1, (0,255,255),7)
     
     # Display the position of contour in sorted list
     cv2.putText(image1_copy, str(i), (cont[0,0,0], cont[0,0,1]-10), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 255, 0),4)
-    PutTextOnImage(image1_copy, "largest contours")
+    PutTextOnImage(image1_copy, "4 Contours")
 image3_copy = original_image.copy()
 
 
