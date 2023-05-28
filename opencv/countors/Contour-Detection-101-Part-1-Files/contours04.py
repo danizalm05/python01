@@ -26,14 +26,14 @@ cv2.namedWindow("ImageStack")
 inpWinName = "Input"
 inpTrackbar(inpWinName)
 
-mimg =   "tree.jpg" #"tree.jpg" #"basketball.jpg"  "tree.jpg"#  "image.png" "1.jpg"
+mimg =  "2.jpg" #"tree.jpg" #"basketball.jpg"    "2.png" "1.jpg"
 path = BASE_FOLDER + mimg
 
 ################## Main ####################
 
 original_image = cv2.imread(path, cv2.IMREAD_UNCHANGED)
 image_gray = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
-ret,binary = cv2.threshold(image_gray,127,255,cv2.THRESH_BINARY) 
+ret,binary = cv2.threshold(image_gray,100,255,cv2.THRESH_BINARY)
 #contours, hierarchy = cv2.findContours(binary, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 # Find the contours from the thresholded image
 '''
@@ -88,6 +88,8 @@ while True:
    scale = cv2.getTrackbarPos("scale",inpWinName)/10
    switch = '0 : OFF \n1 : ON'
    on = cv2.getTrackbarPos(switch,inpWinName)
+
+  ##---------------------------------------##
 
    ContourID = cv2.getTrackbarPos("Contour ID",inpWinName)
    blurred_image = cv2.GaussianBlur(original_image.copy(),(5,5),0)
