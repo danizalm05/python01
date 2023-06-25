@@ -3,6 +3,7 @@ import json
 
 
 def send_message(message):
+
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
         "Authorization": "Bearer YOUR_API_KEY",

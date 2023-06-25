@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 '''
-                  טיפול בנתונים חסריםtitanic
+                   titanic
+1. taking care of missing data
 https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/0f960b9a58644ff4b9c375b0624f8d18/bd2abf63e2d64ccda87e6371cca3da55/
+2. taking care of data duplication
+https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/0f960b9a58644ff4b9c375b0624f8d18/dd409f280fa04f6b8cb552f715d0a0c4/?child=last
+
 https://labs.vocareum.com/main/main.php?m=editor&asnid=537348&stepid=537349&hideNavBar=1
 
 '''
@@ -71,7 +75,7 @@ new_age = df2.Age.fillna(0)# Replace NaN withe 0
 print("df2.Age.fillna(0)  = ",new_age)
 
 new_age = df2.Age.fillna(df2.Age.mean())## Replace NaN withe 'mean'
-print("\n\ndf.Embarked.describe() = \n---------\n",df.Embarked.describe())
+print("\n\ndf.Embarked.describe() = \n-*--------*********-\n",df.Embarked.describe())
 
 dfe= df["Embarked"].fillna('S',inplace=True)# put 's' in NaN vales
 print(dfe)
@@ -79,3 +83,8 @@ print(dfe)
 
 df2.fillna(method = 'ffill')# Fill with close values 'forward fill'
 #bfill=  backward fill
+print("df.Embarked.duplicated().sum() = ",df.Embarked.duplicated().sum())
+# In the 'Embarked' column there only 3 possible values so there are
+# many  duplication in the  above output
+
+print("possible values of  Embarked column =", df.Embarked.unique())

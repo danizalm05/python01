@@ -5,23 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/datasci/panda/Titanic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/data/titanic.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/gpt01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/Outliers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasci/panda/Titanic02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/resize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/chat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/embedding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/hello_world.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/PythonGPT3Tutorial/prompt_chat.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openai/setupt.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/ConvexHull.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/contours04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/inpOpenCV.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paintings.txt.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasci/panda/Titanic.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasci/panda/Titanic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/countors/Contour-Detection-101-Part-1-Files/gpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/Contour-Detection-101-Part-1-Files/gpy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Contents.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/basic_functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/bitwise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/blurring.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/colorSpace.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/contours.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/display_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/drawShapes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/goodFeaturesImg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/histogram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/read.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/rescale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/rescaleVideo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/splitmerge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/thresholding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/trackbarColor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/transformations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/face/facedetect.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/face/haar_face.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +73,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/countors/contours04.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/tutorial5.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -73,29 +85,8 @@
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.contours04">
-    <configuration name="ConvexHull" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/ConvexHull.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Titanic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.lines">
+    <configuration name="Outliers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +98,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/Titanic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/Outliers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,7 +107,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="color_detection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Titanic02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,11 +115,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/projects/ColorDetct" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/projects/ColorDetct/color_detection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/Titanic02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="contours04" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="bitbasic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -145,11 +136,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/contours04.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/bitbasic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="rectange" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="lines" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -166,11 +157,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/countors" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/countors/rectange.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/lines.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="video" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/video.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.contours04" />
-        <item itemvalue="Python.ConvexHull" />
-        <item itemvalue="Python.Titanic" />
-        <item itemvalue="Python.color_detection" />
-        <item itemvalue="Python.rectange" />
+        <item itemvalue="Python.lines" />
+        <item itemvalue="Python.video" />
+        <item itemvalue="Python.bitbasic" />
+        <item itemvalue="Python.Outliers" />
+        <item itemvalue="Python.Titanic02" />
       </list>
     </recent_temporary>
   </component>
