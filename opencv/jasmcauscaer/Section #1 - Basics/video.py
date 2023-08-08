@@ -1,6 +1,8 @@
 '''
 OpenCV Python Tutorial #3 - Cameras and VideoCapture
 https://www.youtube.com/watch?v=rKcwcARdg9M&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=3
+https://github.com/techwithtim/OpenCV-Tutorials/blob/main/tutorial3.py
+
 '''
 
 import numpy as np

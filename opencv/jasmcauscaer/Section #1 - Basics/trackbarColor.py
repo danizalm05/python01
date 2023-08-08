@@ -36,17 +36,7 @@ def  goodFeaturesToTrack():
        #print(x, y, i)
     cv2.imshow("Image", imageCopy)
     imageCopy = image.copy()
-
-
-def update_qualityLevel(value):
-    global qualityLevel, image
-    qualityLevel = value /100000
-    goodFeaturesToTrack()
-
-def update_maxCorner (value):
-     global maxCorner, image
-     maxCorner = value
-     goodFeaturesToTrack()
+    
 
 
 def update_blue(value):
@@ -71,7 +61,7 @@ def update_green(value):
 
 def update_red(value):
     global red, image
-
+  
     # set color and image
     red = value
     color = np.array([blue, green, red], dtype=np.uint8)
@@ -82,9 +72,7 @@ cv2.namedWindow("Parmeters")
 cv2.createTrackbar("Blue",  "Parmeters", 0,  255, update_blue, )
 cv2.createTrackbar("Green", "Parmeters", 0, 255, update_green, )
 cv2.createTrackbar("Red", "Parmeters",  0, 255, update_red, )
-cv2.createTrackbar("Corners","Parmeters",0,400,update_maxCorner)
-cv2.createTrackbar("qualityLevel","Parmeters",0,100,update_qualityLevel)
-qualityLevel
+ 
 
 image_path = readImagePath()
 image = cv2.imread(image_path)

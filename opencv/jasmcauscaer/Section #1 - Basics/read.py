@@ -30,7 +30,7 @@ cv.imshow('bird', img)
 cv.waitKey(0)
 
 
-# Reading Videos
+# Reading Video  file
 video_path = readVideoPath()
 print(video_path)
 capture = cv.VideoCapture(video_path)

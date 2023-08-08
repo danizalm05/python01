@@ -1,13 +1,16 @@
- the very basics (reading images and videos, image transformations) to more advanced concepts (color spaces, edge detection). Towards the end, you'll have hands-on experience building a Deep Computer Vision model to classify between the characters in the popular TV series "The Simpsons".
+ 
+ https://github.com/jasmcaus/opencv-course
+ 
+ he very basics (reading images and videos, image transformations) to more advanced concepts (color spaces, edge detection). Towards the end, you'll have hands-on experience building a Deep Computer Vision model to classify between the characters in the popular TV series "The Simpsons".
 
 ⭐️ Code ⭐️
-🔗Github link: https://github.com/jasmcaus/opencv-co...
+  https://github.com/jasmcaus/opencv-course
+🔗
 🔗The Caer Vision library: https://github.com/jasmcaus/caer
 
 https://www.flickr.com/groups/_al_desnudo/pool/
 ⭐️ Course Contents ⭐️
-⌨️ (0:00:00) Introduction
-⌨️ (0:01:07) Installing OpenCV and Caer
+ 
 Section #1 - Basics
 ⌨️ (0:04:12) Reading Images & Video
 ⌨️ (0:12:57) Resizing and Rescaling Frames

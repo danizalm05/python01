@@ -5,35 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/datasci/panda/Outliers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasci/panda/Titanic02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/resize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/ColoDetect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python01.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasci/panda/Titanic.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasci/panda/Titanic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/countors/Contour-Detection-101-Part-1-Files/gpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/countors/Contour-Detection-101-Part-1-Files/gpy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Contents.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/basic_functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/bitwise.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/blurring.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/colorSpace.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/contours.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/display_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/drawShapes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/edgedetection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/goodFeaturesImg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/histogram.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/read.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/rescale.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/rescaleVideo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/splitmerge.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/thresholding.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/trackbarColor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/Section #1 - Basics/transformations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/face/facedetect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opencv/freeCodeCamp/face/haar_face.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/bitbasic.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/bitbasic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/drawShapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/drawShapes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/new_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/trackbarColor.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/trackbarColor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/video.py" beforeDir="false" afterPath="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/video.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +64,7 @@
       <recent name="C:\Users\gilfm\Documents\d\python01\PyQt\video\noiseuse" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lines">
+  <component name="RunManager" selected="Python.Titanic">
     <configuration name="Outliers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,19 +86,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Titanic02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Titanic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\rockman\anaconda3\envs\python\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasci/panda" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/Titanic02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasci/panda/Titanic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,9 +156,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\rockman\anaconda3\envs\python\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/opencv/basic/Section #1 - Basics/video.py" />
@@ -193,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lines" />
+        <item itemvalue="Python.Titanic" />
         <item itemvalue="Python.video" />
+        <item itemvalue="Python.lines" />
         <item itemvalue="Python.bitbasic" />
         <item itemvalue="Python.Outliers" />
-        <item itemvalue="Python.Titanic02" />
       </list>
     </recent_temporary>
   </component>

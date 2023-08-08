@@ -8,7 +8,7 @@ import getpass
 
 import cv2 as cv
 
-file_name = '1.jpg'
+file_name = '2.jpg'
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
