@@ -22,7 +22,7 @@ def rescaleFrame(frame, scale=0.75):
 #BASE_FOLDER = 'C:/Users/rockman/Pictures/Saved Pictures/fourier/'
 BASE_FOLDER = 'C:/Users/gilfm/Pictures/Saved Pictures/'
 #BASE_FOLDER = 'C:/Users/rockman/Pictures/Saved Pictures/'
-mimg = "lena.png"
+mimg = "1.jpg"
 path = BASE_FOLDER +  mimg
 
 img0 = cv.imread(path)
