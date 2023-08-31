@@ -1,9 +1,12 @@
 """
+transformations.py
 https://www.youtube.com/watch?v=oXlwWbU8l2o
-https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/transformations.py 31:38 44:17
+https://github.com/jasmcaus/opencv-course/tree/master/Section%20%231%20-%20Basics
 
-48:00
+ 44:17  57:00
 """
+#pylint:disable=no-member
+
 
 import getpass
 import cv2 as cv
@@ -11,7 +14,17 @@ import numpy as np
 
 
 
-file_name = 'a4.jpg'
+file_name = '1.jpg'
+def readImagePath():
+    BASE_FOLDER = 'C:/Users/' + getpass.getuser()
+    BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
+    path = BASE_FOLDER
+
+    return path+file_name
+
+# Read in an image
+file_path = readImagePath()
+print("readImagePath  ", file_path)
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
@@ -25,7 +38,7 @@ def translate(img, x, y):
     dimensions = (img.shape[1], img.shape[0])
     return cv.warpAffine(img, transMat, dimensions)
 
-# -x --> Left
+# -x --> Pixel to the Left
 # -y --> Up
 # x --> Right
 # y --> Down
@@ -61,7 +74,7 @@ resized = cv.resize(img, (500,500), interpolation=cv.INTER_CUBIC)
 cv.imshow('Resized', resized)
 
 # Flipping
-flip = cv.flip(img, -1)
+flip = cv.flip(img, -1)# 0 flip  verticlly  1 horzonticly   -1
 cv.imshow('Flip', flip)
 
 # Cropping

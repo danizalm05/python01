@@ -2,7 +2,7 @@
 contours
 https://www.youtube.com/watch?v=oXlwWbU8l2o
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/contours.py
-57:00  1:12:00
+1:00:00
 """
 
 import getpass
@@ -11,7 +11,7 @@ import numpy as np
 import cvzone
 
 
-file_name = 'lady.jpg'
+file_name = '2.jpg'
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
@@ -29,12 +29,12 @@ blank = np.zeros(img.shape, dtype='uint8')
 
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-canny = cv.Canny(img, 125, 175)# find edges
+canny = cv.Canny(img, 125, 175)# find edges  (edge is not the same as contor)
 blur = cv.GaussianBlur(gray, (5,5), cv.BORDER_DEFAULT)
 cannyBlur = cv.Canny(blur, 125, 175)
 
+# Output all the images
 imgList = [img, gray,canny, blur,cannyBlur, gray]
-
 stackedImg = cvzone.stackImages(imgList, 3, 0.4)
 
 cv.imshow("stackedImg", stackedImg)

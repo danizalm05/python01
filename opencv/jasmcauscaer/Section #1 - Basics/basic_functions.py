@@ -8,7 +8,7 @@ import getpass
 
 import cv2 as cv
 
-file_name = '2.jpg'
+file_name = 'b.jpg'
 def readImagePath():
     BASE_FOLDER = 'C:/Users/' + getpass.getuser()
     BASE_FOLDER = BASE_FOLDER + '/Pictures/Saved Pictures/'
@@ -29,11 +29,14 @@ gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Gray', gray)
 
 # Blur
-blur = cv.GaussianBlur(img, (7,7), cv.BORDER_DEFAULT)
+Kernel =7 # Must be odd
+blur = cv.GaussianBlur(img, (Kernel,Kernel), cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
 
-# Edge Cascade
-canny = cv.Canny(blur, 125, 175)
+# Edge Cascade  - Try to find edged in an image
+treshold1 = 125
+treshold2 = 175
+canny = cv.Canny(blur, treshold1,treshold2)
 cv.imshow('Canny Edges', canny)
 
 # Dilating the image
