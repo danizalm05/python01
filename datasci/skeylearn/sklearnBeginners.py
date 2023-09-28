@@ -5,11 +5,14 @@ Introduction to sklearn and ML Data Pre-processing
 https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/6c93ec048fa047efbef02828a32bb0d0/b37f098fbe18488e865593740c38e5ea/6?activate_block_id=block-v1%3AHIT%2BACD_RFP4_DataScienceIntro_HE%2B2022_1%2Btype%40html%2Bblock%40c1c7dff808d84413b7d1c0825b63e588
 https://labs.vocareum.com/main/main.php?m=editor&asnid=537360&stepid=537361&hideNavBar=1
 
+
+
 https://scikit-learn.org/stable/tutorial/basic/tutorial.html
 https://scikit-learn.org/stable/
 https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/
 
-dataset: Womens Clothing E-Commerce Reviews
+https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/6c93ec048fa047efbef02828a32bb0d0/bab4785ebba5438faa972cc5a0938cb1/?child=first
+dataset: A Women Clothing E-Commerce Reviews
 For each review, we have 3 parts of information:
 1.Product information , 2. Review data , 3.Reviewer data
 '''
