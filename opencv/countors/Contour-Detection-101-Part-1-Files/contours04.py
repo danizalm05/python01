@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-
 https://www.youtube.com/watch?v=JOxebvuRpyo
 https://github.com/maksimKorzh/open-cv-tutorials/blob/main/src/contours/contours.py
 https://colab.research.google.com/drive/1QeXAHV3-BNaIoidWhSK3MJyVElNv3FLN#scrollTo=qF-0ptmAzxUv
-20:40
+04:40
 """
 import cv2
 import numpy as np

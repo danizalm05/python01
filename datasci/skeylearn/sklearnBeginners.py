@@ -51,13 +51,13 @@ whether a given user is recommending a product or not.
 For simplicity reasons we will  create a copy dataframe only with
  numeric data:
 '''
-df_copy=df[["Clothing ID","Age","Rating","Recommended IND","Positive Feedback Count"]].copy()
+df_copy = df[["Clothing ID", "Age", "Rating", "Recommended IND", "Positive Feedback Count"]].copy()
 df_copy.head()
 print(df_copy.head())
 '''
 you could have used also the function _get_numeric_data() instead 
 of explicitly selecting 
- 
+
  Data Preperation
 ----------------------------
 Let's start by creating: 
@@ -68,15 +68,15 @@ Let's start by creating:
 
 '''
 # X= TRAINING_FEATURES  = Everthing without the 'Recommended IND' column
-TRAINING_FEATURES =  df_copy.columns[df_copy.columns != 'Recommended IND']
-TARGET_FEATURE    = 'Recommended IND'
+TRAINING_FEATURES = df_copy.columns[df_copy.columns != 'Recommended IND']
+TARGET_FEATURE = 'Recommended IND'
 
 X = df_copy[TRAINING_FEATURES]
 y = df_copy[TARGET_FEATURE]
-print("\n\n   X \n------------\n",X)
-print("\n\n   y \n------------\n",y)
+print("\n\n   X \n------------\n", X)
+print("\n\n   y \n------------\n", y)
 
-#The split ratio is given by the test_size parameter
+# The split ratio is given by the test_size parameter
 # in the train_test_split function.
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -90,17 +90,17 @@ print("Target distribution in the test set:\n{}".format(y_test.value_counts()))
 
 scaler = StandardScaler()
 # z=(x - u) / s #  z=standard score  u = mean   s = standard deviation
- 
-#********************
+
+# ********************
 
 X_train_scaled = scaler.fit_transform(X_train)
 print("X_train_scaled    Mean: ", X_train_scaled.mean(axis=0))
 print("X_train_scaledStandard  Deviation: ", X_train_scaled.std(axis=0))
 
-#Apply it on the test set
+# Apply it on the test set
 X_test_scaled = scaler.transform(X_test)
 
-#Check X_train_scaled's mean and standard deviation
+# Check X_train_scaled's mean and standard deviation
 print("X_test_scaled    Mean: ", X_test_scaled.mean(axis=0))
 print("X_test_scaled    Standard Deviation: ", X_test_scaled.std(axis=0))
 
@@ -123,7 +123,6 @@ print("Min Value: ", X_train_scaled_in_range.min(axis=0))
 print("Max Value: ", X_train_scaled_in_range.max(axis=0))
 X_test_scaled_in_range = min_max_scaler.transform(X_test)
 
-
 '''
 Normalizing 
 https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/6c93ec048fa047efbef02828a32bb0d0/b37f098fbe18488e865593740c38e5ea/?child=last
@@ -145,24 +144,23 @@ Apply the train  function fit.
 clf_model = LogisticRegression().fit(X_train, y_train)
 # Use the classifier model (clf_model)  and apply it  on new data (X_test) in
 # order to predict its labels
-y_pred=clf_model.predict(X_test)
+y_pred = clf_model.predict(X_test)
 '''
 In order to evaluate the model, we will compare the predicted labels, to the
  actual labels provided by y_test, using a DataFrame 
 '''
 
-resDF=pd.DataFrame({"Actual":y_test,"Predicted":y_pred})
+resDF = pd.DataFrame({"Actual": y_test, "Predicted": y_pred})
 
 #  ^: exclusive-or (bitwise)
-resDF["correct"]= abs((resDF["Actual"]^resDF["Predicted"])-1)
+resDF["correct"] = abs((resDF["Actual"] ^ resDF["Predicted"]) - 1)
 # for every correct prediction put 1 in the columnn
-resDF[resDF["correct"]==1]
+resDF[resDF["correct"] == 1]
 print("  resDF \n--------------\n", resDF)
 
-print("correct:",len(resDF[resDF["correct"]==1]))
-print("total:",len(resDF))
-print("correct %:",len(resDF[resDF["correct"]==1])/len(resDF))
-
+print("correct:", len(resDF[resDF["correct"] == 1]))
+print("total:", len(resDF))
+print("correct %:", len(resDF[resDF["correct"] == 1]) / len(resDF))
 
 # if you want to have in the train set 70%  of the instances?
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
@@ -183,20 +181,20 @@ print("Max Value: ", X_train_scaled_in_range.max(axis=0))
 
 X_test_scaled_in_range = min_max_scaler.transform(X_test)
 
-#Send the updated features to the machine learning algorithm
+# Send the updated features to the machine learning algorithm
 # evaluate the results.
 # Are they better? worse? what do you think are the reasons for the change?
 
 clf_model = LogisticRegression().fit(X_train, y_train)
 
-y_pred=clf_model.predict(X_test)
+y_pred = clf_model.predict(X_test)
 
-resDF=pd.DataFrame({"Actual":y_test,"Predicted":y_pred})
+resDF = pd.DataFrame({"Actual": y_test, "Predicted": y_pred})
 
-resDF["correct"]=abs((resDF["Actual"]^resDF["Predicted"])-1)
-print("correct:",len(resDF[resDF["correct"]==1]))
-print("total:",len(resDF))
-print("correct %:",len(resDF[resDF["correct"]==1])/len(resDF))
+resDF["correct"] = abs((resDF["Actual"] ^ resDF["Predicted"]) - 1)
+print("correct:", len(resDF[resDF["correct"] == 1]))
+print("total:", len(resDF))
+print("correct %:", len(resDF[resDF["correct"] == 1]) / len(resDF))
 
-#An introduction to Machine Learning
-#https://www.geeksforgeeks.org/introduction-machine-learning/
+# An introduction to Machine Learning
+# https://www.geeksforgeeks.org/introduction-machine-learning/

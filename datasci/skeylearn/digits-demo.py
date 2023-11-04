@@ -95,16 +95,26 @@ plt.show()
 
 #classification_report builds a text report showing
 # the main classification metrics.
+
+ 
 print(
-    f"Classification report for classifier {clf}:\n"
+    f"\n\nClassification report for classifier {clf}:\n\n"
     f"{metrics.classification_report(y_test, predicted)}\n"
-)
+) 
 
-#Plot a confusion matrix of the true digit values
+'''Plot a confusion matrix of the true digit values
 # and the predicted digit values.
+Each row of the matrix represents the instances in
+ an actual class while each column represents the
+ instances in a predicted class, or vice versa 
+ ''' 
 
+ 
+ 
 disp = metrics.ConfusionMatrixDisplay.from_predictions(y_test, predicted)
 disp.figure_.suptitle("Confusion Matrix")
 print(f"Confusion matrix:\n{disp.confusion_matrix}")
 
 plt.show()
+ 
+ 
