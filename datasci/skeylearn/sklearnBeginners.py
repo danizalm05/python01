@@ -6,7 +6,7 @@ https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE
 https://labs.vocareum.com/main/main.php?m=editor&asnid=537360&stepid=537361&hideNavBar=1
 
 
-
+https://courses.campus.gov.il/courses/course-v1:HIT+ACD_RFP4_DataScienceIntro_HE+2022_1/courseware/dd57cc433d3e42dea49038ccabbc98c7/5f7fabd20c044cc288ff18150b63696c/2?activate_block_id=block-v1%3AHIT%2BACD_RFP4_DataScienceIntro_HE%2B2022_1%2Btype%40lti_consumer%2Bblock%40446f8191c47e4036a099b6ad85e4a6ad
 https://scikit-learn.org/stable/tutorial/basic/tutorial.html
 https://scikit-learn.org/stable/
 https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/
