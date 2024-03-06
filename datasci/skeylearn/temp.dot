@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<Sex &le; 0.5<br/>gini = 0.459<br/>samples = 445<br/>value = [286, 159]<br/>class = Perished>, fillcolor="#f3c7a7"] ;
+1 [label=<SibSp &le; 2.5<br/>gini = 0.386<br/>samples = 157<br/>value = [41, 116]<br/>class = Survived>, fillcolor="#7fc0ee"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<SibSp &le; 1.5<br/>gini = 0.333<br/>samples = 147<br/>value = [31, 116]<br/>class = Survived>, fillcolor="#6eb7ec"] ;
+1 -> 2 ;
+3 [label=<SibSp &le; 0.5<br/>gini = 0.33<br/>samples = 144<br/>value = [30, 114]<br/>class = Survived>, fillcolor="#6db7ec"] ;
+2 -> 3 ;
+4 [label=<gini = 0.32<br/>samples = 90<br/>value = [18, 72]<br/>class = Survived>, fillcolor="#6ab6ec"] ;
+3 -> 4 ;
+5 [label=<gini = 0.346<br/>samples = 54<br/>value = [12, 42]<br/>class = Survived>, fillcolor="#72b9ec"] ;
+3 -> 5 ;
+6 [label=<gini = 0.444<br/>samples = 3<br/>value = [1, 2]<br/>class = Survived>, fillcolor="#9ccef2"] ;
+2 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 10<br/>value = [10, 0]<br/>class = Perished>, fillcolor="#e58139"] ;
+1 -> 7 ;
+8 [label=<SibSp &le; 2.5<br/>gini = 0.254<br/>samples = 288<br/>value = [245, 43]<br/>class = Perished>, fillcolor="#ea975c"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<SibSp &le; 0.5<br/>gini = 0.262<br/>samples = 277<br/>value = [234, 43]<br/>class = Perished>, fillcolor="#ea985d"] ;
+8 -> 9 ;
+10 [label=<gini = 0.24<br/>samples = 229<br/>value = [197, 32]<br/>class = Perished>, fillcolor="#e99559"] ;
+9 -> 10 ;
+11 [label=<SibSp &le; 1.5<br/>gini = 0.353<br/>samples = 48<br/>value = [37, 11]<br/>class = Perished>, fillcolor="#eda674"] ;
+9 -> 11 ;
+12 [label=<gini = 0.337<br/>samples = 42<br/>value = [33, 9]<br/>class = Perished>, fillcolor="#eca36f"] ;
+11 -> 12 ;
+13 [label=<gini = 0.444<br/>samples = 6<br/>value = [4, 2]<br/>class = Perished>, fillcolor="#f2c09c"] ;
+11 -> 13 ;
+14 [label=<gini = 0.0<br/>samples = 11<br/>value = [11, 0]<br/>class = Perished>, fillcolor="#e58139"] ;
+8 -> 14 ;
+}

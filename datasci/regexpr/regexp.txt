@@ -1,0 +1,28 @@
+                             Regular  expresion
+   -------------------------                   -------------------
+   
+   "re" is the python lib for regular expresion 
+   https://docs.python.org/3/library/re.html
+   
+   
+   1: serach functio
+           1.search 
+           2. match 
+           3.findall 
+   2: sub 
+   3: split 
+   4: Match object 
+   
+   \d: number
+   \w\w\w\w : four letters ornumber  words
+   
+   \W : not letters or number or under score
+   [ -]: only one char, a space of minus. 
+   [a-zA-Z] one letter small or capital
+   
+   \s:  space tab or new line
+   \S not space tab or new line
+   .: every chars
+   ^ :beging of string
+   $ : end of string
+   

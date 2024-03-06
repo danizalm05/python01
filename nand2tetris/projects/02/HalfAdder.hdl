@@ -2,14 +2,27 @@
 // and the book "The Elements of Computing Systems"
 // by Nisan and Schocken, MIT Press.
 // File name: projects/02/HalfAdder.hdl
+
+//  a  b  |sum carrry
+//  ------|------------
+//  0  0  | 0    0
+//  0  1  | 1    0 
+//  1  0  | 1    0 
+//  1  1  | 0    1
+//  sum  = a xor b    carry = a and b
+
+
 /**
  * Computes the sum of two bits.
  */
 CHIP HalfAdder {
     IN a, b;    // 1-bit inputs
-    OUT sum,    // Right bit of a + b 
+    
+	OUT sum,    // Right bit of a + b 
         carry;  // Left bit of a + b
 
-    PARTS:
-    //// Replace this comment with your code.
+  
+   PARTS:
+    Xor (a = a, b = b, out = sum);
+	And (a = a, b = b, out = carry);
 }

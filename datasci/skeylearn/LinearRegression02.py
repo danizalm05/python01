@@ -21,12 +21,11 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 advert = pd.read_csv('./data/Advertising.csv',index_col=0) #load data
-#print(advert.head(10))
+print(advert.head(10))
 # initial description of the data
 #print("\n\nadvert.describe()\n--------------\n",advert.describe())
 '''
-Multiple Linear Regression
-
+g
 Model:
 Sales=β0+β1∗Digital+β2∗Radio+β3∗Newspaper.
 '''

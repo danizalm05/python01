@@ -13,5 +13,15 @@ CHIP Bit {
     OUT out;
 
     PARTS:
-    //// Replace this comment with your code.
+    Mux(a = dIn, b = in , sel = load, out = muxout);
+	DFF(in = muxout, out = dIn, out = out);
 }
+/*     
+            (load)sel --------|   
+                              |
+                         _ _ _|_                       _______
+    out --> (dIn)   a --|       \                     |       |
+                        |        \ --muxout->(in) --> |  DEF  |------> dIn,out
+                        |  Mux   /                    |_______| 
+             (in)   b --|_ _ _ _/ 
+*/

@@ -13,5 +13,20 @@ CHIP RAM8 {
     OUT out[16];
 
     PARTS:
-    //// Replace this comment with your code.
+	   	/*in = load ( '0' or '1') only one output is 1 according to 'sel'*/
+      DMux8Way(in = load, sel = address, a = inreg0, b = inreg1, c = inreg2, d = inreg3, e = inreg4, f = inreg5, g = inreg6, h = inreg7);
+	   
+	  Register(in = in, load = inreg0, out = outreg0);
+	  Register(in = in, load = inreg1, out = outreg1);
+	  Register(in = in, load = inreg2, out = outreg2);
+	  Register(in = in, load = inreg3, out = outreg3);
+	  Register(in = in, load = inreg4, out = outreg4);
+	  Register(in = in, load = inreg5, out = outreg5);
+	  Register(in = in, load = inreg6, out = outreg6);
+	  Register(in = in, load = inreg7, out = outreg7);
+	  
+	  //8-way 16-bit multiplexor(8 registers of 16 bit length)
+	  
+	  Mux8Way16(a = outreg0, b = outreg1, c = outreg2, d = outreg3, e = outreg4, f = outreg5, g = outreg6, h = outreg7, sel = address, out = out);
+	  
 }

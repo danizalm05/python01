@@ -1,5 +1,8 @@
 qt5-tools designer
 
+To start, open command line (cmd) and run :
+     designer.exe
+
 translate ui file  to python file:
     pyuic5 -x  <file name>.ui  -o main.py
     pyuic5 -x designer_file.ui -o designer_file_converted.py

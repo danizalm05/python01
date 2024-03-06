@@ -98,3 +98,4 @@ print("accuracy is:",metrics.accuracy_score(y_actual, y_pred))
 print("precision is:",metrics.precision_score(y_actual, y_pred))
 print("recall is:",metrics.recall_score(y_actual, y_pred))
 print("f1 is:",metrics.f1_score(y_actual, y_pred))
+
