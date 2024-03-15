@@ -6,14 +6,25 @@ https://courses.campus.gov.il/courses/course-v1:HUJI+ACD_HUJI_nand2tetris+2020_1
 HDL-Based Chip Simulation 
 https://www.youtube.com/watch?v=iSNfqzJUWW4
 
-http://nand2tetris-questions-and-answers-forum.52.s1.nabble.com/Hardware-Construction-Survival-Kit-td3385741.html
+
+
+Chapter 1
+
 http://nand2tetris-questions-and-answers-forum.52.s1.nabble.com/Comparison-Failure-for-quot-AND-quot-gate-td4037234.html
+
+
+Chapter-4
+http://nand2tetris-questions-and-answers-forum.52.s1.nabble.com/Chapter-4-f32603i35.html
+
 
 https://github.com/Gunasekare/nand2tetris
 https://www.nand2tetris.org/
    
 https://courses.campus.gov.il/courses/course-v1:HUJI+ACD_HUJI_nand2tetris+2020_1/courseware/e966e5c59f414d1f9b92396f05889394/6f60522e532d4e57b81cd179122910f2/
-12:00
+ 
+
+
+
 
 
 
@@ -21,7 +32,7 @@ https://courses.campus.gov.il/courses/course-v1:HUJI+ACD_HUJI_nand2tetris+2020_1
 =============                        ==========
 D:  (Data register) holds a 16 bit number
 A: (addres  register and Data register): register that holds address of a command
-R0-R15: 
+R0-R15: Stord in RAM[0]...RAM[15]
 M: the content of the addres choden by register  A. 
 
 
@@ -45,7 +56,7 @@ The 'A'  instruction start with @ and a number or a symbol that refers to a numb
 examples
 ----------
 @29:    means A=29
-@Sum:   means  A = the constant the is indicated by 'Sum'.
+@Sum:   means A = the constant the is indicated by 'Sum'.
 
 'c'  instruction
 ----------------------
@@ -62,16 +73,21 @@ x =y op z where x,y = {A,D,M} z = {A,D,M,1} and  y not equ to z
 
 examples
 1. // D =19
-      @19  |  D=A
+      @19   
+	  D=A
 
 2. // D=D+23
       @23  | D=D+A
 
 3. // RAM[100] = 0
-      @100 | M=0 
+      @100 
+	  M=0 
 	  
 4. // RAM[100] = 17	  
-      @17 | D=A | @100 | M=D 
+      @17  
+	  D=A  
+	  @100 
+	  M=D 
 	  
 5. // RAM[100] = RAM[200] 	  
       @200  
@@ -104,5 +120,36 @@ control commands    4.7 פקודות בקרה
     D;JLE //if D!=0 jump to Rom (A)	
     0;JMP // jump to Rom (A)	
 
+   
 
- 	  
+ Symbolic address: Veriables
+-------------------------------------- 
+  
+// sum = 1   and x=512 
+     D=1 
+     @sum   //A =   address of ram[16]  M content of ram[16]  
+     M = D  //  sum =1,    ram[16]=1  (M)=1
+     
+	 @512  // A =  512     
+     D=A   //D = 512
+     @x   // M address of ram[17], x= ram[17]
+     M=D  //ram[17]= 512	
+
+//n=n-1	 
+    @n 
+	n=n-1
+
+// sum =sum+x	
+    @sum // A  wil point to ram[16], M = content of ram[16], SUM= ram[16]
+	D=M // D = (M)
+	@x
+	D=D+x
+	M=D
+
+Labels: Veriables
+-------------------------------------- 	
+   // "infinite loop"  
+    (END)
+      @END
+      0;JMP //  jump to {END)	
+	
