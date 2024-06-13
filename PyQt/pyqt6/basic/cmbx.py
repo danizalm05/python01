@@ -6,8 +6,10 @@ Listing 19. basic/widgets_4.py  page 48-51
 
 
 import sys
-from PySide6.QtCore import Qt
+
 from PySide6.QtWidgets import QApplication, QComboBox, QMainWindow
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
