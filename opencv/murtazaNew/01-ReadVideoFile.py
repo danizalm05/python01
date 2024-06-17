@@ -1,5 +1,5 @@
 '''
-Read   and display image
+Read   video  file
 https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s  9:35
 https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter1.py
 '''
@@ -15,12 +15,17 @@ frameHeight = 480
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 ######################## READ IMAGE ############################
  
-
-BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
-path = BASE_FOLDER+'2.jpg'  #'b1.jpg' 'lena.png' 'bb.jpg'
-print("BASE_FOLDER" + path)
-
-img = cv2.imread(path)
-cv2.imshow("my image", img)
-cv2.waitKey(0)
+ 
+ 
+BASE_FOLDER = BASE_FOLDER +'/Videos/Captures/'
+ 
+path = BASE_FOLDER+'dog.mp4'
+print(path)
+cap = cv2.VideoCapture(path)
+while True:
+     success, img = cap.read()
+     img = cv2.resize(img, (frameWidth, frameHeight))
+     cv2.imshow("Result", img)
+     if cv2.waitKey(1) & 0xFF == ord('q'):
+         break
 
