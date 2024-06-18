@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadImg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadVideoFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadVideoFile.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
       <recent name="C:\Users\gilfm\Documents\d\python02\PyQt\pyqt6" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.01-ReadImg">
+  <component name="RunManager" selected="Python.01-ReadVideoFile">
     <configuration name="01-ReadImg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,8 +154,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.01-ReadImg" />
         <item itemvalue="Python.01-ReadVideoFile" />
+        <item itemvalue="Python.01-ReadImg" />
         <item itemvalue="Python.01-ReadVideoCamera" />
         <item itemvalue="Python.QGridLayout" />
         <item itemvalue="Python.colorWidget" />

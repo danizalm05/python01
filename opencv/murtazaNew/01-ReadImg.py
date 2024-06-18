@@ -9,6 +9,7 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 import getpass
+import os
 
 frameWidth = 640
 frameHeight = 480
@@ -18,9 +19,12 @@ BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 
 BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
 path = BASE_FOLDER+'2.jpg'  #'b1.jpg' 'lena.png' 'bb.jpg'
-print("BASE_FOLDER" + path)
 
-img = cv2.imread(path)
-cv2.imshow("my image", img)
-cv2.waitKey(0)
+if os.path.isfile(path):
+    img = cv2.imread(path)
+    cv2.imshow("my image", img)
+    cv2.waitKey(0)
+
+else:
+    print("ERROR --> Missing File: " + path   )
 

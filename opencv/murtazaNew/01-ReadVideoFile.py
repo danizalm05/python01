@@ -9,6 +9,8 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 import getpass
+import os
+
 
 frameWidth = 640
 frameHeight = 480
@@ -21,11 +23,14 @@ BASE_FOLDER = BASE_FOLDER +'/Videos/Captures/'
  
 path = BASE_FOLDER+'dog.mp4'
 print(path)
-cap = cv2.VideoCapture(path)
-while True:
+
+if os.path.isfile(path):
+   cap = cv2.VideoCapture(path)
+   while True:
      success, img = cap.read()
      img = cv2.resize(img, (frameWidth, frameHeight))
      cv2.imshow("Result", img)
      if cv2.waitKey(1) & 0xFF == ord('q'):
          break
-
+else:
+    print("ERROR --> Missing File: " + path   )
