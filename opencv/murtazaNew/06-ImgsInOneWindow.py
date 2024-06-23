@@ -6,10 +6,15 @@ https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter6.py
 import numpy as np
 import cv2
 import getpass
+import os
+import sys
 
+file_name = 'cards.jpg'
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
-path = BASE_FOLDER+'cards.jpg'  #'b1.jpg' 'lena.png' 'bb.jpg'
+path = BASE_FOLDER+ file_name #'b1.jpg' 'lena.png' 'bb.jpg'
+
+
 
 
 def stackImages(scale,imgArray):
@@ -42,6 +47,10 @@ def stackImages(scale,imgArray):
         hor= np.hstack(imgArray)
         ver = hor
     return ver
+
+if not (os.path.isfile(path)):
+    print("ERROR --> Missing File: " + path   ) 
+    sys.exit(1)
 
 img = cv2.imread(path)
 print(img.shape)

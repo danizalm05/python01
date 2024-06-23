@@ -24,7 +24,7 @@ cv2.waitKey(0)
 print(img)
 
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Pictures/Saved Pictures/'
-file_name = '2seef2.jpg'
+file_name = '22.jpg'
 path = BASE_FOLDER + file_name   
 
 
