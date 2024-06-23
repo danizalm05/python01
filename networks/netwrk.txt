@@ -1,0 +1,52 @@
+DemmSec 
+ https://www.youtube.com/user/DemmSec/playlists
+ 
+ route -n it will show you your IP address and interface  (linux)
+ route print  (win)
+ 
+
+ nmap 192.168.43.1    scan single IP address
+ nmap 192.168.43.0/24   or  nmap 192.168.43.*  scan whole network type
+ nmap flags:
+        -O  :-  O.S detection.
+        -sS :-  TCP SYN scan
+        -P0 :-  Ports detection.
+        -T5 :-  Fast Scanning.
+
+
+ 
+
+
+
+
+
+find your ip    http://www.whatismyip.com   
+ping any url ip  in cmd : ping www.facebook.com 
+another way: nslookup www.google.com    
+
+GeoIP: http://www.geoiptool.com 
+
+trace the routh to :  tracert -d www.google.com
+visual traceroute:   https://www.yougetsignal.com/tools/visual-tracert/   use proxy trace
+  
+ פרק   3        
+osi
+ 
+7 	Application  ( )	 יישום 	תקשורת עם המשתמש 	                        YouTube, Skype, Facebook
+6 	Presentation ( )	 ייצוג 	קידוד דחיסה וייצוג 	                        CSS, HTML, GIF
+5 	Session 	 ( )     שיחה 	אפשור קיום השיחה, בקרת דו-שיח, בקרת אסימון 	    FTP
+4 	Transport  (segment) תעבורה 	העברת נתתונים בין שני הצדדים, אמינות  port    	TCP, UDP
+3 	Network    (packet) רשת 	העברת הנתונים ברשת מקצה לקצה - ניתוב    	ICMP,RARP,ARP,IP, IPX, RIP
+2 	Data Link  (frame)  קו 	    העברת הנתונים מנקודה לנקודה למרות הפרעות   	Ethernet, Token ring
+1 	Physical   (bit)    פיזית 	העברת אותות, הגדרת מתחים, הגדרת חיבורים 	RS232,802.11x WiFi, E1, 10Base-T, DSL
+
+משפט באנגלית המקל על זכירת השכבות הוא: All People Seem To Need Data Processing 
+
+IP ranges are reserved for private subnets
+--------------------------------------------
+10.*.*.*, 
+172.16–31.*.*, 
+192.168.*.*:
+These addresses are free for you to use on any of your organization’s internal networks where you want to
+be free to assign IP addresses internally, but whose hosts do not need to be
+accessible from other places on the Internet.
