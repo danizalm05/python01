@@ -6,8 +6,6 @@ DemmSec
  
  ipconfig :list of network interfaces
  tracert d www.google.com  : trace routhe 
- nslookup www.google.com
- 
  nmap 192.168.43.1    scan single IP address
  nmap 192.168.43.0/24   or  nmap 192.168.43.*  scan whole network type
  nmap flags:
