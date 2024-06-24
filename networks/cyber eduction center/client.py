@@ -1,6 +1,10 @@
 import socket
 
-'''nslookup  networks.cyber.org.il ===> ip= 213.57.2.5
+'''
+רשתות מחשבים  page 40 exer  2.1
+run server.py before runing  this program 
+https://cyber.org.il/data/
+nslookup  networks.cyber.org.il ===> ip= 213.57.2.5
 http://cyber.org.il/
 python -V    python version:   Python 3.6.4 :: Anaconda, Inc.
 http://www.lamed-oti.com/school/rs/networks/

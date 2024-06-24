@@ -8,6 +8,7 @@ DemmSec
  tracert d www.google.com  : trace routhe 
  nslookup www.google.com
  
+ C:\Windows\System32
  nmap 192.168.43.1    scan single IP address
  nmap 192.168.43.0/24   or  nmap 192.168.43.*  scan whole network type
  nmap flags:
@@ -15,11 +16,6 @@ DemmSec
         -sS :-  TCP SYN scan
         -P0 :-  Ports detection.
         -T5 :-  Fast Scanning.
-
-
- 
-
-
 
 
 
@@ -35,13 +31,19 @@ visual traceroute:   https://www.yougetsignal.com/tools/visual-tracert/   use pr
  פרק   3        
 osi
  
-7 	Application  ( )	 יישום 	תקשורת עם המשתמש 	                        YouTube, Skype, Facebook
-6 	Presentation ( )	 ייצוג 	קידוד דחיסה וייצוג 	                        CSS, HTML, GIF
-5 	Session 	 ( )     שיחה 	אפשור קיום השיחה, בקרת דו-שיח, בקרת אסימון 	    FTP
-4 	Transport  (segment) תעבורה 	העברת נתתונים בין שני הצדדים, אמינות  port    	TCP, UDP
-3 	Network    (packet) רשת 	העברת הנתונים ברשת מקצה לקצה - ניתוב    	ICMP,RARP,ARP,IP, IPX, RIP
-2 	Data Link  (frame)  קו 	    העברת הנתונים מנקודה לנקודה למרות הפרעות   	Ethernet, Token ring
-1 	Physical   (bit)    פיזית 	העברת אותות, הגדרת מתחים, הגדרת חיבורים 	RS232,802.11x WiFi, E1, 10Base-T, DSL
+7 	Application  יישום 	תקשורת עם המשתמש 	   YouTube, Skype, Facebook
+
+6 	Presentation  ייצוג 	קידוד דחיסה וייצוג 	    CSS, HTML, GIF
+
+5 	Session     שיחה 	אפשור קיום השיחה, בקרת דו-שיח, בקרת אסימון 	   FTP
+
+4 	Transport  (segment) תעבורה 	העברת נתתונים בין שני הצד אמינות  port TCP, UDP
+
+3 	Network    (packet) רשת העברת הנתונים ברשת מקצה לקצה - ניתוב    	ICMP,RARP,ARP,IP, IPX, RIP
+
+2 	Data Link  (frame)  קו 	 העברת הנתונים מנקודה לנקודה למרות הפרעות   	Ethernet, Token ring
+
+1 	Physical   (bit)   פיזית העברת אותות, הגדרת מתחים, הגדרת חיבורים 	RS232,802.11x WiFi, E1, 10Base-T, DSL
 
 משפט באנגלית המקל על זכירת השכבות הוא: All People Seem To Need Data Processing 
 
