@@ -7,6 +7,9 @@ DemmSec
  ipconfig :list of network interfaces
  tracert d www.google.com  : trace routhe 
  nslookup www.google.com
+ https://www.yougetsignal.com/tools/visual-tracert/
+ https://www.yougetsignal.com/what-is-my-ip-address/
+ 
  
  C:\Windows\System32
  nmap 192.168.43.1    scan single IP address

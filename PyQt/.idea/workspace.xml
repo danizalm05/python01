@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadImg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadVideoFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadVideoFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../networks/cyber eduction center/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../networks/cyber eduction center/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../networks/cyber eduction center/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../networks/cyber eduction center/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../opencv/murtazaNew/01-ReadImg.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../networks/cyber eduction center/server.py" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +46,7 @@
       <recent name="C:\Users\gilfm\Documents\d\python02\PyQt\pyqt6" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.01-ReadVideoFile">
+  <component name="RunManager" selected="Python.client">
     <configuration name="01-ReadImg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,19 +110,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="QGridLayout" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\PyQt\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt6/basic" />
+      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../networks/cyber eduction center" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt6/basic/QGridLayout.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../networks/cyber eduction center/client.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,19 +131,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="colorWidget" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt6/basic" />
+      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\PyQt\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../networks/cyber eduction center" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt6/basic/colorWidget.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../networks/cyber eduction center/server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.client" />
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.01-ReadVideoFile" />
         <item itemvalue="Python.01-ReadImg" />
         <item itemvalue="Python.01-ReadVideoCamera" />
-        <item itemvalue="Python.QGridLayout" />
-        <item itemvalue="Python.colorWidget" />
       </list>
     </recent_temporary>
   </component>
