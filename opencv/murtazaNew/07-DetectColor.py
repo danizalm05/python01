@@ -1,13 +1,28 @@
 '''
 07-DetectColors.py
 
-https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s  1:06:00   1:15:00
+https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s  56:00 1:06:00   1:15:00
 https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter7.py'''
 
 import numpy as np
 import cv2
 import getpass
 import numpy as np
+import sys
+import os
+
+
+
+image_name =  'cards.jpg' #'lambo.png'
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
+BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
+path = BASE_FOLDER + image_name
+
+if not (os.path.isfile(path)):
+    print("ERROR --> Missing File: " + path   )
+    sys.exit(1)
+
+
 
 def empty(a):
     pass
@@ -41,9 +56,8 @@ def stackImages(scale,imgArray):
         hor= np.hstack(imgArray)
         ver = hor
     return ver
-BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
-BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
-path = BASE_FOLDER+'lambo.png'  # 'cards.jpg'
+
+
 
 cv2.namedWindow("TrackBars")
 cv2.resizeWindow("TrackBars",640,320)
