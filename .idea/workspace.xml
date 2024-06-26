@@ -7,13 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/client26.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/client27.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/server26.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/server27.py" beforeDir="false" />
-    </list>
+    <list default="true" id="75bef0b5-8852-4a03-bca4-1d1b1b066900" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.client.executor": "Run",
-    "Python.client26.executor": "Run",
-    "Python.face_detector.executor": "Run",
-    "Python.server.executor": "Run",
-    "Python.server26.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client26.executor&quot;: &quot;Run&quot;,
+    &quot;Python.face_detector.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server26.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\python01\opencv\jasmcauscaer\Section #1 - Basics" />
