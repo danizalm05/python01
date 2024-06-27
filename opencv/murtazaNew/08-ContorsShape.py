@@ -1,7 +1,7 @@
 '''
 08-ContorsShape.py
-Load Inmages in one window
-https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s   1:15:00  1:28
+
+https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s   1:15:00  1:21
 https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter8.py
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/contours.py
 '''
@@ -11,6 +11,20 @@ import numpy as np
 import cv2
 import getpass
 import numpy as np
+import sys
+import os
+
+
+file_name = 'shapes01.png'  # 'cards.jpg'
+BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
+BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
+path = BASE_FOLDER +  file_name
+img00 = cv2.imread(path)
+
+if not (os.path.isfile(path)):
+    print("ERROR --> Missing File: " + path   )
+    sys.exit(1)
+
 
 def empty(a):
     pass
@@ -89,10 +103,7 @@ def getContours(img):
 #############
 
 
-BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
-BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
-path = BASE_FOLDER +  'shapes01.png'  # 'cards.jpg'
-img00 = cv2.imread(path)
+
 img00copy = img00.copy()
 gray = cv2.cvtColor(img00, cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray, (3,3), cv2.BORDER_DEFAULT)
