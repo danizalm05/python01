@@ -19,12 +19,12 @@ file_name = 'shapes01.png'  # 'cards.jpg'
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
 path = BASE_FOLDER +  file_name
-img00 = cv2.imread(path)
+
 
 if not (os.path.isfile(path)):
     print("ERROR --> Missing File: " + path   )
     sys.exit(1)
-
+img00 = cv2.imread(path)
 
 def empty(a):
     pass
@@ -70,17 +70,17 @@ def getContours(img):
     for cnt in contours:
         i += 1
         area = cv2.contourArea(cnt)
-
+        print("area = ", area)
         if area >100:   #  'img00copy' ==> copy of the original image
             cv2.drawContours(img00copy, cnt, -1, (0, 0, 255), 1)
             peri = cv2.arcLength(cnt, True)# closed shapes ==> True
             approx = cv2.approxPolyDP(cnt, 0.03 * peri, True) # closed shapes ==> True
-            objCor = len(approx)
+            objCor = len(approx)# Number of corner of the object
             x, y, w, h = cv2.boundingRect(approx)
             print(i, ' : ', area,' peri =  ',peri,'len(approx) = ', objCor)
             print(approx)  #  approx ===> corner   points.
                            #  3 is trinagle 4 rect and >4  circle
-            print('cv2.boundingRect(approx) =', cv2.boundingRect(approx))
+            #print('cv2.boundingRect(approx) =', cv2.boundingRect(approx))
 
             if objCor == 3:
                 objectType = "Tri"
