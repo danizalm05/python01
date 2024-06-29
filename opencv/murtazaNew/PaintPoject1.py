@@ -1,7 +1,7 @@
 """
  virtualpaint: project1
 
-Murtaza's Workshop - Robotics and AI   1:55:00 2:01:00 2:15:00
+Murtaza's    1:55:00 2:01:00 2:15:00
  https://www.youtube.com/watch?v=WQeoO7MI0Bs&list=PLMoSUbG1Q_r9p7iYBg6z6tZP002DAJ41H
  https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/project1.py
  """
@@ -37,12 +37,12 @@ cap.set(4, frameHeight)
 bright = 150
 cap.set(10, bright)
 
-
+#      [h_min, s_min, v_min,     h_max, s_max, v_max]  
 night_colors = [
-            [0, 70, 190, 76, 190, 255],
-            [133,56, 0, 159, 156, 255],
-            [57, 76, 0, 100, 255, 255],
-            [90, 48, 0, 118, 255, 255]
+            [0, 70, 190,   76, 190, 255],
+            [133,56, 0,   159, 156, 255],
+            [57, 76, 0,   100, 255, 255],
+            [90, 48, 0,   118, 255, 255]
           ]
 
 day_colors = [
@@ -52,12 +52,17 @@ day_colors = [
             [90, 48, 0, 118, 255, 255]
           ]
 
-myColorValues = [[51,153,255],          ## BGR
+ 
+## BGR  colors list each item will represent a range of colors
+## index in the list is the ID of the color
+myColorValues = [[51,153,255],         
                  [0,0,255],
                  [0,255,0],
                  [255,0,0]]
 
-myPoints =  []  ## [x , y , colorId ] # colorId  index in 'myColorValues' list
+
+ # colorId  index in 'myColorValues' list
+myPoints =  []  ## [x , y , colorId ]
 
 
 def findColor(img,myColors ,myColorValues):
@@ -93,8 +98,10 @@ def getContours(img):
 
 
 def drawOnCanvas(myPoints, myColorValues):
-    for point in myPoints:
-        cv2.circle(imgResult, (point[0], point[1]), 10, myColorValues[point[2]], cv2.FILLED)
+  for point in myPoints:
+       #x index:point[0], y index::point[1], color id:point[2]
+      cv2.circle(imgResult, (point[0], point[1]), 10,
+                      myColorValues[point[2]], cv2.FILLED)
 
 
 #----------   Main   program -----------------
@@ -103,7 +110,8 @@ while True:
     imgResult = img.copy()
 
     newPoints = findColor(img, day_colors, myColorValues)
-
+    # All the points are kept in the list 'myPoints'
+    # the are all  re-drawn over and over again
     if len(newPoints) != 0:
         for newP in newPoints:
             myPoints.append(newP)
