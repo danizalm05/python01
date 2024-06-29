@@ -64,11 +64,12 @@ def findColor(img,myColors ,myColorValues):
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     count = 0
     newPoints = []
-    for color in myColors: # Scan 'day_colors' list
-      lower = np.array(color[0:3])
-      upper = np.array(color[3:6])
+    for color in myColors: # Scan all colors  in the  myColors list
+      lower = np.array(color[0:3])#min colors values
+      upper = np.array(color[3:6])#max colors values
       mask = cv2.inRange(imgHSV, lower, upper)
-      #If the elements lies between  upper lower bounds returns 255, else returns 0
+      #If the elements lies between  upper lower bounds returns 255, else
+      # returns 0
 
       x, y = getContours(mask)#Mask contain only pixels in the range
       cv2.circle(imgResult, (x, y),  2, myColorValues[count], cv2.FILLED)
@@ -101,7 +102,7 @@ while True:
     success, img = cap.read()
     imgResult = img.copy()
 
-    newPoints = findColor(img, night_colors, myColorValues)#night_colors night_colors
+    newPoints = findColor(img, day_colors, myColorValues)
 
     if len(newPoints) != 0:
         for newP in newPoints:

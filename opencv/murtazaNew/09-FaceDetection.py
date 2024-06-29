@@ -1,6 +1,6 @@
 '''
-09-FaceDetection.py
-Load Inmages in one window
+09-FaceDetection.py  in photo  and video
+
 https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=549s   1:42:00
 https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter9.py
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/contours.py
@@ -8,17 +8,26 @@ https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basic
 
 import getpass
 import cv2
-
+import sys
+import os
 xml_file = "./Resources/haarcascade_frontalface_default.xml"
+file_name = "1.jpg"# "2.jpg"
+if not (os.path.isfile(xml_file)):
+    print("ERROR --> Missing File: xml_file =   " + xml_file  )
+    sys.exit(1)
 print(xml_file)
-faceCascade = cv2.CascadeClassifier(xml_file)
-
-
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'# faces/'
 
-path = BASE_FOLDER +  'road.jpg' #'test3.jpg'  # 'bb.jpg' 'b1.jpg'
+path = BASE_FOLDER + file_name #'test3.jpg'  # 'bb.jpg' 'b1.jpg'
 print(path)
+
+
+
+faceCascade = cv2.CascadeClassifier(xml_file)
+
+
+
 
 img00 = cv2.imread(path)
 
