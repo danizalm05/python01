@@ -117,7 +117,7 @@ def stackImages(scale,imgArray):
     return ver
 
 while True:
-    #success, img = cap.read()
+    #    success, img = cap.read()
     #img = cv2.resize(img,(widthImg,heightImg))
     imgContour = img.copy()
 
