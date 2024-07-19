@@ -3,7 +3,7 @@ Create GUI Applications with Python & Qt6 / Martin Fitzpatrick
 page 30
 
 '''
-
+ 
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 
 import sys
