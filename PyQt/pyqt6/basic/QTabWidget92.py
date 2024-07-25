@@ -7,7 +7,8 @@ Listing 35. basic/layout_9.py
 '''
 
 import sys
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt,QSize
+
 from PySide6.QtWidgets import (
     QApplication,
     QLabel,

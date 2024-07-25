@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pyqt6/basic/ToolBar96.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyqt6/basic/myapp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt6/basic/QTabWidget92.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt6/basic/QTabWidget92.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt6/basic/ToolBar96.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt6/basic/ToolBar96.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,8 +153,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.ToolBar96" />
-        <item itemvalue="Python.myapp" />
         <item itemvalue="Python.QTabWidget92" />
+        <item itemvalue="Python.myapp" />
         <item itemvalue="Python.StackLay88" />
         <item itemvalue="Python.QGridLayout" />
       </list>
