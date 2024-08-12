@@ -1,10 +1,8 @@
 '''
-How to use the  CVZone updated version
-https://www.youtube.com/watch?v=3xfOa4yeOb0
 https://www.computervision.zone/lessons/code-and-files-6/
 
 https://www.youtube.com/watch?v=3xfOa4yeOb0
-9:09
+
 '''
 import cv2
 from cvzone.HandTrackingModule import HandDetector
