@@ -5,8 +5,8 @@ https://sefiks.com/2022/01/14/deep-face-detection-with-mediapipe/
 https://www.youtube.com/watch?v=Yg6bFRnOSbs
 '''
 
-imgName = 'test9.jpeg'  #"cat-face.png"
-scaling_factor = 0.4
+imgName = 'test4.jpg'  #"cat-face.png"
+scaling_factor = 2
 import mediapipe
 import cv2
 import getpass
