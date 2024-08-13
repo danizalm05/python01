@@ -1,15 +1,35 @@
+'''
+basic module :https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s
+hand gesture https://www.youtube.com/watch?v=9iEPzbG-xLE
+'''
+
+
+
 import mediapipe as mp
 import numpy as np
 import cv2
+import getpass
+imgName = 'hand_pen.jpg'#'test4.jpg'
+
+def readImagePath(imgName):
+	BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
+	BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
+	path = BASE_FOLDER+imgName
+	print(path)
+
+	return path
+
 
 cap = cv2.VideoCapture(0)
+image_path = readImagePath(imgName)
+print('image_path =',image_path )
 
 hands = mp.solutions.hands
 hands_mesh = hands.Hands(static_image_mode=True, min_detection_confidence=0.7)
 draw = mp.solutions.drawing_utils
-frm = cv2.imread("hands.jpg")
+frm = cv2.imread(image_path )
 while True:
-	#_, frm = cap.read()
+	_, frm = cap.read()
 	rgb = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
 
 	op = hands_mesh.process(rgb)
