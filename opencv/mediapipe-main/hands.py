@@ -1,5 +1,6 @@
 '''
-basic module :https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s
+Hand Tracking 30 FPS using CPU  Computer Vision 
+https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  10:01
 hand gesture https://www.youtube.com/watch?v=9iEPzbG-xLE
 '''
 
@@ -25,7 +26,10 @@ image_path = readImagePath(imgName)
 print('image_path =',image_path )
 
 hands = mp.solutions.hands
-hands_mesh = hands.Hands(static_image_mode=True, min_detection_confidence=0.7)
+hands_mesh = hands.Hands(static_image_mode=False,
+                         min_detection_confidence=0.7)
+
+
 draw = mp.solutions.drawing_utils
 frm = cv2.imread(image_path )
 while True:
@@ -42,7 +46,7 @@ while True:
 
 
 	cv2.imshow("window", frm)
-	cv2.imwrite("hand.jpg", frm)
+	#cv2.imwrite("hand.jpg", frm)
 
 	if cv2.waitKey(1) == 27:
 		cv2.destroyAllWindows()

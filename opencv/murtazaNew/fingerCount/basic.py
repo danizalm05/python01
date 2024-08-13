@@ -7,19 +7,33 @@ import time
 import os
 import HandTrackingModule as htm
 
+import getpass
+imgName = 'hand_pen.jpg'#'test4.jpg'
+
+
+
 wCam, hCam = 640, 480
 
 cap = cv2.VideoCapture(1)
 cap.set(3, wCam)
 cap.set(4, hCam)
+imgName = 'hand_pen.jpg'#'test4.jpg'
 
-folderPath = "FingerImages"
+def readImagePath(imgName):
+	BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
+	BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
+	path = BASE_FOLDER#+imgName
+	return path
+
+
+folderPath  = readImagePath(imgName)
+print('folderPath =',folderPath )
 myList = os.listdir(folderPath)
-print(myList)
+#print(myList)
 overlayList = []
 for imPath in myList:
     image = cv2.imread(f'{folderPath}/{imPath}')
-    # print(f'{folderPath}/{imPath}')
+    print(f'{folderPath}/{imPath}')
     overlayList.append(image)
 
 print(len(overlayList))

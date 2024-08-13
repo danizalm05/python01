@@ -50,18 +50,18 @@ class handDetector():
 
         return lmList
 
-
+####################################################
 def main():
     pTime = 0
     cTime = 0
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     detector = handDetector()
     while True:
         success, img = cap.read()
-        img = detector.findHands(img)
-        lmList = detector.findPosition(img)
-        if len(lmList) != 0:
-            print(lmList[4])
+       # img = detector.findHands(img)
+       # lmList = detector.findPosition(img)
+       # if len(lmList) != 0:
+        #    print(lmList[4])
 
         cTime = time.time()
         fps = 1 / (cTime - pTime)
