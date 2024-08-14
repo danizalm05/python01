@@ -1,6 +1,6 @@
 '''
 Hand Tracking 30 FPS using CPU  Computer Vision 
-https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  10:01
+https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  15:01
 hand gesture https://www.youtube.com/watch?v=9iEPzbG-xLE
 '''
 
@@ -22,8 +22,8 @@ def readImagePath(imgName):
 
 
 cap = cv2.VideoCapture(0)
-image_path = readImagePath(imgName)
-print('image_path =',image_path )
+#image_path = readImagePath(imgName)
+#print('image_path =',image_path )
 
 hands = mp.solutions.hands
 hands_mesh = hands.Hands(static_image_mode=False,
@@ -31,18 +31,22 @@ hands_mesh = hands.Hands(static_image_mode=False,
 
 
 draw = mp.solutions.drawing_utils
-frm = cv2.imread(image_path )
+#frm = cv2.imread(image_path )
 while True:
+
 	_, frm = cap.read()
 	rgb = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
-
 	op = hands_mesh.process(rgb)
-
+	# (op.multi_hand_landmarks) == true, means one or two hands are in view
 	if op.multi_hand_landmarks:
-		for i in op.multi_hand_landmarks:
-			draw.draw_landmarks(frm, i, hands.HAND_CONNECTIONS, 
-				landmark_drawing_spec=draw.DrawingSpec(color = (255, 0,0),circle_radius=4, thickness=3),
-				connection_drawing_spec=draw.DrawingSpec(thickness=3, color=(0,0,255)))
+	 for i in op.multi_hand_landmarks:
+
+		 connect  = draw.DrawingSpec(thickness=1, color=(0,0,255))
+		 landmark = draw.DrawingSpec(color = (255, 100,0),circle_radius=4, thickness=2)
+
+		 draw.draw_landmarks(frm, i, hands.HAND_CONNECTIONS,
+				        landmark_drawing_spec= landmark,
+				         connection_drawing_spec = connect)
 
 
 	cv2.imshow("window", frm)
