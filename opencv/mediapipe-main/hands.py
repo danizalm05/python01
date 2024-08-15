@@ -46,7 +46,10 @@ while True:
           #print(id, lm)
           h, w, c = frm.shape
           cx, cy = int(lm.x * w), int(lm.y * h)
-          print(id, cx, cy)
+
+          if id == 4: #tip  of the tomb
+              print(id, cx, cy)
+              cv2.circle(frm, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
       connect  = draw.DrawingSpec(thickness=1, color=(0,0,255))
       landmark = draw.DrawingSpec(color = (255, 100,0),circle_radius=4, thickness=2)
       draw.draw_landmarks(frm, i, hands.HAND_CONNECTIONS,
