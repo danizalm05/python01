@@ -1,6 +1,6 @@
 '''
 Hand Tracking 30 FPS using CPU  Computer Vision 
-https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  21:01
+https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  26:01
 hand gesture https://www.youtube.com/watch?v=9iEPzbG-xLE
 '''
 
