@@ -1,79 +1,90 @@
-"""
-Hand Tracing Module
-By: Murtaza Hassan
-Youtube: http://www.youtube.com/c/MurtazasWorkshopRoboticsandAI
-Website: https://www.computervision.zone
-"""
+'''
+Hand Tracking 30 FPS using CPU  Computer Vision 
+https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  26:01
+hand gesture https://www.youtube.com/watch?v=9iEPzbG-xLE
+'''
 
-import cv2
+
+
 import mediapipe as mp
+import numpy as np
+import cv2
 import time
+import getpass
+imgName = 'hand_pen.jpg'#'test4.jpg'
+
+def readImagePath(imgName):
+	BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
+	BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
+	path = BASE_FOLDER+imgName
+	print(path)
+
+	return path
 
 
-class handDetector():
-    #def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
-    def __init__(self, mode=False, maxHands=2, detectionCon=0.7, trackCon=0.5):
-        self.mode = mode
-        self.maxHands = maxHands
-        self.detectionCon = detectionCon
-        self.trackCon = trackCon
 
-        self.mpHands = mp.solutions.hands
-        self.hands = self.mpHands.Hands(self.mode, self.maxHands,
-                                        self.detectionCon, self.trackCon)
-        self.mpDraw = mp.solutions.drawing_utils
+#image_path = readImagePath(imgName)
+#print('image_path =',image_path )
 
-    def findHands(self, img, draw=True):
-        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        self.results = self.hands.process(imgRGB)
-        # print(results.multi_hand_landmarks)
+hands = mp.solutions.hands
+hands_mesh = hands.Hands(static_image_mode=False,
+                         min_detection_confidence=0.7)
 
-        if self.results.multi_hand_landmarks:
-            for handLms in self.results.multi_hand_landmarks:
-                if draw:
-                    self.mpDraw.draw_landmarks(img, handLms,
-                                               self.mpHands.HAND_CONNECTIONS)
-        return img
 
-    def findPosition(self, img, handNo=0, draw=True):
+draw = mp.solutions.drawing_utils
 
-        lmList = []
-        if self.results.multi_hand_landmarks:
-            myHand = self.results.multi_hand_landmarks[handNo]
-            for id, lm in enumerate(myHand.landmark):
-                # print(id, lm)
-                h, w, c = img.shape
-                cx, cy = int(lm.x * w), int(lm.y * h)
-                # print(id, cx, cy)
-                lmList.append([id, cx, cy])
-                if draw:
-                    cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+ 
+while True:
+    n=2
+     
+    rgb = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
+    op = hands_mesh.process(rgb)
+	# (op.multi_hand_landmarks) == true, means one or two hands are in view
+    if op.multi_hand_landmarks:
+     for i in op.multi_hand_landmarks:
+      for id,lm in enumerate(i.landmark):
+          #print(id, lm)
+          h, w, c = frm.shape
+          cx, cy = int(lm.x * w), int(lm.y * h)
 
-        return lmList
+          if id == 4: #tip  of the tomb
+              print(id, cx, cy)
+              cv2.circle(frm, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+      connect  = draw.DrawingSpec(thickness=1, color=(0,0,255))
+      landmark = draw.DrawingSpec(color = (255, 100,0),circle_radius=4, thickness=2)
+      draw.draw_landmarks(frm, i, hands.HAND_CONNECTIONS,
+				        landmark_drawing_spec= landmark,
+				         connection_drawing_spec = connect)
+    
+     
+   
+     
 
-####################################################
 def main():
     pTime = 0
     cTime = 0
-    cap = cv2.VideoCapture(0)
-    detector = handDetector()
+    cap = cv2.VideoCapture(0) 
+    
     while True:
-        success, img = cap.read()
-       # img = detector.findHands(img)
-       # lmList = detector.findPosition(img)
-       # if len(lmList) != 0:
-        #    print(lmList[4])
+        _, frm = cap.read()
+        rgb = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
+
 
         cTime = time.time()
         fps = 1 / (cTime - pTime)
         pTime = cTime
 
-        cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3,
-                    (255, 0, 255), 3)
+        cv2.putText(frm, f'FPS: {int(fps)}', (10, 60), 
+             cv2.FONT_HERSHEY_PLAIN, 3, (255 , 220, 0), 2)
 
-        cv2.imshow("Image", img)
-        cv2.waitKey(1)
-
-
+        cv2.imshow("window", frm)
+       
+        if cv2.waitKey(1) == 27:
+          cv2.destroyAllWindows()
+          cap.release()
+          break
+      
+        
+      
 if __name__ == "__main__":
-    main()
+    main()  

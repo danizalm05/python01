@@ -1,9 +1,3 @@
-"""
-Hand Tracing Module
-By: Murtaza Hassan
-Youtube: http://www.youtube.com/c/MurtazasWorkshopRoboticsandAI
-Website: https://www.computervision.zone
-"""
 
 import cv2
 import mediapipe as mp
@@ -11,17 +5,22 @@ import time
 
 
 class handDetector():
-    #def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
-    def __init__(self, mode=False, maxHands=2, detectionCon=0.7, trackCon=0.5):
-        self.mode = mode
-        self.maxHands = maxHands
-        self.detectionCon = detectionCon
-        self.trackCon = trackCon
+    
+    def __init__(self, mode=False, maxHands=2, modelComp=1,
+                 detectionCon=0.5, trackCon=0.5):
 
-        self.mpHands = mp.solutions.hands
-        self.hands = self.mpHands.Hands(self.mode, self.maxHands,
-                                        self.detectionCon, self.trackCon)
-        self.mpDraw = mp.solutions.drawing_utils
+      self.mode = mode
+      self.maxHands = maxHands
+      self.detectionCon = detectionCon
+      self.trackCon = trackCon
+      self.modelComp = modelComp
+
+      self.mpHands = mp.solutions.hands
+      self.hands = self.mpHands.Hands(self.mode, 
+                      self.maxHands, self.modelComp, 
+                      self.detectionCon, self.trackCon)
+      self.mpDraw = mp.solutions.drawing_utils
+
 
     def findHands(self, img, draw=True):
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -30,9 +29,9 @@ class handDetector():
 
         if self.results.multi_hand_landmarks:
             for handLms in self.results.multi_hand_landmarks:
-                if draw:
-                    self.mpDraw.draw_landmarks(img, handLms,
-                                               self.mpHands.HAND_CONNECTIONS)
+               if draw:
+                  self.mpDraw.draw_landmarks(img, handLms,
+                           self.mpHands.HAND_CONNECTIONS)
         return img
 
     def findPosition(self, img, handNo=0, draw=True):
@@ -47,11 +46,12 @@ class handDetector():
                 # print(id, cx, cy)
                 lmList.append([id, cx, cy])
                 if draw:
-                    cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+                    cv2.circle(img, (cx, cy), 2, 
+                               (255, 200, 0), cv2.FILLED)
 
         return lmList
 
-####################################################
+
 def main():
     pTime = 0
     cTime = 0
@@ -59,10 +59,10 @@ def main():
     detector = handDetector()
     while True:
         success, img = cap.read()
-       # img = detector.findHands(img)
-       # lmList = detector.findPosition(img)
-       # if len(lmList) != 0:
-        #    print(lmList[4])
+        img = detector.findHands(img)
+        lmList = detector.findPosition(img)
+        if len(lmList) != 0:
+            print(lmList[4])
 
         cTime = time.time()
         fps = 1 / (cTime - pTime)
@@ -72,8 +72,12 @@ def main():
                     (255, 0, 255), 3)
 
         cv2.imshow("Image", img)
-        cv2.waitKey(1)
-
-
+        
+        if cv2.waitKey(1) == 27:
+          cv2.destroyAllWindows()
+          cap.release()
+          break
+       
 if __name__ == "__main__":
     main()
+
