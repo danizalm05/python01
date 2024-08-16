@@ -1,4 +1,7 @@
-
+'''Hand Tracking Module
+https://www.youtube.com/watch?v=NZde8Xt78Iw&t=0s  36:01
+hand gesture https://www.youtube.com/watch?v=9iEPzbG-xLE
+'''
 import cv2
 import mediapipe as mp
 import time
@@ -34,14 +37,16 @@ class handDetector():
                            self.mpHands.HAND_CONNECTIONS)
         return img
 
+   
     def findPosition(self, img, handNo=0, draw=True):
 
+        h, w, c = img.shape
         lmList = []
         if self.results.multi_hand_landmarks:
             myHand = self.results.multi_hand_landmarks[handNo]
             for id, lm in enumerate(myHand.landmark):
                 # print(id, lm)
-                h, w, c = img.shape
+                #h, w, c = img.shape
                 cx, cy = int(lm.x * w), int(lm.y * h)
                 # print(id, cx, cy)
                 lmList.append([id, cx, cy])
@@ -62,7 +67,7 @@ def main():
         img = detector.findHands(img)
         lmList = detector.findPosition(img)
         if len(lmList) != 0:
-            print(lmList[4])
+            print(lmList[4])#Show just land mark number 4
 
         cTime = time.time()
         fps = 1 / (cTime - pTime)
