@@ -1,35 +1,48 @@
 # -*- coding: utf-8 -*-
 """
- '''    using   HandTrackingModule.py
+  volune hand control using   HandTrackingModule.py
   www.computervision.zone/topic/gesture-volume-control-part-1-volumehandcontrol-py/
   https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q
- '''
+  11:00
+  
+  pip install pycaw
 """
 
 import cv2
 import time
 import numpy as np
+
+# The file 'HandTrackingModule.py' must be in the same folder
 import HandTrackingModule as htm
+
 import math
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
-'''
-################################
-wCam, hCam = 640, 480
-################################
 
-cap = cv2.VideoCapture(1)
+camId = 0 
+wCam, hCam = 640, 480
+ 
+
+cap = cv2.VideoCapture(camId)
 cap.set(3, wCam)
 cap.set(4, hCam)
 pTime = 0
 
+'''
+ handDetector is a class locatd in  HandTrackingModule
+ which is loaded as 'htm'
+'''
 detector = htm.handDetector(detectionCon=0.7)
+#
 
 devices = AudioUtilities.GetSpeakers()
+
+
 interface = devices.Activate(
     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
+
 # volume.GetMute()
 # volume.GetMasterVolumeLevel()
 volRange = volume.GetVolumeRange()
@@ -40,6 +53,24 @@ volBar = 400
 volPer = 0
 while True:
     success, img = cap.read()
+    img = detector.findHands(img)
+    lmList = detector.findPosition(img, draw=True)
+    
+    
+    
+    cTime = time.time()
+    fps = 1 / (cTime - pTime)
+    pTime = cTime
+    cv2.putText(img, f'FPS: {int(fps)}', (40, 50), cv2.FONT_HERSHEY_COMPLEX,
+                1, (0, 0, 255), 1)
+    cv2.imshow("Img", img)
+    if cv2.waitKey(1) == 27:
+      cv2.destroyAllWindows()
+      cap.release()
+      break
+'''
+
+
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
     if len(lmList) != 0:
