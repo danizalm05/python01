@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-  volune hand control using   HandTrackingModule.py
+  volumne hand control using   HandTrackingModule.py
   www.computervision.zone/topic/gesture-volume-control-part-1-volumehandcontrol-py/
   https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q
-  11:00
+  18:00
   
   pip install pycaw
 """
@@ -20,9 +20,8 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-camId = 0 
+camId = 0
 wCam, hCam = 640, 480
- 
 
 cap = cv2.VideoCapture(camId)
 cap.set(3, wCam)
@@ -37,7 +36,6 @@ detector = htm.handDetector(detectionCon=0.7)
 #
 
 devices = AudioUtilities.GetSpeakers()
-
 
 interface = devices.Activate(
     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -54,10 +52,21 @@ volPer = 0
 while True:
     success, img = cap.read()
     img = detector.findHands(img)
-    lmList = detector.findPosition(img, draw=True)
-    
-    
-    
+    lmList = detector.findPosition(img, draw=False)
+
+    if len(lmList) != 0:
+        #print(lmList[4], lmList[8])
+        x1, y1 = lmList[4][1], lmList[4][2]
+        x2, y2 = lmList[8][1], lmList[8][2]
+        cx, cy = (x1 + x2) // 2, (y1 + y2) // 2
+
+        cv2.circle(img, (x1, y1), 7, (0, 0, 255), cv2.FILLED)
+        cv2.circle(img, (x2, y2), 7, (25, 0, 255), cv2.FILLED)
+        cv2.line(img, (x1, y1), (x2, y2), (255, 0, 255), 3)
+        cv2.circle(img, (cx, cy), 7, (25, 0, 255), cv2.FILLED)
+
+        length = math.hypot(x2 - x1, y2 - y1)
+        print(length)
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
@@ -65,9 +74,9 @@ while True:
                 1, (0, 0, 255), 1)
     cv2.imshow("Img", img)
     if cv2.waitKey(1) == 27:
-      cv2.destroyAllWindows()
-      cap.release()
-      break
+        cv2.destroyAllWindows()
+        cap.release()
+        break
 '''
 
 
