@@ -3,7 +3,7 @@
   volumne hand control using   HandTrackingModule.py
   www.computervision.zone/topic/gesture-volume-control-part-1-volumehandcontrol-py/
   https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q
-  18:00
+  25:00
   
   pip install pycaw
 """
@@ -22,7 +22,7 @@ from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 camId = 0
 wCam, hCam = 640, 480
-
+MinDist, MaxDist = 20, 30
 cap = cv2.VideoCapture(camId)
 cap.set(3, wCam)
 cap.set(4, hCam)
@@ -41,9 +41,13 @@ interface = devices.Activate(
     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = cast(interface, POINTER(IAudioEndpointVolume))
 
-# volume.GetMute()
-# volume.GetMasterVolumeLevel()
+#volume.GetMute()
+#volume.GetMasterVolumeLevel()
 volRange = volume.GetVolumeRange()
+print('volRange = ',volRange)#(-96.0, 0.0, 1.5)
+volume.SetMasterVolumeLevel(-20.0,None)# 0 is max level
+
+
 minVol = volRange[0]
 maxVol = volRange[1]
 vol = 0
@@ -66,11 +70,19 @@ while True:
         cv2.circle(img, (cx, cy), 7, (25, 0, 255), cv2.FILLED)
 
         length = math.hypot(x2 - x1, y2 - y1)
-        print(length)
+        if length < MinDist: MinDist = length
+        if length > MaxDist: MaxDist = length
+        
+        if length < MinDist:
+            cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+
+        print(MinDist,MaxDist)
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
-    cv2.putText(img, f'FPS: {int(fps)}', (40, 50), cv2.FONT_HERSHEY_COMPLEX,
+    
+    msg = f'FPS: {int(fps)}'+ ' ' + str(int(MinDist))+ '  '  + str(int(MaxDist))
+    cv2.putText(img, msg, (40, 50), cv2.FONT_HERSHEY_COMPLEX,
                 1, (0, 0, 255), 1)
     cv2.imshow("Img", img)
     if cv2.waitKey(1) == 27:
