@@ -3,7 +3,7 @@
   volumne hand control using   HandTrackingModule.py
   www.computervision.zone/topic/gesture-volume-control-part-1-volumehandcontrol-py/
   https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q
-  25:00
+  29:00
   
   pip install pycaw
 """
@@ -44,9 +44,9 @@ volume = cast(interface, POINTER(IAudioEndpointVolume))
 #volume.GetMute()
 #volume.GetMasterVolumeLevel()
 volRange = volume.GetVolumeRange()
-print('volRange = ',volRange)#(-96.0, 0.0, 1.5)
+print('volRange = ',volRange)#
 volume.SetMasterVolumeLevel(-20.0,None)# 0 is max level
-
+print('volRange = ',volRange)#
 
 minVol = volRange[0]
 maxVol = volRange[1]
@@ -70,18 +70,26 @@ while True:
         cv2.circle(img, (cx, cy), 7, (25, 0, 255), cv2.FILLED)
 
         length = math.hypot(x2 - x1, y2 - y1)
+
         if length < MinDist: MinDist = length
         if length > MaxDist: MaxDist = length
         
-        if length < MinDist+10:
+        if length < MinDist+25:
             cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
+        # Hand range 50 - 300
+        # Volume Range -65 - 0
 
-        print(MinDist,MaxDist)
+        vol = np.interp(length, [MinDist+25, 300], [minVol, maxVol])
+        volBar = np.interp(length, [MinDist+25, 300], [400, 150])
+        volPer = np.interp(length, [MinDist+25, 300], [0, 100])
+        print('int(length) = ',length,'vol = ', vol)
+        volume.SetMasterVolumeLevel(vol, None)
+        #print(MinDist, MaxDist)
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
     
-    msg = f'FPS: {int(fps)}'+ ' ' + str(int(MinDist))+ '  '  + str(int(MaxDist))
+    msg = f'FPS: {int(fps)}'+ ' min =' + str(int(MinDist))+ '  max = '  + str(int(MaxDist))
     cv2.putText(img, msg, (40, 50), cv2.FONT_HERSHEY_COMPLEX,
                 1, (0, 0, 255), 1)
     cv2.imshow("Img", img)
