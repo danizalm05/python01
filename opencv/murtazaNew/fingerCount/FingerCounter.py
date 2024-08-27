@@ -4,7 +4,7 @@ Finger Counter (using   HandTrackingModule.py)
   https://www.computervision.zone/lessons/code-files-13/
  https://www.youtube.com/watch?v=p5Z_GGRCI5s&t=1s
  
- 15:00
+ 32:00
 """
 import cv2
 import time
@@ -16,22 +16,12 @@ BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 path = BASE_FOLDER +'/Pictures/Saved Pictures/'
 
 wCam, hCam = 640, 480
-cam_ID =0
+cam_ID = 0
 
 cap = cv2.VideoCapture(cam_ID)
 cap.set(3, wCam)
 cap.set(4, hCam)
 
-folderPath = "FingerImages"
-myList = os.listdir(path)
-print(myList)
-overlayList = []
-for imPath in myList:
-    image = cv2.imread(f'{path}/{imPath}')
-    print(f'{folderPath}/{imPath}')
-    overlayList.append(image)
-
-print(len(overlayList))
 pTime = 0
 
 
@@ -43,8 +33,7 @@ while True:
     success, img = cap.read()
     img = detector.findHands(img)
     lmList = detector.findPosition(img, draw=False)
-#    '''
-    # print(lmList)
+
 
     if len(lmList) != 0:
         fingers = []
@@ -62,17 +51,16 @@ while True:
             else:
                 fingers.append(0)
 
-        # print(fingers)
-        totalFingers = fingers.count(1)
+
+        totalFingers = fingers.count(1)#count the number of 1 in the finger list
         print(totalFingers)
 
-        h, w, c = overlayList[totalFingers - 1].shape
-        #img[0:h, 0:w] = overlayList[totalFingers - 1]
+
 
         cv2.rectangle(img, (20, 225), (170, 425), (0, 255, 0), cv2.FILLED)
         cv2.putText(img, str(totalFingers), (45, 375), cv2.FONT_HERSHEY_PLAIN,
                     10, (255, 0, 0), 25)
-#''' 
+
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
