@@ -2,10 +2,6 @@
 Object Tracking with Opencv and Python
 https://www.youtube.com/watch?v=O3b8lVF93jU
 
-next course:
-    https://www.youtube.com/watch?v=GgGro5IV-cs
-    https://pysource.com/2021/10/05/object-tracking-from-scratch-opencv-and-python/
-
 python 3.10
 conda install numpy
 """
