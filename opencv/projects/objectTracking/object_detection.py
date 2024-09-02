@@ -1,9 +1,18 @@
 import cv2
 import numpy as np
+import getpass
+
+'''
+"/Pictures/Resources/dnn_model/yolov4.weights" 
+'''
+Base_path = 'C:/Users/' + getpass.getuser() + '/Pictures/Resources/dnn_model/'
+w_path = Base_path +'yolov4.weights'
+cf_path= Base_path +'yolov4.cfg'
+cl_path = Base_path +"classes.txt" 
 
 
 class ObjectDetection:
-    def __init__(self, weights_path="dnn_model/yolov4.weights", cfg_path="dnn_model/yolov4.cfg"):
+    def __init__(self, weights_path = w_path, cfg_path=cf_path):
         print("Loading Object Detection")
         print("Running opencv dnn with YOLOv4")
         self.nmsThreshold = 0.4
@@ -23,8 +32,8 @@ class ObjectDetection:
         self.colors = np.random.uniform(0, 255, size=(80, 3))
 
         self.model.setInputParams(size=(self.image_size, self.image_size), scale=1/255)
-
-    def load_class_names(self, classes_path="dnn_model/classes.txt"):
+   
+    def load_class_names(self, classes_path= cl_path):
 
         with open(classes_path, "r") as file_object:
             for class_name in file_object.readlines():
