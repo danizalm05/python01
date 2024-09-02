@@ -17,6 +17,11 @@ import getpass
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Videos/Captures/'
 # "highway.mp4""los_angeles.mp4"
 vid = "los_angeles.mp4"
+
+frameWidth = 640
+frameHeight = 480
+
+
 path = BASE_FOLDER + vid
 # Initialize Object Detection
 od = ObjectDetection()
@@ -43,8 +48,10 @@ while True:
     (class_ids, scores, boxes) = od.detect(frame)
     for box in boxes:
         (x, y, w, h) = box
+        print("FRAME N°", count, " ", x, y, w, h)
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
+    frame = cv2.resize(frame, (frameWidth, frameHeight))
     cv2.imshow("Frame", frame)
     key = cv2.waitKey(1)
     if key == 27:
