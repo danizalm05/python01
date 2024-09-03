@@ -48,12 +48,25 @@ while True:
     (class_ids, scores, boxes) = od.detect(frame)
     for box in boxes:
         (x, y, w, h) = box
+        cx = int((x + x + w) / 2)
+        cy = int((y + y + h) / 2)
+        center_points_cur_frame.append((cx, cy))
         print("FRAME N°", count, " ", x, y, w, h)
+        #cv2.circle(frame, (cx, cy), 5, (0, 0, 255), -1)
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+        for pt in center_points_cur_frame:
+            for pt2 in center_points_prev_frame:
+              # cv2.circle(frame, (cx, cy), 5, (0, 0, 255), -1)
 
     frame = cv2.resize(frame, (frameWidth, frameHeight))
     cv2.imshow("Frame", frame)
-    key = cv2.waitKey(1)
+
+
+    # Make a copy of the points
+    center_points_prev_frame = center_points_cur_frame.copy()
+
+    key = cv2.waitKey(0)
     if key == 27:
          break
 
