@@ -3,7 +3,7 @@ ToolBar96.py
 Create GUI Applications with Python & Qt6 / Martin Fitzpatrick
 
 Listing 37. basic/toolbars_and_menus_1.py
-#page  94 -105
+#page  94 -116
 https://www.pythonguis.com/pyqt6/
 http://www.learnpyqt.com/d/pyqt6-source.zip
 '''
