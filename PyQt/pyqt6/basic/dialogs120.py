@@ -32,3 +32,4 @@ window = MainWindow()
 window.show()
 
 app.exec()
+QApplication.shutdown(app) 

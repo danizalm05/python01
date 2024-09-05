@@ -1,33 +1,39 @@
 '''
 https://www.youtube.com/watch?v=KecMlLUuiE4&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZzFPI&index=1
 https://github.com/learncodebygaming/opencv_tutorials/blob/master/001_intro/main.py
+https://docs.opencv.org/4.x/index.html
+
 '''
 
 import cv2 as cv
 import numpy as np
 import os
+import getpass
+
+ 
+'''
+find the position of  a smaller image inside in  a bigger  screenshot. 
+ 
+'''
+path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 
 
-# Change the working directory to the folder this script is in.
-# Doing this because I'll be putting the files from each video in their own folder on GitHub
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-# Can use IMREAD flags to do different pre-processing of image files,
-# like making them grayscale or reducing the size.
-# https://docs.opencv.org/4.2.0/d4/da8/group__imgcodecs.html
-haystack_img = cv.imread('albion_farm.jpg', cv.IMREAD_UNCHANGED)
-needle_img = cv.imread('albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
+haystack_img = cv.imread(path+'albion_farm.jpg', cv.IMREAD_UNCHANGED)
+needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
 
 # There are 6 comparison methods to choose from:
 # TM_CCOEFF, TM_CCOEFF_NORMED, TM_CCORR, TM_CCORR_NORMED, TM_SQDIFF, TM_SQDIFF_NORMED
-# You can see the differences at a glance here:
+#  
 # https://docs.opencv.org/master/d4/dc6/tutorial_py_template_matching.html
 # Note that the values are inverted for TM_SQDIFF and TM_SQDIFF_NORMED
+
 result = cv.matchTemplate(haystack_img, needle_img, cv.TM_CCOEFF_NORMED)
 
 # You can view the result of matchTemplate() like this:
-#cv.imshow('Result', result)
+cv.imshow('Result', result)
 #cv.waitKey()
+
+
 # If you want to save this result to a file, you'll need to normalize the result array
 # from 0..1 to 0..255, see:
 # https://stackoverflow.com/questions/35719480/opencv-black-image-after-matchtemplate
