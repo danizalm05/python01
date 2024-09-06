@@ -2,6 +2,7 @@
 https://www.youtube.com/watch?v=KecMlLUuiE4&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZzFPI&index=1
 https://github.com/learncodebygaming/opencv_tutorials/blob/master/001_intro/main.py
 https://docs.opencv.org/4.x/index.html
+https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
 
 '''
 
@@ -15,7 +16,12 @@ import getpass
 find the position of  a smaller image inside in  a bigger  screenshot. 
  
 '''
+
+frameWidth = 640
+frameHeight = 480
 path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
+
+
 
 
 haystack_img = cv.imread(path+'albion_farm.jpg', cv.IMREAD_UNCHANGED)
@@ -30,8 +36,8 @@ needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
 result = cv.matchTemplate(haystack_img, needle_img, cv.TM_CCOEFF_NORMED)
 
 # You can view the result of matchTemplate() like this:
-cv.imshow('Result', result)
-#cv.waitKey()
+#cv.imshow('Result', result)
+
 
 
 # If you want to save this result to a file, you'll need to normalize the result array
@@ -69,12 +75,18 @@ if max_val >= threshold:
                     color=(0, 255, 0), thickness=2, lineType=cv.LINE_4)
 
     # You can view the processed screenshot like this:
-    #cv.imshow('Result', haystack_img)
-    #cv.waitKey()
+    
+    
+   
     # Or you can save the results to a file.
     # imwrite() will smartly format our output image based on the extension we give it
     # https://docs.opencv.org/3.4/d4/da8/group__imgcodecs.html#gabbc7ef1aa2edfaa87772f1202d67e0ce
-    cv.imwrite('result.jpg', haystack_img)
+    #cv.imwrite('result.jpg', haystack_img)
 
 else:
     print('Needle not found.')
+    
+img = cv.resize(haystack_img, (frameWidth, frameHeight))    
+cv.imshow('Result', img)
+cv.waitKey(0)
+cv.destroyAllWindows()    

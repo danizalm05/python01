@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 
 BASE_FOLDER = 'C:/Users/rockman/Pictures/Saved Pictures/'
-mimg = "bz.JPG"
+mimg = "1.JPG"
 path = BASE_FOLDER + mimg
 
 img0 = cv.imread(path)
