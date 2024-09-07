@@ -3,7 +3,7 @@ https://www.youtube.com/watch?v=KecMlLUuiE4&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZz
 https://github.com/learncodebygaming/opencv_tutorials/blob/master/001_intro/main.py
 https://docs.opencv.org/4.x/index.html
 https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
-
+10:00
 '''
 
 import cv2 as cv
@@ -36,7 +36,8 @@ needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
 result = cv.matchTemplate(haystack_img, needle_img, cv.TM_CCOEFF_NORMED)
 
 # You can view the result of matchTemplate() like this:
-#cv.imshow('Result', result)
+img = cv.resize(result, (frameWidth, frameHeight))
+cv.imshow('Result0', img)
 
 
 
@@ -47,14 +48,15 @@ result = cv.matchTemplate(haystack_img, needle_img, cv.TM_CCOEFF_NORMED)
 
 # Get the best match position from the match result.
 min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
-# The max location will contain the upper left corner pixel position for the area
-# that most closely matches our needle image. The max value gives an indication
-# of how similar that find is to the original needle, where 1 is perfect and -1
-# is exact opposite.
+# The max location will contain the upper left corner pixel position
+# for the area that most closely matches our needle image.
+#  The max value gives an indication of how similar that find is
+#  to the original needle, where 1 is perfect and -1 is exact opposite.
 print('Best match top left position: %s' % str(max_loc))
 print('Best match confidence: %s' % max_val)
 
-# If the best match value is greater than 0.8, we'll trust that we found a match
+# If the best match value is greater than 0.8, we'll trust that we
+# found a match
 threshold = 0.8
 if max_val >= threshold:
     print('Found needle.')
