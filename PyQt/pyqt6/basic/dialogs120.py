@@ -2,7 +2,7 @@
 Create GUI Applications with Python & Qt6
 The hands-on guide to making apps with Python
 Martin Fitzpatrick
-120-126
+120-128
 '''
 
 import sys
@@ -19,8 +19,9 @@ from PySide6.QtWidgets import (
 
 
 class CustomDialog(QDialog):
-    def __init__(self):
-        super().__init__()
+    def __init__(self,parent=None):
+     #Set a default value to None so we can omit the parent
+        super().__init__(parent)
 
         self.setWindowTitle("HELLO!")
 
@@ -55,10 +56,12 @@ class MainWindow(QMainWindow):
         button.clicked.connect(self.button_clicked)
         self.setCentralWidget(button)
 
-    def button_clicked(self,is_checked):
-        print("click", is_checked)
+    def button_clicked(self,s):
+        print("click", s)
 
-        dlg = CustomDialog()
+        dlg = CustomDialog(self)
+        # self is our main window object.
+        # this way dialog pop up  in the middle of the parent window.
         if dlg.exec():
             print("Success!")
         else:
