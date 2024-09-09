@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=ffRYijPR8pk&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZz
 https://github.com/learncodebygaming/opencv_tutorials/blob/master/001_intro/main.py
 https://docs.opencv.org/4.x/index.html
 https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
- 
+https://learncodebygaming.com/blog/thresholding-with-match-template
 '''
 
 
@@ -17,8 +17,8 @@ frameHeight = 480
 path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 
 haystack_img = cv.imread(path+'albion_farm.jpg', cv.IMREAD_UNCHANGED)
-needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED) 
- 
+needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
+#smalllogo.png albion_cabbage.jpg square.bmp
 
 
 # There are 6 comparison methods to choose from:
@@ -28,26 +28,33 @@ needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
 # https://docs.opencv.org/master/d4/dc6/tutorial_py_template_matching.html
 # Note that the values are inverted for TM_SQDIFF and TM_SQDIFF_NORMED
 result = cv.matchTemplate(haystack_img, needle_img, cv.TM_SQDIFF_NORMED)
+#Each value in this matrix represents the confidence score for how closely the needle image matches the
+# haystack image at a given position
+
+
 #print(result)
 
 img = cv.resize(result, (frameWidth, frameHeight))    
-cv.imshow('Result01', img)
+cv.imshow('Result01', img)#
 img = cv.resize(needle_img, (200,200)) 
 cv.imshow('inp', img)# Object to look for
 
 
 # I've inverted the threshold and where comparison to work with TM_SQDIFF_NORMED
 threshold = 0.17
-# The np.where() return value will look like this:
-#         (array([482, 483, 483, 483, 484], dtype=int32), 
-#          array([514, 513, 514, 515, 514], dtype=int32))
+# The 'np.where()' return value will look like this:
+#         (  array([482, 483, 483, 483, 484], dtype=int32),
+#          array([514, 513, 514, 515, 514], dtype=int32)    )
 
 locations = np.where(result <= threshold)
 #print(locations)
 # We can zip those up into a list of (x, y) position tuples
 locations = list(zip(*locations[::-1]))
 # [::-1] means from 1st to last in steps of 1 in reverse order.
-# *locations means  pass a variable number of arguments to a function 
+#so we get the X values to come before the Y
+# '*locations' means  pass   number of arguments to a function
+# so that we now have two one-dimensional arrays instead of one
+# two-dimensional array.
 # the location will be a list of [(514,482),(,)...........]
 print(locations)
 
