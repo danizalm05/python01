@@ -76,4 +76,35 @@ window = MainWindow()
 window.show()
 
 app.exec()
-QApplication.shutdown(app) 
+QApplication.shutdown(app)
+
+
+'''
+Button types:
+QDialogButtonBox.Ok
+QDialogButtonBox.Open
+QDialogButtonBox.Save
+QDialogButtonBox.Cancel
+QDialogButtonBox.Close
+QDialogButtonBox.Discard
+QDialogButtonBox.Apply
+QDialogButtonBox.Reset
+QDialogButtonBox.RestoreDefaults
+QDialogButtonBox.Help
+QDialogButtonBox.SaveAll
+QDialogButtonBox.Yes
+QDialogButtonBox.YesToAll
+QDialogButtonBox.No
+QDialogButtonBox.NoToAll
+QDialogButtonBox.Abort
+QDialogButtonBox.Retry
+QDialogButtonBox.Ignore
+QDialogButtonBox.NoButton
+
+QMessageBox.about(parent, title, message)
+QMessageBox.critical(parent, title, message)
+QMessageBox.information(parent, title, message)
+QMessageBox.question(parent, title, message)
+QMessageBox.warning(parent, title, message)
+The
+'''
