@@ -24,7 +24,8 @@ class MainWindow(QMainWindow):
         button = QPushButton("Press me for a dialog!")
         button.clicked.connect(self.button_clicked)
         self.setCentralWidget(button)
-
+        #but2 = QPushButton("Pr !")
+        #self.setCentralWidget(but2)
     # tag::button_clicked[]
     def button_clicked(self, s):
 
@@ -46,7 +47,7 @@ window = MainWindow()
 window.show()
 
 app.exec()
-
+QApplication.shutdown(app)
 '''
 Button types:
 QDialogButtonBox.Ok
