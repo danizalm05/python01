@@ -2,7 +2,7 @@
 Create GUI Applications with Python & Qt6
 The hands-on guide to making apps with Python
 Martin Fitzpatrick
-132-
+132-138
 '''
 import sys
 
@@ -29,15 +29,32 @@ class MainWindow(QMainWindow):
     # tag::button_clicked[]
     def button_clicked(self, s):
 
+        '''
         button = QMessageBox.question(
             self, "Question dialog", "The longer message"
         )
+        '''
+        button = QMessageBox.critical(
+            self,
+            "Oh dear!",
+            "Something went very wrong.",
+            buttons=QMessageBox.Discard | QMessageBox.NoToAll |
+                    QMessageBox.Ignore,
+            defaultButton=QMessageBox.Discard,
+        )
+        if button == QMessageBox.Discard:
+            print("Discard!")
+        elif button == QMessageBox.NoToAll:
+            print("No to all!")
+        else:
+            print("Ignore!")
 
+        ''' 
         if button == QMessageBox.Yes:
             print("Yes!")
         else:
             print("No!")
-
+       '''
     # end::button_clicked[]
 
 
