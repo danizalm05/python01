@@ -1,15 +1,20 @@
+'''
+ take overlapping results from matchTemplate() and turn
+ them into single object detections. We'll do this by
+ using  groupRectangles(),
+https://www.youtube.com/watch?v=KecMlLUuiE4&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZzFPI&index=3
+https://github.com/learncodebygaming/opencv_tutorials/blob/master 
+https://learncodebygaming.com/blog/grouping-rectangles-into-click-points
+https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
+ 
+'''
+
+
 import cv2 as cv
 import numpy as np
 import os
 import getpass
-
-frameWidth = 640
-frameHeight = 480
-path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
-
-
  
-import getpass
 
 frameWidth = 640
 frameHeight = 480
@@ -40,21 +45,30 @@ def findClickPositions(needle_img_path, haystack_img_path, threshold=0.5, debug_
     locations = list(zip(*locations[::-1]))
     #print(locations)
 
-    # You'll notice a lot of overlapping rectangles get drawn. We can eliminate those redundant
+    # You'll notice a lot of overlapping rectangles get 
+    # drawn.  We can eliminate those redundant
     # locations by using groupRectangles().
-    # First we need to create the list of [x, y, w, h] rectangles
+    # First we need to create the list of [x, y, w, h] 
+    # rectangles
     rectangles = []
     for loc in locations:
         rect = [int(loc[0]), int(loc[1]), needle_w, needle_h]
-        # Add every box to the list twice in order to retain single (non-overlapping) boxes
+        # Add every box to the list twice in order to 
+        # retain single (non-overlapping) boxes
         rectangles.append(rect)
         rectangles.append(rect)
     # Apply group rectangles.
-    # The groupThreshold parameter should usually be 1. If you put it at 0 then no grouping is
-    # done. If you put it at 2 then an object needs at least 3 overlapping rectangles to appear
-    # in the result. I've set eps to 0.5, which is:
-    # "Relative difference between sides of the rectangles to merge them into a group."
-    rectangles, weights = cv.groupRectangles(rectangles, groupThreshold=1, eps=0.5)
+    # The groupThreshold parameter should usually be 1.
+    # If you put it at 0 then no grouping is done.
+    #  If you put it at 2 then an object needs at least 3
+    # overlapping rectangles to appear in the result.
+    #   eps to 0.5 
+    # "Relative difference between sides of the rectangles
+    # to merge them into a group."
+   
+    rectangles, weights = cv.groupRectangles(
+                   rectangles, groupThreshold=1, eps=0.5)
+    # We will ignore the weights 
     #print(rectangles)
 
     points = []
@@ -99,10 +113,10 @@ def findClickPositions(needle_img_path, haystack_img_path, threshold=0.5, debug_
 
     return points
 
-
-points = findClickPositions('albion_cabbage.jpg', 'albion_farm.jpg', debug_mode='points')
+#path+
+points = findClickPositions(path+'albion_cabbage.jpg', path+'albion_farm.jpg', debug_mode='points')
 print(points)
-points = findClickPositions('albion_turnip.jpg', 'albion_farm.jpg', 
+points = findClickPositions(path+'albion_turnip.jpg', path+'albion_farm.jpg', 
                             threshold=0.70, debug_mode='rectangles')
 print(points)
 print('Done.')
