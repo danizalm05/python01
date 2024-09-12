@@ -24,11 +24,10 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 
 def findClickPositions(needle_img_path, haystack_img_path, threshold=0.5, debug_mode=None):
         
-    # https://docs.opencv.org/4.2.0/d4/da8/group__imgcodecs.html
-    #haystack_img = cv.imread(haystack_img_path, cv.IMREAD_UNCHANGED)
+
     needle_img = cv.imread(needle_img_path, cv.IMREAD_UNCHANGED)
-    haystack_img = cv.imread(path+'albion_farm.jpg', cv.IMREAD_UNCHANGED)
-    needle_img = cv.imread(path+'albion_cabbage.jpg', cv.IMREAD_UNCHANGED)
+    haystack_img = cv.imread(haystack_img_path, cv.IMREAD_UNCHANGED)
+
 
 
     # Save the dimensions of the needle image
@@ -106,19 +105,20 @@ def findClickPositions(needle_img_path, haystack_img_path, threshold=0.5, debug_
             #cv.imshow('Matches', haystack_img)
             img = cv.resize(haystack_img, (frameWidth, frameHeight))    
             cv.imshow('Result02', img)
+            cv.imshow("needle",needle_img)
             cv.waitKey(0)
-            
-            
             #cv.imwrite('result_click_point.jpg', haystack_img)
 
     return points
 
-#path+
+ # ================          Main             ======================
+
+
 points = findClickPositions(path+'albion_cabbage.jpg', path+'albion_farm.jpg', debug_mode='points')
-print(points)
+print("points 1 = ",points)
 points = findClickPositions(path+'albion_turnip.jpg', path+'albion_farm.jpg', 
                             threshold=0.70, debug_mode='rectangles')
-print(points)
+print("points 2 = ",points)
 print('Done.')
 
 
