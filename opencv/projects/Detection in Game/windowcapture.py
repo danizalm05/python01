@@ -21,15 +21,6 @@ frameWidth = 640
 frameHeight = 480
 path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
  
-def list_window_names():
-    def winEnumHandler(hwnd, ctx):
-        if win32gui.IsWindowVisible(hwnd):
-            print(hex(hwnd), win32gui.GetWindowText(hwnd))
-    win32gui.EnumWindows(winEnumHandler, None)
-
-list_window_names()
-
-
 class WindowCapture:
 
     # properties

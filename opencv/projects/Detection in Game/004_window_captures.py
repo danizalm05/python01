@@ -21,8 +21,9 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 
 # =================     MAIN   ===============
 # initialize the WindowCapture class
-wincap = WindowCapture('Program Manager')#('Albion Online Client') 
+#'Albion Online Client' 'Program Manager' 'objectTracking'
 
+wincap = WindowCapture('Windows Media Player')
 loop_time = time()
 while(True):
 
