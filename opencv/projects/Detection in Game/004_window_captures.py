@@ -25,7 +25,7 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 # initialize the WindowCapture class
 #'Albion Online Client' 'Program Manager' 'objectTracking'
 #Spyder (Python 3.9) 'Windows Media Player'
-wincap = WindowCapture('Program Manager')
+wincap = WindowCapture('11.jpg ‎- Photos')
 loop_time = time()
 while(True):
 
