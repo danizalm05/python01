@@ -1,11 +1,13 @@
-'''
- 
-https://www.youtube.com/watch?v=KecMlLUuiE4&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZzFPI&index=3
-https://github.com/learncodebygaming/opencv_tutorials/blob/master 
-https://learncodebygaming.com/blog/grouping-rectangles-into-click-points
+"""
+Real-time Object Detection
+https://www.youtube.com/watch?v=WymCpVUPWQ4&source_ve_path=Mjg2NjY
+https://learncodebygaming.com/blog/fast-window-capture 
 https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
  
-'''
+
+
+"""
+
 import cv2 as cv
 import numpy as np
 import os
@@ -22,8 +24,8 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 # =================     MAIN   ===============
 # initialize the WindowCapture class
 #'Albion Online Client' 'Program Manager' 'objectTracking'
-
-wincap = WindowCapture('Windows Media Player')
+#Spyder (Python 3.9) 'Windows Media Player'
+wincap = WindowCapture('Program Manager')
 loop_time = time()
 while(True):
 

@@ -10,17 +10,10 @@ or 'conda install pywin32
 
 '''
 
-
-import cv2 as cv
 import numpy as np
-import os
-import getpass
-import win32gui,  win32ui, win32con 
+import win32gui, win32ui, win32con
 
-frameWidth = 640
-frameHeight = 480
-path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
- 
+
 class WindowCapture:
 
     # properties
@@ -110,4 +103,3 @@ class WindowCapture:
     # the __init__ constructor.
     def get_screen_position(self, pos):
         return (pos[0] + self.offset_x, pos[1] + self.offset_y)
- 

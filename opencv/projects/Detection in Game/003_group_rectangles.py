@@ -1,7 +1,6 @@
 '''
  take overlapping results from matchTemplate() and turn
- them into single object detections. We'll do this by
- using  groupRectangles(),
+ them into single object detections.   using  groupRectangles(),
 https://www.youtube.com/watch?v=KecMlLUuiE4&list=PL1m2M8LQlzfKtkKq2lK5xko4X-8EZzFPI&index=3
 https://github.com/learncodebygaming/opencv_tutorials/blob/master 
 https://learncodebygaming.com/blog/grouping-rectangles-into-click-points
