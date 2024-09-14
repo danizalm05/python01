@@ -25,7 +25,7 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 # initialize the WindowCapture class
 #'Albion Online Client' 'Program Manager' 'objectTracking'
 #Spyder (Python 3.9) 'Windows Media Player'
-wincap = WindowCapture('11.jpg ‎- Photos')
+wincap = WindowCapture('Microsoft Text Input Application')
 loop_time = time()
 while(True):
 
@@ -35,7 +35,8 @@ while(True):
     cv.imshow('Computer Vision', screenshot)
 
     # debug the loop rate
-    print('FPS {}'.format(1 / (time() - loop_time)))
+    if (not (time() == loop_time)):
+        print('FPS {}'.format(1 / (time() - loop_time)))
     loop_time = time()
 
     # press 'q' with the output window focused to exit.

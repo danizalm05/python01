@@ -30,7 +30,7 @@ def get_screenshot():
     # if you want a specific window use the next code:
     #     window_name = <name of a spacfic window>
     #     hwnd = win32gui.FindWindow(None, window_name)
-    window_name =  'Program Manager'  
+    window_name = 'Microsoft Text Input Application' #Windows Media Player'#Program Manager'
     hwnd = win32gui.FindWindow(None, window_name)
     # get the window image data
     wDC = win32gui.GetWindowDC(hwnd)
@@ -44,7 +44,8 @@ def get_screenshot():
 
     # convert the raw data into a format opencv can read
     signedIntsArray = dataBitMap.GetBitmapBits(True)
-    img = np.fromstring(signedIntsArray, dtype='uint8')
+    #img = np.fromstring(signedIntsArray, dtype='uint8')
+    img = np.frombuffer(signedIntsArray, dtype='uint8')
     img.shape = (h, w, 4)
 
     # free resources
