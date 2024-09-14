@@ -14,7 +14,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # initialize the WindowCapture class
 WindowCapture.list_window_names()
 #sys.exit() 
-win_name ='Smash Karts 🏎️ Play on CrazyGames — Mozilla Firefox'
+win_name ='' #'Windows Media Player'
 wincap = WindowCapture(win_name) 
 # initialize the Vision class
 vision_limestone = Vision('albion_limestone.jpg')

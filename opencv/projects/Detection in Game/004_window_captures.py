@@ -1,9 +1,9 @@
 """
 Real-time Object Detection
 https://www.youtube.com/watch?v=WymCpVUPWQ4&source_ve_path=Mjg2NjY
-https://learncodebygaming.com/blog/fast-window-capture 
+https://learncodebygaming.com/blog/fast-window-capture
 https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
- 
+
 
 
 """
@@ -13,7 +13,7 @@ import numpy as np
 import os
 import getpass
 from time import time
-from windowcapture import WindowCapture 
+from windowcapture import WindowCapture
 
 frameWidth = 640
 frameHeight = 480
@@ -25,7 +25,7 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 # initialize the WindowCapture class
 #'Albion Online Client' 'Program Manager' 'objectTracking'
 #Spyder (Python 3.9) 'Windows Media Player'
-wincap = WindowCapture('Program Manager')
+wincap = WindowCapture('Windows Media Player')
 loop_time = time()
 while(True):
 
@@ -47,4 +47,3 @@ while(True):
 
 print('Done.')
 
- 
