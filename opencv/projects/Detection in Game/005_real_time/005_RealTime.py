@@ -1,17 +1,21 @@
-import cv2 as cv
+import cv2 as cv   
 import numpy as np
 import os
 from time import time
 from windowcapture import WindowCapture
 from vision import Vision
+import sys
 
 # Change the working directory to the folder this script is in.
 # Doing this because I'll be putting the files from each video in their own folder on GitHub
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-
+#('Program Manager')#('Albion Online Client')Media Player   ‏‏סרטי וידאו 
 # initialize the WindowCapture class
-wincap = WindowCapture('Albion Online Client')
+WindowCapture.list_window_names()
+#sys.exit() 
+win_name ='Smash Karts 🏎️ Play on CrazyGames — Mozilla Firefox'
+wincap = WindowCapture(win_name) 
 # initialize the Vision class
 vision_limestone = Vision('albion_limestone.jpg')
 
@@ -22,6 +26,7 @@ vision_gunsnbottle = Vision('gunsnbottle.jpg')
 '''
 
 loop_time = time()
+
 while(True):
 
     # get an updated image of the game

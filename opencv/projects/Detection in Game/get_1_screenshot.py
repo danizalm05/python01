@@ -30,7 +30,7 @@ def get_screenshot():
     # if you want a specific window use the next code:
     #     window_name = <name of a spacfic window>
     #     hwnd = win32gui.FindWindow(None, window_name)
-    window_name = 'Microsoft Text Input Application' #Windows Media Player'#Program Manager'
+    window_name = 'Program Manager' #Windows Media Player'#Program Manager'
     hwnd = win32gui.FindWindow(None, window_name)
     # get the window image data
     wDC = win32gui.GetWindowDC(hwnd)
