@@ -4,8 +4,8 @@ https://www.youtube.com/watch?v=WymCpVUPWQ4&source_ve_path=Mjg2NjY
 https://learncodebygaming.com/blog/fast-window-capture
 https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
 
-Dominating an Online Game with Object Detection Using OpenCV - Template Matching.
-https://www.youtube.com/watch?v=vXqKniVe6P8
+
+
 """
 
 import cv2 as cv
