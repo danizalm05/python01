@@ -63,7 +63,8 @@ def capture_win_alt(window_name: str,hwd):
 
 def main():
     list_window_names()
-    WINDOW_NAME ='Media Player'
+    WINDOW_NAME ='Fast Window Capture - OpenCV Object Detection in Games #4 - YouTube — Mozilla Firefox'
+
     hwnd = 0
     #'Program Manager'
     while(True):

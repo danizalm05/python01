@@ -13,8 +13,8 @@ import numpy as np
 import os
 import getpass
 from time import time
-from windowcapture import WindowCapture
-
+#from windowcapture import WindowCapture
+from grabb import capture_win_alt
 frameWidth = 640
 frameHeight = 480
 path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
@@ -25,13 +25,17 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 # initialize the WindowCapture class
 #'Albion Online Client' 'Program Manager' 'objectTracking' 'Mozilla Firefox'
 #Spyder (Python 3.9) 'Windows Media Player'
-wincap = WindowCapture('Program Manager')
+#wincap = WindowCapture('Program Manager')
 loop_time = time()
+
+WINDOW_NAME ='Fast Window Capture - OpenCV Object Detection in Games #4 - YouTube — Mozilla Firefox'
+
+hwnd = 0
 while(True):
 
     # get an updated image of the game
-    screenshot = wincap.get_screenshot()
-
+    #screenshot = wincap.get_screenshot()       #  windowcapture
+    screenshot = capture_win_alt(WINDOW_NAME,hwnd)#grabb.py
     cv.imshow('Computer Vision', screenshot)
 
     # debug the loop rate
