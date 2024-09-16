@@ -4,28 +4,38 @@ https://stackoverflow.com/questions/76373625/pywin32-cannot-capture-certain-wind
 
 
 """
-import cv2
+import cv2 as cv
 import numpy as np
 from ctypes import windll
 import win32gui
 import win32ui
+import sys
+
+
+#@staticmethod
+def list_window_names():
+     def winEnumHandler(hwnd, ctx):
+         if win32gui.IsWindowVisible(hwnd):
+             print(hex(hwnd), win32gui.GetWindowText(hwnd))
+     win32gui.EnumWindows(winEnumHandler, None) 
 
 
 
 
-
-
-def capture_win_alt(window_name: str):
+def capture_win_alt(window_name: str,hwd):
     # Adapted from https://stackoverflow.com/questions/19695214/screenshot-of-inactive-window-printwindow-win32gui
 
     windll.user32.SetProcessDPIAware()
-    hwnd = win32gui.FindWindow(None, window_name)
-
-    left, top, right, bottom = win32gui.GetClientRect(hwnd)
+    if hwd == 0 :
+         hwd  = win32gui.FindWindow(None, window_name)
+    #print(hwd,hex(hwd ) )  
+   
+    #sys.exit()
+    left, top, right, bottom = win32gui.GetClientRect(hwd)
     w = right - left
     h = bottom - top
 
-    hwnd_dc = win32gui.GetWindowDC(hwnd)
+    hwnd_dc = win32gui.GetWindowDC(hwd)
     mfc_dc = win32ui.CreateDCFromHandle(hwnd_dc)
     save_dc = mfc_dc.CreateCompatibleDC()
     bitmap = win32ui.CreateBitmap()
@@ -33,7 +43,7 @@ def capture_win_alt(window_name: str):
     save_dc.SelectObject(bitmap)
 
     # If Special K is running, this number is 3. If not, 1
-    result = windll.user32.PrintWindow(hwnd, save_dc.GetSafeHdc(), 3)
+    result = windll.user32.PrintWindow(hwd, save_dc.GetSafeHdc(), 3)
 
     bmpinfo = bitmap.GetInfo()
     bmpstr = bitmap.GetBitmapBits(True)
@@ -45,18 +55,26 @@ def capture_win_alt(window_name: str):
         win32gui.DeleteObject(bitmap.GetHandle())
         save_dc.DeleteDC()
         mfc_dc.DeleteDC()
-        win32gui.ReleaseDC(hwnd, hwnd_dc)
+        win32gui.ReleaseDC(hwd, hwnd_dc)
         raise RuntimeError(f"Unable to acquire screenshot! Result: {result}")
 
     return img
 
 
 def main():
-
-    WINDOW_NAME = 'OpenCV Object Detection in Games Python Tutorial #1 - YouTube — Mozilla Firefox Private Browsing'#'Windows Media Player'#'Program Manager'
-    while cv2.waitKey(1) != ord('q'):
-        screenshot = capture_win_alt(WINDOW_NAME)
-        cv2.imshow('grabb Computer Vision', screenshot)
+    list_window_names()
+    WINDOW_NAME ='Media Player'
+    hwnd = 0
+    #'Program Manager'
+    while(True):
+        screenshot = capture_win_alt(WINDOW_NAME,hwnd)
+        image_gray = cv.cvtColor(screenshot, cv.COLOR_BGR2GRAY)
+        cv.imshow('grabbbb', image_gray)
+        if cv.waitKey(1) == ord('q'):
+             cv.destroyAllWindows()
+             break
+   
+        
 
 
 if __name__ == '__main__':
