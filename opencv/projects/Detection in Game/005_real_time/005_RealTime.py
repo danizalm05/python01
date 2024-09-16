@@ -13,7 +13,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 #('Program Manager')#('Albion Online Client')Media Player   ‏‏סרטי וידאו 
 # initialize the WindowCapture class
 WindowCapture.list_window_names()
-#sys.exit() 
+sys.exit()
 win_name ='Program Manager' #'Windows Media Player'
 wincap = WindowCapture(win_name) 
 # initialize the Vision class
