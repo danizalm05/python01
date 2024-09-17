@@ -28,7 +28,7 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 #wincap = WindowCapture('Program Manager')
 loop_time = time()
 
-WINDOW_NAME ='Fast Window Capture - OpenCV Object Detection in Games #4 - YouTube — Mozilla Firefox'
+WINDOW_NAME ='Settings'
 
 hwnd = 0
 while(True):

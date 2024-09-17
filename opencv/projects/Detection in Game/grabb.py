@@ -10,6 +10,7 @@ from ctypes import windll
 import win32gui
 import win32ui
 import sys
+from time import time
 
 
 #@staticmethod
@@ -64,13 +65,17 @@ def capture_win_alt(window_name: str,hwd):
 def main():
     list_window_names()
     WINDOW_NAME ='Fast Window Capture - OpenCV Object Detection in Games #4 - YouTube — Mozilla Firefox'
-
-    hwnd = 0
+    loop_time = time()
+    hwnd = 0x202bc #Number of window handler in Hex. Put 0 to use WINDOW_NAME
     #'Program Manager'
     while(True):
         screenshot = capture_win_alt(WINDOW_NAME,hwnd)
         image_gray = cv.cvtColor(screenshot, cv.COLOR_BGR2GRAY)
         cv.imshow('grabbbb', image_gray)
+        # debug the loop rate
+        #if (not (time() == loop_time)):
+        print('FPS {}'.format(1 / (time() - loop_time)))
+        loop_time = time()
         if cv.waitKey(1) == ord('q'):
              cv.destroyAllWindows()
              break
