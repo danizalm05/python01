@@ -21,7 +21,7 @@ path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 
 # =================     MAIN   ===============
 WINDOW_NAME ='Settings'
-hwnd = 0xc0d34  #Number of window handler in Hex. Put 0 to use WINDOW_NAME
+hwnd = 0x3047c  #Number of window handler in Hex. Put 0 to use WINDOW_NAME
 
 list_window_names()# Get the nanes and handlevnubers (grabb.py) 
 loop_time = time()

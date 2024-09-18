@@ -27,8 +27,8 @@ def capture_win_alt(window_name: str,hwd):
     # Adapted from https://stackoverflow.com/questions/19695214/screenshot-of-inactive-window-printwindow-win32gui
 
     windll.user32.SetProcessDPIAware()
-    if hwd == 0:
-         hwd = win32gui.FindWindow(None, window_name)
+    if hwd == 0 :
+         hwd  = win32gui.FindWindow(None, window_name)
     #print(hwd,hex(hwd ) )  
    
     #sys.exit()
@@ -66,7 +66,7 @@ def main():
     list_window_names()
     WINDOW_NAME ='Fast Window Capture - OpenCV Object Detection in Games #4 - YouTube — Mozilla Firefox'
     loop_time = time()
-    hwnd = 0x3047c #Number of window handler in Hex. Put 0 to use WINDOW_NAME
+    hwnd = 0x4043e #Number of window handler in Hex. Put 0 to use WINDOW_NAME
     #'Program Manager'
     while(True):
         screenshot = capture_win_alt(WINDOW_NAME,hwnd)
