@@ -9,19 +9,19 @@ https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html
 import cv2 as cv
 import numpy as np
 import os
-import getpass
+#import getpass
 from time import time
 #from windowcapture import WindowCapture
 from grabb import capture_win_alt,list_window_names
 frameWidth = 640
 frameHeight = 480
-path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
+#path = 'C:/Users/' + getpass.getuser() + '/Pictures/opencv/'
 
 
 
 # =================     MAIN   ===============
 WINDOW_NAME ='Settings'
-hwnd = 0xd0386   #Number of window handler in Hex. Put 0 to use WINDOW_NAME
+hwnd = 0x40436   #Number of window handler in Hex. Put 0 to use WINDOW_NAME
 
 list_window_names()# Get the nanes and handlevnubers (grabb.py) 
 loop_time = time()
