@@ -13,7 +13,7 @@ import os
 
 
 
-image_name =  'cards.jpg' #'lambo.png'
+image_name =  'lambo.png' #'lambo.png' 'cards.jpg'
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
 BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
 path = BASE_FOLDER + image_name
@@ -62,13 +62,16 @@ def stackImages(scale,imgArray):
 cv2.namedWindow("TrackBars")
 cv2.resizeWindow("TrackBars",640,320)
 cv2.createTrackbar("Hue Min","TrackBars",9,255,empty)
-cv2.createTrackbar("Hue Max","TrackBars",90,179,empty)
-cv2.createTrackbar("Sat Min","TrackBars",10,255,empty)
-cv2.createTrackbar("Sat Max","TrackBars",40,255,empty)
-cv2.createTrackbar("Val Min","TrackBars",5,255,empty)
-cv2.createTrackbar("Val Max","TrackBars",230,255,empty)
+cv2.createTrackbar("Hue Max","TrackBars",24,179,empty)
+cv2.createTrackbar("Sat Min","TrackBars",30,255,empty)
+cv2.createTrackbar("Sat Max","TrackBars",240,255,empty)
+cv2.createTrackbar("Val Min","TrackBars",175,255,empty)
+cv2.createTrackbar("Val Max","TrackBars",250,255,empty)
 img = cv2.imread(path)
 imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+
+colRect = np.ones((212, 212, 3), np.uint8)
+cv2.rectangle(colRect, (1,1), (212, 212), (0, 255, 0), -1)
 while True:
    
 
@@ -89,12 +92,20 @@ while True:
     mask = cv2.inRange(imgHSV,lower,upper)
     imgResult = cv2.bitwise_and(img,img,mask=mask)
 
+    hue =(h_min + h_max)/2
+    sat =(s_min +s_max)/2
+    val =(v_min + v_max)/2
 
+    print(hue,sat,val)
+    cv2.rectangle(colRect, (1,1), (212, 212),(hue,sat,val), -1)
     #cv2.imshow("Image", img)
     #cv2.imshow("imgHSV", imgHSV)
-    imgStack = stackImages(0.5,([img,imgHSV],[mask,imgResult]))
+    imgStack = stackImages(0.5,([imgHSV,colRect,img],[mask,imgResult,colRect]))
     #all white values in mask will appear in the result
     cv2.imshow("Result", imgResult)
     cv2.imshow("Stacked Images", imgStack)
 
-    cv2.waitKey(1)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+#cap.release()
+cv2.destroyAllWindows()
