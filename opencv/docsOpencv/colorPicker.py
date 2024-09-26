@@ -7,7 +7,7 @@ https://www.selecolor.com/en/hsv-color-picker/
 import cv2
 import numpy as np
 import getpass
-
+from inpOpenCV import stackImages,PutTextOnImage, inpTrackbar
 #image_source = "image"
 image_source = "camera"
 frameWidth = 640
@@ -31,7 +31,8 @@ if image_source == "camera":
 
 def empty(a):
     pass
-
+inpWinName = "Input"
+inpTrackbar(inpWinName)
 def stackImages(scale,imgArray):
     rows = len(imgArray)
     cols = len(imgArray[0])
