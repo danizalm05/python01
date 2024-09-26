@@ -5,6 +5,7 @@ https://www.youtube.com/watch?v=JOxebvuRpyo
 https://github.com/maksimKorzh/open-cv-tutorials/blob/main/src/contours/contours.py
 https://colab.research.google.com/drive/1QeXAHV3-BNaIoidWhSK3MJyVElNv3FLN#scrollTo=qF-0ptmAzxUv
 
+
 """
 import cv2
 import numpy as np
@@ -14,21 +15,23 @@ import getpass
 def empty(a):
     pass
 
-def inpTrackbar(winName):
-    cv2.namedWindow(winName)
-    cv2.resizeWindow(winName,640,240)
-    cv2.createTrackbar("HUE Min",winName,45,255,empty)
-    cv2.createTrackbar("HUE Max",winName,45,255,empty)
-    cv2.createTrackbar("SAT Min",winName,100,255,empty)
-    cv2.createTrackbar("SAT Max",winName,100,255,empty)
-    cv2.createTrackbar("VALUE Min",winName,90,255,empty)
-    cv2.createTrackbar("VALUE Max",winName,90,255,empty)
+def inpTrackbar(win):
+    cv2.namedWindow(win)
+    cv2.createTrackbar("Scale", win, 3, 10, empty)
+
+    cv2.createTrackbar("Hue Min", win, 10, 255, empty)  # 100
+    cv2.createTrackbar("Hue Max", win, 25, 189, empty)  # 100
+    cv2.createTrackbar("Sat Min", win, 30, 255, empty)  # 100
+    cv2.createTrackbar("Sat Max", win, 235, 255, empty)
+    cv2.createTrackbar("Val Min", win, 0, 255, empty)  # 100
+    cv2.createTrackbar("Val Max", win, 233, 259, empty)
+    
+    
     # create switch for ON/OFF functionality
     switch = '0 : OFF \n1 : ON'
 
-    cv2.createTrackbar(switch, winName, 0, 1, empty)
-    cv2.createTrackbar("Contour ID", winName, 0, 100, empty)
-
+    cv2.createTrackbar(switch, win, 0, 1, empty)
+    
 
 
 
@@ -77,4 +80,18 @@ def PutTextOnImage(image,txt):
    return im
 
 #-------------------------------
+
+
+def get_limits(color):
+
+    c = np.uint8([[color]])  # here insert the bgr values which you want to convert to hsv
+    hsvC = cv2.cvtColor(c, cv2.COLOR_BGR2HSV)
+    print(hsvC)
+    lowerLimit = hsvC[0][0][0] - 10, 100, 100
+    upperLimit = hsvC[0][0][0] + 10, 255, 255
+
+    lowerLimit = np.array(lowerLimit, dtype=np.uint8)
+    upperLimit = np.array(upperLimit, dtype=np.uint8)
+    #print(color, lowerLimit, upperLimit)
+    return lowerLimit, upperLimit
 
