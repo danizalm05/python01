@@ -17,7 +17,7 @@ def empty(a):
 
 def inpTrackbar(win):
     cv2.namedWindow(win)
-    cv2.createTrackbar("Scale", win, 3, 10, empty)
+    
 
     cv2.createTrackbar("Hue Min", win, 10, 255, empty)  # 100
     cv2.createTrackbar("Hue Max", win, 25, 189, empty)  # 100
@@ -26,7 +26,7 @@ def inpTrackbar(win):
     cv2.createTrackbar("Val Min", win, 0, 255, empty)  # 100
     cv2.createTrackbar("Val Max", win, 233, 259, empty)
     
-    
+    cv2.createTrackbar("Scale", win, 3, 10, empty)
     # create switch for ON/OFF functionality
     switch = '0 : OFF \n1 : ON'
 

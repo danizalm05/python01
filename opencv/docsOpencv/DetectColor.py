@@ -60,16 +60,6 @@ def stackImages(scale,imgArray):
     return ver
 
 
-'''
-cv2.namedWindow("TrackBars")
-cv2.resizeWindow("TrackBars",640,320)
-cv2.createTrackbar("Hue Min","TrackBars",9,255,empty)
-cv2.createTrackbar("Hue Max","TrackBars",24,179,empty)
-cv2.createTrackbar("Sat Min","TrackBars",30,255,empty)
-cv2.createTrackbar("Sat Max","TrackBars",240,255,empty)
-cv2.createTrackbar("Val Min","TrackBars",175,255,empty)
-cv2.createTrackbar("Val Max","TrackBars",250,255,empty)
-'''
 
 img = cv2.imread(path)
 imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -77,7 +67,7 @@ imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 colRect = np.ones((212, 212, 3), np.uint8)
 cv2.rectangle(colRect, (1,1), (212, 212), (0, 255, 0), -1)
 while True:
-    scale = cv2.getTrackbarPos("Scale", inpWin)/10 
+    
     #        hue
     h_min = cv2.getTrackbarPos("Hue Min",inpWin)
     h_max = cv2.getTrackbarPos("Hue Max", inpWin)
@@ -88,7 +78,7 @@ while True:
     v_min = cv2.getTrackbarPos("Val Min", inpWin)
     v_max = cv2.getTrackbarPos("Val Max", inpWin)
     
-   
+    scale = cv2.getTrackbarPos("Scale", inpWin)/10 
     
     #print(h_min,h_max,s_min,s_max,v_min, v_max)
     lower = np.array([h_min,s_min,v_min])#array of 3 min values
@@ -101,7 +91,7 @@ while True:
     sat =(s_min +s_max)/2
     val =(v_min + v_max)/2
      
-    print(scale)
+    
     
     cv2.rectangle(colRect, (1,1), (212, 212),(hue,sat,val), -1)
     
