@@ -81,9 +81,12 @@ while True:
     scale = cv2.getTrackbarPos("Scale", inpWin)/10 
     
     #print(h_min,h_max,s_min,s_max,v_min, v_max)
+    #For HSV, hue range is [0,179], saturation range is [0,255], 
+    # and value range is [0,255
     lower = np.array([h_min,s_min,v_min])#array of 3 min values
     upper = np.array([h_max,s_max,v_max])
-  
+   
+    # Threshold the HSV image to get only the target colors
     mask = cv2.inRange(imgHSV,lower,upper)
     imgResult = cv2.bitwise_and(img,img,mask=mask)
 
