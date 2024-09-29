@@ -25,9 +25,10 @@ if not (os.path.isfile(path)):
 inpWin = "TrackBars"
 scale = 0.2
 inpTrackbar(inpWin)
-
+'''
 def empty(a):
     pass
+
 def stackImages(scale,imgArray):
     rows = len(imgArray)
     cols = len(imgArray[0])
@@ -59,13 +60,14 @@ def stackImages(scale,imgArray):
         ver = hor
     return ver
 
-
+'''
 
 img = cv2.imread(path)
 imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 
-colRect = np.ones((212, 212, 3), np.uint8)
-cv2.rectangle(colRect, (1,1), (212, 212), (0, 255, 0), -1)
+colRect = np.ones((312, 312, 3), np.uint8)
+colRect_copy = colRect.copy()
+
 while True:
     
     #        hue
@@ -93,14 +95,14 @@ while True:
     hue =(h_min + h_max)/2
     sat =(s_min +s_max)/2
     val =(v_min + v_max)/2
+    colRect_copy = colRect.copy()
+
+    cv2.rectangle(colRect, (1,1), (312, 312),(hue,sat,val), -1)
+    stext = str(hue) + " " +str(sat) +" " +str(val)
+    cl_text =PutTextOnImage(colRect ,stext)
      
-    
-    
-    cv2.rectangle(colRect, (1,1), (212, 212),(hue,sat,val), -1)
-    
-     
-    imgStack = stackImages(scale,([imgHSV,colRect,img],[mask,imgResult,colRect]))
-    #all white values in mask will appear in the result
+    imgStack = stackImages(scale,([imgHSV,cl_text ,img],[mask,imgResult,colRect]))
+    #All white values in mask window will appear in the result
     cv2.imshow("Result", imgResult)
     cv2.imshow("Stacked Images", imgStack)
      
