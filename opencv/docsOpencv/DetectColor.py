@@ -29,9 +29,15 @@ cap = cv2.VideoCapture(CameraID)
 
 inpWin = "TrackBars"
 scale = 0.2
+
+
 inpTrackbar(inpWin)
- 
-img = cv2.imread(path)
+vidoe_on = cv2.getTrackbarPos("switch", inpWin)
+if (vidoe_on):
+          ret, img = cap.read() 
+else: 
+          img = cv2.imread(path)
+          
 imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 
 colRect = np.ones((312, 312, 3), np.uint8)
@@ -49,10 +55,11 @@ while True:
     v_min = cv2.getTrackbarPos("Val Min", inpWin)
     v_max = cv2.getTrackbarPos("Val Max", inpWin)
 
-    switch = cv2.getTrackbarPos("switch", inpWin)
+    
     scale = cv2.getTrackbarPos("Scale", inpWin)/10 
-    ret, vid = cap.read()
-    print(switch)
+    vidoe_on = cv2.getTrackbarPos("switch", inpWin)
+    
+      
     #print(h_min,h_max,s_min,s_max,v_min, v_max)
     #For HSV, hue range is [0,179], saturation range is [0,255], 
     # and value range is [0,255
@@ -60,6 +67,11 @@ while True:
     upper = np.array([h_max,s_max,v_max])
    
     # Threshold the HSV image to get only the target colors
+    if (vidoe_on):
+          _ , img = cap.read() 
+          imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+           
+          
     mask = cv2.inRange(imgHSV,lower,upper)
     imgResult = cv2.bitwise_and(img,img,mask=mask)
 
@@ -72,7 +84,7 @@ while True:
     stext = str(hue) + " " +str(sat) +" " +str(val)
     colRect =PutTextOnImage(colRect ,stext)
      
-    imgStack = stackImages(scale,([imgHSV,colRect ,img],[mask,imgResult,vid]))
+    imgStack = stackImages(scale,([imgHSV,colRect ,img],  [mask,imgResult,colRect]))
     #All white values in mask window will appear in the result
     imgResult =PutTextOnImage(imgResult ,"Result")
     cv2.imshow("Result", imgResult)
@@ -82,5 +94,8 @@ while True:
     cv2.imshow("Image", img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-#cap.release()
+cap.release()
+print("Hue Min = ", 10,  " Hue Max = ", 25),
+print("Sat min = ", 235, " Sat min =",23)
+print("Val Min = ", 120, " Val Max =",34)
 cv2.destroyAllWindows()
