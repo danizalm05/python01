@@ -48,9 +48,11 @@ while True:
     #        value
     v_min = cv2.getTrackbarPos("Val Min", inpWin)
     v_max = cv2.getTrackbarPos("Val Max", inpWin)
-    
+
+    switch = cv2.getTrackbarPos("switch", inpWin)
     scale = cv2.getTrackbarPos("Scale", inpWin)/10 
     ret, vid = cap.read()
+    print(switch)
     #print(h_min,h_max,s_min,s_max,v_min, v_max)
     #For HSV, hue range is [0,179], saturation range is [0,255], 
     # and value range is [0,255
