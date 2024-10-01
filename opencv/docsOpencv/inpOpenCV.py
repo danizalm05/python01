@@ -15,13 +15,13 @@ def inpTrackbar(win):
 
     cv2.resizeWindow(win, 600,400)
 
-
-    cv2.createTrackbar("Hue Min", win, 110, 179, empty)  # 100
-    cv2.createTrackbar("Hue Max", win, 130, 179, empty)  # 100
-    cv2.createTrackbar("Sat Min", win, 50, 255, empty)  # 100
+    #0 96 97 250 139 255
+    cv2.createTrackbar("Hue Min", win, 1, 179, empty)  # 100
+    cv2.createTrackbar("Hue Max", win, 99, 179, empty)  # 100
+    cv2.createTrackbar("Sat Min", win, 97, 255, empty)  # 100
     cv2.createTrackbar("Sat Max", win, 255, 255, empty)
-    cv2.createTrackbar("Val Min", win, 50, 255, empty)  # 100
-    cv2.createTrackbar("Val Max", win, 253, 255, empty)
+    cv2.createTrackbar("Val Min", win, 139, 255, empty)  # 100
+    cv2.createTrackbar("Val Max", win, 255, 255, empty)
     
     cv2.createTrackbar("Scale", win, 3, 10, empty)
     # create switch for ON/OFF functionality

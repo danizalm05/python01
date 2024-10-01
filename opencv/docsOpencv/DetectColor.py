@@ -39,9 +39,10 @@ else:
           img = cv2.imread(path)
           
 imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-
-colRect = np.ones((312, 312, 3), np.uint8)
-colRect_copy = colRect.copy()
+rect =  np.ones((312, 312, 3), np.uint8)
+colRectLow =  cv2.cvtColor(rect,cv2.COLOR_BGR2HSV)
+colRectHigh =  cv2.cvtColor(rect,cv2.COLOR_BGR2HSV)
+#colRect_copy = colRect.copy()
 
 while True:
     
@@ -75,16 +76,16 @@ while True:
     mask = cv2.inRange(imgHSV,lower,upper)
     imgResult = cv2.bitwise_and(img,img,mask=mask)
 
-    hue =(h_min + h_max)/2
-    sat =(s_min +s_max)/2
-    val =(v_min + v_max)/2
-    #colRect_copy = colRect.copy()
-
-    cv2.rectangle(colRect, (1,1), (312, 312),(hue,sat,val), -1)
-    stext = str(hue) + " " +str(sat) +" " +str(val)
-    colRect =PutTextOnImage(colRect ,stext)
-     
-    imgStack = stackImages(scale,([imgHSV,colRect ,img],  [mask,imgResult,colRect]))
+    
+    
+    cv2.rectangle(colRectLow, (1,1), (312, 312),(h_min,s_min,v_min), -1)
+    cv2.rectangle(colRectHigh, (1,1), (312, 312),(h_max,s_max,v_max), -1)
+    
+    stext = str(h_min) + " " +str(s_min) +" " + str(v_min)
+    colRectLow =PutTextOnImage(colRectLow ,"Low Color")
+    stext = str(h_max) + " " +str(s_max) +" " + str(v_max)
+    colRectHigh =PutTextOnImage(colRectHigh ,"High Color") 
+    imgStack = stackImages(scale,([imgHSV,colRectLow ,img],  [mask,imgResult,colRectHigh]))
     #All white values in mask window will appear in the result
     imgResult =PutTextOnImage(imgResult ,"Result")
     cv2.imshow("Result", imgResult)
