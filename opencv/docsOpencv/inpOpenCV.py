@@ -1,10 +1,5 @@
 """
-Find Nax Contours & sort -
-https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
-https://www.youtube.com/watch?v=JOxebvuRpyo
-https://github.com/maksimKorzh/open-cv-tutorials/blob/main/src/contours/contours.py
-https://colab.research.google.com/drive/1QeXAHV3-BNaIoidWhSK3MJyVElNv3FLN#scrollTo=qF-0ptmAzxUv
-
+input for hsv
 
 """
 import cv2
@@ -18,15 +13,15 @@ def empty(a):
 def inpTrackbar(win):
     cv2.namedWindow(win)
 
-    cv2.resizeWindow(win, 600,600)
+    cv2.resizeWindow(win, 600,400)
 
 
-    cv2.createTrackbar("Hue Min", win, 10, 179, empty)  # 100
-    cv2.createTrackbar("Hue Max", win, 25, 179, empty)  # 100
-    cv2.createTrackbar("Sat Min", win, 30, 255, empty)  # 100
-    cv2.createTrackbar("Sat Max", win, 235, 255, empty)
-    cv2.createTrackbar("Val Min", win, 0, 255, empty)  # 100
-    cv2.createTrackbar("Val Max", win, 233, 255, empty)
+    cv2.createTrackbar("Hue Min", win, 110, 179, empty)  # 100
+    cv2.createTrackbar("Hue Max", win, 130, 179, empty)  # 100
+    cv2.createTrackbar("Sat Min", win, 50, 255, empty)  # 100
+    cv2.createTrackbar("Sat Max", win, 255, 255, empty)
+    cv2.createTrackbar("Val Min", win, 50, 255, empty)  # 100
+    cv2.createTrackbar("Val Max", win, 253, 255, empty)
     
     cv2.createTrackbar("Scale", win, 3, 10, empty)
     # create switch for ON/OFF functionality

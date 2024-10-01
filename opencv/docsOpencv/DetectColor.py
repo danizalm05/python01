@@ -32,8 +32,8 @@ scale = 0.2
 
 
 inpTrackbar(inpWin)
-vidoe_on = cv2.getTrackbarPos("switch", inpWin)
-if (vidoe_on):
+vid_on = cv2.getTrackbarPos("switch", inpWin)
+if (vid_on):
           ret, img = cap.read() 
 else: 
           img = cv2.imread(path)
@@ -57,7 +57,7 @@ while True:
 
     
     scale = cv2.getTrackbarPos("Scale", inpWin)/10 
-    vidoe_on = cv2.getTrackbarPos("switch", inpWin)
+    vid_on = cv2.getTrackbarPos("switch", inpWin)
     
       
     #print(h_min,h_max,s_min,s_max,v_min, v_max)
@@ -67,7 +67,7 @@ while True:
     upper = np.array([h_max,s_max,v_max])
    
     # Threshold the HSV image to get only the target colors
-    if (vidoe_on):
+    if (vid_on):
           _ , img = cap.read() 
           imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
            
@@ -95,7 +95,5 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
-print("Hue Min = ", 10,  " Hue Max = ", 25),
-print("Sat min = ", 235, " Sat min =",23)
-print("Val Min = ", 120, " Val Max =",34)
+print(h_min,h_max,s_min ,s_max,v_min , v_max)
 cv2.destroyAllWindows()
