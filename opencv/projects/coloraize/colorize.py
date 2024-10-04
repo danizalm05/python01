@@ -1,5 +1,5 @@
 """
-Black and white image colorization using Python, OpenCV and Deep Learning
+Black and white image colorization 
 https://www.youtube.com/watch?v=gAmskBNz_Vc
 https://github.com/balajisrinivas/Colorizing-black-and-white-images-using-Python/blob/master/colorize.py
 6:17
@@ -22,23 +22,47 @@ Download the model files:
 
 """
 
-# Paths to load the model
-DIR = r"C:\Users\Balaji\Documents\colorize"
+IMAGE_NAME = 'wed.jpg'
+IMAGE_PATH = 'C:/Users/' + getpass.getuser() + '/Pictures/'
+IMAGE = IMAGE_PATH +'Saved Pictures/'+ IMAGE_NAME
+DIR = IMAGE_PATH + 'Resources/colorize/'
 
-
-BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Resources/colorize/'
-mimg = "pic3.jpg"# 'pic2.jpg'
-img_path  = BASE_FOLDER + mimg
-
-
-# When an 'r'  a character following a backslash is included in the string without change
-# Paths to load the model
-DIR = r"C:\Users\Balaji\Documents\colorize"
-PROTOTXT = os.path.join(DIR, r"model/colorization_deploy_v2.prototxt")
-POINTS = os.path.join(DIR, r"model/pts_in_hull.npy")
-
-MODEL = os.path.join(BASE_FOLDER, "colorization_release_v2.caffemodel")
-
+PROTOTXT = DIR + "colorization_deploy_v2.prototxt"
+POINTS = DIR + "pts_in_hull.npy"
+MODEL = DIR + "colorization_release_v2.caffemodel"
+print(IMAGE)
 # Argparser
 ap = argparse.ArgumentParser()
+
+# Load the Model
+print("Load model")
+#dnn =   Deep Nural Network
+net = cv2.dnn.readNetFromCaffe(PROTOTXT, MODEL)
+pts = np.load(POINTS)
+image = cv2.imread(IMAGE)
+
+scaled = image.astype("float32") / 255.0
+lab = cv2.cvtColor(scaled, cv2.COLOR_BGR2LAB)
 print(MODEL)
+
+resized = cv2.resize(lab, (224, 224))
+L = cv2.split(resized)[0]
+L -= 50
+
+print("Colorizing the image")
+net.setInput(cv2.dnn.blobFromImage(L))
+ab = net.forward()[0, :, :, :].transpose((1, 2, 0))
+
+ab = cv2.resize(ab, (image.shape[1], image.shape[0]))
+
+L = cv2.split(lab)[0]
+colorized = np.concatenate((L[:, :, np.newaxis], ab), axis=2)
+
+colorized = cv2.cvtColor(colorized, cv2.COLOR_LAB2BGR)
+colorized = np.clip(colorized, 0, 1)
+
+colorized = (255 * colorized).astype("uint8")
+
+cv2.imshow("Original", image)
+cv2.imshow("Colorized", colorized)
+cv2.waitKey(0)
