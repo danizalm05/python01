@@ -1,6 +1,7 @@
 """
 Black and white image colorization
 https://www.youtube.com/watch?v=oNjQpq8QuAo
+6:00
 The basic idea is:
 https://github.com/opencv/opencv/blob/master/samples/dnn/colorization.py
 
