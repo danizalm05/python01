@@ -18,5 +18,5 @@ img = cv.imread(path)
 if img is None:
     sys.exit("Could not read the image.")
 cv.imshow("Display window", img)
-key = cv.waitKey(0)
+key = cv.waitKey(1)
 #cv2.destroyAllWindows()

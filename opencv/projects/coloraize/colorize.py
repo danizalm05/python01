@@ -1,7 +1,7 @@
 """
 Black and white image colorization
 https://www.youtube.com/watch?v=oNjQpq8QuAo
-
+The basic idea is:
 https://github.com/opencv/opencv/blob/master/samples/dnn/colorization.py
 
 """
@@ -12,7 +12,7 @@ import numpy as np
 
 import argparse
 import cv2 as cv
-import os
+
 import getpass
 """
 Download the model files: 
@@ -25,7 +25,7 @@ Download the model files:
   
 """
 
-IMAGE_NAME = '3.jpg'#'wed.jpg'
+IMAGE_NAME = '1.jpg'#'wed.jpg' '3.jpg'
 IMAGE_PATH = 'C:/Users/' + getpass.getuser() + '/Pictures/'
 IMAGE = IMAGE_PATH +'Saved Pictures/'+ IMAGE_NAME
 DIR = IMAGE_PATH + 'Resources/colorize/'
@@ -52,59 +52,42 @@ net.getLayer(net.getLayerId('conv8_313_rh')).blobs = [np.full([1, 313], 2.606, n
 
 
 frame = cv.imread(IMAGE)
-#cap = cv.VideoCapture(0)
 
-while cv.waitKey(1) < 0:
-    # hasFrame, frame = cap.read()
-    # if not hasFrame:
-    #    cv.waitKey()
-    #    break
-    img_rgb = (frame[:,:,[2, 1, 0]] * 1.0 / 255).astype(np.float32)
-    img_lab = cv.cvtColor(img_rgb, cv.COLOR_RGB2Lab)
-    img_l = img_lab[:,:,0] # pull out L channel
-    (H_orig,W_orig) = img_rgb.shape[:2] # original image size
 
-    # resize image to network input size
-    img_rs = cv.resize(img_rgb, (W_in, H_in)) # resize image to network input size
-    img_lab_rs = cv.cvtColor(img_rs, cv.COLOR_RGB2Lab)
-    img_l_rs = img_lab_rs[:,:,0]
-    img_l_rs -= 50 # subtract 50 for mean-centering
+ 
+# hasFrame, frame = cap.read()
+# if not hasFrame:
+#    cv.waitKey()
+#    break
+img_rgb = (frame[:,:,[2, 1, 0]] * 1.0 / 255).astype(np.float32)
+img_lab = cv.cvtColor(img_rgb, cv.COLOR_RGB2Lab)
+img_l = img_lab[:,:,0] # pull out L channel
+(H_orig,W_orig) = img_rgb.shape[:2] # original image size
 
-    net.setInput(cv.dnn.blobFromImage(img_l_rs))
-    ab_dec = net.forward()[0,:,:,:].transpose((1,2,0)) # this is our result
+# resize image to network input size
+img_rs = cv.resize(img_rgb, (W_in, H_in)) # resize image to network input size
+img_lab_rs = cv.cvtColor(img_rs, cv.COLOR_RGB2Lab)
+img_l_rs = img_lab_rs[:,:,0]
+img_l_rs -= 50 # subtract 50 for mean-centering
 
-    (H_out,W_out) = ab_dec.shape[:2]
-    ab_dec_us = cv.resize(ab_dec, (W_orig, H_orig))
-    img_lab_out = np.concatenate((img_l[:,:,np.newaxis],ab_dec_us),axis=2) # concatenate with original image L
-    img_bgr_out = np.clip(cv.cvtColor(img_lab_out, cv.COLOR_Lab2BGR), 0, 1)
-    frame = cv.resize(frame, imshowSize)
+net.setInput(cv.dnn.blobFromImage(img_l_rs))
+ab_dec = net.forward()[0,:,:,:].transpose((1,2,0)) # this is our result
 
-    cv.imshow('origin', frame)
-    cv.imshow('gray', cv.cvtColor(frame, cv.COLOR_RGB2GRAY))
-    cv.imshow('colorized', cv.resize(img_bgr_out, imshowSize))
+(H_out,W_out) = ab_dec.shape[:2]
+ab_dec_us = cv.resize(ab_dec, (W_orig, H_orig))
+img_lab_out = np.concatenate((img_l[:,:,np.newaxis],ab_dec_us),axis=2) # concatenate with original image L
+img_bgr_out = np.clip(cv.cvtColor(img_lab_out, cv.COLOR_Lab2BGR), 0, 1)
+frame = cv.resize(frame, imshowSize)
 
-scaled = image.astype("float32") / 255.0
-lab = cv2.cvtColor(scaled, cv2.COLOR_BGR2LAB)
-print(MODEL)
+cv.imshow('origin', frame)
+cv.imshow('gray', cv.cvtColor(frame, cv.COLOR_RGB2GRAY))
+cv.imshow('colorized', cv.resize(img_bgr_out, imshowSize))
 
-resized = cv2.resize(lab, (224, 224))
-L = cv2.split(resized)[0]
-L -= 50
 
-print("Colorizing the image")
-net.setInput(cv2.dnn.blobFromImage(L))
-ab = net.forward()[0, :, :, :].transpose((1, 2, 0))
-
-ab = cv2.resize(ab, (image.shape[1], image.shape[0]))
-
-L = cv2.split(lab)[0]
-colorized = np.concatenate((L[:, :, np.newaxis], ab), axis=2)
-
-colorized = cv2.cvtColor(colorized, cv2.COLOR_LAB2BGR)
-colorized = np.clip(colorized, 0, 1)
-
-colorized = (255 * colorized).astype("uint8")
-
-cv2.imshow("Original", image)
-cv2.imshow("Colorized", colorized)
-cv2.waitKey(0)
+while True:
+   if cv.waitKey(1) & 0xFF == ord('q'):
+       break 
+  
+cv.destroyAllWindows()  
+print("end")
+ 
