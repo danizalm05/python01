@@ -26,7 +26,7 @@ Download the model files:
   
 """
 
-IMAGE_NAME = 'moon.tif'  # 'wed.jpg' '3.jpg' 'g.jpg'
+IMAGE_NAME = '15.jpg'  # 'wed.jpg' '3.jpg' 'g.jpg'
 IMAGE_PATH = 'C:/Users/' + getpass.getuser() + '/Pictures/'
 IMAGE = IMAGE_PATH + 'Saved Pictures/' + IMAGE_NAME
 DIR = IMAGE_PATH + 'Resources/colorize/'
@@ -37,7 +37,7 @@ MODEL = DIR + "colorization_release_v2.caffemodel"
 print("Loading image ", IMAGE)
 # Argparser
 ap = argparse.ArgumentParser()
-#  dimensions the model is pretrained
+#  The dimensions, the model is pretrained.
 W_in = 224
 H_in = 224
 
