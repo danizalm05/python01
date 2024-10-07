@@ -26,7 +26,7 @@ Download the model files:
   
 """
 
-IMAGE_NAME = '15.jpg'  # 'wed.jpg' '3.jpg' 'g.jpg'
+IMAGE_NAME = '14.jpg'  # 'wed.jpg' '3.jpg' 'g.jpg'
 IMAGE_PATH = 'C:/Users/' + getpass.getuser() + '/Pictures/'
 IMAGE = IMAGE_PATH + 'Saved Pictures/' + IMAGE_NAME
 DIR = IMAGE_PATH + 'Resources/colorize/'
@@ -67,7 +67,7 @@ img_rs = cv.resize(img_rgb, (W_in, H_in))
 
 img_lab_rs = cv.cvtColor(img_rs, cv.COLOR_RGB2Lab)
 img_l_rs = img_lab_rs[:, :, 0]
-img_l_rs -= 50  # subtract 50 for mean-centering you can change this value
+img_l_rs -= 250  # subtract 50 for mean-centering you can change this value
 
 net.setInput(cv.dnn.blobFromImage(img_l_rs))
 ab_dec = net.forward()[0, :, :, :].transpose((1, 2, 0))  # this is our result
