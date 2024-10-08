@@ -23,7 +23,8 @@ IMAGE = BASE_FOLDER + IMAGE_NAME
 # Video Playlist: https://www.youtube.com/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
 
 img = io.imread(IMAGE)
+
 gaussian_img = filters.gaussian(img, sigma=1)
 plt.imshow(gaussian_img)
-
+plt.show()
 print("image = ",IMAGE)
