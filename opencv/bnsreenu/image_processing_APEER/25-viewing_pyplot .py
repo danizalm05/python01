@@ -8,11 +8,12 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
 from skimage import io
 import matplotlib.pyplot as plt
 import cv2
+import getpass
 
-USER1 = 'gilfm'
-USER2 = 'rockman'
+USER = getpass.getuser()
+
 IMAGE_NAME = '1.jpg'
-BASE_FOLDER = 'C:/Users/' + USER2 + '/Pictures/Saved Pictures/'
+BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
 img = io.imread(IMAGE)
@@ -51,27 +52,14 @@ ax4.imshow(img_gray, cmap='nipy_spectral')
 ax4.title.set_text('4th')
 plt.show()
 
-
-
-############################################
 #Using opencv
-
-
 
 gray_img = cv2.imread(IMAGE, 0)
 color_img = cv2.imread(IMAGE, 1)
-
-
-# Use the function cv2.imshow() to display an image in a window. 
-# First argument is the window name which is a string. second argument is our image. 
 
 cv2.imshow("pic from skimage import", img)  #Shows weird colors as R and B channels are swapped
 cv2.imshow("color pic from opencv", color_img)
 cv2.imshow("gray pic from opencv", gray_img)
 
-# Maintain output window until 
-# user presses a key or 1000 ms (1s)
 cv2.waitKey(0)          
-
-#destroys all windows created
-cv2.destroyAllWindows() 
+cv2.destroyAllWindows()
