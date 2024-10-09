@@ -10,7 +10,7 @@ from skimage import io
 USER1 = 'gilfm'
 USER2 = 'rockman'
 IMAGE_NAME = '1.jpg'
-BASE_FOLDER = 'C:/Users/' + USER1 + '/Pictures/Saved Pictures/'
+BASE_FOLDER = 'C:/Users/' + USER2 + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
 img = io.imread(IMAGE)
