@@ -17,7 +17,7 @@ from matplotlib import pyplot as plt
 USER1 = 'gilfm'
 USER2 = 'rockman'
 IMAGE_NAME = '1.jpg'
-BASE_FOLDER = 'C:/Users/' + USER2 + '/Pictures/Saved Pictures/'
+BASE_FOLDER = 'C:/Users/' + USER1 + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 # Video Playlist: https://www.youtube.com/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
 
