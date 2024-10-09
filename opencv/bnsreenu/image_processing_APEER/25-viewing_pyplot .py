@@ -1,11 +1,13 @@
 """
-display of images pyplot and opencv
-skimage can also be used.. io.imshow
+display of images pyplot and opencv skimage
    
 https://www.youtube.com/watch?v=2Q-bmlsdqRk&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=26
+https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial25_viewing_images_in_python.py
 """
 #
 from skimage import io
+import matplotlib.pyplot as plt
+import cv2
 
 USER1 = 'gilfm'
 USER2 = 'rockman'
@@ -14,11 +16,10 @@ BASE_FOLDER = 'C:/Users/' + USER2 + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
 img = io.imread(IMAGE)
-
 io.imshow(img)
 
 #MATPLOTLIB.PYPLOT
-import matplotlib.pyplot as plt
+
 plt.imshow(img)  
 
 #Colormaps...  https://matplotlib.org/tutorials/colors/colormaps.html
@@ -55,7 +56,7 @@ plt.show()
 ############################################
 #Using opencv
 
-import cv2
+
 
 gray_img = cv2.imread(IMAGE, 0)
 color_img = cv2.imread(IMAGE, 1)
