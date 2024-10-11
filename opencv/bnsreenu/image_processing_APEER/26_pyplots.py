@@ -5,7 +5,6 @@ https://www.youtube.com/watch?v=67ylv7ldPj0&list=PLHae9ggVvqPgyRQQOtENr6hK0m1Uqu
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial26_plotting_using_pyplots_python.py
 """
 #
-
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2

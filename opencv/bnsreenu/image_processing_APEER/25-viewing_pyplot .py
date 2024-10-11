@@ -51,7 +51,7 @@ ax4.imshow(img_gray, cmap='nipy_spectral')
 ax4.title.set_text('4th')
 
 # Using opencv
-
+ 
 gray_img = cv2.imread(IMAGE, 0)
 color_img = cv2.imread(IMAGE, 1)
 
