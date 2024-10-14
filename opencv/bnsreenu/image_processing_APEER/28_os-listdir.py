@@ -40,17 +40,20 @@ os.path.join() method in Python join one or more path components
 intelligently.
 """ 
 print("\n\n        os.walk\n---------------------------\n") 
-print(os.walk("."))  #Nothing to see here as this is just a generator 
+print(os.walk("."))  #Nothing to see here as this is just a generator
+
 #object
 
 # traverse root directory, and list directories as dirs and files as 
 #files
-for root, dirs, files in os.walk("."):
-    #print(root)  #Prints root directory names
+#alk_str = "."#local dir
+walk_str = 'C:/Users/' + USER + '/Pictures/'
+for (root,  dirs,  files)  in  os.walk(walk_str):
+    print("root = ",root)  #Prints root directory names
     
     path = root.split(os.sep)  #SPlit at separator (/ or \)
     #print(path)  #Gives names of directories for easy location of files
-    #print(files)   #Prints all file names in all directories
+
     
 #Let us now visualize directories and files within them
     #Add --- based on the path
@@ -58,6 +61,19 @@ for root, dirs, files in os.walk("."):
     
     for file in files:
         print(len(path) * '---', file)
-        
- #######################        
- 
+
+    #######################
+    # Another way to look at all dirs. and files...
+
+
+for root, dirs, files in os.walk("."):
+    # for path,subdir,files in os.walk("."):
+    print('\n start name in dirs\n====\n' )
+
+    for name in dirs:
+        print(os.path.join(root, name))  # will print path of directories
+    print('\n end name in dirs\n-----------------\n')
+    print('\n start name in files\n**********\n')
+    for name in files:
+        print(os.path.join(root, name))  # will print path of files
+    print('\n end name in files\n++++++++++++++++++\n')
