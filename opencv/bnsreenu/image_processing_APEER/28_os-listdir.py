@@ -10,7 +10,10 @@ https://www.youtube.com/watch?v=mQkcf8kgit8&list=PLHae9ggVvqPgyRQQOtENr6hK0m1Uqu
  scratch assay analysis.
 #Resize, rescale
 """
+import matplotlib.pyplot as plt
 
+from skimage import io, color
+from skimage.transform import rescale, resize, downscale_local_mean
 import getpass
 import os
 
@@ -23,8 +26,7 @@ IMAGE = BASE_FOLDER + IMAGE_NAME
 
 path = BASE_FOLDER
 file_list = os.listdir(path)
-print(file_list)  #Very similar to glob, prints a list of all files in the directory
 
 for (image) in os.listdir(path):  #iterate through each file to perform some action
     print(image)
- 
+img = io.imread(IMAGE, as_gray=True) 
