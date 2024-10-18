@@ -5,7 +5,7 @@ import os
 
 USER = getpass.getuser()
 
-IMAGE_NAME = '1.jpg'
+IMAGE_NAME = 'lena.jpg'
 BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
