@@ -1,10 +1,8 @@
 import cv2
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import getpass
-import os
+
 
 USER = getpass.getuser()
 
@@ -55,8 +53,12 @@ img_mod = np.fft.ifft2(fft_img_mod)
 img_mod = np.abs(img_mod)
 
 # show differences
-plt.subplot(121)
+plt.subplot(221)
+#plt.imshow(phases, cmap='gray')
+plt.subplot(222)
+#plt.imshow(real_mod, cmap='gray')
+plt.subplot(223)
 plt.imshow(img, cmap='gray')
-plt.subplot(122)
+plt.subplot(224)
 plt.imshow(img_mod, cmap='gray')
 plt.show() 
