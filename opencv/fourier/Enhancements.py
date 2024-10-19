@@ -33,15 +33,33 @@ cargoship_gray = rgb2gray(cargoship_rgb)
 
 
 cargoship_fft = np.fft.fftshift(np.fft.fft2(cargoship_gray))
-#plt.imshow(np.log(abs(cargoship_fft)), cmap='gray')
-#plt.title(' Fourier Transform Representation of the Cargo Ship');
+cargoship_fft2 = cargoship_fft.copy()
+cargoship_fft2[0:243,  0: 648] = 1
 
-f, axarr = plt.subplots(2,2)
+fft =np.log(abs(cargoship_fft))
+
+f, axarr = plt.subplots(2, 3, figsize=(15, 16))
 axarr[0,0].imshow(cargoship_rgb)
+
+axarr[0,0].set_title("Original")
+
 axarr[0,1].imshow(cargoship_gray, cmap='gray')
+axarr[0,1].set_title("gray")
+
+axarr[0,2].imshow(abs(np.fft.ifft2(cargoship_fft2)),  cmap='gray')
+axarr[0,2].axis('off')
+axarr[0,2].set_title("ifft2")
+
 axarr[1,0].imshow(np.log(abs(cargoship_fft)), cmap='gray')
-axarr[1,1].imshow(cargoship_gray)
+axarr[1,0].set_title("fft")
+
+
+axarr[1,1].imshow(abs(np.fft.ifft2(cargoship_fft)),  cmap='gray')
 axarr[1,1].axis('off')
-axarr[1,1].set_title("gray")
-plt.subplots_adjust(hspace=0.5)
+axarr[1,1].set_title("ifft2")
+
+axarr[1,2].imshow(np.log(abs(cargoship_fft2)), cmap='gray')
+axarr[1,2].set_title("ft2")
+plt.subplots_adjust(hspace=0.3)
+
 plt.show()
