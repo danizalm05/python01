@@ -10,6 +10,20 @@ import getpass
 
 def empty(a):
     pass
+def getTrackVal(inpWin):
+    radius = cv2.getTrackbarPos("radius", inpWin)
+    h_max = cv2.getTrackbarPos("Hue Max", inpWin)
+    #        saturation
+    s_min = cv2.getTrackbarPos("Sat Min", inpWin)
+    s_max = cv2.getTrackbarPos("Sat Max", inpWin)
+    #        value
+    v_min = cv2.getTrackbarPos("Val Min", inpWin)
+    v_max = cv2.getTrackbarPos("Val Max", inpWin)
+
+    scale = cv2.getTrackbarPos("Scale", inpWin) / 10
+    if scale < 1: scale =1
+    vid_on = cv2.getTrackbarPos("switch", inpWin)
+    return (radius,h_max,s_min,s_max,v_min,v_max,scale,vid_on)
 
 def inpTrackbar(win):
     cv2.namedWindow(win)
@@ -17,7 +31,7 @@ def inpTrackbar(win):
     cv2.resizeWindow(win, 600,400)
 
     #0 96 97 250 139 255
-    cv2.createTrackbar("Hue Min", win, 1, 179, empty)  # 100
+    cv2.createTrackbar("radius", win, 30, 179, empty)  # 100
     cv2.createTrackbar("Hue Max", win, 99, 179, empty)  # 100
     cv2.createTrackbar("Sat Min", win, 97, 255, empty)  # 100
     cv2.createTrackbar("Sat Max", win, 255, 255, empty)
