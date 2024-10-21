@@ -10,7 +10,7 @@ import getpass
 import matplotlib.pyplot as plt
 import sys
 import os
-from inpOpenCV import stackImages,PutTextOnImage, inpTrackbar, get_limits
+from FFTinp import stackImages,PutTextOnImage, inpTrackbar, get_limits
 
 
 image_name =  'lambo.png' #'lambo.png' 'cards.jpg'
