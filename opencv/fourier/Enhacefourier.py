@@ -13,14 +13,12 @@ import os
 from inpOpenCV import stackImages,PutTextOnImage, inpTrackbar, get_limits
 
 
-image_name =  'lambo.png' #'lambo.png' 'cards.jpg'
-BASE_FOLDER = 'C:/Users/'+ getpass.getuser()
-BASE_FOLDER = BASE_FOLDER +'/Pictures/Saved Pictures/'
-path = BASE_FOLDER + image_name
 
-if not (os.path.isfile(path)):
-    print("ERROR --> Missing File: " + path   )
-    sys.exit(1)
+
+USER = getpass.getuser()
+IMAGE_NAME = 'lena.jpg' #'2.jpg'
+BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
+IMAGE = BASE_FOLDER + IMAGE_NAME
 
 
 CameraID = 0
@@ -36,16 +34,34 @@ vid_on = cv2.getTrackbarPos("switch", inpWin)
 if (vid_on):
           ret, img = cap.read() 
 else: 
-          img = cv2.imread(path)
+          img = cv2.imread(IMAGE)
           
 imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 rect =  np.ones((312, 312, 3), np.uint8)
 colRectLow =  cv2.cvtColor(rect,cv2.COLOR_BGR2HSV)
 colRectHigh =  cv2.cvtColor(rect,cv2.COLOR_BGR2HSV)
-#colRect_copy = colRect.copy()
+
+
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-img_fft = np.fft.fftshift(np.fft.fft2(imgGray))
-img_fft_copy = img_fft.copy()
+
+#Fourier Transform Representation of the image.
+####################
+image = cv2.imread(IMAGE)
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# Compute the discrete Fourier Transform of the image
+fourier = cv2.dft(np.float32(gray), flags=cv2.DFT_COMPLEX_OUTPUT)
+# Shift the zero-frequency component to the center of the spectrum
+fourier_shift = np.fft.fftshift(fourier)
+# calculate the magnitude of the Fourier Transform
+magnitude = 20 * np.log(cv2.magnitude(fourier_shift[:, :, 0], fourier_shift[:, :, 1]))
+# Scale the magnitude for display
+magnitude = cv2.normalize(magnitude, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8UC1)
+
+# Display the magnitude of the Fourier Transform
+
+
+#############################
 while True:
     
     #        hue
@@ -88,13 +104,15 @@ while True:
     stext = str(h_max) + " " +str(s_max) +" " + str(v_max)
     colRectHigh =PutTextOnImage(colRectHigh ,"High Color")
 
-    imgStack = stackImages(scale, ([img,imgGray,img],
+    imgStack = stackImages(scale, ([img,imgGray,magnitude  ],
                                   [mask,imgResult,colRectHigh]))
+
+
     #All white values in mask window will appear in the result
     imgResult =PutTextOnImage(imgResult ,"Result")
-    cv2.imshow("Result", imgResult)
-    cv2.imshow("Stacked Images", imgStack)
 
+    cv2.imshow('Fourier Transform', magnitude)
+    cv2.imshow("Stacked Images", imgStack)
 
 
     #cv2.imshow("Image", img)
