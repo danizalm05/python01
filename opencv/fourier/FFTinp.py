@@ -23,7 +23,7 @@ def getTrackVal(inpWin):
     scale = cv2.getTrackbarPos("Scale", inpWin) / 10
     if scale < 1: scale =1
     vid_on = cv2.getTrackbarPos("switch", inpWin)
-    return (radius,h_max,s_min,s_max,v_min,v_max,scale,vid_on)
+    return (radius,h_max,s_min,s_max,v_min,v_max,scale)
 
 def inpTrackbar(win):
     cv2.namedWindow(win)

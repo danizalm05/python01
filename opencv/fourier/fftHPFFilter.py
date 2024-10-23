@@ -31,14 +31,9 @@ cap = cv2.VideoCapture(CameraID)
 inpWin = "TrackBars"
 scale = 0.2
 
-
 inpTrackbar(inpWin)
 vid_on = cv2.getTrackbarPos("switch", inpWin)
-# vid_on = True
-if (vid_on):
-    ret, img = cap.read()
-else:
-    img = cv2.imread(IMAGE)
+img = cv2.imread(IMAGE)
 
 # do dft saving as complex output
 dft = np.fft.fft2(img, axes=(0,1))
@@ -49,17 +44,14 @@ dft_shift = np.fft.fftshift(dft)
 mag = np.abs(dft_shift)
 spec = np.log(mag) / 20
 
+#cv2.namedWindow("concat", cv2.WINDOW_NORMAL)
+#cv2.resizeWindow("concat", 100, 100)
 
 
 while True:
-    (radius, h_max, s_min, s_max, v_min, v_max,scale,vid_on) = getTrackVal(inpWin)
+    (radius, h_max, s_min, s_max, v_min, v_max,scale) = getTrackVal(inpWin)
 
-    if (vid_on):
-        _ , img = cap.read()
-        #img = cv2.resize(img, (462,623))
-
-
-   # create circle mask
+    # create circle mask
     #radius = 32
     mask = np.zeros_like(img)
     cy = mask.shape[0] // 2
@@ -92,14 +84,18 @@ while True:
     cv2.imshow("ORIGINAL", img)
     cv2.imshow("SPECTRUM", spec)
     cv2.imshow("MASK", mask)
-    cv2.imshow("MASK2", mask2)
+   # cv2.imshow("MASK2", mask2)
     cv2.imshow("ORIGINAL DFT/IFT ROUND TRIP", img_back)
     cv2.imshow("FILTERED DFT/IFT ROUND TRIP", img_filtered)
     cv2.imshow("FILTERED2 DFT/IFT ROUND TRIP", img_filtered2)
 
-    imgStack = stackImages(scale,([img ,spec,mask ,mask2],
-                                  [img_filtered, mask,imgResult,img_filtered2]))
-    cv2.imshow("Stacked Images", imgStack)
+    #concat = np.concatenate((spec, img_back), axis=1)
+
+    #cv2.imshow('Concat', concat)
+
+    #imgStack = stackImages(scale,([img ,spec,mask ,mask2],
+    #                              [img_filtered, mask,imgResult,img_filtered2]))
+    #cv2.imshow("Stacked Images", imgStack)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

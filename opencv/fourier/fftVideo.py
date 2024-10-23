@@ -34,21 +34,12 @@ scale = 0.2
 
 inpTrackbar(inpWin)
 vid_on = cv2.getTrackbarPos("switch", inpWin)
-# vid_on = True
-#if (vid_on):
 ret, img = cap.read()
-#else:
-#    img = cv2.imread(IMAGE)
-
-
-
 
 while True:
-    (radius, h_max, s_min, s_max, v_min, v_max,scale,vid_on) = getTrackVal(inpWin)
-
-    #if (vid_on):
+    (radius, h_max, s_min, s_max, v_min, v_max,scale) = getTrackVal(inpWin)
     _ , img = cap.read()
-        #img = cv2.resize(img, (462,623))
+
 
     # do dft saving as complex output
     dft = np.fft.fft2(img, axes=(0,1))
@@ -79,7 +70,7 @@ while True:
     back_ishift_masked2 = np.fft.ifftshift(dft_shift_masked2)
 
     # do idft saving as complex output
-    img_back = np.fft.ifft2(back_ishift, axes=(0,1))
+    img_back     = np.fft.ifft2(back_ishift, axes=(0,1))
     img_filtered = np.fft.ifft2(back_ishift_masked, axes=(0,1))
     img_filtered2 = np.fft.ifft2(back_ishift_masked2, axes=(0,1))
 
