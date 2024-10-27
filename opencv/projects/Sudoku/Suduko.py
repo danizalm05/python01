@@ -46,7 +46,7 @@ def solve(bo):
 
     return False
 
-
+#check if  new number in pos is valid  
 def valid(bo, num, pos):
     # Check row
     for i in range(len(bo[0])):
@@ -59,7 +59,7 @@ def valid(bo, num, pos):
             return False
 
     # Check box
-    box_x = pos[1] // 3
+    box_x = pos[1] // 3 # 0, 1, 2
     box_y = pos[0] // 3
 
     for i in range(box_y*3, box_y*3 + 3):
@@ -86,6 +86,7 @@ def print_board(bo):
 
 
 def find_empty(bo):
+    
     for i in range(len(bo)):
         for j in range(len(bo[0])):
             if bo[i][j] == 0:
@@ -97,3 +98,8 @@ print_board(board)
 solve(board)
 print("___________________")
 print_board(board)
+
+
+
+print(range(len(board))) # range(0, 9)
+print(range(len(board[0])))# range(0, 9)
