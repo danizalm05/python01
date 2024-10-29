@@ -1,3 +1,7 @@
+
+https://zetcode.com/pyqt6/
+
+
 Learn Python GUI Development for Desktop – PySide6 and Qt Tutorial
 
  https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-
