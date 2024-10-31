@@ -51,7 +51,7 @@ rows, cols = img.shape
 crow, ccol = int(rows / 2), int(cols / 2)
 
 mask = np.ones((rows, cols, 2), np.uint8)
-r = 80
+r = 10
 center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
 
