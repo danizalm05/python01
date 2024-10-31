@@ -1,6 +1,6 @@
 """
 Tutorial 30 - Basic image processing using opencv in python 
-
+5:30
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial41_image_filters_using_fourier_transform_DFT.py
 https://www.youtube.com/watch?v=9mLeVn8xzMw&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=42
   
@@ -54,6 +54,8 @@ mask = np.ones((rows, cols, 2), np.uint8)
 r = 80
 center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
+
+# Create a circle mask   '<= r*r'
 mask_area = (x - center[0]) ** 2 + (y - center[1]) ** 2 <= r*r
 mask[mask_area] = 0
 
