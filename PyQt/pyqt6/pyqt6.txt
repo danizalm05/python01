@@ -8,6 +8,11 @@ Learn Python GUI Development for Desktop – PySide6 and Qt Tutorial
 
 
 
+Create Your First GUI App in Python | PyQt6 Tutorial
+https://www.youtube.com/watch?v=SelawmXHtPg&list=PL3JVwFmb_BnSOj_OtnKlsc2c7Jcs6boyB
+
+
+
 qt5-tools designer
 
 To start, open command line (cmd) and run :
