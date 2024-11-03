@@ -12,6 +12,9 @@ import cv2
 from matplotlib import pyplot as plt
 import numpy as np
 
+from PySide6.QtWidgets import QApplication, QWidget
+import sys
+
 USER = getpass.getuser()
 
 IMAGE_NAME = 'lena.jpg' #'2.jpg'
@@ -19,6 +22,10 @@ BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
 print(IMAGE)
+
+
+
+
 path = BASE_FOLDER
 file_list = os.listdir(path)
 
