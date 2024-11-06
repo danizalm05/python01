@@ -4,8 +4,8 @@
 
  https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/blob/main/2.SignalsAndSlots/main.py
   https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s
-56:00
-'''
+56:00  01:00:04
+
 
 #VERSION2 : SIGNALS SENDING VALUES, CAPTURE VALUES IN SLOTS
 
@@ -50,4 +50,3 @@ slider.setValue(25)
 slider.valueChanged.connect(respond_to_slider)
 slider.show()
 app.exec()
-'''
