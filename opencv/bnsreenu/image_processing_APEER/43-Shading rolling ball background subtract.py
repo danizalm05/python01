@@ -12,6 +12,7 @@ https://www.youtube.com/watch?v=BQ-YrAIl2GU&list=PLHae9ggVvqPgyRQQOtENr6hK0m1Uqu
 
 2nd approach:
 Apply rolling ball background subtraction
+
 pip install opencv-rolling-ball
 
 """
@@ -28,7 +29,7 @@ import os
 
 USER = getpass.getuser()
 
-IMAGE_NAME = '3.jpg' #'2.jpg' 'lena.jpg'
+IMAGE_NAME = 'lena.jpg'  #'2.jpg' 'lena.jpg'
 BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
@@ -41,4 +42,59 @@ for (image) in os.listdir(path):  # iterate through each file to perform some ac
     print(image)
 
 img = cv2.imread(IMAGE, 1) # load an image
+'''
+lab_img = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+l, a, b = cv2.split(lab_img)
+
+
+clahe = cv2.createCLAHE(clipLimit=3, tileGridSize=(8,8))
+clahe_img = clahe.apply(l)
+CLAHE_img = cv2.merge((clahe_img,a,b))
+
+corrected_image = cv2.cvtColor(CLAHE_img, cv2.COLOR_LAB2BGR)
+
+cv2.imshow("Original image", img)
+cv2.imshow("Corrected image", corrected_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+'''
+############################################################
+"""
+#2nd method
+# https://pypi.org/project/opencv-rolling-ball/
+# 
+# pip install opencv-rolling-ball
+# Only works with 8 bit grey
+
+A local background value is determined for every pixel by averaging over a 
+very large ball around the pixel. This value is then subtracted from 
+the original image, removing large spatial variations of the 
+background intensities. The radius should be set to at least the size of the 
+largest object that is not part of the background.
+"""
+
+from cv2_rolling_ball import subtract_background_rolling_ball
  
+img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+radius=20
+final_img, background = subtract_background_rolling_ball(
+                             img,
+                             radius, light_background=True,
+                             use_paraboloid=False,
+                             do_presmooth=True)
+
+
+#optionally perform CLAHE to equalize histogram for better segmentation
+#otherwise the image may appear washedout.
+
+clahe = cv2.createCLAHE(clipLimit=3, tileGridSize=(8,8))
+clahe_img = clahe.apply(final_img)
+
+#cv2.imshow("Original image", img)
+cv2.imshow("Background image", background)
+cv2.imshow("AFter background subtraction", final_img)
+cv2.imshow("After CLAHE", clahe_img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
