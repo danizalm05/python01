@@ -79,3 +79,5 @@ ax4.imshow(magnitude_spectrum)
 ax4.title.set_text('FFT of image')
 
 plt.show() 
+
+print('picoCTF{gl17ch_m3_n07_' + chr(0x61) + chr(0x34) + chr(0x33) + chr(0x39) + chr(0x32) + chr(0x64) + chr(0x32) + chr(0x65) + '}')
