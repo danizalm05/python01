@@ -29,7 +29,7 @@ import os
 
 USER = getpass.getuser()
 
-IMAGE_NAME = 'lena.jpg'  #'2.jpg' 'lena.jpg'
+IMAGE_NAME = 'lena.jpg'  #'2.jpg' 'lena.jpg''Alloy.jpg'
 BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
@@ -42,6 +42,7 @@ for (image) in os.listdir(path):  # iterate through each file to perform some ac
     print(image)
 
 img = cv2.imread(IMAGE, 1) # load an image
+cv2.imshow("Original image", img)
 '''
 lab_img = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
 l, a, b = cv2.split(lab_img)
@@ -77,7 +78,7 @@ largest object that is not part of the background.
 from cv2_rolling_ball import subtract_background_rolling_ball
  
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-radius=20
+radius = 15
 final_img, background = subtract_background_rolling_ball(
                              img,
                              radius, light_background=True,
@@ -91,7 +92,7 @@ final_img, background = subtract_background_rolling_ball(
 clahe = cv2.createCLAHE(clipLimit=3, tileGridSize=(8,8))
 clahe_img = clahe.apply(final_img)
 
-#cv2.imshow("Original image", img)
+
 cv2.imshow("Background image", background)
 cv2.imshow("AFter background subtraction", final_img)
 cv2.imshow("After CLAHE", clahe_img)
