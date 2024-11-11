@@ -36,34 +36,48 @@ img_list = []
 for (image) in os.listdir(BASE_FOLDER):  # iterate through each file to perform some action
     img_list.append(image)
 
-img_num = 20
+img_num = 14
 IMAGE = BASE_FOLDER + img_list[img_num]
 #IMAGE = BASE_FOLDER + IMAGE_NAME
 
 print(IMAGE)
 img = cv2.imread(IMAGE, 1)
 
-
+################   BGR  *
 #Needs 8 bit, not float.
 color_opencv = cv2.imread(IMAGE, 1)
 gray_opencv = cv2.imread(IMAGE, 0)
-
 color_skimage = io.imread(IMAGE, as_gray=False)
 gray_skimage = io.imread(IMAGE, as_gray=True)
-
+  
 B, G, R = cv2.split(color_opencv)
-
-
 cv2.imshow("Original", color_opencv)
 cv2.imshow("B", B)
 cv2.imshow("G", G)
 cv2.imshow("R", R)
+#cv2.waitKey(0)          
+#cv2.destroyAllWindows() 
+ 
+
+##########################################################
+
+hsv_image = cv2.cvtColor(color_skimage, cv2.COLOR_BGR2HSV)
+h, s, v = cv2.split(hsv_image)
+
+cv2.imshow("Original", color_opencv)
+cv2.imshow("h", h)
+cv2.imshow("s", s)
+cv2.imshow("v", v)
+
+
+lab_image = cv2.cvtColor(color_skimage, cv2.COLOR_BGR2LAB)
+L, A, B = cv2.split(lab_image)
+
+cv2.imshow("Original", color_opencv)
+cv2.imshow("lab_L", L)
+cv2.imshow("lab_A", A)
+cv2.imshow("lab_B", B)
 
 
 cv2.waitKey(0)          
 cv2.destroyAllWindows() 
-
-
-##########################################################
-
- 
