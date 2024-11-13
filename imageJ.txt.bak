@@ -1,0 +1,87 @@
+
+https://zetcode.com/pyqt6/
+
+
+Learn Python GUI Development for Desktop – PySide6 and Qt Tutorial
+
+ https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-
+
+
+
+Create Your First GUI App in Python | PyQt6 Tutorial
+https://www.youtube.com/watch?v=SelawmXHtPg&list=PL3JVwFmb_BnSOj_OtnKlsc2c7Jcs6boyB
+
+doc.qt.io/qt-6
+
+qt5-tools designer
+
+To start, open command line (cmd) and run :
+     designer.exe
+
+translate ui file  to python file:
+    pyuic5 -x  <file name>.ui  -o main.py
+    pyuic5 -x designer_file.ui -o designer_file_converted.py
+
+pyuic55
+
+
+from PyQt5 import uic
+if the error meassage is:
+    Cannot find reference 'uic' in '__init__.pyi'  
+Write :
+    # noinspection PyUnresolvedReferences
+    from PyQt5 import uic# Add the above line so uic is imported
+
+c:\users\gilfm\appdata\local\programs\python\python310\lib\site-packages
+C:\Users\gilfm\AppData\Local\Programs\Python\Python310\Scripts\pyuic5.exe
+
+auto-py-to-exe  # translate python  to exe 
+
+List Installed Packages with Pip
+  pip list  
+
+
+
+
+
+Convert Python Script to .exe File
+Method 1
+----------------------------
+https://www.youtube.com/watch?v=JjtqLPbh9-o&list=PLjPKPFvkBtZqKg8ugYihcxkWfnIDcwR4K&index=21
+
+1. Download Inno Setup 6 from   'https://jrsoftware.org/isdl.php'
+2. pip install pyinstaller
+3. pyinstaller     <filename.py>
+4. All the files needed are located in the  '/dist' directory
+5. Add a '/data' directory and move all  directorys to this new directory
+6. Create new script file from 'Welcom' window
+
+
+
+Method 2
+-----------------------
+ 1. pip install pyinstaller
+ 2. Go into the directory where your ‘.py’ file is located. 
+ 3. Press the shift+right click 
+ 4. Click on ‘Open PowerShell window here’. 
+ 5. pyinstaller --onefile -w 'filename.py'
+     pyinstaller   -w 'filename.py'
+
+  Open ‘dist’ folder above. Here you will get your ‘.exe’ file. 
+
+
+
+pip install auto-py-to-exe
+
+How do I use auto py to exe?
+Making an Executable file with auto-py-to-exe
+
+    Installing with pip. ...
+    Running auto-py-to-exe. ...
+    Step 1: Add the script location. ...
+    Step 2: Choosing “One Directory” or “One File” ...
+    Choosing “Console Based” or “Window Based” ...
+    Step 4: Advanced options (e.g., output directory, additional imports) ...
+    Step 5: Convert the file.
+
+ 
