@@ -4,7 +4,7 @@
 
 https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s
 https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/tree/main/3.ATourOfQtWidgets/2.QMainWindow
-01:22:30
+01:32:00
 
 
 '''
@@ -49,12 +49,12 @@ class MainWindow(QMainWindow):
         toolbar.addAction(quit_action)
 
         action1 = QAction("Some Action", self)
-        action1.setStatusTip("Status message for some action")
+        action1.setStatusTip("Status message for some action1")
         action1.triggered.connect(self.toolbar_button_click)
         toolbar.addAction(action1)
 
         action2 = QAction(QIcon("start.png"), "Some other action", self)
-        action2.setStatusTip("Status message for some other action")
+        action2.setStatusTip("Status message for some other action2")
         action2.triggered.connect(self.toolbar_button_click)
         #action2.setCheckable(True)
         toolbar.addAction(action2)
@@ -75,6 +75,6 @@ class MainWindow(QMainWindow):
         print("Clicked on the button")
     def quit_app(self):
         self.app.quit()
-
+        
     def toolbar_button_click(self):
         self.statusBar().showMessage("Message from my app",3000)
