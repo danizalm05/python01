@@ -4,7 +4,7 @@
 
 https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s
 https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/tree/main/3.ATourOfQtWidgets/2.QMainWindow
-01:32:00
+01:41:00
 
 
 '''
