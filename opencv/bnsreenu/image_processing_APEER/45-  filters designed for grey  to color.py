@@ -1,6 +1,6 @@
 """
 #45-Applying filters designed for grey scale to color images (in python)
-7:00
+11:00
 #-----------------------------------------------------
  
 #https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial45_applying_grey_scale_filters_to_color_images.py
@@ -35,7 +35,7 @@ img_list = []
 for (image) in os.listdir(BASE_FOLDER):  # iterate through each file to perform some action
     img_list.append(image)
 
-img_num = 22
+img_num = 8
 IMAGE = BASE_FOLDER + img_list[img_num]
 # IMAGE = BASE_FOLDER + IMAGE_NAME
 print(IMAGE)
@@ -50,21 +50,27 @@ try_to_apply_sobel = filters.sobel(image)
 
 #Too many lines of code to do these tasks but with adapt_rgb decorator the task becomes easy.
 
-
-from skimage import exposure
-@adapt_rgb(each_channel) # apply the sobel for each channel speratly and unit them
-def eq_each(image):
-    output_image = exposure.equalize_hist(image)
-    return (output_image)
-
-equ_RGB = eq_each(image)
-plt.imshow(equ_RGB)
-
+@adapt_rgb(each_channel)
+def sobel_each(image):
+    return filters.sobel(image)
 
 
 @adapt_rgb(hsv_value)
-def eq_hsv(image):
-    output_image = exposure.equalize_hist(image)
-    return (output_image)
-plt.imshow(image)
+def sobel_hsv(image):
+    return filters.sobel(image)
+
+
+each_channel_image = sobel_each(image)
+hsv_value_image = sobel_hsv(image)
+
+#Convert to grey if needed
+
+sobel_grey = rgb2gray(hsv_value_image)
+plt.imshow(sobel_grey)
 plt.show()
+
+#################################
+
+
+from skimage import exposure
+ 
