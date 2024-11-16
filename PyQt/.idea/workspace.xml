@@ -4,91 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/PyQt.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/Basic_initia_pyqt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/Layouts/comboDail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/Layouts/dail.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/QtOpencv.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/contours.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/loadImage.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/masking.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/qtopencv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/qtopencv02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/readImg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/image/staticLabel2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/.idea/intro.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/Focus.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/LCD_Clock .py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/basic01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/calc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/calc02.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/cb.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/cb.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/checkbox.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/content.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/countor2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/countor2.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/formy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/hello.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/lcd.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/loadui.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/loadui.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/menu_colors.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/menu_colors.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/newWin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/newWin.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/pyqt5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/radio.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/slide.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/sliders.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/style.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/styleTransfer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/tabber.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/tictac.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/tictac.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/todo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/todo2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/todolist2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/translate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/translate.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/intro/translate.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/loadui.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/nodekeyboard.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/KeyBoardModule.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/nodekeyboard/NoseEyeBoard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/pyqt5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/KeyBoardModule.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/noiseuse/frameGrab.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/noiseuse/framegrab.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/noiseuse/haarcascade_frontalface_default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/noiseuse/twoVideo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/pyqt5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/video04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt5/video/videoVirtKeyBoard.py" beforeDir="false" />
-    </list>
+    <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,16 +33,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.04-imread.executor": "Run",
-    "Python.dialogs132.executor": "Run",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/python02/opencv/bnsreenu/image_processing_APEER",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.04-imread.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dialogs132.executor&quot;: &quot;Run&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/python02/opencv/bnsreenu/image_processing_APEER&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gilfm\Documents\d\python02\PyQt\pyqt6\basic" />
