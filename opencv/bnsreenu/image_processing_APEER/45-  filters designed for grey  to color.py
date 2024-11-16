@@ -35,7 +35,7 @@ img_list = []
 for (image) in os.listdir(BASE_FOLDER):  # iterate through each file to perform some action
     img_list.append(image)
 
-img_num = 8
+img_num = 18
 IMAGE = BASE_FOLDER + img_list[img_num]
 # IMAGE = BASE_FOLDER + IMAGE_NAME
 print(IMAGE)
@@ -70,6 +70,62 @@ plt.imshow(sobel_grey)
 plt.show()
 
 #################################
+#The decorators work on any function, including
+#the ones using opencv filters
+import cv2
+
+@adapt_rgb(each_channel)
+def median_each(image, k):
+    output_image = cv2.medianBlur(image, k)
+    return (output_image)
+
+median_using_cv2 = median_each(image, 3)
+plt.imshow(median_using_cv2)
+plt.show()
+##############################################
+##############################################
+
+#Histogram equalization on RGB channels will yield non-ideal results
+#Applying it on V channel in HSV provies the best results
+
+from skimage import exposure
+
+@adapt_rgb(each_channel)
+def eq_each(image):
+    output_image = exposure.equalize_hist(image)
+    return (output_image)
+
+equ_RGB = eq_each(image)
+plt.imshow(equ_RGB)
+
+
+@adapt_rgb(hsv_value)
+def eq_hsv(image):
+    output_image = exposure.equalize_hist(image)
+    return (output_image)
+
+equ_hsv = eq_hsv(image)
+plt.imshow(equ_hsv)
+
+
+fig = plt.figure(figsize=(10, 10))
+
+ax1 = fig.add_subplot(2,2,1)
+ax1.imshow(image)
+ax1.title.set_text('Input Image')
+
+ax2 = fig.add_subplot(2,2,2)
+ax2.imshow(equ_RGB)
+ax2.title.set_text('Equalized using RGB channels')
+
+ax3 = fig.add_subplot(2,2,3)
+ax3.imshow(equ_hsv)
+ax3.title.set_text('Equalized using v channel in hsv')
+
+plt.show()
+
+
+
 
 
 from skimage import exposure
