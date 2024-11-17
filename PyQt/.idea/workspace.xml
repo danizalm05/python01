@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="" />
+    <list default="true" id="d0b376d1-9ab3-44e1-a6d1-5f85ca496e1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt6/freeCodeCamp/3.ATourOfQtWidgets/3.QMessageBox/widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt6/freeCodeCamp/3.ATourOfQtWidgets/3.QMessageBox/widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../opencv/bnsreenu/image_processing_APEER/46  image registration libraries.py" beforeDir="false" afterPath="$PROJECT_DIR$/../opencv/bnsreenu/image_processing_APEER/46  image registration libraries.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,16 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.04-imread.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dialogs132.executor&quot;: &quot;Run&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/python02/opencv/bnsreenu/image_processing_APEER&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.04-imread.executor": "Run",
+    "Python.45-  filters designed for grey  to color.executor": "Run",
+    "Python.46  image registration libraries.executor": "Run",
+    "Python.dialogs132.executor": "Run",
+    "Python.main.executor": "Run",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/python02/opencv/bnsreenu/image_processing_APEER/45-  filters designed for grey  to color.py",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gilfm\Documents\d\python02\PyQt\pyqt6\basic" />
@@ -51,7 +59,7 @@
       <recent name="C:\Users\gilfm\Documents\d\python02\PyQt\pyqt6" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.04-imread">
+  <component name="RunManager" selected="Python.46  image registration libraries">
     <configuration name="04-imread" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyQt" />
       <option name="ENV_FILES" value="" />
@@ -74,20 +82,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="QTabWidget92" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="45-  filters designed for grey  to color" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyQt" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt6/basic" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../opencv/bnsreenu/image_processing_APEER" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt6/basic/QTabWidget92.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../opencv/bnsreenu/image_processing_APEER/45-  filters designed for grey  to color.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,20 +104,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ToolBar96" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="46  image registration libraries" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyQt" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt6/basic" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../opencv/bnsreenu/image_processing_APEER" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt6/basic/ToolBar96.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../opencv/bnsreenu/image_processing_APEER/46  image registration libraries.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,20 +149,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="myapp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PyQt" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\gilfm\Documents\d\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt6/basic" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt6/freeCodeCamp/3.ATourOfQtWidgets/3.QMessageBox" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt6/basic/myapp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyqt6/freeCodeCamp/3.ATourOfQtWidgets/3.QMessageBox/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.46  image registration libraries" />
+        <item itemvalue="Python.45-  filters designed for grey  to color" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.04-imread" />
         <item itemvalue="Python.dialogs132" />
-        <item itemvalue="Python.ToolBar96" />
-        <item itemvalue="Python.QTabWidget92" />
-        <item itemvalue="Python.myapp" />
       </list>
     </recent_temporary>
   </component>
