@@ -13,40 +13,31 @@ pip install image_registration
  
 input photos:   Osteosarcoma_01.tif Osteosarcoma_01_transl.tif
  
-07:00
+09:12
 """
 import cv2
 from skimage import io
 import numpy
-#from image_registration import chi2_shift
-
 import getpass
 import os
-print(numpy.__version__)
+
+print("numpy.__version__ =  ",numpy.__version__)
 USER = getpass.getuser()
 
 BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE_NAME_1 = 'Osteosarcoma_01.tif'  # '2.jpg' 'lena.jpg'
 IMAGE_NAME_2 = 'Osteosarcoma_01_transl.tif'
-img_list = []
+ 
 
-for (image) in os.listdir(BASE_FOLDER):  # iterate through each file to perform some action
-    img_list.append(image)
-
-img_num = 17
-IMAGE = BASE_FOLDER + img_list[img_num]
 IMAGE1 = BASE_FOLDER + IMAGE_NAME_1
 IMAGE2 = BASE_FOLDER + IMAGE_NAME_2
-print(IMAGE1)
- 
- 
 
 image = io.imread(IMAGE_NAME_1 , as_gray=True)
 offset_image = io.imread(IMAGE_NAME_2 , as_gray=True)
 # offset image translated by (-17, 18.) in y and x 
 
 '''
-#Method 1: chi squared shift
+#Method 1: chi squared shift   Doesn't work'
 #Find the offsets between image 1 and image 2 using the DFT upsampling method
 # 2D rigid
 
@@ -73,9 +64,6 @@ ax3.imshow(corrected_image, cmap='gray')
 ax3.title.set_text('Corrected')
 plt.show()
 '''
-###########################################################################
-
-###########################################################
 
 #Method 3: Register translation from skimage.feature
 #2D rigid, same as cross correlation.
