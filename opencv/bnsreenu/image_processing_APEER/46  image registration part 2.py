@@ -28,7 +28,7 @@ BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE_NAME_1 = 'Osteosarcoma_01.tif'  # '2.jpg' 'lena.jpg'
 IMAGE_NAME_2 = 'Osteosarcoma_01_transl.tif'
 
-IMAGE = BASE_FOLDER + img_list[img_num]
+
 IMAGE1 = BASE_FOLDER + IMAGE_NAME_1
 IMAGE2 = BASE_FOLDER + IMAGE_NAME_2
 print(IMAGE1)
