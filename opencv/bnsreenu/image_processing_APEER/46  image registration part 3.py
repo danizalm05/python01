@@ -1,7 +1,8 @@
 """
 46 part 3- Useful image registration libraries in python p
-
-#Method 4: Optical flow based shift. Best for warped images.
+     registration.optical_flow_tvl1(image, offset_image)
+11:50-18:11
+Method 4: Optical flow based shift. Best for warped images.
 #takes two images and returns a vector field.
 #For every pixel in image 1 you get a vector showing where it moved to in image 2.
 
@@ -11,12 +12,9 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
 
 https://github.com/bnsreenu/python_for_image_processing_APEER/tree/master/images
 
-A couple of ways to perform image registration
-https://image-registration.readthedocs.io/en/latest/image_registration.html
 input photos:   Osteosarcoma_01.tif Osteosarcoma_01_transl.tif
- 
+ """
 
-"""
 from skimage import io
 import numpy
 import getpass
