@@ -14,7 +14,7 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/tree/master/images
 """
 Image registration using pystackreg
 https://pypi.org/project/pystackreg/
-pip3 install pystackreg
+
 pip install pystackreg
 
 pyStackReg is used to align (register) one or more images to a 
