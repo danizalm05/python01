@@ -1,5 +1,5 @@
 """
-tutorial47_image_registration_using_pystackreg.py
+ 
 #-----------------------------------------------------
 https://www.youtube.com/watch?v=F4AV6SsUxXE&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=47
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial46_img_registration_libraries_in_python.py
