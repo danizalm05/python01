@@ -1,12 +1,13 @@
 """
- 
+ Tutorial 48 - Image quality metrics using a reference image
+ 8:30
 #-----------------------------------------------------
-https://www.youtube.com/watch?v=F4AV6SsUxXE&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=47
-https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial46_img_registration_libraries_in_python.py
-
-https://github.com/bnsreenu/python_for_image_processing_APEER/tree/master/images
-
- 
+https://www.youtube.com/watch?v=F4AV6SsUxXE&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=48
+https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial48_reference_based_image_quality.py
+tutorial48_reference_based_image_quality.py
+ inp  images:
+         Osteosarcoma_01.tif
+         Osteosarcoma_01_8bit_salt_pepper.tif
  """
  
 import cv2 
@@ -17,29 +18,30 @@ import sys
 
 print('\n'.join(sys.path))
 
-#Video Playlist: https://www.youtube.com/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
-
-"""
-Older versions of scikit-image: older than 0.16
-https://scikit-image.org/docs/dev/api/skimage.measure.html
-
-Newer scikit-image: 0.17 or later
-https://scikit-image.org/docs/stable/api/skimage.metrics.html
-
-https://pypi.org/project/sewar/
-https://sewar.readthedocs.io/en/latest/_modules/sewar/full_ref.html#ergas
-
-"""
 
 import cv2
 import numpy as np
-
+import getpass
 from skimage import measure, metrics
 from sewar import full_ref
 
+#print(measure.__version__)
 #Reference and image to be compared must be of the same size
-ref_img = cv2.imread("images/noisy_images/sandstone.tif", 1)
-img = cv2.imread("images/noisy_images/sandstone_25sigma_noisy.tif", 1)
+USER = getpass.getuser()
+
+BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
+IMAGE_NAME_1 = 'Osteosarcoma_01.tif  '  # '2.jpg' 'lena.jpg'
+IMAGE_NAME_2 = 'Osteosarcoma_01_8bit_salt_pepper.tif'
+
+
+IMAGE1 = BASE_FOLDER + IMAGE_NAME_1
+IMAGE2 = BASE_FOLDER + IMAGE_NAME_2
+print(IMAGE1)
+
+
+
+ref_img = cv2.imread(IMAGE2, 1)
+img = cv2.imread(IMAGE2, 1)
 
 ################################################################
 #skimage tools
