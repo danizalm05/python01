@@ -30,8 +30,8 @@ IMAGE1 = BASE_FOLDER + IMAGE_NAME_1
 IMAGE2 = BASE_FOLDER + IMAGE_NAME_2
 print(IMAGE1)
 
-image = io.imread(IMAGE_NAME_1 , as_gray=True)
-offset_image = io.imread(IMAGE_NAME_2 , as_gray=True)
+image = io.imread(IMAGE1 , as_gray=True)
+offset_image = io.imread(IMAGE2 , as_gray=True)
 # offset image translated by (-17, 18.) in y and x
 
 

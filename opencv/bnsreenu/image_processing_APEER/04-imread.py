@@ -11,15 +11,17 @@ import os
 from PIL import Image
 from skimage import io, filters
 from matplotlib import pyplot as plt
- 
+import getpass
+import os 
 
-# C:\Users\rockman\Anaconda3\envs\tensorflow
-USER1 = 'gilfm'
-USER2 = 'rockman'
-IMAGE_NAME = '1.jpg'
-BASE_FOLDER = 'C:/Users/' + USER1 + '/Pictures/Saved Pictures/'
+USER = getpass.getuser()
+
+IMAGE_NAME = 'lena.jpg' #'2.jpg'
+BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
-# Video Playlist: https://www.youtube.com/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
+
+print(IMAGE)
+
 
 img = io.imread(IMAGE)
 
