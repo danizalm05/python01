@@ -7,6 +7,7 @@ https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamenta
 01:26:30 -   1:42:00
 
 '''
+wer
 from PySide6.QtWidgets import QApplication
 from mainwindow import MainWindow
 import sys
