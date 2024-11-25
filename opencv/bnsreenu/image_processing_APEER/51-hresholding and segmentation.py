@@ -6,6 +6,7 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
  
 
  Manual and auto thresholding
+ 9:38
 """
 
 import cv2
@@ -26,13 +27,14 @@ IMAGE1 = BASE_FOLDER + IMAGE_NAME_1
 IMAGE2 = BASE_FOLDER + IMAGE_NAME_2
 print(IMAGE1)
 
-img = cv2.imread(IMAGE1 , 1)
+img = cv2.imread(IMAGE1 , 1)#read as color image
 
 #########################MANUAL##################
 #Separate blue channels as they contain nuclei pixels (DAPI). 
 blue_channel = img[:,:,0]
 plt.imshow(blue_channel, cmap='gray')
 
+'''
 #plt.hist(blue_channel.flat, bins=100, range=(0,150))  #.flat returns the flattened numpy array (1D)
 
 #Manual thresholding by setting threshold value to numpy array
@@ -62,5 +64,25 @@ import numpy as np
 #For binary it wold be 0 and 1. 
 regions1=np.digitize(blue_channel, bins=np.array([ret2]))
 plt.imshow(regions1)
-
+plt.show()
 #################################################################### 
+'''
+
+from matplotlib import pyplot as plt
+fig = plt.figure(figsize=(16, 16))
+
+ax1 = fig.add_subplot(2,2,1)
+ax1.imshow(img, cmap='gray')
+ax1.title.set_text('Input Image')
+
+ax2 = fig.add_subplot(2,2,2)
+ax2.imshow(blue_channel, cmap='gray')
+ax2.title.set_text('blue_channel')
+
+ax3 = fig.add_subplot(2,2,3)
+ax3.imshow(img, cmap='gray')
+ax3.title.set_text('Pixel Corrected')
+ax4 = fig.add_subplot(2,2,4)
+ax4.imshow(img, cmap='gray')
+ax4.title.set_text('Flow Corrected')
+plt.show()
