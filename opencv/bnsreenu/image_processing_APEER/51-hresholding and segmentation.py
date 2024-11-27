@@ -34,15 +34,16 @@ img = cv2.imread(IMAGE1 , 1)#read as color image
 blue_channel = img[:,:,0]
 plt.imshow(blue_channel, cmap='gray')
 
-'''
-#plt.hist(blue_channel.flat, bins=100, range=(0,150))  #.flat returns the flattened numpy array (1D)
+blue_flat = blue_channel.flat#.flat returns the flattened numpy array (1D)
+plt.hist(blue_flat, bins=100, range=(0,150))  
+
 
 #Manual thresholding by setting threshold value to numpy array
 #After thresholding we will get a binary image.
 background = (blue_channel <= 40)
 nuclei = (blue_channel > 40)
-plt.imshow(nuclei, cmap='gray')
-
+#plt.imshow(nuclei, cmap='gray')
+'''
 #Using opencv to perform manual threshold
 #All pixels above 40 will have pixel value 255
 #Should be exactly same as the above method. 
@@ -71,18 +72,20 @@ plt.show()
 from matplotlib import pyplot as plt
 fig = plt.figure(figsize=(16, 16))
 
-ax1 = fig.add_subplot(2,2,1)
+ax1 = fig.add_subplot(3,3,1)
 ax1.imshow(img, cmap='gray')
 ax1.title.set_text('Input Image')
 
-ax2 = fig.add_subplot(2,2,2)
+ax2 = fig.add_subplot(3,3,2)
 ax2.imshow(blue_channel, cmap='gray')
 ax2.title.set_text('blue_channel')
 
-ax3 = fig.add_subplot(2,2,3)
-ax3.imshow(img, cmap='gray')
-ax3.title.set_text('Pixel Corrected')
-ax4 = fig.add_subplot(2,2,4)
+ax3 = fig.add_subplot(3,3,3)
+ax3.imshow(nuclei, cmap='gray')
+ax3.title.set_text('nuclei')
+
+ax4 = fig.add_subplot(3,3,4)
 ax4.imshow(img, cmap='gray')
 ax4.title.set_text('Flow Corrected')
+
 plt.show()
