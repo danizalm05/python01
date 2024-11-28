@@ -6,7 +6,7 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
  
 
  Manual and auto thresholding
- 9:38
+ 20:38
 """
  
 import cv2
@@ -42,9 +42,9 @@ plt.imshow(blue_channel, cmap='gray')
 #Manual thresholding by setting threshold value to numpy array
 #After thresholding we will get a binary image.
 background = (blue_channel <= 40)
-nuclei = (blue_channel > 40)
+nuclei = (blue_channel > 40)# An array of boolean values
 #plt.imshow(nuclei, cmap='gray')
-'''    
+
 #Using opencv to perform manual threshold
 #All pixels above 40 will have pixel value 255
 #Should be exactly same as the above method. 
@@ -57,7 +57,7 @@ plt.imshow(thresh1, cmap='gray')
 #Using opencv for otsu based automatic thresholding
 ret2, thresh2 = cv2.threshold(blue_channel,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 #Reports a value of 50 as threshold for the nuclei.
-
+''' 
 #Now, let us segment the image, meaning assign values of 0, 1, 2, ... to pixels
 import numpy as np 
 #np.digitize needs bins to be defined as an array
@@ -73,6 +73,12 @@ plt.show()
  
 fig = plt.figure(figsize=(16, 16))
 
+plt.subplots_adjust ( hspace=0.6)
+
+
+
+
+
 ax1 = fig.add_subplot(3,3,1)
 ax1.imshow(img, cmap='gray')
 ax1.title.set_text('Input Image')
@@ -87,10 +93,16 @@ ax3.title.set_text('hist color range 0- 50')
 
 ax4 = fig.add_subplot(3,3,4)
 ax4.imshow(nuclei, cmap='gray')
-ax4.title.set_text('nuclei')
+ax4.title.set_text('nuclei menual metod')
+
+
+ax5 = fig.add_subplot(3,3,5)
+ax5.imshow(thresh1, cmap='gray')
+ax5.title.set_text('nuclei cv2')
 
 
 
-plt.show()
-plt.hist(blue_channel.flat, bins=100, range=(0,50))
+ax6 = fig.add_subplot(3,3,6)
+ax6.imshow(thresh2, cmap='gray')
+ax6.title.set_text('AUTO using OTSU')
 plt.show()
