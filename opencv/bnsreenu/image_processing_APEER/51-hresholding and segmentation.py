@@ -57,7 +57,7 @@ plt.imshow(thresh1, cmap='gray')
 #Using opencv for otsu based automatic thresholding
 ret2, thresh2 = cv2.threshold(blue_channel,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 #Reports a value of 50 as threshold for the nuclei.
-''' 
+ 
 #Now, let us segment the image, meaning assign values of 0, 1, 2, ... to pixels
 import numpy as np 
 #np.digitize needs bins to be defined as an array
@@ -65,10 +65,13 @@ import numpy as np
 # #np.digitize assign values 0, 1, 2, 3, ... to pixels in each class.
 #For binary it wold be 0 and 1. 
 regions1=np.digitize(blue_channel, bins=np.array([ret2]))
+
 plt.imshow(regions1)
-plt.show()
+
+plt.title( 'bins=np.array([ret2])')
+plt.axis("off") 
 #################################################################### 
-'''
+ 
 
  
 fig = plt.figure(figsize=(16, 16))
@@ -105,4 +108,11 @@ ax5.title.set_text('nuclei cv2')
 ax6 = fig.add_subplot(3,3,6)
 ax6.imshow(thresh2, cmap='gray')
 ax6.title.set_text('AUTO using OTSU')
+
+
+
+ax7 = fig.add_subplot(3,3,7)
+ax7.imshow(regions1, cmap='gray')
+ax7.title.set_text('regions1')
+ 
 plt.show()
