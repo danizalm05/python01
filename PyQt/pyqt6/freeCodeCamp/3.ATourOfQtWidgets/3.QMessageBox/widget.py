@@ -3,7 +3,7 @@
 
 https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s
 https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/tree/main/3.ATourOfQtWidgets/3.QMessageBox
-01:45: -   1:50 :00
+01:45: -   1:59 :00
 '''
 from PySide6.QtWidgets import QWidget, QPushButton, QVBoxLayout, QMessageBox
 
