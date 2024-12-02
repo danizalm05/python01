@@ -4,9 +4,9 @@
 https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s 
 https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/blob/main/3.ATourOfQtWidgets/4.QPushButton/widget.py
 
+https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets/QPushButton.html
 
-
-01:59: -   1:59 :00
+01:59:00 -   02:03 :00
 '''
 from PySide6.QtWidgets import QWidget, QPushButton, QVBoxLayout, QMessageBox
 
