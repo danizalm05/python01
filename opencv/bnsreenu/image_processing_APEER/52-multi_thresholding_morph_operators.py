@@ -3,9 +3,7 @@
  -----------------------------------------------------
 https://www.youtube.com/watch?v=3fMgy7VTYH0&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=53
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial52_multi_thresholding_and_morph_operators.py
-
-
-
+10:00
 """
  
 import cv2
@@ -32,7 +30,8 @@ img = cv2.imread(IMAGE1 , 0)#read as color image
 
 #Denoise for better results
 from skimage.restoration import denoise_tv_chambolle
-#denoised_img = denoise_tv_chambolle(img, weight=0.1, eps=0.0002, n_iter_max=200, multichannel=False)
+denoised_img = denoise_tv_chambolle(img, weight=0.1, eps=0.0002, n_iter_max=200, multichannel=False)
+
 plt.imshow(img, cmap='gray')
 plt.show()
 plt.hist(img.flat, bins=100, range=(100,255))
