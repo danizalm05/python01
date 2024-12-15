@@ -17,3 +17,18 @@ https://www.computernetworkingnotes.com/ccna-study-guide/download-packet-tracer-
 1 / 7
 
 https://www.youtube.com/watch?v=DUP3MYjOxyg&list=PLx_Uw9Ip80xMmmb82aP_1-KPP1EEc7nRz
+
+
+Day 2
+https://www.youtube.com/watch?v=ieTH5lVhNaY&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=4
+
+RJ-45 (RJ= Registered jack)
+Ethernet = A collection of network protocols/standards
+IEEE = Institute of Electrical And Electronics Enginers
+UTC Cables Unshilded Twisted Pair
+10:00
+
+
+
+
+
