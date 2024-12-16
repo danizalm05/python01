@@ -27,8 +27,10 @@ Ethernet = A collection of network protocols/standards
 IEEE = Institute of Electrical And Electronics Enginers
 UTC Cables Unshilded Twisted Pair
 10:00
-
-
-
+Full-Duplex = transmit and recive data at the same time.
+Straight-through cable = pin 1,2 one way to pin 1,2 and pin 3,6 to 
+          pin 3,6the other way.
+16:11
+crosssover cable
 
 
