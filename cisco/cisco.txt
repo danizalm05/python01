@@ -27,10 +27,28 @@ Ethernet = A collection of network protocols/standards
 IEEE = Institute of Electrical And Electronics Enginers
 UTC Cables Unshilded Twisted Pair
 10:00
-Full-Duplex = transmit and recive data at the same time.
-Straight-through cable = pin 1,2 one way to pin 1,2 and pin 3,6 to 
-          pin 3,6the other way.
-16:11
-crosssover cable
+                    UTC  cables
+-------------------------------------------------------------------
+Cupper UTC can be used up to 100 meters
 
+1.UTC  cables(10BASE-T,100BASE-T) only four pins are used
 
+ 1.1  old cables types
+   1.1.1 Full-Duplex = transmit and recive data at the same time.
+      Straight-through cable = pin 1,2 one way to pin 1,2 and pin 3,6 to 
+          pin 3,6 the other way.
+ 
+   1.1.2  .crosssover cable = pin 1,2 one way to pin 3,6 and pin 3,6 to 
+          pin 1,2 the other way
+ 1.2. modern type cable
+   1.2.1 Auto MDI-x = Automatic detection of transmiting and recving pins
+
+2. UTC  cables(1000BASE-T,10GBASE-T) eight pins are used
+-----------------------------------------------------
+each pair of pin is bidirecional
+
+SFP Transceiver (Small Form-Factor Plugable)
+connected with fibber optic cable
+multinode fiber
+single nude fiber
+25:00
