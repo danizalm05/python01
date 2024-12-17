@@ -49,6 +49,6 @@ each pair of pin is bidirecional
 
 SFP Transceiver (Small Form-Factor Plugable)
 connected with fibber optic cable
-multinode fiber
-single nude fiber
+multimode fiber
+single mode fiber
 25:00
