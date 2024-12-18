@@ -100,8 +100,9 @@ ax5.title.set_text('Entropy')
 
 
 ax6 = fig.add_subplot(3,3,6)
-ax6.imshow(img, cmap='gray')
-ax6.title.set_text('AUTO using OTSU')
+ax6.hist(entropy_img.flat, bins=100, range=(0,255))
+#ax6.imshow(img, cmap='gray')
+ax6.title.set_text('entropy hist')
 
 
 
