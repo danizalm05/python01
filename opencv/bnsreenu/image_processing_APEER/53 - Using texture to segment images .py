@@ -66,12 +66,29 @@ plt.imshow(filtered_image, cmap='gray')
 #higher compared to scratch region
 from skimage.filters.rank import entropy
 from skimage.morphology import disk
-entropy_img = entropy(img, disk(3))
+entropy_img = entropy(img, disk(7))
 plt.imshow(entropy_img)
 plt.show()
 #######################################################################
-
+#Scratch Analysis - single image
+#Now let us use otsu to threshold high vs low entropy regions.
+plt.hist(entropy_img.flat, bins=100, range=(0,5))  #.flat returns the flattened numpy array (1D)
+plt.show()
  
+thresh = threshold_otsu(entropy_img)# find the le between high and low entropy
+#Now let us binarize the entropy image (Only 1,0 values)
+binary = entropy_img <= thresh
+plt.imshow(binary)
+plt.show()
+
+
+#Sum all pixels in the scratch region (values =1)
+scratch_area = np.sum(binary == 1)
+print("Scratched area is: ", scratch_area, "Square pixels")
+
+scale = 0.45 # microns/pixel
+print("Scratched area in sq. microns is: ", scratch_area*((scale)**2), "Square pixels")
+
 fig = plt.figure(figsize=(16, 16))
 plt.subplots_adjust ( hspace=0.6)
 
@@ -100,15 +117,13 @@ ax5.title.set_text('Entropy')
 
 
 ax6 = fig.add_subplot(3,3,6)
-ax6.hist(entropy_img.flat, bins=100, range=(0,255))
+plt.hist(entropy_img.flat, bins=100, range=(0,5))
 #ax6.imshow(img, cmap='gray')
 ax6.title.set_text('entropy hist')
 
-
-
 ax7 = fig.add_subplot(3,3,7)
-ax7.imshow(img, cmap='gray')
-ax7.title.set_text('regions1')
+ax7.imshow(binary)#, cmap='gray'
+ax7.title.set_text('binarize entropy image')
 
 plt.show()
  
