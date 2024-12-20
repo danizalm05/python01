@@ -3,19 +3,13 @@
 
  Learn Python GUI Development for Desktop – PySide6 and Qt Tutorial
 
-
 https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s 
-https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/tree/main/3.ATourOfQtWidgets/5.QLabel_QLineEdit
+
+https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/tree/main/3.ATourOfQtWidgets/6.QTextEdit
+
 https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets 
 
-Qlabel:
-https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets/QLabel.html
-
-Qlineedit:
-https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets/QLineEdit.html
-
-
- 02:05 :00   02:24:00
+ 02:24:00
 ''' 
 
 from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton
