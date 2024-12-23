@@ -7,69 +7,71 @@ https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s
 
 https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/tree/main/3.ATourOfQtWidgets/6.QTextEdit
 
-https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets 
+https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets/QTextEdit.html
 
- 02:24:00
+ 02:24:00    02:34:00      
 ''' 
 
-from PySide6.QtWidgets import QWidget, QLineEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton
+from PySide6.QtWidgets import QWidget, QTextEdit, QHBoxLayout, QVBoxLayout, QLabel, QPushButton
 
 class Widget(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("QLabel and QLineEdit")
+        self.setWindowTitle("QTextEdit Demo")
+        self.text_edit = QTextEdit()
+        
+        #Buttons
 
-        #A set of signals we can connect to
-        label = QLabel("Fullname : ")
-        self.line_edit = QLineEdit()
-        self.line_edit.textChanged.connect(self.text_changed)
-        self.line_edit.cursorPositionChanged.connect(self.cursor_position_changed)
-        self.line_edit.editingFinished.connect(self.editing_finished)
-        self.line_edit.returnPressed.connect(self.return_pressed)
-        self.line_edit.selectionChanged.connect(self.selection_changed)
-        self.line_edit.textEdited.connect(self.text_edited)
+        current_text_button = QPushButton("Current Text")
+        current_text_button.clicked.connect(self.current_text_button_clicked)
 
+        copy_button = QPushButton("Copy")
+        #https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets/QTextEdit.html#PySide6.QtWidgets.PySide6.QtWidgets.QTextEdit.copy
+        copy_button.clicked.connect(self.text_edit.copy) #Connect directly to QTextEdit slot
 
+        cut_button = QPushButton("Cut")
+        #cut_button.clicked.connect(self.text_edit.cut)
 
+        paste_button = QPushButton("Paste")
+        #paste_button.clicked.connect(self.paste) #Go through a custom slot
 
+        undo_button = QPushButton("Undo")
+       # undo_button.clicked.connect(self.text_edit.undo)
 
-        button = QPushButton("Grab data")
-        button.clicked.connect(self.button_clicked)
-        self.text_holder_label = QLabel("I AM HERE")
+        redo_button = QPushButton("Redo")
+       # redo_button.clicked.connect(self.text_edit.redo)
+
+        set_plain_text_button = QPushButton("Set Plain Text")
+       # set_plain_text_button.clicked.connect(self.set_plain_text)
+
+        set_html_button = QPushButton("Set html")
+       # set_html_button.clicked.connect(self.set_html)
+
+        clear_button = QPushButton("Clear")
+       # clear_button.clicked.connect(self.text_edit.clear)
 
         h_layout = QHBoxLayout()
-        h_layout.addWidget(label)
-        h_layout.addWidget(self.line_edit)
+        h_layout.addWidget(current_text_button)
+        h_layout.addWidget(copy_button)
+        h_layout.addWidget(cut_button)
+        h_layout.addWidget(paste_button)
+        h_layout.addWidget(undo_button)
+        h_layout.addWidget(redo_button)
+        h_layout.addWidget(set_plain_text_button)
+        h_layout.addWidget(set_html_button)
+        h_layout.addWidget(clear_button)
 
         v_layout = QVBoxLayout()
+        
+        v_layout = QVBoxLayout()
         v_layout.addLayout(h_layout)
-        v_layout.addWidget(button)
-        v_layout.addWidget(self.text_holder_label)
-
+        v_layout.addWidget(self.text_edit)
 
         self.setLayout(v_layout)
+        
+    def current_text_button_clicked(self):
+           print(self.text_edit.toPlainText())
 
-    #Slots
-    def button_clicked(self):
-        #print("Fullname : ",self.line_edit.text())
-        self.text_holder_label.setText(self.line_edit.text())
-
-    def text_changed(self):
-        print("Text  changed to ",self.line_edit.text())
-        self.text_holder_label.setText(self.line_edit.text())
-
-    def cursor_position_changed(self,old,new):
-        print("cursor old position : ",old," -new position : ",new)
-
-    def editing_finished(self) : 
-        print("Editing finished")
-
-    def return_pressed(self):
-        print("Return pressed")
-
-    def selection_changed(self):
-        print("Selection Changed : ",self.line_edit.selectedText())
-
-    def text_edited(self,new_text) : 
-        print("Text edited. New text : ",new_text)
+    def paste(self):
+        self.text_edit.paste()
