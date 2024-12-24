@@ -6,7 +6,7 @@ https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamenta
 
 https://doc.qt.io/qtforpython-6.5/PySide6/QtWidgets/QTextEdit.html
 
- 02:24:00
+ 02:24:00    02:41:00     
 """
 from PySide6.QtWidgets import QApplication
 from widget import Widget
