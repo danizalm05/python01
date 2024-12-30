@@ -13,6 +13,13 @@ https://www.computernetworkingnotes.com/ccna-study-guide/download-packet-tracer-
  cisco Academy
  https://www.netacad.com/launch?id=954212d3-54a4-46c2-a03c-7bfb16a7f157&tab=curriculum&view=4cb7639d-25a5-5f67-b949-c4383f57e554
  
+ 
+Intro to the CLI CCNA 
+https://networklessons.com/cisco/ccna-routing-switching-icnd1-100-105/introduction-cisco-ios-cli-command-line-interface 
+ 
+ 
+ 
+ 
 המדריך לפאקט טרייסר Packet Tracer - היכרות עם התפריטים והאפשרויות
 מדריכים בתוכנת פאקט טרייסר - Packet Tracer
 1 / 7
