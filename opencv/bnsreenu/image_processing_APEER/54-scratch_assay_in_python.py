@@ -56,7 +56,7 @@ path = "images/scratch_assay/*.*"
 i=0
 # to apply segmentaion to all images
 for file in glob.glob(path):
-    print(i) 
+    print(file) 
     img=io.imread(file)
     i  +=1
     
