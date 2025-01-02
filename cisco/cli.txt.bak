@@ -1,0 +1,5 @@
+help :
+Displays a brief description of the help system.
+
+?:
+Lists all commands available in the command mode.  
