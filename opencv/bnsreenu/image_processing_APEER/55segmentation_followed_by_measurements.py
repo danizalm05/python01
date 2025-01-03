@@ -11,7 +11,7 @@ image:
 https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.regionprops
 https://github.com/scikit-image/scikit-image/blob/v0.17.2/skimage/measure/_regionprops.py#L643
  
-10:30
+14:00
 
 """
 
@@ -71,6 +71,34 @@ plt.show()
 image_label_overlay = label2rgb(label_image, image=image)
 plt.imshow(image_label_overlay) 
 plt.show()
+
+#Calculate properties
+#Using regionprops or regionprops_table
+all_props=measure.regionprops(label_image, image)
+#Can print various parameters for all objects
+for prop in all_props:
+    print('Label: {} Area: {}'.format(prop.label, prop.area))
+
+#Compute image properties and return them as a pandas-compatible table.
+#Available regionprops: area, bbox, centroid, convex_area, coords, eccentricity,
+# equivalent diameter, euler number, label, intensity image, major axis length, 
+#max intensity, mean intensity, moments, orientation, perimeter, solidity, and many more
+
+
+props = measure.regionprops_table(label_image, image, 
+                          properties=['label',
+                                      'area', 'equivalent_diameter',
+                                      'mean_intensity', 'solidity'])
+
+import pandas as pd
+df = pd.DataFrame(props)
+print(df.head())
+
+#To delete small regions...
+df = df[df['area'] > 50]
+print(df.head()) 
+
+
 img = image
 
 
