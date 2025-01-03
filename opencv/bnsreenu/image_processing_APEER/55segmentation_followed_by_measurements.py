@@ -23,7 +23,8 @@ from skimage.color import label2rgb, rgb2gray
 import numpy as np
 import cv2
 import getpass
-
+from pathlib import Path
+import sys
 
 
 USER = getpass.getuser()
@@ -31,7 +32,14 @@ BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE_NAME_1 = 'cast_iron1.tif'  # '2.jpg' 'lena.jpg' 'scratch0.tif'  'Osteosarcoma_01_transl.tif'
 IMAGE1 = BASE_FOLDER + IMAGE_NAME_1
 
-print(IMAGE1)
+# Check if the file exists
+if not(Path(IMAGE1).exists()):
+    msg = "Error: file " + IMAGE1 +" does not exist"
+    sys.exit(msg)
+   
+
+
+
 
 image = cv2.imread(IMAGE1, 0)#Gray image
 #img = io.imread(IMAGE1)
@@ -92,13 +100,18 @@ props = measure.regionprops_table(label_image, image,
 
 import pandas as pd
 df = pd.DataFrame(props)
-print(df.head())
+#print(df.head())
 
 #To delete small regions...
 df = df[df['area'] > 50]
-print(df.head()) 
+#print(df.head()) 
 
-
+#Convert to micron scale
+df['area_sq_microns'] = df['area'] * (scale**2)
+df['equivalent_diameter_microns'] = df['equivalent_diameter'] * (scale)
+print(df.head())
+print(df['area_sq_microns'])
+#df.to_csv('cast_iron_measurements.csv')
 img = image
 
 
