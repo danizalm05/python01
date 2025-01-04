@@ -1,24 +1,20 @@
-initial mode
-privilage mode
-globel configuration mode
+                  Level Mode Prompt
+1  User EXEC Device>
+2  Privileged EXEC Device#
+3  Global Config Device (co nfig)#
+4a Interface Config Device (co nfi g-if)#
+4b Line Config Device (co nfi g-line)
 
-help :
-Displays a brief description of the help system.
+exit: return to the previous mode.
+help :   help system.
+?: Lists all commands available in the command mode. 
 
-?:
-Lists all commands available in the command mode. 
+ 1. Cisco IOS Command Hierarchy
 
- 
-
-1. Cisco IOS Command Hierarchy
-
- There are currently eight modes in Cisco IOS commands.
- 
- 
 Prompt 	            Abbrev 	 Description
 ========================================================
-Router> 	            U 	User EXEC mode, is the first level of access.
-Router# 	            P   Privileged EXEC mode. The second level of access, 
+Router> 	            U 	User EXEC mode 
+Router# 	            P   Privileged EXEC mode.   
                             accessible with the “enable” command.
 Router(config)# 	    G 	Configuration mode. Accessible only via the 
                             privileged EXEC mode.
@@ -35,11 +31,11 @@ Switch(vlan)# 	        VD  Vlan database, accessible from the privileged
  
 Commands To Move Between These Six Modes:
 ------------------------------------------------
-Command         	  Mode 	Description
-enable   	            U 	    Moves from User to Privileged mode.
-logout                  U   	Exit User mode.
-configure <terminal> 	P 	Moves from Privileged to Configure mode.
-disable 	            P 	Exit user mode.
+Command         	  Mode   	Description
+enable   	            U 	  Moves from User to Privileged mode.
+logout                  U     Exit User mode.
+configure <terminal> 	P 	  Moves from Privileged to Configure mode.
+disable 	            P 	  Exit user mode.
 Interface <interface description>   	G  	Enter interface configuration mode.
 vlan vlan-id            G 	Moves to configure vlan mode.
 Vlan database        	P 	Enter vlan database from Privilege mode.
@@ -77,17 +73,15 @@ no shutdown
 description <name-string> 	 I  	Set a description to the interface.
 show ip interface <type number> 	U,P 	Displays the usability status of the protocols for the interfaces.
 show running-config interface interface <slot/number> 	P 	Displays the running configuration for a specific interface.
-hostname <name> 	       G 	Set a hostname for the Cisco device.
-enable secret <password> 	G 	Set an “enable” secret password.
+hostname <name> 	        G 	   Set a hostname for the Cisco device.
+enable secret <password> 	G   	Set an “enable” secret password.
 copy running-config startup-config 	 P 	Saves the current (running) configuration in the startup configuration into the NVRAM. The command saves the configuration so when the device reloads, it loads the latest configuration file.
 copy startup-config running-config 	 P 	It saves (overwrites) the startup configuration into the running configuration.
 copy from-location to-location 	     P 	It copies a file (or set of files) from a location to another location.
 erase nvram 	G 	Delete the current startup configuration files. The command returns the device to its factory default.
 reload 	G 	Reboot the device. The NVRAM will take the latest configuration.
-erase startup-config
-
- 
-	G 	Erase the NVRAM filesystem. The command achieves the similar outcome as “erase nvram”
+erase startup-configb     G 	
+               Erase the NVRAM filesystem. The command achieves the similar outcome as “erase nvram”
 
  
 3. Network Access
@@ -196,14 +190,16 @@ sh ip ssh 	P 	Verify SSH access into the device.
 
 In this section, we include the most basic AAA configuration commands for Cisco IOS. We’ll also include basic standard and extended ACLs and port security configuration commands.
 Command 	Mode 	Description
-enable secret <password> 	G 	Set an “enable” secret password. Enable secret passwords are hashed via the MD5 algorithm.
+enable secret <password> 	G 	Set an “enable” secret password. Enable secret passwords are hashed 
+                              via the MD5 algorithm.
 line vty 0 4 	G 	A global configuration command to access the virtual terminal configuration. VTY is a virtual port used to access the device via SSH and Telnet. 0 4 to allow five simultaneous virtual connections
 line console 0
 
  
 	G 	A global configuration command to access the console configuration.
-password <password> 	L 	Once in line mode, set a password for those remote sessions with the “password” command.
+password <password> 	L 	Once in line mode, set a password for those remote sessions with the “password”  command.
 Login local 		The authentication uses only locally configured credentials.
+
 username <username> privilege <level> secret <password> 	G 	Require a username with a specific password. Also configure different levels of privilege.
 service password-encryption 	G 	Makes the device encrypt all passwords saved on the configuration file.
 crypto key generate rsa 	G 	Generate a set of RSA key pairs for your device. These keys may be used for remote access via SSH.
