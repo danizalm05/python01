@@ -1,58 +1,49 @@
+initial mode
+privilage mode
+globel configuration mode
+
 help :
 Displays a brief description of the help system.
 
 ?:
 Lists all commands available in the command mode. 
 
-
-
-    Home
-    About
-    Services
-    Resources
-    Contact
-
-Guides
-
-We may earn a commission if you make a purchase through the links on our website.
-Cisco Commands Cheat Sheet – Learn the Most Important IOS CLI Commands
-
-
-
+ 
 
 1. Cisco IOS Command Hierarchy
 
-
-
-There are currently eight modes in Cisco IOS commands.
-Prompt 	Abbreviation 	Description
-Router> 	U 	User EXEC mode, is the first level of access.
-Router# 	P 	Privileged EXEC mode. The second level of access, 
-                 accessible with the “enable” command.
-Router(config)# 	G 	 Configuration mode. Accessible only via the 
-                         privileged EXEC mode.
-Router(config-if)# 	I 	 Interface mode. Level accessible via configuration 
-                         mode.
+ There are currently eight modes in Cisco IOS commands.
+ 
+ 
+Prompt 	            Abbrev 	 Description
+========================================================
+Router> 	            U 	User EXEC mode, is the first level of access.
+Router# 	            P   Privileged EXEC mode. The second level of access, 
+                            accessible with the “enable” command.
+Router(config)# 	    G 	Configuration mode. Accessible only via the 
+                            privileged EXEC mode.
+Router(config-if)# 	    I   Interface mode. Level accessible via configuration 
+                               mode.
 Router(config-router)# 	R 	Routing mode. Level within configuration mode.
 Router(config-line)# 	L 	Line level (vty, tty, async). Accessed via the 
                             configuration mode
 Router(config-vlan)# 	V 	Config-vlan, accessible via the global 
                              configuration mode.
-Switch(vlan)# 	VD 	         Vlan database, accessible from the privileged 
+Switch(vlan)# 	        VD  Vlan database, accessible from the privileged 
                              EXEC mode.
 
  
 Commands To Move Between These Six Modes:
 ------------------------------------------------
-Command 	Mode 	Description
-enable 	U 	Moves from User to Privileged mode.
-logout 	U 	Exit User mode.
+Command         	  Mode 	Description
+enable   	            U 	    Moves from User to Privileged mode.
+logout                  U   	Exit User mode.
 configure <terminal> 	P 	Moves from Privileged to Configure mode.
-disable 	P 	Exit user mode.
-Interface <interface description> 	G 	Enter interface configuration mode.
-vlan vlan-id 	G 	Moves to configure vlan mode.
-Vlan database 	P 	Enter vlan database from Privilege mode.
-line 	G 	Enter line from Global configuration mode.
+disable 	            P 	Exit user mode.
+Interface <interface description>   	G  	Enter interface configuration mode.
+vlan vlan-id            G 	Moves to configure vlan mode.
+Vlan database        	P 	Enter vlan database from Privilege mode.
+line 	                G 	Enter line from Global configuration mode.
 exit
 
 end
@@ -63,32 +54,34 @@ end
 ----------------------------------------------------
 The following are the fundamental Cisco IOS commands. These commands give 
   you the necessary base to move to more advanced and specific commands.
-Command 	Mode 	Description
-show version 	U,P 	Display information about IOS and router.
-show interfaces 	U,P 	Display physical attributes of the router’s 
-                           interfaces.
-show ip route 	U,P 	Display the current state of the routing table.
-show access-lists 	P 	Display current configured ACLs and their contents.
-show ip interface brief 	P 	Displays a summary of the status for each 
+  
+Command 	       Mode 	Description
+-----------------------------------------------
+show version 	     U,P 	Display information about IOS and router.
+show interfaces 	 U,P 	Display physical attributes of the router’s 
+                              interfaces.
+show ip route 	     U,P 	Display the current state of the routing table.
+show access-lists 	 P 	    Display current configured ACLs and their contents.
+show ip interface brief 	P 	 Displays a summary of the status for each 
                                  interface.
-show running-config 	P 	Display the current configuration.
-show startup-config 	P 	Display the configuration at startup.
-enable 	U 	Acces Privilege mode
-config terminal 	P 	Access Configuration mode.
-interface <int> 	G 	Enter interface configuration.
+show running-config  P 	Display the current configuration.
+show startup-config  P 	Display the configuration at startup.
+enable 	             U 	Acces Privilege mode
+config terminal 	 P 	Access Configuration mode.
+interface <int> 	 G 	Enter interface configuration.
 ip address <ip address> <mask> 	I 	Assign an IP address to the specified interface.
 shutdown
 
 no shutdown
 	I 	Turn off or turn on an interface. Use both to reset.
-description <name-string> 	I 	Set a description to the interface.
+description <name-string> 	 I  	Set a description to the interface.
 show ip interface <type number> 	U,P 	Displays the usability status of the protocols for the interfaces.
 show running-config interface interface <slot/number> 	P 	Displays the running configuration for a specific interface.
-hostname <name> 	G 	Set a hostname for the Cisco device.
+hostname <name> 	       G 	Set a hostname for the Cisco device.
 enable secret <password> 	G 	Set an “enable” secret password.
-copy running-config startup-config 	P 	Saves the current (running) configuration in the startup configuration into the NVRAM. The command saves the configuration so when the device reloads, it loads the latest configuration file.
-copy startup-config running-config 	P 	It saves (overwrites) the startup configuration into the running configuration.
-copy from-location to-location 	P 	It copies a file (or set of files) from a location to another location.
+copy running-config startup-config 	 P 	Saves the current (running) configuration in the startup configuration into the NVRAM. The command saves the configuration so when the device reloads, it loads the latest configuration file.
+copy startup-config running-config 	 P 	It saves (overwrites) the startup configuration into the running configuration.
+copy from-location to-location 	     P 	It copies a file (or set of files) from a location to another location.
 erase nvram 	G 	Delete the current startup configuration files. The command returns the device to its factory default.
 reload 	G 	Reboot the device. The NVRAM will take the latest configuration.
 erase startup-config
@@ -99,18 +92,26 @@ erase startup-config
  
 3. Network Access
 
-This section covers all popular Cisco’s network access protocols. From how to configure and verify VLANs, trunks, to Layer 2 discovery protocols like CDP and LLDP. We’ll also cover simple Etherchannel, Rapid PVST+ Spanning Tree Protocol configuration.
+This section covers all popular Cisco’s network access protocols. From how to 
+configure and verify VLANs, trunks, to Layer 2 discovery protocols like 
+CDP and LLDP. We’ll also cover simple Etherchannel, 
+Rapid PVST+ Spanning Tree Protocol configuration.
+
+
 Command 	Mode 	Description
+
 cdp run
 
 no cdp run
-	P 	The “cdp run” command enables Cisco Discovery Protocol. The “no cdp run” disables it.
+	        P 	   The “cdp run” command enables Cisco Discovery Protocol.
+  			        The “no cdp run” disables it.
 show cdp 	P 	Display global information for CDP.
 show cdp neighbors 	P 	Display all CDP neighbors.
 lldp run
 
 no lldp run
-	P 	The “lldp run” command enables the LLDP Protocol. The “no lldp run” disables it.
+	        P 	The “lldp run” command enables the LLDP Protocol.
+			   The “no lldp run” disables it.
 show lldp 	P 	Displays global information for LLDP
 show lldp neighbors 	P 	Show all LLDP neighbors.
 show mac address-table 	P 	Display all the MAC address entries in a table.
