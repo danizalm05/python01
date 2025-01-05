@@ -188,16 +188,15 @@ sh ip ssh 	P 	Verify SSH access into the device.
  
 6. Security
 
-In this section, we include the most basic AAA configuration commands for Cisco IOS. We’ll also include basic standard and extended ACLs and port security configuration commands.
-Command 	Mode 	Description
-enable secret <password> 	G 	Set an “enable” secret password. Enable secret passwords are hashed 
-                              via the MD5 algorithm.
-line vty 0 4 	G 	A global configuration command to access the virtual terminal configuration. VTY is a virtual port used to access the device via SSH and Telnet. 0 4 to allow five simultaneous virtual connections
-line console 0
 
- 
-	G 	A global configuration command to access the console configuration.
-password <password> 	L 	Once in line mode, set a password for those remote sessions with the “password”  command.
+Command                	  Mode 	Description
+enable secret <password> 	G 	Set an “enable” secret password. Enable secret 
+                               passwords are hashed  via the MD5 algorithm.
+line vty 0 4 	 G 	A global configuration command to access the virtual terminal configuration. VTY is a virtual port used to access the device via SSH and Telnet. 0 4 to allow five simultaneous virtual connections
+line console 0
+                 G 	A global configuration command to access the console configuration.
+password <password> 	L 	Once in line mode, set a password for those remote
+                             sessions with the “password”  command.
 Login local 		The authentication uses only locally configured credentials.
 
 username <username> privilege <level> secret <password> 	G 	Require a username with a specific password. Also configure different levels of privilege.
