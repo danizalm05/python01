@@ -34,7 +34,7 @@ Commands To Move Between These Six Modes:
 Command         	  Mode   	Description
 enable   	            U 	  Moves from User to Privileged mode.
 logout                  U     Exit User mode.
-configure <terminal> 	P 	  Moves from Privileged to Configure mode.
+configure <terminal> 	P 	  (conf t) Moves from Privileged to Configure mode.
 disable 	            P 	  Exit user mode.
 Interface <interface description>   	G  	Enter interface configuration mode.
 vlan vlan-id            G 	Moves to configure vlan mode.
@@ -200,7 +200,8 @@ password <password> 	L 	Once in line mode, set a password for those remote
 Login local 		The authentication uses only locally configured credentials.
 
 username <username> privilege <level> secret <password> 	G 	Require a username with a specific password. Also configure different levels of privilege.
-service password-encryption 	G 	Makes the device encrypt all passwords saved on the configuration file.
+service password-encryption 	G 	(service pass ) Makes the device encrypt 
+                                  all passwords saved on the configuration file.
 crypto key generate rsa 	G 	Generate a set of RSA key pairs for your device. These keys may be used for remote access via SSH.
 access-list 	G 	Defined a numbered ACL
 ip access-list 	G 	Defined an IPv4 ACL.
