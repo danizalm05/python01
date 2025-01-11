@@ -7,8 +7,6 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
 image:
     python_for_image_processing_APEER/images/cast_iron1.tif
 
- 
-
 https://www.learnopencv.com/blob-detection-using-opencv-python-c/
 
 BLOB stands for Binary Large OBject and refers to a group of connected pixels 
@@ -64,9 +62,55 @@ plt.imshow(image, cmap='gray')
 # Set up the SimpleBlobdetector with default parameters.
 params = cv2.SimpleBlobDetector_Params()
 
+# Define thresholds
+#Can define thresholdStep. See documentation. 
+params.minThreshold = 0
+params.maxThreshold = 255
+
+# Filter by Area.
+params.filterByArea = True
+params.minArea = 50
+params.maxArea = 10000
 
 
+# Filter by Color (black=0)
+params.filterByColor = False  #Set true for cast_iron as we'll be detecting black regions
+params.blobColor = 0
 
+# Filter by Circularity
+params.filterByCircularity = True
+params.minCircularity = 0.5
+params.maxCircularity = 1
+
+# Filter by Convexity
+params.filterByConvexity = True
+params.minConvexity = 0.5
+params.maxConvexity = 1
+
+# Filter by InertiaRatio
+params.filterByInertia = True
+params.minInertiaRatio = 0.1# 0   error: (-5:Bad argument) minDistBetweenBlobs>0 in function
+params.maxInertiaRatio = 1
+
+# Distance Between Blobs
+params.minDistBetweenBlobs = 1 #0  error: (-5:Bad argument) minDistBetweenBlobs>0 in function
+
+# Setup the detector with parameters
+detector = cv2.SimpleBlobDetector_create(params)
+
+# Detect blobs
+keypoints = detector.detect(image)
+
+print("Number of blobs detected are : ", len(keypoints))
+ 
+
+# Draw blobs
+img_with_blobs = cv2.drawKeypoints(image, keypoints, np.array([]), (250,0,0), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+plt.imshow(img_with_blobs)
+plt.show()
+
+
+ 
 #============================   Output  ===============================   
 
 fig = plt.figure(figsize=(16, 16))
@@ -85,8 +129,8 @@ ax3.hist(image.flat, bins=100, range=(0,255))
 ax3.title.set_text('hist color range 100,255')
 
 ax4 = fig.add_subplot(3,3,4)
-ax4.imshow(image, cmap='gray')
-ax4.title.set_text('edge_touching_removed')
+ax4.imshow(img_with_blobs, cmap='gray')
+ax4.title.set_text('img_with_blobs')
 
 
 ax5 = fig.add_subplot(3,3,5)
