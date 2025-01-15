@@ -8,16 +8,7 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
  image:
     python_for_image_processing_APEER/images/Osteosarcoma_01.tif.tif
 
-
-Cell counting and size distribution analysis and dumps results into
- a csv file.
-It uses watershed segmentation for better segmentation, separating 
-touching nuclei.
-
-
 """
-
-
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -47,11 +38,47 @@ cells = image[:,:,0]  #Blue channel. Image equivalent to grey image.
 pixels_to_um = 0.454 # 1 pixel = 454 nm (got this from the metadata of original image)
 
 
-# Threshold image to binary using OTSU. ALl thresholded pixels will be set
+# Threshold image is  binary using OTSU. ALl thresholded pixels will be set
 # to 255
 ret1, thresh = cv2.threshold(cells, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU) 
 print("ret1,_ = cv2.threshold(......) =  ", ret1)
 #10:20
+
+# Morphological operations to remove small noise - opening
+#To remove holes we can use closing
+kernel = np.ones((3,3),np.uint8)
+opening1 = cv2.morphologyEx(thresh,cv2.MORPH_OPEN,kernel, iterations = 2)
+
+from skimage.segmentation import clear_border
+opening2 = clear_border(opening1) #Remove edge touching grains
+ 
+
+
+#                        STEP 1: Sure background 
+#Now we know that the regions at the center of cells is for sure cells
+#The region far away is background.
+#We need to extract sure regions. For that erode a few times. 
+#But we have cells touching, so erode alone will not work. 
+#To separate touching objects, the best approach would be distance
+# transform and then thresholding.
+
+# let us start by identifying sure background area
+# dilating pixes a few times increases cell boundary to background. 
+# This way whatever is remaining for sure will be background. 
+#The area in between sure background and foreground is our ambiguous area. 
+#Watershed should find this area for us. 
+sure_bg = cv2.dilate(opening2,kernel,iterations=10)
+
+#plt.imshow(sure_bg, cmap='gray') #Dark region is our sure background
+
+
+# Finding sure foreground area using distance transform and thresholding
+#intensities of the points inside the foreground regions are changed to 
+#distance their respective distances from the closest 0 value (boundary).
+#https://www.tutorialspoint.com/opencv/opencv_distance_transformation.htm
+dist_transform = cv2.distanceTransform(opening2,cv2.DIST_L2,5)
+#plt.imshow(dist_transform, cmap='gray') #Dist transformed img. 
+#15:00
 #============================   Output  ===============================   
 
 fig = plt.figure(figsize=(16, 16))
@@ -75,18 +102,31 @@ ax4.title.set_text('thresh')
 
 
 ax5 = fig.add_subplot(3,3,5)
-ax5.imshow(image)#,cmap='gray')
-ax5.title.set_text('label_image')
+ax5.imshow(opening1)#,cmap='gray')
+ax5.title.set_text('opening1')
 
 
 
 ax6 = fig.add_subplot(3,3,6)
-ax6.imshow(image)#, cmap='gray')
-ax6.title.set_text('image_label_overlay')
+ax6.imshow(opening2)#, cmap='gray')
+ax6.title.set_text('opening2')
 
 ax7 = fig.add_subplot(3,3,7)
-ax7.imshow(image, cmap='gray')
-ax7.title.set_text('binarize entropy image')
+ax7.imshow(sure_bg, cmap='gray')
+ax7.title.set_text('surebackground')
+
+ 
+
+ax8 = fig.add_subplot(3,3,8)
+ax8.imshow(dist_transform, cmap='gray')
+ax8.title.set_text('sureforground')
+
+
+ax9 = fig.add_subplot(3,3,9)
+ax9.imshow(dist_transform, cmap='gray')
+ax9.title.set_text('sureforground')
+
+
 
 plt.show()
  
