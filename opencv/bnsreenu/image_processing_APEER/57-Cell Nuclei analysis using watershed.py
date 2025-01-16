@@ -79,52 +79,72 @@ sure_bg = cv2.dilate(opening2,kernel,iterations=10)
 dist_transform = cv2.distanceTransform(opening2,cv2.DIST_L2,5)
 #plt.imshow(dist_transform, cmap='gray') #Dist transformed img. 
 #15:00
+
+#Let us threshold the dist transform by starting at 1/2 its max value.
+print("dist_transform.max() = ",dist_transform.max()) #gives about 21.9
+ret2, sure_fg = cv2.threshold(dist_transform,0.5*dist_transform.max(),255,0)
+#plt.imshow(sure_fg, cmap='gray')
+
+#17:33
+
+#Later you realize that 0.25* max value will not separate the cells well.
+#High value like 0.7 will not recognize some cells. 0.5 seems to be a good 
+#compromize
+
+# Unknown ambiguous region is nothing but bkground - foreground
+sure_fg = np.uint8(sure_fg)  #Convert to uint8 from float
+unknown = cv2.subtract(sure_bg,sure_fg)
+#plt.imshow(unknown, cmap='gray')
+
+
+#18:30
+
 #============================   Output  ===============================   
 
 fig = plt.figure(figsize=(16, 16))
 plt.subplots_adjust ( hspace=0.6)
 
-ax1 = fig.add_subplot(3,3,1)
+ax1 = fig.add_subplot(4,3,1)
 ax1.imshow(image, cmap='gray')
 ax1.title.set_text('Input Image')
 
-ax2 = fig.add_subplot(3,3,2)
+ax2 = fig.add_subplot(4,3,2)
 ax2.imshow(cells, cmap='gray')
 ax2.title.set_text('cells - blue channel')
 
-ax3 = fig.add_subplot(3,3,3)
+ax3 = fig.add_subplot(4,3,3)
 ax3.hist(image.flat, bins=100, range=(0,255))
 ax3.title.set_text('hist color range')
 
-ax4 = fig.add_subplot(3,3,4)
+ax4 = fig.add_subplot(4,3,4)
 ax4.imshow(thresh, cmap='gray')
 ax4.title.set_text('thresh')
 
 
-ax5 = fig.add_subplot(3,3,5)
+ax5 = fig.add_subplot(4,3,5)
 ax5.imshow(opening1)#,cmap='gray')
 ax5.title.set_text('opening1')
 
 
 
-ax6 = fig.add_subplot(3,3,6)
+ax6 = fig.add_subplot(4,3,6)
 ax6.imshow(opening2)#, cmap='gray')
 ax6.title.set_text('opening2')
 
-ax7 = fig.add_subplot(3,3,7)
+ax7 = fig.add_subplot(4,3,7)
 ax7.imshow(sure_bg, cmap='gray')
 ax7.title.set_text('surebackground')
 
  
 
-ax8 = fig.add_subplot(3,3,8)
-ax8.imshow(dist_transform, cmap='gray')
-ax8.title.set_text('sureforground')
+ax8 = fig.add_subplot(4,3,8)
+ax8.imshow( sure_fg , cmap='gray')
+ax8.title.set_text(' sure_fg ')
 
 
-ax9 = fig.add_subplot(3,3,9)
-ax9.imshow(dist_transform, cmap='gray')
-ax9.title.set_text('sureforground')
+ax9 = fig.add_subplot(4,3,9)
+ax9.imshow(unknown, cmap='gray')
+ax9.title.set_text('unknown')
 
 
 
