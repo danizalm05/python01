@@ -99,6 +99,23 @@ unknown = cv2.subtract(sure_bg,sure_fg)
 
 #18:30
 
+#Now we create a marker and label the regions inside. 
+# For sure regions, both foreground and background will be 
+#labeled with positive numbers.
+# Unknown regions will be labeled 0. 
+#For markers let us use ConnectedComponents. 
+#Connected components labeling scans an image and groups its 
+#pixels into components based on pixel connectivity, i.e. all 
+#pixels in a connected component share similar pixel intensity
+# values and are in  some way connected with each other. 
+#Once all groups have been determined, each pixel is labeled 
+#with a graylevel or a color (color labeling) according to the
+# component it was assigned to.
+ret3, markers = cv2.connectedComponents(sure_fg)
+plt.imshow(markers)
+#20:00
+
+
 #============================   Output  ===============================   
 
 fig = plt.figure(figsize=(16, 16))
@@ -146,6 +163,10 @@ ax9 = fig.add_subplot(4,3,9)
 ax9.imshow(unknown, cmap='gray')
 ax9.title.set_text('unknown')
 
+#
+ax10 = fig.add_subplot(4,3,10)
+ax10.imshow(markers)#, cmap='gray')
+ax10.title.set_text('markers')
 
 
 plt.show()
