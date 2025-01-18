@@ -112,9 +112,33 @@ unknown = cv2.subtract(sure_bg,sure_fg)
 #with a graylevel or a color (color labeling) according to the
 # component it was assigned to.
 ret3, markers = cv2.connectedComponents(sure_fg)
-plt.imshow(markers)
+#plt.imshow(markers)
 #20:00
 
+#One problem rightnow is that the entire background pixels
+# is given value 0.
+#This means watershed considers this region as unknown.
+#So let us add 10 to all labels so that sure background
+# is not 0, but 10
+markers10 = markers+10
+
+# Now, mark the region of unknown with zero
+markers10[unknown==255] = 0
+plt.imshow(markers10, cmap='jet')   #Look at the 3 
+                                    #distinct regions.
+img = image
+#Now we are ready for watershed filling. 
+markers10 = cv2.watershed(img,markers10)
+
+#Let us color boundaries in yellow. 
+#Remember that watershed assigns boundaries a value of -1
+img[markers10 == -1] = [0,255,255]  
+
+#label2rgb - Return an RGB image where color-coded 
+#labels are painted over the image.
+img2 = color.label2rgb(markers10, bg_label=0)
+
+plt.imshow(img2)
 
 #============================   Output  ===============================   
 
@@ -168,6 +192,16 @@ ax10 = fig.add_subplot(4,3,10)
 ax10.imshow(markers)#, cmap='gray')
 ax10.title.set_text('markers')
 
+ 
 
+ax11 = fig.add_subplot(4,3,11)
+ax11.imshow(markers10,cmap='gray')
+ax11.title.set_text('markers10')
+
+ 
+
+ax12 = fig.add_subplot(4,3,12)
+ax12.imshow(img2,cmap='gray')
+ax12.title.set_text('labels are painted over the image.')
 plt.show()
  
