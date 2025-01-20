@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=Z1N9JzNax2k&t=3s
 https://github.com/rutura/Qt-For-Python-PySide6-GUI-For-Beginners-The-Fundamentals-/blob/main/3.ATourOfQtWidgets/8.SizePolicies/widget.py
  
 
-  02:41:00   02:   
+  02:41:00   03:00:00 
       
 from tkinter import Label
 from PySide6.QtWidgets import QWidget,  QLabel, QHBoxLayout, QVBoxLayout, QSizePolicy, QLineEdit, QPushButton
