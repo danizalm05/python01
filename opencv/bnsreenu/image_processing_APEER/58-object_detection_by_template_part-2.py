@@ -60,25 +60,26 @@ IMAGE = BASE_FOLDER + 'Ti_powder_single.tif'
 
 template = cv2.imread(IMAGE, 0)# what we are looking for
 h, w = template.shape[::] # get hight  and withd
+####----------------------------
+res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
+plt.imshow(res, cmap='gray')
 
-#methods available: ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
-#            'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+threshold = 0.8 #Pick only values above 0.8. For TM_CCOEFF_NORMED, larger values = good fit.
 
-res = cv2.matchTemplate(img_gray, template, cv2.TM_SQDIFF)
+loc = np.where( res >= threshold)  
+#Outputs 2 arrays. Combine these arrays to get x,y coordinates - take x from one array and y from the other.
 
-# For TM_SQDIFF, Good match yields minimum value; bad match yields large values
-# For all others it is exactly opposite, max value = good fit.
+#Reminder: ZIP function is an iterator of tuples where first item in each iterator is paired together,
+#then the second item and then third, etc. 
 
+for pt in zip(*loc[::-1]):   #-1 to swap the values as we assign x and y coordinate to draw the rectangle. 
+    #Draw rectangle around each object. We know the top left (pt), draw rectangle to match the size of the template image.
+    cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0, 0, 255), 1)  #Red rectangles with thickness 2. 
 
-min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-
-top_left = min_loc  #Change to max_loc for all except for TM_SQDIFF
-bottom_right = (top_left[0] + w, top_left[1] + h)
-final_results = img_gray
-cv2.rectangle(final_results, top_left, bottom_right, 0, 1)  #Black rectangle with thickness 2. 
-
-cv2.imshow("Matched image", final_results) 
-plt.show()
+cv2.imshow("Matched image", img_rgb)
+cv2.waitKey()
+cv2.destroyAllWindows()
+ 
 #============================   Output  ===============================   
 
 fig = plt.figure(figsize=(16, 16))
@@ -86,7 +87,7 @@ plt.subplots_adjust ( hspace=0.6)
 
  
 ax1 = fig.add_subplot(4,3,1)
-ax1.imshow(img_rgb)#  , cmap='gray')
+ax1.imshow(image)#  , cmap='gray')
 ax1.title.set_text('Input Image')
 
 ax2 = fig.add_subplot(4,3,2)
@@ -107,20 +108,16 @@ ax5.imshow(res)#,cmap='gray')
 ax5.title.set_text('res')
 
 
-
-ax6 = fig.add_subplot(4,3,6)
-ax6.imshow(final_results)#, cmap='gray')
-ax6.title.set_text('final_results')
-
-ax7 = fig.add_subplot(4,3,7)
-ax7.imshow(image, cmap='gray')
-ax7.title.set_text('surebackground')
-
  
 
-ax8 = fig.add_subplot(4,3,8)
-ax8.imshow( image , cmap='gray')
-ax8.title.set_text(' sure_fg ')
+ax6 = fig.add_subplot(4,3,6)
+ax6.imshow(img_rgb, cmap='gray')
+ax6.title.set_text('finl')
+
+ 
+ax7 = fig.add_subplot(4,3,7)
+ax7.imshow( res , cmap='gray')
+ax7.title.set_text('cv2.TM_CCOEFF_NORMED')
 
  
 plt.show()
