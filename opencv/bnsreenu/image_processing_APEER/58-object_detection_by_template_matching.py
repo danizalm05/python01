@@ -77,7 +77,7 @@ bottom_right = (top_left[0] + w, top_left[1] + h)
 final_results = img_gray
 cv2.rectangle(final_results, top_left, bottom_right, 0, 1)  #Black rectangle with thickness 2. 
 
-cv2.imshow("Matched image", final_results) 
+#cv2.imshow("Matched image", final_results) 
 plt.show()
 #============================   Output  ===============================   
 
