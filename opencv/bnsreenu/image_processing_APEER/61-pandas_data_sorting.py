@@ -34,3 +34,35 @@ rows =  list(range(20,30))
 colums = ['Manual', 'Auto_th_2']
 #04:26
 print(df.loc[rows,colums]) #    print(df.loc[20:30, ['Manual', 'Auto_th_2']])
+
+#Selecting rows using row values, for example if we only want Set 2 info
+#Similar to dropping rows we saw earlier.
+dfset2 = df['Unnamed: 0'] == 'Set2'
+set2_df = df[dfset2]   #    df[df['Unnamed: 0'] == 'Set2']
+print(set2_df.tail())
+print("\n\nmax(df['Manual']) = ", max(df['Manual']))
+
+#Instead of selection we can do data filtering,
+#e.g. filter all values greater than certain size
+#Prints True or False.
+print("\n\n df['Manual'] > 100 = ",df['Manual'] > 100.)  
+#If we want to extract all data with this condition then use square brackets.
+print(df[df['Manual'] > 100.])
+
+#We can give multiple conditions to filter
+dfmu = df[(df['Manual'] > 80.) & (df['Auto_th_2'] < 60.)]
+print("\n\n df[(df['Manual'] > 80.) & (df['Auto_th_2'] <60.)] ")
+print("=================================================== ")
+
+
+print(dfmu)
+
+
+#We can use for loop to iterate just like we do for lists.
+#Let's iterate through Auto, add them and divide by 3 to get 
+#averageand compare with Manual value.
+for index, row in df.iterrows():
+    print("\nindex =", index)#,"\n-----row -----\n", row)
+    average_auto = (row['Auto_th_2'] + row['Auto_th_3'] + row['Auto_th_4'])/3
+    print("avg = ",round(average_auto),"  Manual = ", row['Manual'])  #ROunding to INT for easy comparison
+
