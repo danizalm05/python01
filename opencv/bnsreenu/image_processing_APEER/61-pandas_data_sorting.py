@@ -14,9 +14,10 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('data/manual_vs_auto_updated.csv')
 print(df.head())
-print("\n\n\ndf.columns = ",df.columns)
+print("\n\n\ndf.columns= b",df.columns)
 
-#Let us sort and assign this to a diferent variable
+
+
 df2=df.sort_values('Manual', ascending=True)
 #We can select just a subset of data, for example to only get Manual column
 print(df2['Manual'])
