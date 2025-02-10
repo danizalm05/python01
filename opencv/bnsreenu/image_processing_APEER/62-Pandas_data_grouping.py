@@ -35,9 +35,19 @@ group_by_file_count = df.groupby(by=['Image_set']).count()
 group_by_file_mean  = df.groupby(by=['Image_set']).mean(numeric_only=True) 
 group_by_file_sum  = df.groupby(by=['Image_set']).sum() 
 
- 
+corl = df.corr(numeric_only=True)
+print(corl)  #Correlation between all columns
 
 
-#Correlation between data
+#Check correlation for specific columns
+colcor = df['Manual'].corr(df['Auto_th_2'])
+print("\ncorrelation between ['Manual']  and  ['Auto_th_2']  =  ",colcor) 
 
+
+"""
+Positive numbers indicate a positive correlation — one goes up 
+the other goes up — and negative numbers represent an inverse correlation — 
+one goes up the other goes down. 1.0 indicates a perfect correlation.
+
+"""
 
