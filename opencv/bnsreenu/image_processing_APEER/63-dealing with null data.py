@@ -65,5 +65,9 @@ import numpy as np
 
 df = pd.read_csv(csv_name)
 
-df['Manual'] =  df.apply(lambda row: (round((row['Auto_th_2']+row['Auto_th_3']+row['Auto_th_3'])/3)) if np.isnan(row['Manual']) else row['Manual'], axis=1)
+df['Manual'] = df.apply(lambda row: (round((row['Auto_th_2']
+                                       +row['Auto_th_3']
+                                       +row['Auto_th_3'])/3))
+                         if np.isnan(row['Manual']) 
+                         else row['Manual'], axis=1)
 print(df.head(25))
