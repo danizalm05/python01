@@ -47,3 +47,43 @@ df['Manual'].rolling(3).mean().plot()  #MUch nicer plot.
 #Can do rolling mean or sum or anything else that makes sense.
 #Some disconnects, let's not worry about it for now.
 plt.show()
+
+
+print(df['Manual'].describe())
+#This can be graphically represented using box plot.
+df['Manual'].plot(kind="box", figsize=(8,6))  #Shows max and min values, outliers, etc.
+plt.show()
+
+#In order to plot the relationship between Columns, we typically generate scatter 
+#plots
+
+df.plot(kind='scatter', x='Manual', y='Auto_th_2', title='Manual vs Auto2')
+plt.show()
+#### Using functions and creating Caterogries and plotting
+
+#Now, Let's go through an exercise where we define all cell counts
+# below 100 as low  and above as high.
+# Then let's plot using the new categories we defined.
+
+# define a function to categorize low and high counts.
+def cell_count(x):
+    if x <= 100.0:
+        return "low"
+    else:
+        return "high"
+
+#Now we want to send the entire Manual column through this function, which is what apply() does:
+#Start by defining a new column title cell_count_index
+#Then just apply the function to categorize counts into low and high.
+df["cell_count_index"] = df["Manual"].apply(cell_count)
+print(df.head())
+#Creates a new column called grain_category
+#Can save to new csv
+#df.to_csv('data/manual_vs_auto2.csv')
+
+print(df.loc[20:30, ['Manual', 'cell_count_index']]) #Verify 20-30 rows.
+
+#we can plot by combining this cell count index information
+df.boxplot(column='Manual', by='cell_count_index')
+
+plt.show()
