@@ -14,7 +14,7 @@ the box environment.
 https://seaborn.pydata.org/examples/index.html   
  pip install seaborn
  
- 12:00
+ 15:00
 """    
  
 import pandas as pd
@@ -72,11 +72,20 @@ sns.set(style='darkgrid')   #Adds a grid
 sns.lineplot(x='Image', y='Manual', data=df, hue='Unnamed: 0',ax=axes[1, 1])  
  #Simple line plot
 #Hue tells seaborn how to color various subcategories, like our set in this example.
+axes[1,2].set_title('scatter plot with density curve.')
+#Basic scatter plot with density curve.
+sns.jointplot(x="Manual", y="Auto_th_2", data=df, kind='reg', color='r')
+
+#KDE plot, Kernel density estimation.
+sns.jointplot(x="Manual", y="Auto_th_2", data=df, kind="kde")
 
 
-
-
-
+#Scatter Plot with linear regression fit. Change order for higher order fits.
+sns.lmplot(x='Manual', y='Auto_th_2', data=df, order=1)
+#Scatterplot with linear regression fit 
+#Separated by hue (e.g. Image_set)
+# 95% confidence interval for each set
+sns.lmplot(x='Manual', y='Auto_th_2', data=df, hue='Unnamed: 0', order=1)  
 
  
 plt.show()
@@ -100,64 +109,3 @@ plt.show()
 sns.lineplot(x='Image', y='Manual', data=df, hue='Unnamed: 0')
 
 plt.show()
-'''
-
-fig = plt.figure(figsize=(16, 16))
-plt.subplots_adjust ( hspace=0.6)
-
-ax1 = fig.add_subplot(4,3,1)
-ax1.title.set_text('.distplot(df[Manual]')
-ax1.title.set_text('Input Image')
-
-ax2 = fig.add_subplot(4,3,2)
-ax2.sns.distplot(df['Manual']) 
-ax2.title.set_text('.distplot(df[Manual]')
-
-ax3 = fig.add_subplot(4,3,3)
-ax3.sns.distplot(df['Manual'], bins=20, kde=True, rug=False, hist_kws=dict(edgecolor='k', linewidth=0.8)) 
-ax3.title.set_text('hist color range')
-
-ax4 = fig.add_subplot(4,3,4)
-#ax4.imshow(thresh, cmap='gray')
-ax4.title.set_text('thresh')
-
-
-ax5 = fig.add_subplot(4,3,5)
-#ax5.imshow(opening1)#,cmap='gray')
-ax5.title.set_text('opening1')
-
-
-
-ax6 = fig.add_subplot(4,3,6)
-#ax6.imshow(opening2)#, cmap='gray')
-ax6.title.set_text('opening2')
-
-ax7 = fig.add_subplot(4,3,7)
-#ax7.imshow(sure_bg, cmap='gray')
-ax7.title.set_text('surebackground')
-
- 
-
-ax8 = fig.add_subplot(4,3,8)
-#ax8.imshow( sure_fg , cmap='gray')
-ax8.title.set_text(' sure_fg ')
-
-
-ax9 = fig.add_subplot(4,3,9)
-#ax9.imshow(unknown, cmap='gray')
-ax9.title.set_text('unknown')
-
-#
-ax10 = fig.add_subplot(4,3,10)
-#ax10.imshow(markers)#, cmap='gray')
-ax10.title.set_text('markers')
-
- 
-
-ax11 = fig.add_subplot(4,3,11)
-#ax11.imshow(markers10,cmap='gray')
-ax11.title.set_text('markers10')
-'''
- 
-
-
