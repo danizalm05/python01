@@ -103,9 +103,77 @@ sns.kdeplot(df['Auto_th_2'], shade=True)
 sns.kdeplot(df['Auto_th_3'], shade=True)
 sns.kdeplot(df['Auto_th_4'], shade=True)
 
+#Basic scatter plot with density curve.
+sns.jointplot(x="Manual", y="Auto_th_2", data=df, kind='reg', color='r')
+
+#KDE plot, Kernel density estimation.
+sns.jointplot(x="Manual", y="Auto_th_2", data=df, kind="kde")
+
 plt.show()
 
 
 sns.lineplot(x='Image', y='Manual', data=df, hue='Unnamed: 0')
 
 plt.show()
+
+from scipy import stats
+slope, intercept, r_value, p_value, std_err = stats.linregress(df['Manual'],df['Auto_th_2'])
+print(slope, intercept)
+
+#Regplots are similar to lmplots. 
+sns.regplot(x='Manual', y='Auto_th_2', data=df, color='g')
+plt.show()
+
+#Relationship between each feature and another selected feature can be easily plotted
+#using pariplot function in Seaborn
+
+sns.pairplot(df, x_vars=["Auto_th_2", "Auto_th_3", "Auto_th_4"], y_vars="Manual")
+plt.show()
+
+
+#too small. Let us chage the size
+
+sns.pairplot(df, x_vars=["Auto_th_2", "Auto_th_3", "Auto_th_4"], y_vars="Manual", size=6, aspect=0.75)
+plt.show()
+
+#Generate a grid with liner relationship between each column (feature)
+sns.pairplot(df, hue='Unnamed: 0', dropna=True)
+plt.show()
+
+#Swarm plots
+#Let's use manual_vs_auto2 file that we generated earlier 
+
+
+sns.swarmplot(x ='Unnamed: 0', y="Manual", data = df)#, hue="cell_count_index")
+plt.show()
+#SPlit each category
+sns.swarmplot(x = 'Unnamed: 0', y="Manual", data = df)#, hue="cell_count_index", dodge=True)
+plt.show()
+
+
+"""
+we can utilise the pandas Corr() to find the correlation between each variable 
+in the matrix and plot this using Seaborn’s Heatmap function, 
+specifying the labels and the Heatmap colour range.
+
+"""
+
+
+#Change Unnamed: 0 name to Image_set
+df = df.rename(columns = {'Unnamed: 0':'Image_set'})
+
+
+corr = df.loc[:, df.dtypes == 'int64'].corr() #Correlates all int64 columns
+
+sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns)
+plt.show()
+
+
+
+
+
+
+
+
+
+
