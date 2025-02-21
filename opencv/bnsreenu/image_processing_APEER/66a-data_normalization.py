@@ -4,7 +4,7 @@
 https://www.youtube.com/watch?v=Mhkx-gu6QLk&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=67
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial66a_need_for_data_normalization.py
 
-06:00
+08:00
 
 data file url
 https://github.com/pkmklong/Breast-Cancer-Wisconsin-Diagnostic-DataSet/blob/master/data.csv
@@ -70,3 +70,24 @@ print(df.isnull().sum())
 df = df.rename(columns={'diagnosis':'Label'})  
 print("\n\n   df.dtypes\n  ==============================")
 print(df.dtypes)
+
+#Replace categorical values with numbers
+# first cloumn is 'label' two posssible values:
+#    'b' for "Benign", 'm' for "Malignant"
+print("\n df['Label'].value_counts() \n========== \n", df['Label'].value_counts())
+'''
+ Label
+B    357
+M    212
+'''
+
+categories = {"B":1, "M":2}
+df['Label'] = df['Label'].replace(categories)
+
+#Define the dependent variable that needs to be predicted (labels)
+Y = df["Label"].values
+#Define the independent variables. Let's also drop 
+# "Label", "id", so we can normalize other data
+X = df.drop(labels = ["Label", "id"], axis=1) 
+
+
