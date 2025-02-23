@@ -1,5 +1,5 @@
 """
-65_pandas_data_plotting_using_Seaborn.py
+66a the need for data normlizing 
  ------------------------------------------- 
 https://www.youtube.com/watch?v=Mhkx-gu6QLk&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=67
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial66a_need_for_data_normalization.py
