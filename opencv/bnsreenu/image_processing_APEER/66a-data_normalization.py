@@ -91,14 +91,14 @@ Y = df["Label"].values
 X = df.drop(labels = ["Label", "id"], axis=1) 
 
 
-'''
+ 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import QuantileTransformer
 
 scaler = MinMaxScaler()
 scaler.fit(X)
 X = scaler.transform(X)
-'''
+ 
 #Split data into train and test to verify accuracy after fitting the model. 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
