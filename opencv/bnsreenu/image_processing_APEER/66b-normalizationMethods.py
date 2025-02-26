@@ -16,6 +16,8 @@ cloumn names
 6	Latitude
 7	Longitude
 8	target
+
+
  """
  
  
@@ -58,6 +60,8 @@ sns.distplot(df['Population'], kde=False) #Outliers. 35682 max but mean 1425
 plt.show()
 
 X = X[['MedInc', 'AveOccup']].copy()#only this two cloumns
+#The idea is to predicet the price of the house using only these two items. 
+
 column_names = X.columns
 
 #sns.jointplot(x='MedInc', y='AveOccup', data=X, xlim=[0,10], ylim=[0,5] ) # xlim=[0,10], ylim=[0,5]
@@ -65,10 +69,8 @@ column_names = X.columns
 
 
 
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.preprocessing import RobustScaler
-from sklearn.preprocessing import PowerTransformer
-from sklearn.preprocessing import QuantileTransformer
+
+
 
 #Other transformations not shown below. 
 from sklearn.preprocessing import minmax_scale
@@ -94,4 +96,53 @@ plt.show()
 
 
 ####################################
-#2 MinMaxScaler##########################################
+#2 MinMaxScaler# 
+
+#rescales the data set such that all feature values are
+# in the range [0, 1] 
+#For large outliers, it compresses lower values to too small numbers.
+#Sensitive to outliers.
+from sklearn.preprocessing import MinMaxScaler
+
+scaler2 = MinMaxScaler()
+scaler2.fit(X)
+X2 = scaler2.transform(X)
+df2 = pd.DataFrame(data=X2, columns=column_names)
+print(df2.describe())
+sns.jointplot(x='MedInc', y='AveOccup', data=df2)#, xlim=[0,1], ylim=[0,0.005])  #Data scaled but outliers still exist
+plt.suptitle("MinMaxScaler")
+ 
+plt.show()
+
+
+
+#3 RobustScaler
+# the centering and scaling statistics of this scaler 
+#are based on percentiles 
+#and are therefore not influenced by a few number 
+#of very large marginal outliers.
+from sklearn.preprocessing import RobustScaler
+
+scaler3 = RobustScaler()
+scaler3.fit(X)
+X3 = scaler3.transform(X)
+df3 = pd.DataFrame(data=X3, columns=column_names)
+print(df3.describe())
+sns.jointplot(x='MedInc', y='AveOccup', data=df3)#, xlim=[-2,3], ylim = [-2,3]) #Range -2 to 3
+
+plt.suptitle("RobustScaler")
+ 
+plt.show()
+#18:00
+
+#4 PowerTransformer
+# applies a power transformation to each feature to make the data more Gaussian-like
+
+from sklearn.preprocessing import PowerTransformer
+
+
+
+
+
+
+from sklearn.preprocessing import QuantileTransformer
