@@ -76,7 +76,7 @@ column_names = X.columns
 from sklearn.preprocessing import minmax_scale
 from sklearn.preprocessing import MaxAbsScaler
 from sklearn.preprocessing import Normalizer
-
+'''
 ##############################################################################
 from sklearn.preprocessing import StandardScaler
 #1 Standard scaler
@@ -91,7 +91,7 @@ sns.jointplot(x='MedInc', y='AveOccup', data=df1)  #Data scaled but outliers sti
 plt.suptitle("Standard scaler")
  
 plt.show()
-
+'''
 #13:30
 
 
@@ -115,7 +115,7 @@ plt.suptitle("MinMaxScaler")
 plt.show()
 
 
-
+'''
 #3 RobustScaler
 # the centering and scaling statistics of this scaler 
 #are based on percentiles 
@@ -133,16 +133,39 @@ sns.jointplot(x='MedInc', y='AveOccup', data=df3)#, xlim=[-2,3], ylim = [-2,3]) 
 plt.suptitle("RobustScaler")
  
 plt.show()
-#18:00
+''' 
 
 #4 PowerTransformer
 # applies a power transformation to each feature to make the data more Gaussian-like
 
+
+
+
+#4 PowerTransformer
+# applies a power transformation to each feature to make the data more Gaussian-like
+# This metho is usfull in case of alot of outliers
 from sklearn.preprocessing import PowerTransformer
+scaler4 = PowerTransformer()
+scaler4.fit(X)
+X4 = scaler4.transform(X)
+df4 = pd.DataFrame(data=X4, columns=column_names)
+print(df4.describe())
+sns.jointplot(x='MedInc', y='AveOccup', data=df4) #
+plt.show()
 
 
-
-
-
-
+#5 QuantileTransformer
+'''
 from sklearn.preprocessing import QuantileTransformer
+
+
+# has an additional output_distribution parameter allowing to match a 
+# Gaussian distribution instead of a uniform distribution.
+scaler5 = QuantileTransformer()
+scaler5.fit(X)
+X5 = scaler5.transform(X)
+df5 = pd.DataFrame(data=X5, columns=column_names)
+print(df5.describe())
+sns.jointplot(x='MedInc', y='AveOccup', data=df5) #
+
+'''
