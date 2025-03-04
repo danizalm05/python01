@@ -7,6 +7,10 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
 db source:
 https://github.com/bnsreenu/python_for_microscopists/blob/master/other_files/cells.csv
 
+
+
+pip3 install pandas
+
 """
 
 import pandas as pd
