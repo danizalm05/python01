@@ -1,7 +1,8 @@
 """
 69-multi_linear_regression.py
- -------------------------------------------https://www.youtube.com/watch?v=9CxJhQynU20&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=70
-https://www.youtube.com/watch?v=_gTr5DtndeU&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=71
+ -------------------------------------------
+ 
+ https://www.youtube.com/watch?v=9CxJhQynU20&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=70https://www.youtube.com/watch?v=_gTr5DtndeU&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=71
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial69-multi_linear_regression.py
  
 Multiple Linear Regression uses several explanatory 
@@ -40,3 +41,6 @@ y_df = df['heart.disease']
 
 
  
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(x_df, y_df, test_size=0.3, random_state=42)
