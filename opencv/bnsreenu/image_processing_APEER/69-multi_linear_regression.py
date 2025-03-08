@@ -57,3 +57,18 @@ model.fit(X_train, y_train) #Indep variables, dep. variable to be predicted
 #Prints the R^2 value, a measure of how well
 print("\nR^2 value = ",model.score(X_train, y_train))  
 #08:00
+
+
+prediction_test = model.predict(X_test)    
+print("\n y_test\n ===========\n ",y_test)
+print("\n prediction_test \n ===========\n ",prediction_test)
+print("\n  Mean sq. errror between y_test and predicted =  ", np.mean(prediction_test-y_test)**2)
+
+
+#Model is ready. Let us check the coefficients, stored as reg.coef_.
+#These are a, b, and c from our equation. 
+#Intercept is stored as reg.intercept_
+print(model.coef_, model.intercept_)
+
+#All set to predict the number of images someone would analyze at a given time
+#print(model.predict([[13, 2, 23]]))
