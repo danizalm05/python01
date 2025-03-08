@@ -14,14 +14,20 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy import ndimage
 from skimage import measure, color, io
-
 import getpass
 from pathlib import Path
 import sys
-USER = getpass.getuser()
+import os
 
 IMAGE_NAME = 'Osteosarcoma_01.tif'  # 'Osteosarcoma_01_transl.tif'
-BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
+USER = getpass.getuser()
+
+
+if (os.name == "posix"):  #this is a linux  system 
+    BASE_FOLDER = "/home/"+USER +'/Pictures/'
+    print(BASE_FOLDER)
+else: #this is a windows  system 
+    BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE = BASE_FOLDER + IMAGE_NAME
 
 # Check if the file exists

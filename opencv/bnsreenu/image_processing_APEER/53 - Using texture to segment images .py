@@ -16,9 +16,11 @@ import getpass
 import matplotlib.pyplot as plt
 from skimage import io
 from skimage.filters import threshold_otsu
+import os
 
-
+print("os.name =",os.name)
 USER = getpass.getuser()
+print("User name = ",USER)
 BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/Saved Pictures/'
 IMAGE_NAME_1 = 'scratch0.jpg'  # '2.jpg' 'lena.jpg' 'scratch0.tif'  'Osteosarcoma_01_transl.tif'
 #IMAGE_NAME_1 =   '2.jpg' 
