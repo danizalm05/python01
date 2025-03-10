@@ -56,6 +56,91 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 #5:00 
 df = pd.read_csv("data/wisconsin_breast_cancer_dataset.csv")
-
+print("\ndf.describe().T\n================") 
 print(df.describe().T)  #Values need to be normalized before fitting. 
- 
+print("\ndf.isnull().sum()\n================") 
+print(df.isnull().sum())
+#df = df.dropna() 
+
+
+#Rename Dataset to Label to make it easy to understand
+df = df.rename(columns={'diagnosis':'Label'})
+#print(df.dtypes)
+
+
+
+#Understand the data 
+sns.countplot(x="Label", data=df) #M - malignant   B - benign
+plt.show()
+sns.distplot(df['radius_mean'], kde=False)
+plt.show()
+
+#Replace categorical values with numbers
+valuesofLabels =  df['Label'].value_counts()
+print("values of Labels =  ", valuesofLabels) #How many B's nan M's
+
+categories = {"B":1, "M":2}
+df['Label'] = df['Label'].replace(categories)
+print(df.corr())#find corrlation between the features
+
+corrMatrix = df.corr()
+
+
+fig, ax = plt.subplots(figsize=(10,10))         # Sample figsize in inches
+#sns.heatmap(df.iloc[:, 1:6:], annot=True, linewidths=.5, ax=ax)
+sns.heatmap(corrMatrix, annot=False, linewidths=.5, ax=ax)
+plt.show()
+
+#12:00
+'''
+
+
+
+
+#Define the dependent variable that needs to be predicted (labels)
+Y = df["Label"].values
+
+#Define the independent variables. Let's also drop Gender, so we can normalize other data
+X = df.drop(labels = ["Label", "ID"], axis=1) 
+
+
+#Without scaling the error would be large. Near 100% for no disease class. 
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+scaler.fit(X)
+X = scaler.transform(X)
+
+#Split data into train and test to verify accuracy after fitting the model. 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+
+#Fir the model
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression(max_iter=5000)
+model.fit(X_train, y_train)
+
+
+prediction = model.predict(X_test)
+
+from sklearn import metrics
+print ("Accuracy = ", metrics.accuracy_score(y_test, prediction))
+
+
+#Confusion Matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, prediction)
+print(cm)
+
+#Print individual accuracy values for each class, based on the confusion matrix
+print("With Lung disease = ", cm[0,0] / (cm[0,0]+cm[1,0]))
+print("No disease = ",   cm[1,1] / (cm[0,1]+cm[1,1]))
+
+
+
+
+
+
+'''
+
+
+
