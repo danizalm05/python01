@@ -7,7 +7,11 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
 data file url
 https://github.com/pkmklong/Breast-Cancer-Wisconsin-Diagnostic-DataSet/blob/master/data.csv
 
-
+Logistic regression is primarly used for classification 
+where the traget is categorical.
+The logistic function is an S shaped curve that takes a
+real-valued number and maps it to a value between [0,1]
+y  = 1/(1+ e ^(-z))
 ""
 https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
 ## 'data.frame':    569 obs. of  31 variables:
@@ -50,7 +54,7 @@ import cv2
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
- 
+#5:00 
 df = pd.read_csv("data/wisconsin_breast_cancer_dataset.csv")
 
 print(df.describe().T)  #Values need to be normalized before fitting. 
