@@ -147,13 +147,11 @@ print("No disease = ",   cm[1,1] / (cm[0,1]+cm[1,1]))
 resluts:
 Accuracy =  0.9824561403508771
  
-              Result
-           +-----------
-           |   B    M
-hypothesis +---------- 
----------- |
-   B       |  [71   0]
-   M       |  [ 2  41]
+             reality
+               B   M
+Prediction
+B            [71  0]
+M            [ 2 41]
 
 in malingat there 41  corectly dignose an 0 err 
 in begin 71  corectly dignose  2 errors
