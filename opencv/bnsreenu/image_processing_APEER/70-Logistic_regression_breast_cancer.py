@@ -92,29 +92,37 @@ sns.heatmap(corrMatrix, annot=False, linewidths=.5, ax=ax)
 plt.show()
 
 #12:00
-'''
 
 
 
 
-#Define the dependent variable that needs to be predicted (labels)
+
+#Define the dependent variable that needs to be
+# predicted (labels)
 Y = df["Label"].values
 
-#Define the independent variables. Let's also drop Gender, so we can normalize other data
-X = df.drop(labels = ["Label", "ID"], axis=1) 
+#Define the independent variables. Let's also drop id,
+# so we can normalize other data
+X = df.drop(labels = ["Label", "id"], axis=1) 
+'''
+from sklearn.preprocessing import normalize
+X =  normalize(X,axis=1)
+'''
 
+#Without scaling the error would be large. 
+#Near 100% for no disease class. 
 
-#Without scaling the error would be large. Near 100% for no disease class. 
 from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler()
+scaler = MinMaxScaler()#all values are scale beteen 0 to 1
 scaler.fit(X)
-X = scaler.transform(X)
+X = scaler.transform(X) 
 
-#Split data into train and test to verify accuracy after fitting the model. 
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = \
+             train_test_split(X, Y, test_size=0.2, random_state=42)
+ 
 
-#Fir the model
+#Fit the model
 from sklearn.linear_model import LogisticRegression
 model = LogisticRegression(max_iter=5000)
 model.fit(X_train, y_train)
@@ -132,15 +140,19 @@ cm = confusion_matrix(y_test, prediction)
 print(cm)
 
 #Print individual accuracy values for each class, based on the confusion matrix
-print("With Lung disease = ", cm[0,0] / (cm[0,0]+cm[1,0]))
+print("disease = ", cm[0,0] / (cm[0,0]+cm[1,0]))
 print("No disease = ",   cm[1,1] / (cm[0,1]+cm[1,1]))
 
-
-
-
-
-
 '''
+resluts:
+Accuracy =  0.9824561403508771
+ 
+             reality
+               B   M
+Prediction
+B            [71  0]
+M            [ 2 41]
 
-
-
+in malingat there 41  corectly dignose an 0 err 
+in begin 71  corectly dignose  2 errors
+'''
