@@ -54,7 +54,7 @@ import sys
 import os
 import getpass
 from pathlib import Path
-IMAGE_NAME = 'BSE_Image.jpg'  # 'Osteosarcoma_01_transl.tif'
+IMAGE_NAME = 'BSE.tif'  #BSE_Image.jpg  'Osteosarcoma_01_transl.tif'
 USER = getpass.getuser()
 
 
