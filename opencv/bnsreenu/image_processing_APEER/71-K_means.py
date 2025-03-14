@@ -86,11 +86,15 @@ img = io.imread(IMAGE, as_gray=False)#Gray image
  
 plt.imshow(img, cmap='gray')
 plt.show()
+
 # Convert MxNx3 image into Kx3 where K=MxN
+# instad ofv 3 matrix we will have 3 vectors size of MxN
 img2 = img.reshape((-1, 3))  #-1 reshape means, in this case MxN
 
-#We convert the unit8 values to float as it is a requirement of the k-means method of OpenCV
+#We convert the unit8 values to float as it is a requirement 
+# of the k-means method of OpenCV
 #img2 = np.float32(img2)
+
 from sklearn.cluster import KMeans
 
 kmeans = KMeans(n_clusters=4, init='k-means++', max_iter=300, n_init=10, random_state=42)
@@ -98,8 +102,10 @@ model = kmeans.fit(img2)
 predicted_values = kmeans.predict(img2)
 
 #res = center[label.flatten()]
+
+#  reshape to the size of the  original image
 segm_image = predicted_values.reshape((img.shape[0], img.shape[1]))
-plt.imshow(segm_image, cmap='gray')
+plt.imshow(segm_image)#, cmap='gray')
 plt.show() 
 
 
