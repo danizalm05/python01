@@ -54,7 +54,7 @@ import sys
 import os
 import getpass
 from pathlib import Path
-IMAGE_NAME = 'BSE.tif'  #BSE_Image.jpg  'Osteosarcoma_01_transl.tif'
+IMAGE_NAME =  '2.jpg'# 'BSE.tif'  BSE_Image.jpg  'Osteosarcoma_01_transl.tif'
 USER = getpass.getuser()
 
 
@@ -97,7 +97,7 @@ img2 = img.reshape((-1, 3))  #-1 reshape means, in this case MxN
 
 from sklearn.cluster import KMeans
 
-kmeans = KMeans(n_clusters=4, init='k-means++', max_iter=300, n_init=10, random_state=42)
+kmeans = KMeans(n_clusters=4, init='k-means++', max_iter=300, n_init=10, random_state=82)
 model = kmeans.fit(img2)
 predicted_values = kmeans.predict(img2)
 

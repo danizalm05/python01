@@ -38,5 +38,90 @@ data_df.head(n=3)
 plt.scatter(x='x',y='y',c='true_color',data=data_df)
 plt.xlabel("x")#add  'y' label  on y-aix
 plt.ylabel("y")
+plt.title("Simulated clusters using scikit learn")
+plt.show()
 
+#  Chose randomly a center of the group
+#------------------------------------------------
+#data_df.sample: Return a random sample of items from an axis of object.
+#You can use random_state for reproducibility.
+
+current_centers = data_df.sample(3,random_state=42)
+plt.scatter(x='x',y='y',
+           c='yellow',
+           data=data_df)
+plt.scatter(x='x',y='y', 
+           data=current_centers,
+           c=['red','blue','green'],
+           s=100)
+plt.xlabel("x")
+plt.ylabel("y")
+
+plt.title("current_centers")
+plt.show()
+
+##########################################
+# distance
+def dist(x, y):
+    return sum((xi - yi) ** 2 for xi, yi in zip(x, y))
+
+def assign_cluster_labels(data, centers):
+    cluster_labels = []
+    for point in data:
+        # compute distances between three cluster centers to a data point
+        distances = [dist(point, center) for center in centers]
+        # find which cluster is closest to the data point and assign the cluster  it
+        cluster_labels.append(distances.index(min(distances)))
+    return cluster_labels
+
+
+current_labels = assign_cluster_labels(data_df[['x','y']].values, 
+                                      current_centers[['x','y']].values)
+current_labels[1:3]
+#[2, 0, 0, 0, 0, 2, 0, 0, 0, 0]
+
+plt.scatter(x='x',y='y',c=current_labels,data=data_df)
+plt.scatter(x='x',y='y',data=current_centers,c=['red','blue','black'],marker='*', s=200)
+plt.title("Distance")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+
+
+#Second iteration
+current_centers = data_df[['x','y']].groupby(current_labels).mean()
+print(current_centers)
+current_labels = assign_cluster_labels(data_df[['x','y']].values, 
+                                      current_centers.values)
+ 
+plt.scatter(x='x',y='y',c=current_labels,data=data_df)
+plt.scatter(x='x',y='y',data=current_centers,c=['red','blue','black'],marker='*', s=200)
+plt.title("Second iteration  -  groupby mean")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+
+
+#3rd iteration
+current_centers = data_df[['x','y']].groupby(current_labels).mean()
+print(current_centers)
+current_labels = assign_cluster_labels(data_df[['x','y']].values, 
+                                      current_centers.values)
+ 
+plt.scatter(x='x',y='y',c=current_labels,data=data_df)
+plt.scatter(x='x',y='y',data=current_centers,c=['red','blue','black'],marker='*', s=200)
+plt.xlabel("x")
+plt.xlabel("y")
+plt.show()
+#4th iteration
+
+current_centers = data_df[['x','y']].groupby(current_labels).mean()
+print(current_centers)
+current_labels = assign_cluster_labels(data_df[['x','y']].values, 
+                                      current_centers.values)
+ 
+plt.scatter(x='x',y='y',c=current_labels,data=data_df)
+plt.scatter(x='x',y='y',data=current_centers,c=['purple','blue','yellow'],marker='*', s=200)
+plt.xlabel("x")
+plt.xlabel("y")
 plt.show()
