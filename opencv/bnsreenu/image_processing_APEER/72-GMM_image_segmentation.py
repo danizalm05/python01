@@ -96,7 +96,7 @@ print('millions = ',millions)
 ax.fmt_ydata = millions
 plt.plot(n_components, [m.bic(img2) for m in gmm_models], label='BIC')
 
-
+# the n value   for th elbow is the better .
 
 plt.show()
 
