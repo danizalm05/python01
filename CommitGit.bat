@@ -1,5 +1,5 @@
 cls
-rem "Start  new  commit to github."
+rem "Start    new  commit to github."
 
 pause
 git add .
