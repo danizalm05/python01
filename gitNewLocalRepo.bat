@@ -6,7 +6,7 @@ pause
 git init
 
 pause
-git remote add origin https://github.com/danizalm05/linux01.git
+git remote add origin https://github.com/danizalm05/python01.git
 
 git remote -v
 pause 
