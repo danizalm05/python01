@@ -53,17 +53,29 @@ if not(Path(IMAGE).exists()):
 img = cv2.imread(IMAGE)#Gray image
 plt.imshow(img)
 
-ksize = 15  #Use size that makes sense to the image and fetaure size. Large may not be good. 
+ksize = 5  #Use size that makes sense to the image and fetaure 
+#          size. Large may not be good. 
 #On the synthetic image it is clear how ksize affects imgae (try 5 and 50)
 sigma = 5 #Large sigma on small features will fully miss the features. 
 theta = 1*np.pi/2  #/4 shows horizontal 3/4 shows other horizontal. Try other contributions
 lamda = 1*np.pi/4  #1/4 works best for angled. 
-gamma=0.9  #Value of 1 defines spherical. Calue close to 0 has high aspect ratio
+gamma=0.5  #Value of 1 defines spherical. Calue close to 0 has
+#            high aspect ratio
 #Value of 1, spherical may not be ideal as it picks up features from other regions.
-phi = 0.8  #Phase offset. I leave it to 0. (For hidden pic use 0.8)
+phi = 1.0  #Phase offset. I leave it to 0. (For hidden pic use 0.8)
 
 
 kernel = cv2.getGaborKernel((ksize, ksize), sigma, theta, lamda, gamma, phi, ktype=cv2.CV_32F)
+
+img_g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+#Apply the filter
+fimg = cv2.filter2D(img, cv2.CV_8UC3, kernel)
+
+kernel_resized = cv2.resize(kernel, (400, 400))                    # Resize image
+
+
+
 
 #plt.imshow(kernel)
 
@@ -83,26 +95,27 @@ ax1.title.set_text('Input Image')
 ax2 = fig.add_subplot(4,3,2)
 ax2.imshow(kernel)#, cmap='gray')
 ax2.title.set_text('kernel')
-'''
-ax3 = fig.add_subplot(4,3,3)
-ax3.hist(image.flat, bins=100, range=(0,255))
-ax3.title.set_text('hist color range')
 
+
+ax3 = fig.add_subplot(4,3,3)
+ax3.hist(img.flat, bins=100, range=(0,255))
+ax3.title.set_text('hist color range')
+ 
 ax4 = fig.add_subplot(4,3,4)
-ax4.imshow(thresh, cmap='gray')
-ax4.title.set_text('thresh')
+ax4.imshow(img_g, cmap='gray')
+ax4.title.set_text('Gray color')
 
 
 ax5 = fig.add_subplot(4,3,5)
-ax5.imshow(opening1)#,cmap='gray')
-ax5.title.set_text('opening1')
+ax5.imshow(kernel_resized)#,cmap='gray')
+ax5.title.set_text('kernel_resized')
 
 
 
 ax6 = fig.add_subplot(4,3,6)
-ax6.imshow(opening2)#, cmap='gray')
-ax6.title.set_text('opening2')
-
+ax6.imshow(fimg )#, cmap='gray')
+ax6.title.set_text('result')
+'''
 ax7 = fig.add_subplot(4,3,7)
 ax7.imshow(sure_bg, cmap='gray')
 ax7.title.set_text('surebackground')
