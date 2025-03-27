@@ -16,6 +16,9 @@ Therefore we do not need to import any other libraries to compute these.
 The way you compute them (for example BIC) is by fitting a GMM model and then calling the method BIC. 
 15:00
 """
+
+
+
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
