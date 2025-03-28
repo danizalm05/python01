@@ -72,7 +72,7 @@ img_g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 #Apply the filter
 fimg = cv2.filter2D(img, cv2.CV_8UC3, kernel)
 
-kernel_resized = cv2.resize(kernel, (400, 400))                    # Resize image
+kernel_resized = cv2.resize(kernel, (400, 400))    # Resize image
 
 
 

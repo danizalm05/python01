@@ -104,21 +104,21 @@ gamma=0.5  #Value of 1 defines spherical. Calue close to 0 has
 #Value of 1, spherical may not be ideal as it picks up features from other regions.
 phi = 1.0  #Phase offset. I leave it to 0. (For hidden pic use 0.8)
 
-def nothing(x):
+def empty(a):
     pass
  
 wname = 'image'
 cv2.namedWindow(wname)
  
 # create trackbars for color change
-cv2.createTrackbar('scale',wname,0,10,nothing)
- 
-cv2.createTrackbar('G',wname,0,255,nothing)
-cv2.createTrackbar('B',wname,0,255,nothing)
+cv2.createTrackbar('scale',wname,0,10,empty)
+  
+cv2.createTrackbar('ksize',wname,6,5,empty)
+cv2.createTrackbar('theta',wname,1,16,empty)
  
 # create switch for ON/OFF functionality
 switch = '0 : OFF \n1 : ON'
-cv2.createTrackbar(switch, wname,0,1,nothing)
+cv2.createTrackbar(switch, wname,0,1,empty)
 
 
 
@@ -127,27 +127,36 @@ cv2.createTrackbar(switch, wname,0,1,nothing)
 while True:
    
     scale = 0.4 + cv2.getTrackbarPos("scale", wname) / 10
-    print(scale)
-    imgStack = stackImages( scale,  ([img,img ])    )
-    cv2.imshow("img", imgStack)
+    ksize=  cv2.getTrackbarPos("ksize", wname) 
+    n_theta=  cv2.getTrackbarPos("theta", wname)  
+    theta = n_theta*np.pi/16  #/4 shows horizontal 3/4 shows other horizontal. Try other contributions
+
+    
+  
+    
+    print(theta)
+    
+    
+    
+    kernel = cv2.getGaborKernel((ksize, ksize), sigma, theta, lamda, gamma, phi, ktype=cv2.CV_32F)
+    
+    img_g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    #Apply the filter
+    fimg = cv2.filter2D(img, cv2.CV_8UC3, kernel)
+
+    kernel_resized = cv2.resize(kernel, (400, 400)) 
+    
+    
+    imgStack = stackImages( scale,  ([img,kernel ],[fimg,kernel_resized ])    )
+    cv2.imshow("Result", fimg)
+    cv2.imshow("kernel", imgStack)
     key = cv2.waitKey(1) & 0xFF
     if key == ord('q'):
         break
 
 cv2.destroyAllWindows()
-'''
 
-
-kernel = cv2.getGaborKernel((ksize, ksize), sigma, theta, lamda, gamma, phi, ktype=cv2.CV_32F)
-
-img_g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-#Apply the filter
-fimg = cv2.filter2D(img, cv2.CV_8UC3, kernel)
-
-kernel_resized = cv2.resize(kernel, (400, 400))                    # Resize image
-
-'''
 
 
  
