@@ -23,6 +23,10 @@ psi Phase offset.
 ktype Type of filter coefficients. It can be CV_32F or CV_64F.
 indicates the type and range of values that each pixel in the Gabor kernel can hold.
 Basically float32 or float64
+
+Gabor1 : theta= 0.0 : sigma= 1 : lamda= 0.0 : gamma= 0.05
+
+Gabor253 : theta= 5.497787143782138 : sigma= 7 : lamda= 1.5707963267948966 : gamma= 0.05
 """
 
 import numpy as np
@@ -130,13 +134,8 @@ while True:
     ksize=  cv2.getTrackbarPos("ksize", wname) 
     n_theta=  cv2.getTrackbarPos("theta", wname)  
     theta = n_theta*np.pi/16  #/4 shows horizontal 3/4 shows other horizontal. Try other contributions
-
-
-    
-    
-    
+   
     kernel = cv2.getGaborKernel((ksize, ksize), sigma, theta, lamda, gamma, phi, ktype=cv2.CV_32F)
-    
     img_g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     #Apply the filter
@@ -144,7 +143,7 @@ while True:
 
     kernel_resized = cv2.resize(kernel, (400, 400)) 
     
-    
+    ##  Display
     imgStack = stackImages( scale,  ([img,kernel ],[fimg,kernel_resized ])    )
   
     cv2.imshow("kernel", imgStack)
