@@ -110,7 +110,7 @@ def empty(a):
 wname = 'image'
 cv2.namedWindow(wname)
  
-# create trackbars for color change
+# create trackbars 
 cv2.createTrackbar('scale',wname,0,10,empty)
   
 cv2.createTrackbar('ksize',wname,6,5,empty)
@@ -122,19 +122,16 @@ cv2.createTrackbar(switch, wname,0,1,empty)
 
 
 
-
+ 
      
 while True:
    
-    scale = 0.4 + cv2.getTrackbarPos("scale", wname) / 10
+    scale = 0.4 + cv2.getTrackbarPos("scale", wname) / 25
     ksize=  cv2.getTrackbarPos("ksize", wname) 
     n_theta=  cv2.getTrackbarPos("theta", wname)  
     theta = n_theta*np.pi/16  #/4 shows horizontal 3/4 shows other horizontal. Try other contributions
 
-    
-  
-    
-    print(theta)
+
     
     
     
@@ -149,14 +146,45 @@ while True:
     
     
     imgStack = stackImages( scale,  ([img,kernel ],[fimg,kernel_resized ])    )
-    cv2.imshow("Result", fimg)
+  
     cv2.imshow("kernel", imgStack)
+    cv2.imshow("Result", fimg)
     key = cv2.waitKey(1) & 0xFF
     if key == ord('q'):
         break
 
 cv2.destroyAllWindows()
 
+fig = plt.figure(figsize=(16, 16))
+plt.subplots_adjust ( hspace=0.6)
 
+ax1 = fig.add_subplot(4,3,1)
+ax1.imshow(img, cmap='gray')
+ax1.title.set_text('Input Image')
+
+ax2 = fig.add_subplot(4,3,2)
+ax2.imshow(kernel)#, cmap='gray')
+ax2.title.set_text('kernel')
+
+
+ax3 = fig.add_subplot(4,3,3)
+ax3.hist(img.flat, bins=100, range=(0,255))
+ax3.title.set_text('hist color range')
+ 
+ax4 = fig.add_subplot(4,3,4)
+ax4.imshow(img_g, cmap='gray')
+ax4.title.set_text('Gray color')
+
+
+ax5 = fig.add_subplot(4,3,5)
+ax5.imshow(kernel_resized)#,cmap='gray')
+ax5.title.set_text('kernel_resized')
+
+
+
+ax6 = fig.add_subplot(4,3,6)
+ax6.imshow(fimg )#, cmap='gray')
+ax6.title.set_text('result')
+plt.show()
 
  
