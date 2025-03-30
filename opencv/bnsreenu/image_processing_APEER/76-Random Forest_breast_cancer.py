@@ -51,8 +51,65 @@ from matplotlib import pyplot as plt
 import seaborn as sns
  
 df = pd.read_csv("data/wisconsin_breast_cancer_dataset.csv")
-
+print("\ndf.describe().T\n================") 
 print(df.describe().T)  #Values need to be normalized before fitting. 
+print("\ndf.isnull().sum()\n================") 
+print(df.isnull().sum())
+#df = df.dropna() 
 
 
-print(df.isnull().sum()) 
+#Rename Dataset to Label to make it easy to understand
+df = df.rename(columns={'diagnosis':'Label'})
+#print(df.dtypes)
+
+
+
+#Understand the data 
+sns.countplot(x="Label", data=df) #M - malignant   B - benign
+plt.show()
+sns.distplot(df['radius_mean'], kde=False)
+plt.show()
+
+#Replace categorical values with numbers
+valuesofLabels =  df['Label'].value_counts()
+print("values of Labels =  ", valuesofLabels) #How many B's nan M's
+
+categories = {"B":1, "M":2}
+df['Label'] = df['Label'].replace(categories)
+print(' \ndf.corr() \n =============== \n',df.corr())#find corrlation between the features
+
+corrMatrix = df.corr()
+
+#Show Corrlation matrix
+fig, ax = plt.subplots(figsize=(10,10))         # Sample figsize in inches
+#sns.heatmap(df.iloc[:, 1:6:], annot=True, linewidths=.5, ax=ax)
+sns.heatmap(corrMatrix, annot=False, linewidths=.5, ax=ax)
+plt.show()
+
+
+#Create  X and Y foir the mechine learning process  
+#Define the dependent variable that needs to be predicted (labels)
+Y = df["Label"].values
+
+#Define the independent variables. Let's also drop ID, so we can normalize other data
+X = df.drop(labels = ["Label", "id"], axis=1) 
+features_list = list(X.columns)  #List features so we can rank them later.
+
+
+#######      normalize X  ########
+
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+scaler.fit(X)
+X = scaler.transform(X)
+
+#######       Split data into train and test      ########
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+
+#17:00
+#######    RANDOM FOREST #######
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier(n_estimators = 25, random_state = 42)
+
