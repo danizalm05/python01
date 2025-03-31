@@ -76,7 +76,7 @@ print("values of Labels =  ", valuesofLabels) #How many B's nan M's
 
 categories = {"B":1, "M":2}
 df['Label'] = df['Label'].replace(categories)
-print(' \ndf.corr() \n =============== \n',df.corr())#find corrlation between the features
+#print(' \ndf.corr() \n =============== \n',df.corr())#find corrlation between the features
 
 corrMatrix = df.corr()
 
@@ -111,5 +111,31 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_
 #17:00
 #######    RANDOM FOREST #######
 from sklearn.ensemble import RandomForestClassifier
+ 
 model = RandomForestClassifier(n_estimators = 25, random_state = 42)
 
+# Train the model on training data
+model.fit(X_train, y_train)
+prediction = model.predict(X_test)
+
+from sklearn import metrics
+print ("Accuracy = ", metrics.accuracy_score(y_test, prediction))
+
+
+#Confusion Matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, prediction)
+print("\n\n[Benign  .  Malignant]\n=====================")
+print(cm)
+
+
+#Print individual accuracy values for each class, based on the confusion matrix
+print("Benign = ", cm[0,0] / (cm[0,0]+cm[1,0]))
+print("Malignant = ",   cm[1,1] / (cm[0,1]+cm[1,1]))
+
+
+#features   importances list - what is the most importend feature
+#importances = list(model_RF.feature_importances_)
+feature_imp = pd.Series(model.feature_importances_, index=features_list).sort_values(ascending=False)
+print("\n\nimportances list \n=====================")
+print(feature_imp)
