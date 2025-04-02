@@ -84,9 +84,41 @@ Y = df["Label"].values
 #Define the independent variables. Let's also drop ID, so we can normalize other data
 X = df.drop(labels = ["Label", "id"], axis=1) 
 
-#6:00
+#6:00   normalize
+#from sklearn.preprocessing import normalize
+#X = normalize(X, axis=1)
+
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 scaler.fit(X)
 X = scaler.transform(X)
+
+#Split data into train and test to verify accuracy after fitting the model. 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+
+#https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html?highlight=svc#sklearn.svm.SVC
+#https://scikit-learn.org/stable/modules/svm.html
+#from sklearn.svm import SVC
+from sklearn import svm
+model = svm.LinearSVC(max_iter=10000)
+#model = SVC(kernel='linear', C=10, gamma=1000, max_iter=10000)
+model.fit(X_train, y_train)
+
+prediction = model.predict(X_test)
+
+from sklearn import metrics
+print ("Accuracy = ", metrics.accuracy_score(y_test, prediction))
+
+
+#Confusion Matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, prediction)
+print(cm)
+
+#Print individual accuracy values for each class, based on the confusion matrix
+print("Benign = ", cm[0,0] / (cm[0,0]+cm[1,0]))
+print("Malignant = ",   cm[1,1] / (cm[0,1]+cm[1,1]))
+
+
