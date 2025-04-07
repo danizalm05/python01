@@ -1,5 +1,5 @@
 """
-l79_part1_traditional_machine_learning_based_img_segmentation.py
+79_part1_traditional_machine_learning_based_img_segmentation.py
  -----------------------------------------------------
 https://www.youtube.com/watch?v=uWTzkUD3V9g&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=81
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial79_part1_traditional_machine_learning_based_img_segmentation.py
@@ -11,7 +11,7 @@ Gabor and traditional filters for feature generation and
 Random Forest, SVM for classification. 
 
 'images/sandstone/Train_images/Sandstone_Versa0000.tif'
-
+Sandstone_Versa0000_mask.tif
 10:00
 """
 
@@ -136,9 +136,14 @@ df['Median s3'] = median_img1
 
 
 ######################################  
-
+IMAGE2 = BASE_FOLDER +'Sandstone_Versa0000_mask.tif'  
 #Now, add a column in the data frame for the Labels
 #For this, we need to import the labeled image
-labeled_img = cv2.imread('images/sandstone/Train_mask_APEER/Train_masks_APEER.ome00.tif')
+
+labeled_img = cv2.imread(IMAGE2)
 #Remember that you can load an image with partial labels 
-#But, drop the rows with unlabeled data           
+#But, drop the rows with unlabeled data  
+
+ 
+plt.imshow(labeled_img) 
+plt.show()         
