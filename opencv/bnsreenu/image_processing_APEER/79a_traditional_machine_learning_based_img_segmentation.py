@@ -146,4 +146,18 @@ labeled_img = cv2.imread(IMAGE2)
 
  
 plt.imshow(labeled_img) 
-plt.show()         
+plt.show()   
+
+ 
+labeled_img = cv2.cvtColor(labeled_img, cv2.COLOR_BGR2GRAY)
+ 
+plt.imshow(labeled_img) 
+plt.show()
+labeled_img1 = labeled_img.reshape(-1)
+df['Labels'] = labeled_img1
+
+print(df.head())      
+
+original_img_data = df.drop(labels = ["Labels"], axis=1) #Use for prediction
+#df.to_csv("Gabor.csv")
+df = df[df.Labels != 0]# copy only Label non zero  values
