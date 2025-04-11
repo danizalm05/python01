@@ -12,7 +12,14 @@ Random Forest, SVM for classification.
 
 'images/sandstone/Train_images/Sandstone_Versa0000.tif'
 Sandstone_Versa0000_mask.tif
-10:00
+ 
+
+Image Labeling   Annotation Tools
+https://medevel.com/image-annotation-tools-1831/
+====================================================	  
+https://www.makesense.ai/ 
+
+
 """
 
 import numpy as np
