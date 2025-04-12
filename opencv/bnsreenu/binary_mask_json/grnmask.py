@@ -1,3 +1,23 @@
+
+'''
+VGG-Image-Annotator: Parsing the JSON file
+The code in this repository is used to parse the JSON file generated 
+after annotating the images through the VGG Image Annotator tool designed by
+ Visual Geometry Group.
+
+https://towardsdatascience.com/generating-image-segmentation-masks-the-easy-way-dd4d3656dbd1/?gi=21e4686bceed
+
+
+https://www.youtube.com/watch?v=G-JYJaQmhwM
+https://github.com/nikhilroxtomar/VGG-Image-Annotator-Process-JSON-file/blob/main/process_data.py
+https://jsonformatter.org/json-viewer
+https://www.robots.ox.ac.uk/~vgg/software/via/via.html   #VGG Image Annotator Version 3
+
+'''
+
+
+
+ 
 # Author : frakw
 # Date : 2023-12-04
 # Description : Convert all labelme generated json into mask image in every subdirectory
