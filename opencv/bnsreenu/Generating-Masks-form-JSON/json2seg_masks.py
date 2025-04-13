@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jan 25 15:01:15 2021
 
-@author: Talha
-"""
 import os, glob, re
 from tqdm import tqdm, trange
 import matplotlib.pyplot as plt
@@ -22,7 +18,8 @@ class_name = ['mountain', 'car']
 # set it to ture if you are generating masks for instance 
 #segementation.
 instance_seg = False  # True or False
- 
+# if instance segmentation mask gen is set to true
+# than we will save  a 3 channel image 
 output_dir = 'output/'
 
 # path to json files
@@ -66,27 +63,23 @@ for i in trange(len(file_paths)):
         sem_mask = cv2.fillPoly(sem_mask, [item_pts],  color=int(color)) 
         dr= output_dir+mask_name+'.png'
         if instance_seg == False:
-            print(j,'  ',dr)
-            plt.imshow(sem_mask)
-            plt.show() 
-            #cv2.imwrite(dr, sem_mask)
-            cv2.imwrite(dr,sem_mask)
-         
-            
-            #print(output_dir+mask_name+'.png') 
+            #print(j,'  ',dr)
+            #plt.imshow(sem_mask)
+            #plt.savefig('dr')
+            plt.imsave(dr, sem_mask)#, cmap='gray')
+           # plt.show() 
+        
         if instance_seg:
-            # if instance segmentation mask gen is set to true than we will save
-            # a 3 channel image 
-            # 1st channel will have semantic IDs
-            # 2nd will have instance IDs
-            # 3rd channel will be all zeros
+            # if instance segmentation mask gen is set to true
+            # than we will save  a 3 channel image 
+            #  1st channel will have semantic IDs
+            #  2nd will have instance IDs
+            #  3rd channel will be all zeros
             idx = j + 1
             inst_mask = cv2.fillPoly(inst_mask, [item_pts],  color=int(idx)) 
-            #plt.imshow(inst_mask)
+            
             full_mask = cv2.merge((sem_mask, inst_mask, zero_mask))
-            cv2.imwrite(dr, full_mask)
-            plt.imshow(full_mask)
-            plt.show() 
+            #cv2.imwrite(dr, full_mask)
+            
 
-#img = cv2.imread('C:/Users/Talha/Desktop/output/car4.png',-1)
-#plt.imshow(img)
+
