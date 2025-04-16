@@ -35,7 +35,7 @@ import sys
 import os
 
 
-IMAGE_NAME =  'Sandstone_Versa0000_train.tif' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
+IMAGE_NAME =  'stone.png' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
 USER = getpass.getuser()
 
 if (os.name == "posix"):  #this is a linux  system 
@@ -143,7 +143,7 @@ df['Median s3'] = median_img1
 
 
 ######################################  
-IMAGE2 = BASE_FOLDER +'Sandstone_Versa0000_mask.tif'  
+IMAGE2 = BASE_FOLDER +'stonemask.png'  
 #Now, add a column in the data frame for the Labels
 #For this, we need to import the labeled image
 
