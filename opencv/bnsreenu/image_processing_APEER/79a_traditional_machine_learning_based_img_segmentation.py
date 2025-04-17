@@ -165,6 +165,69 @@ df['Labels'] = labeled_img1
 
 print(df.head())      
 
-original_img_data = df.drop(labels = ["Labels"], axis=1) #Use for prediction
+original_img_data = df.drop(labels = ["Labels"], axis=1) #Use for prediction- this are the X vlaues
 #df.to_csv("Gabor.csv")
 df = df[df.Labels != 0]# copy only Label non zero  values
+
+#########################################################
+
+#Define the dependent variable that needs to be predicted (labels)
+Y = df["Labels"].values
+
+#Encode Y values to 0, 1, 2, 3, .... (NOt necessary but makes it easy to use other tools like ROC plots)
+from sklearn.preprocessing import LabelEncoder
+Y = LabelEncoder().fit_transform(Y)
+
+
+
+#Define the independent variables
+X = df.drop(labels = ["Labels"], axis=1) 
+
+#Split data into train and test to verify accuracy after fitting the model. 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=20)
+
+
+# Import the model we are using
+#RandomForestRegressor is for regression type of problems. 
+#For classification we use RandomForestClassifier.
+#Both yield similar results except for regressor the result is float
+#and for classifier it is an integer. 
+#16:10
+
+
+fig = plt.figure(figsize=(16, 16))
+plt.subplots_adjust ( hspace=0.6)
+
+ax1 = fig.add_subplot(4,3,1)
+ax1.imshow(img, cmap='gray')
+ax1.title.set_text('Input Image')
+
+ax2 = fig.add_subplot(4,3,2)
+ax2.imshow(kernel)#, cmap='gray')
+ax2.title.set_text('Gabor kernel')
+
+
+ax3 = fig.add_subplot(4,3,3)
+ax3.hist(img.flat, bins=100, range=(0,255))
+ax3.title.set_text('hist color range')
+ 
+ax4 = fig.add_subplot(4,3,4)
+ax4.imshow(labeled_img)#, cmap='gray')
+ax4.title.set_text('labeled_img - mask')
+
+'''
+ax5 = fig.add_subplot(4,3,5)
+ax5.imshow(kernel_resized)#,cmap='gray')
+ax5.title.set_text('kernel_resized')
+
+
+
+ax6 = fig.add_subplot(4,3,6)
+ax6.imshow(fimg )#, cmap='gray')
+ax6.title.set_text('result')
+'''
+
+plt.show()
+
+ 
