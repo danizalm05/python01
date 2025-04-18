@@ -35,7 +35,7 @@ import sys
 import os
 
 
-IMAGE_NAME =  'stone.png' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
+IMAGE_NAME =  'Sandstone_Versa0050_test.tif' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
 USER = getpass.getuser()
 
 if (os.name == "posix"):  #this is a linux  system 
@@ -143,20 +143,20 @@ df['Median s3'] = median_img1
 
 
 ######################################  
-IMAGE2 = BASE_FOLDER +'stonemask.png'  
+IMAGE2 = BASE_FOLDER +'mask01.tif'  
 #Now, add a column in the data frame for the Labels
 #For this, we need to import the labeled image
 
-labeled_img = cv2.imread(IMAGE2)
+labeled_img00 = cv2.imread(IMAGE2)
 #Remember that you can load an image with partial labels 
 #But, drop the rows with unlabeled data  
 
  
-plt.imshow(labeled_img) 
+plt.imshow(labeled_img00) 
 plt.show()   
 
  
-labeled_img = cv2.cvtColor(labeled_img, cv2.COLOR_BGR2GRAY)
+labeled_img = cv2.cvtColor(labeled_img00, cv2.COLOR_BGR2GRAY)
  
 plt.imshow(labeled_img) 
 plt.show()
@@ -213,8 +213,12 @@ ax3.hist(img.flat, bins=100, range=(0,255))
 ax3.title.set_text('hist color range')
  
 ax4 = fig.add_subplot(4,3,4)
-ax4.imshow(labeled_img)#, cmap='gray')
-ax4.title.set_text('labeled_img - mask')
+ax4.imshow(labeled_img00)#, cmap='gray')
+ax4.title.set_text('labeled_img00')
+
+ax5 = fig.add_subplot(4,3,5)
+ax5.imshow(labeled_img)#, cmap='gray')
+ax5.title.set_text('labeled_img - mask')
 
 '''
 ax5 = fig.add_subplot(4,3,5)
