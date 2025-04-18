@@ -195,7 +195,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_
 #and for classifier it is an integer. 
 #16:10
 
-
+kernel_resized = cv2.resize(kernel, (400, 400)) 
 fig = plt.figure(figsize=(16, 16))
 plt.subplots_adjust ( hspace=0.6)
 
@@ -220,16 +220,16 @@ ax5 = fig.add_subplot(4,3,5)
 ax5.imshow(labeled_img)#, cmap='gray')
 ax5.title.set_text('labeled_img - mask')
 
-'''
-ax5 = fig.add_subplot(4,3,5)
-ax5.imshow(kernel_resized)#,cmap='gray')
-ax5.title.set_text('kernel_resized')
-
-
 
 ax6 = fig.add_subplot(4,3,6)
-ax6.imshow(fimg )#, cmap='gray')
-ax6.title.set_text('result')
+ax6.imshow(kernel_resized)#,cmap='gray')
+ax6.title.set_text('kernel_resized')
+
+'''
+
+ax7 = fig.add_subplot(4,3,7)
+ax7.imshow(fimg )#, cmap='gray')
+ax7.title.set_text('result')
 '''
 
 plt.show()

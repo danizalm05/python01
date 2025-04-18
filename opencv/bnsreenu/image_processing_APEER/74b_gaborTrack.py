@@ -39,7 +39,7 @@ import sys
 import os
  
 
-IMAGE_NAME =  'synthetic.jpg' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
+IMAGE_NAME = 'p2.jpg'# 'synthetic.jpg' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
 USER = getpass.getuser()
 
 if (os.name == "posix"):  #this is a linux  system 
