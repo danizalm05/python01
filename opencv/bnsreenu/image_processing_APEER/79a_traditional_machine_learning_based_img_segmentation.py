@@ -225,12 +225,14 @@ ax6 = fig.add_subplot(4,3,6)
 ax6.imshow(kernel_resized)#,cmap='gray')
 ax6.title.set_text('kernel_resized')
 
-'''
+ 
 
 ax7 = fig.add_subplot(4,3,7)
-ax7.imshow(fimg )#, cmap='gray')
-ax7.title.set_text('result')
-'''
+
+ax7.hist( labeled_img.flat, bins=20, range=(0,5))
+ax7.title.set_text('hist - mask01')
+
+ 
 
 plt.show()
 
