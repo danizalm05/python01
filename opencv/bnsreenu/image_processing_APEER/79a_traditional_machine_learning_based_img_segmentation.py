@@ -169,16 +169,15 @@ original_img_data = df.drop(labels = ["Labels"], axis=1) #Use for prediction- th
 #df.to_csv("Gabor.csv")
 df = df[df.Labels != 0]# copy only Label non zero  values
 
-#########################################################
 
+
+#########################################################
 #Define the dependent variable that needs to be predicted (labels)
 Y = df["Labels"].values
 
 #Encode Y values to 0, 1, 2, 3, .... (NOt necessary but makes it easy to use other tools like ROC plots)
 from sklearn.preprocessing import LabelEncoder
 Y = LabelEncoder().fit_transform(Y)
-
-
 
 #Define the independent variables
 X = df.drop(labels = ["Labels"], axis=1) 
@@ -194,6 +193,121 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_
 #Both yield similar results except for regressor the result is float
 #and for classifier it is an integer. 
 #16:10
+
+
+from sklearn.ensemble import RandomForestClassifier
+# Instantiate model with n number of decision trees
+model = RandomForestClassifier(n_estimators = 20, random_state = 42)
+
+# Train the model on training data
+model.fit(X_train, y_train)
+
+
+
+# Get numerical feature importances
+#importances = list(model.feature_importances_)
+
+#Let us print them into a nice format.
+
+feature_list = list(X.columns)
+feature_imp = pd.Series(model.feature_importances_,index=feature_list).sort_values(ascending=False)
+print("feature_imp \n=============\n", feature_imp)
+
+
+
+###
+#SVM
+# Train the Linear SVM to compare against Random Forest
+#SVM will be slower than Random Forest. 
+#Make sure to comment out Fetaure importances lines of code as it does not apply to SVM.
+from sklearn.svm import LinearSVC
+model_SVM = LinearSVC(max_iter=100)  
+model_SVM.fit(X_train, y_train)
+
+#Logistic regression
+#from sklearn.linear_model import LogisticRegression
+#model_LR = LogisticRegression(max_iter=100).fit(X_train, y_train)
+# prediction_test_LR = model_logistic.predict(X_test)
+
+# verify number of trees used. If not defined above. 
+#print('Number of Trees used : ', model.n_estimators)
+
+#STEP 8: TESTING THE MODEL BY PREDICTING ON TEST DATA
+#AND CALCULATE THE ACCURACY SCORE
+
+#Test prediction on testing data. 
+prediction_RF = model.predict(X_test)
+prediction_SVM = model_SVM.predict(X_test)
+#prediction_LR = model_LR.predict(X_test)
+
+
+#.predict just takes the .predict_proba output and changes everything 
+#to 0 below a certain threshold (usually 0.5) respectively to 1 above that threshold.
+#In this example we have 4 labels, so the probabilities will for each label stored separately. 
+# 
+#prediction_prob_test = model.predict_proba(X_test)
+
+#Let us check the accuracy on test data
+from sklearn import metrics
+#Print the prediction accuracy
+#Check accuracy on test dataset. If this is too low compared to train it indicates overfitting on training data.
+print ("Accuracy using Random Forest= ", metrics.accuracy_score(y_test, prediction_RF))
+print ("Accuracy using SVM = ", metrics.accuracy_score(y_test, prediction_SVM))
+#print ("Accuracy using LR = ", metrics.accuracy_score(y_test, prediction_LR))
+
+
+#https://www.scikit-yb.org/en/latest/api/classifier/rocauc.html
+
+
+from yellowbrick.classifier import ROCAUC
+
+print("Classes in the image are: ", np.unique(Y))
+
+#ROC curve for RF
+roc_auc=ROCAUC(model, classes=[0, 1, 2, 3])  #Create object
+roc_auc.fit(X_train, y_train)
+roc_auc.score(X_test, y_test)
+roc_auc.show()
+  
+#ROC curve for SVM
+roc_auc=ROCAUC(model_SVM, classes=[0, 1, 2, 3])  #Create object
+roc_auc.fit(X_train, y_train)
+roc_auc.score(X_test, y_test)
+roc_auc.show()
+#ROC curve for LR
+#roc_auc=ROCAUC(model_LR, classes=[0, 1, 2, 3])  #Create object
+#roc_auc.fit(X_train, y_train)
+#roc_auc.score(X_test, y_test)
+#roc_auc.show()
+
+############################################
+#FOR RANDOM FOREST
+
+
+#############################################
+
+#MAKE PREDICTION
+#You can store the model for future use. In fact, this is how you do machine elarning
+#Train on training images, validate on test images and deploy the model on unknown images. 
+
+import pickle
+
+
+#Save the trained model as pickle string to disk for future use
+filename = "sandstone_model"
+pickle.dump(model, open(filename, 'wb'))
+
+#To test the model on future datasets
+loaded_model = pickle.load(open(filename, 'rb'))
+result = loaded_model.predict(original_img_data)
+
+segmented = result.reshape((img.shape))
+
+from matplotlib import pyplot as plt
+plt.imshow(segmented, cmap ='jet')
+#plt.imsave('segmented_rock_RF_100_estim.jpg', segmented, cmap ='jet')
+plt.show()
+#########################  Output #######################
 
 kernel_resized = cv2.resize(kernel, (400, 400)) 
 fig = plt.figure(figsize=(16, 16))
@@ -234,6 +348,10 @@ ax7.title.set_text('hist - mask01')
 
  
 
+ax8 = fig.add_subplot(4,3,8)
+
+ax8.imshow(segmented)#, cmap='gray')
+ax8.title.set_text('segmented (PREDICTION)')
 plt.show()
 
  
