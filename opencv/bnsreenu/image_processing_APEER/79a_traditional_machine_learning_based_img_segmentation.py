@@ -5,7 +5,8 @@ https://www.youtube.com/watch?v=uWTzkUD3V9g&list=PLHae9ggVvqPgyRQQOtENr6hK0m1Uqu
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial79_part1_traditional_machine_learning_based_img_segmentation.py
 
 image url
- https://github.com/anukash/Image_segmentation_with_ML/blob/main/Sandstone_Versa0050_test.tif
+  https://drive.google.com/file/d/1HWtBaSa-LTyAMgf2uaz1T9o1sTWDBajU/view?usp=sharing
+
 
 Gabor and traditional filters for feature generation and 
 Random Forest, SVM for classification. 
