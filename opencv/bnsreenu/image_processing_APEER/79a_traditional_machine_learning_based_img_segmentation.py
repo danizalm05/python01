@@ -36,7 +36,10 @@ import sys
 import os
 
 
-IMAGE_NAME =  'Sandstone_Versa0050_test.tif' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
+IMAGE_NAME =  'train_imgs_cropped_768.tif'#'Sandstone_Versa0050_test.tif' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
+MASK= 'train_masks_grey_cropped_768.tif'# 'mask01.tif'  
+
+
 USER = getpass.getuser()
 
 if (os.name == "posix"):  #this is a linux  system 
@@ -144,7 +147,8 @@ df['Median s3'] = median_img1
 
 
 ######################################  
-IMAGE2 = BASE_FOLDER +'mask01.tif'  
+IMAGE2 = BASE_FOLDER + MASK# 'mask01.tif'  
+print("mask = ",IMAGE2)
 #Now, add a column in the data frame for the Labels
 #For this, we need to import the labeled image
 
@@ -222,9 +226,13 @@ print("feature_imp \n=============\n", feature_imp)
 #SVM will be slower than Random Forest. 
 #Make sure to comment out Fetaure importances lines of code as it does not apply to SVM.
 from sklearn.svm import LinearSVC
+print(" y_train\n============\n", y_train)
 model_SVM = LinearSVC(max_iter=100)  
+# %%
+print("qqqqqq\n=============\n")
 model_SVM.fit(X_train, y_train)
 
+print("qsssssssssss\n=============\n")
 #Logistic regression
 #from sklearn.linear_model import LogisticRegression
 #model_LR = LogisticRegression(max_iter=100).fit(X_train, y_train)
