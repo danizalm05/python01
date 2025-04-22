@@ -7,9 +7,9 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
 image url
   https://drive.google.com/file/d/1HWtBaSa-LTyAMgf2uaz1T9o1sTWDBajU/view?usp=sharing
 
+This program uses the model that was created in the 79a.....  program so there is no 
+labeled image or mask image.
 
-Gabor and traditional filters for feature generation and 
-Random Forest, SVM for classification. 
 
 'images/sandstone/Train_images/Sandstone_Versa0000.tif'
 Sandstone_Versa0000_mask.tif
@@ -144,11 +144,26 @@ from skimage import io
 
 
 filename = MODEL_FILE_NAME
-loaded_model = pickle.load(open(filename, 'rb'))
+loaded_model = pickle.load(open(filename, 'rb'))#upload the model file
 
 path = BASE_FOLDER#"images/sandstone/Test_images/"
 
 #  print(path)
 import os
+from matplotlib import pyplot as plt
 for image in os.listdir(path):  #iterate through each file to perform some action
-    print(image)
+    print(path+image)
+    img1= cv2.imread(path+image)
+    img = cv2.cvtColor(img1,cv2.COLOR_BGR2GRAY)
+    #Call the feature extraction function.
+    X = feature_extraction(img)
+    plt.imshow(img) 
+    plt.show()
+    X = feature_extraction(img)
+    result = loaded_model.predict(X)
+    segmented = result.reshape((img.shape))
+    segmented = segmented.astype(np.int8)
+    plt.imshow(segmented) 
+    plt.show()
+   # io.imsave('images/sandstone/Segmanted_images/'+ image, segmented)
+    #plt.imsave('images/sandstone/Segmanted_images/'+ image, segmented, cmap ='jet')
