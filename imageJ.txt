@@ -1,6 +1,11 @@
-Labeling images using LabKit for semantic segmentation
-https://www.youtube.com/watch?v=KopmsnC8GWI
 
+labkit
+ Labeling images using LabKit for semantic segmentation
+ https://www.youtube.com/watch?v=KopmsnC8GWI
+
+spearting tif images
+ File > Import > Image Sequence...
+https://learn.ptglab.com/view/courses/09095d76-6cee-4e09-a5c3-1e9313558419/2720920-introduction-to-imagej/8771921-what-is-fiji-and-is-it-just-imagej
 A beginners guide to ImageJ (and Fiji) - Craig   Daly
 
 https://www.youtube.com/watch?v=y567dfZ_reI&t=30s
@@ -13,10 +18,4 @@ Alicerita
     
 https://imagej.net/plugins/updater
 https://imagej.net/software/imagej2/
-
-cisco flash  cards
-
-https://drive.google.com/drive/folders/1PwK_jWqfUtOjV7gHt8ODutq9QA5cxCgi
-
-
-URL copied to clipboard: https://fasthashcat.com/results?cod_req=57a1e40fd6c5c55cba23935847d7a55f
+ 
