@@ -1,9 +1,6 @@
-cls
-rem "Start    new  commit to github."
-
 
 git add .
-git commit -m  "ubunto000"
+git commit -m  "ubunto001"
 
 
 git push -u origin master
