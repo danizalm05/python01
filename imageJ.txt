@@ -1,11 +1,16 @@
 
+
+A beginners guide to ImageJ (and Fiji)
+Craig Daly
+https://www.youtube.com/watch?v=y567dfZ_reI&list=PL3xuUmPLUVG-pinPqYkuYPYnFvzv6Hk26&index=17
+
+
+
 labkit
  Labeling images using LabKit for semantic segmentation
  https://www.youtube.com/watch?v=KopmsnC8GWI
  
  
- Tutorial 01 Installing and Basics of ImageJ
- https://www.youtube.com/watch?v=_zgvo6GBdX8
  
  
     
