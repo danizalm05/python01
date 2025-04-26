@@ -39,7 +39,7 @@ import sys
 import os
  
 
-IMAGE_NAME = 'p2.jpg'# 'synthetic.jpg' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
+IMAGE_NAME = '1.jpg'# 'synthetic.jpg' # 'BSE.tif'   'Osteosarcoma_01_transl.tif'  '2.jpg'
 USER = getpass.getuser()
 
 if (os.name == "posix"):  #this is a linux  system 
@@ -116,23 +116,20 @@ cv2.namedWindow(wname)
  
 # create trackbars 
 cv2.createTrackbar('scale',wname,0,10,empty)
-  
-cv2.createTrackbar('ksize',wname,6,5,empty)
-cv2.createTrackbar('theta',wname,1,16,empty)
- 
+cv2.createTrackbar('ksize',wname,4,6,empty)
+cv2.createTrackbar('theta',wname,0,7,empty)
+cv2.createTrackbar('sigma',wname,1,7,empty)
 # create switch for ON/OFF functionality
 switch = '0 : OFF \n1 : ON'
 cv2.createTrackbar(switch, wname,0,1,empty)
 
-
-
  
-     
 while True:
    
     scale = 0.4 + cv2.getTrackbarPos("scale", wname) / 25
     ksize=  cv2.getTrackbarPos("ksize", wname) 
     n_theta=  cv2.getTrackbarPos("theta", wname)  
+    sigma =  cv2.getTrackbarPos("sigma", wname) 
     theta = n_theta*np.pi/16  #/4 shows horizontal 3/4 shows other horizontal. Try other contributions
    
     kernel = cv2.getGaborKernel((ksize, ksize), sigma, theta, lamda, gamma, phi, ktype=cv2.CV_32F)
