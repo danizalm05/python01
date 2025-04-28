@@ -18,4 +18,76 @@ labkit
     
 https://imagej.net/plugins/updater
 https://imagej.net/software/imagej2/
+
+Convert to Gray scale   image/type/8bit
+
+split color             image/color/split
+
+	
+Shortcut
+	
+Description
+New>Image 	            n	Create new image or stack
+New>Text Window 	    shift+n	Create new text window
+New>System Clipboard 	shift+v	Create image from system clipboard
+Open 	o	            Open 
+Open Next 	            shift+o	Open next image in folder
+Open Samples        	shift+b	Opens "Blobs" example image
+Close 	w	            Close the active window
+Save 	s	Save active image in Tiff format
+Revert 	r	Revert to saved version of image
+Print 	p	Print active image
+Undo 	z	Undo last operation
+Cut 	x	Copy selection to internal clipboard and clear
+Copy 	c	Copy selection to internal clipboard
+Paste 	v	Paste contents of internal clipboard
+
+Clear 	backspace	Erase selection to background color
+
+Fill 	f	Fill selection in foreground color
+Draw 	d	Draw selection
+Invert 	shift+i	Invert image or selection
+Selection>Select All       a	Select entire image
+Selection>Select None 	   shift+a	Delete selection
+Selection>Restore 	       shift+e	Restore previous selection
+Selection>Add to Manager   t	Add selection to ROI Manager
+Adjust>Contrast 	       shift+c	Adjust brightness and contrast
+Adjust>Threshold 	       shift+t	Adjust threshold levels  Image/adjast
+Show Info 	i	          Display information about active image
+Properties 	              shift+p	Display image properties
+Color>Color Picker        shift+k	Open Color Picker
+Stacks>Next Slice 	> or →[new]	Go to next stack slice
+Stacks>Previous Slice 	< or ←[new]	Go to previous stack slice
+Stacks>Reslice 	/	Reslice stack
+Stacks>Animation    	\	Start/stop stack animation
+Hyperstacks>Channels 	shift+z	Open "Channels" tool
+Hyperstacks 	> or →[new]	Next hyperstack channel
+Hyperstacks 	< or ←[new]	Previous hyperstack channel
+Hyperstacks 	ctrl+>[new]	Next hyperstack slice
+Hyperstacks 	ctrl+<[new]	Previous hyperstack slice
+Hyperstacks 	alt+>[new]	Next hyperstack frame
+Hyperstacks 	alt+<[new]	Previous hyperstack frame
+
+Crop 	shift+x	Crop active image or selection
+Duplicate 	shift+d	Duplicate active image or selection
+Scale 	e	Scale image or selection
+Zoom>In 	+ or ↑[new]	Make image larger
+Zoom>Out 	- or ↓[new]	Make image smaller
+Zoom>Original Scale	4	Revert to original zoom level
+Zoom>View 100%	5	Zoom to 1:1
+Smooth 	shift+s	3x3 unweighted smoothing
+Repeat Command 	shift+r	Repeat previous command
+Measure 	m	Display statistics about active image or selection
+Histogram 	h	Display histogram of active image or selection
+Plot Profile 	k	Display density profile plot of current selection
+
+Gels>Select First	1	Select first gel lane
+Gels>Select Next	2	Select next gel lane
+Gels>Plot Lanes 	3	Plot gel lanes
+Macros>Install 	shift+m	Install a macro set
+Utilities>Capture Screen	shift+g	Grab screenshot
+Utilities>Find Commands	l	List, find and launch commands
+Show All 	shift+f	Make all windows visible
+Put Behind 	tab	Switch to next image window
+ImageJ 	enter	Bring "ImageJ" window to front
  
