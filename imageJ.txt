@@ -2,7 +2,7 @@
 
 A beginners guide to ImageJ (and Fiji)
 Craig Daly
-https://www.youtube.com/watch?v=y567dfZ_reI&list=PL3xuUmPLUVG-pinPqYkuYPYnFvzv6Hk26&index=17
+https://www.youtube.com/watch?v=kBZMnEYg24w&list=PL3xuUmPLUVG-pinPqYkuYPYnFvzv6Hk26&index=28
 
 
 Introduction to Bioimage Analysis
@@ -47,6 +47,9 @@ Clear 	backspace	Erase selection to background color
 Fill 	f	Fill selection in foreground color
 Draw 	d	Draw selection
 Invert 	shift+i	Invert image or selection
+
+
+
 Selection>Select All       a	Select entire image
 Selection>Select None 	   shift+a	Delete selection
 Selection>Restore 	       shift+e	Restore previous selection
