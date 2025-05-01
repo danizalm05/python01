@@ -28,6 +28,12 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import glob
 
+
+import seaborn as sns
+import pandas as pd
+from skimage.filters import sobel
+
+
  
 import getpass
 from pathlib import Path
@@ -84,4 +90,73 @@ test_images = []
 test_labels = [] 
 for directory_path in glob.glob(TEST_FOLDER +"*"):
     label = directory_path.split("\\")[-1]
-    print(label)
+    #print(label)
+    fruit_label = directory_path.split("\\")[-1]
+    for img_path in glob.glob(os.path.join(directory_path, "*.jpg")):
+        img = cv2.imread(img_path, cv2.IMREAD_COLOR)
+        img = cv2.resize(img, (SIZE, SIZE))
+        #img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR) #Optional
+        test_images.append(img)
+        test_labels.append(fruit_label)
+        #print(img_path)
+test_images = np.array(test_images)
+test_labels = np.array(test_labels)
+    
+
+
+#Encode labels from text (folder names) to integers.
+from sklearn import preprocessing
+le = preprocessing.LabelEncoder()
+le.fit(test_labels)
+test_labels_encoded = le.transform(test_labels) # [0,1,2,3]
+le.fit(train_labels)
+train_labels_encoded = le.transform(train_labels)    
+
+#Split data into test and train datasets (already split but assigning to meaningful convention)
+#If you only have one dataset then split here
+x_train, y_train, x_test, y_test = train_images, train_labels_encoded, test_images, test_labels_encoded
+
+# Normalize pixel values to between 0 and 1
+max_color = 255.0
+x_train, x_test = x_train / max_color, x_test / max_color    
+
+
+###################################################################
+# FEATURE EXTRACTOR function
+# input shape is (n, x, y, c) - number of images, x, y, and channels
+def feature_extractor(dataset):
+    x_train = dataset
+    image_dataset = pd.DataFrame()
+    print(image_dataset)
+    for image in range(x_train.shape[0]):  #iterate through each file 
+       print(image, "\n-----\n")
+       df = pd.DataFrame()  #Temporary data frame to capture information for each loop.
+       #Reset dataframe to blank after each loop.
+       
+       input_img = x_train[image, :,:,:]
+       img = input_img
+       #print(img)
+       
+       
+       #START ADDING DATA TO THE DATAFRAME
+   #Add feature extractors, e.g. edge detection, smoothing, etc. 
+           
+        # FEATURE 1 - Pixel values
+        
+       #Add pixel values to the data frame
+       pixel_values = img.reshape(-1)
+       df['Pixel_Value'] = pixel_values   #Pixel value itself as a feature
+       #df['Image_Name'] = image   #Capture image name as we read multiple images
+       
+       # FEATURE 2 - Bunch of Gabor filter responses 20:00
+####################################################################
+#Extract features from training images
+
+
+
+
+
+ 
+image_features = feature_extractor(x_train)
+
+ 
