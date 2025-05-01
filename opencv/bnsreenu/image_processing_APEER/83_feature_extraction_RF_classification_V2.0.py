@@ -38,18 +38,23 @@ import os
 USER = getpass.getuser()
 
 if (os.name == "posix"):  #this is a linux  system 
-    BASE_FOLDER = "/home/"+USER +'/Pictures/ml/train/'
-    print(BASE_FOLDER)
+    TRAIN_FOLDER = "/home/"+USER +'/Pictures/ml/train/'
+    TEST_FOLDER = "/home/"+USER +'/Pictures/ml/test/'
+    print(TRAIN_FOLDER)
 else: #this is a windows  system 
-    BASE_FOLDER = 'C:/Users/' + USER + '/Pictures/ml/train/'
-
+    TRAIN_FOLDER = 'C:/Users/' + USER + '/Pictures/ml/train/'
+    TEST_FOLDER = 'C:/Users/' + USER + '/Pictures/ml/test/'
 
 # Check if the file exists
-if not(Path(BASE_FOLDER).exists()):
-    msg = "Error: Dir " + BASE_FOLDER +" does not exist"
+if not(Path(TRAIN_FOLDER).exists()):
+    msg = "Error: Train Dir " + TRAIN_FOLDER +" does not exist"
     sys.exit(msg)
-
-print(os.listdir(BASE_FOLDER))
+if not(Path(TEST_FOLDER).exists()):
+    msg = "Error: Test Dir " + TEST_FOLDER +" does not exist"
+    sys.exit(msg)    
+    
+''
+print("\n",TEST_FOLDER ," listdir  = " ,os.listdir(TEST_FOLDER),"\n")
 
 #Resize images to
 SIZE = 128
@@ -58,8 +63,25 @@ SIZE = 128
 #Start by creating empty lists.
 train_images = []
 train_labels = [] 
-for directory_path in glob.glob(BASE_FOLDER +"*"):
+for directory_path in glob.glob(TRAIN_FOLDER +"*"):
+    label = directory_path.split("\\")[-1]
+    #print(label)
+    for img_path in glob.glob(os.path.join(directory_path, "*.jpg")):
+      #print(img_path)
+      img = cv2.imread(img_path, cv2.IMREAD_COLOR) #Reading color images
+      img = cv2.resize(img, (SIZE, SIZE)) #Resize images
+      #img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR) #Optional step. Change BGR to RGB
+      train_images.append(img)
+      train_labels.append(label) 
+      
+train_images = np.array(train_images)
+train_labels = np.array(train_labels)    
+
+
+#Do exactly the same for test/validation images
+# test  09:46
+test_images = []
+test_labels = [] 
+for directory_path in glob.glob(TEST_FOLDER +"*"):
     label = directory_path.split("\\")[-1]
     print(label)
-    for img_path in glob.glob(os.path.join(directory_path, "*.jpg")):
-      print(img_path)
