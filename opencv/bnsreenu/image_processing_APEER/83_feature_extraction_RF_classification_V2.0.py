@@ -127,7 +127,7 @@ def feature_extractor(dataset):
     image_dataset = pd.DataFrame()#Create df for each image
   
     for image in range(x_train.shape[0]):  #iterate through each file 
-       print(image, "\n-----\n")
+       #print(image, "\n-----\n")
        df = pd.DataFrame()  #Temporary data frame to capture information for each loop.
        #Reset dataframe to blank after each loop.
        
@@ -161,7 +161,7 @@ def feature_extractor(dataset):
                fimg = cv2.filter2D(img, cv2.CV_8UC3, kernel)
                filtered_img = fimg.reshape(-1)
                df[gabor_label] = filtered_img  #Labels columns as Gabor1, Gabor2, etc.
-               print(gabor_label, ': theta=', theta, ': sigma=', sigma, ': lamda=', lamda, ': gamma=', gamma)
+             #  print(gabor_label, ': theta=', theta, ': sigma=', sigma, ': lamda=', lamda, ': gamma=', gamma)
                num += 1  #Increment for gabor column label
                
              # FEATURE 3 Sobel
@@ -182,9 +182,69 @@ def feature_extractor(dataset):
 
 
 
-
-
- 
+#Extract features from training image
 image_features = feature_extractor(x_train)
 
+
+#Reshape to a vector for Random Forest / SVM training
+n_features = image_features.shape[1]
+image_features = np.expand_dims(image_features, axis=0)
+X_for_RF = np.reshape(image_features, (x_train.shape[0], -1))  #Reshape to #images, features
+
+
+#Define the classifier
+from sklearn.ensemble import RandomForestClassifier
+RF_model = RandomForestClassifier(n_estimators = 50, random_state = 42)
+
+
+
+#Can also use SVM but RF is faster and may be more accurate.
+#from sklearn import svm
+#SVM_model = svm.SVC(decision_function_shape='ovo')  #For multiclass classification
+#SVM_model.fit(X_for_RF, y_train)
+
+# Fit the model on training data
+RF_model.fit(X_for_RF, y_train) #For sklearn no one hot encoding
+
+#Predict on Test data
+#Extract features from test data and reshape, just like training data
+test_features = feature_extractor(x_test)
+test_features = np.expand_dims(test_features, axis=0)
+test_for_RF = np.reshape(test_features, (x_test.shape[0], -1))
+
+
+#Predict on test
+test_prediction = RF_model.predict(test_for_RF)
+#Inverse le transform to get original label back. 
+test_prediction = le.inverse_transform(test_prediction)
+
+
+#Print overall accuracy
+from sklearn import metrics
+print ("Accuracy = ", metrics.accuracy_score(test_labels, test_prediction))
+
+#Print confusion matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(test_labels, test_prediction)
+
+fig, ax = plt.subplots(figsize=(6,6))         # Sample figsize in inches
+sns.set(font_scale=1.6)
+sns.heatmap(cm, annot=True, ax=ax)
+
+#Check results on a few random images
+import random
+n=random.randint(0, x_test.shape[0]-1) #Select the index of image to be loaded for testing
+img = x_test[n]
+plt.imshow(img)
+
+#Extract features and reshape to right dimensions
+input_img = np.expand_dims(img, axis=0) #Expand dims so the input is (num images, x, y, c)
+input_img_features=feature_extractor(input_img)
+input_img_features = np.expand_dims(input_img_features, axis=0)
+input_img_for_RF = np.reshape(input_img_features, (input_img.shape[0], -1))
+#Predict
+img_prediction = RF_model.predict(input_img_for_RF)
+img_prediction = le.inverse_transform([img_prediction])  #Reverse the label encoder to original name
+print("The prediction for this image is: ", img_prediction)
+print("The actual label for this image is: ", test_labels[n])
  
