@@ -1,0 +1,5 @@
+ https://colab.research.google.com/
+ https://drive.google.com/drive/my-drive
+ 
+ 
+ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial91_binary_classification_breast_cancer.ipynb
