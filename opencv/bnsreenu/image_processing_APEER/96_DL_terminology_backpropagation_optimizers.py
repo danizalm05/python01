@@ -8,7 +8,7 @@ https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutori
  
  
 """
-https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
+##https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
 ## 'data.frame':    569 obs. of  31 variables:
 ##  $ diagnosis              : Factor w/ 2 levels "Benign","Malignant": 2 2 2 2 2 2 2 2 2 2 ...
 ##  $ radius_mean            : num  18 20.6 19.7 11.4 20.3 ...
@@ -54,17 +54,17 @@ import seaborn as sns
 import numpy as np
 
 
-'''
+ 
 df = pd.read_csv("data/wisconsin_breast_cancer_dataset.csv")
 print("\ndf.describe().T\n================") 
 print(df.describe().T)  #Values need to be normalized before fitting. 
 print("\ndf.isnull().sum()\n================") 
 print(df.isnull().sum())
 
+ 
 '''
 
-
-df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/data/wisconsin_breast_cancer_dataset.csv")
+#df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/data/wisconsin_breast_cancer_dataset.csv")
      
 
 print(df.describe().T)
@@ -179,3 +179,4 @@ plt.ylabel('Accuracy')
 plt.legend()
 plt.show()
      
+'''
