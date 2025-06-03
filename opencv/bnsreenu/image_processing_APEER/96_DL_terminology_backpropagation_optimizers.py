@@ -4,7 +4,7 @@
 
 https://www.youtube.com/watch?v=KR3l_EfINdw&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=100 
 https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial96_DL_terminology_backpropagation_optimizers.ipynb 
- 33:00
+ 35:00
  
  
 """
