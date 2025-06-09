@@ -1,12 +1,10 @@
 
 """
-96_DL_terminology_backpropagation_optimizers 
+tutorial97_DL_terminology_batch_size_iterations_epochs.ipynb 
 
-https://www.youtube.com/watch?v=KR3l_EfINdw&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=100 
-https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial96_DL_terminology_backpropagation_optimizers.ipynb 
- 35:00
+https://www.youtube.com/watch?v=OSY7hWADMZk
  
- 
+https://github.com/bnsreenu/python_for_image_processing_APEER/blob/master/tutorial97_DL_terminology_batch_size_iterations_epochs.ipynb 
 """
 ##https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
 ## 'data.frame':    569 obs. of  31 variables:
@@ -62,9 +60,18 @@ print("\ndf.isnull().sum()\n================")
 print(df.isnull().sum())
 
  
-'''
+ 
+  
+''' 
+     
 
-#df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/data/wisconsin_breast_cancer_dataset.csv")
+import pandas as pd
+from matplotlib import pyplot as plt
+import seaborn as sns
+import numpy as np
+     
+
+df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/data/wisconsin_breast_cancer_dataset.csv")
      
 
 print(df.describe().T)
@@ -124,16 +131,8 @@ from keras.layers import Dense, Activation, Dropout
 import keras
      
 
-#Restart runtime and run these experiments
-
-#SGD
-#lr = 0.001 and lr =0.1 --> As expected lr=0.1 converges faster. 
-#Check momentum 0.1 and 0.9. --> Faster drop in loss at higher momentum.
-opt1 = keras.optimizers.SGD(learning_rate=0.001, momentum=0.9)  
-
-#Adam
-#Verify against SGD for lr=0.1 and 0.001: Adam converges faster even at lr=0.001
-opt2 = keras.optimizers.Adam(learning_rate=0.001) 
+opt1 = keras.optimizers.SGD(learning_rate=0.001, momentum=0.9)  #Check momentum 0.1 and 0.9. Also check lr=0.001 and 0.1
+opt2 = keras.optimizers.Adam(learning_rate=0.001) #Verify against SGD for lr=0.01 and 0.001
      
 
 model = Sequential()
@@ -142,21 +141,58 @@ model.add(Dropout(0.2))
 model.add(Dense(1)) 
 model.add(Activation('sigmoid')) 
  
-model.compile(loss='binary_crossentropy', optimizer=opt2, metrics=['accuracy'])  #Change optimizer here
+model.compile(loss='binary_crossentropy', optimizer=opt1, metrics=['accuracy'])  #Change optimizer here
 
 print(model.summary())
      
 
+#Understanding batch size... 
+from math import ceil #Rounding up
+print("Shape of training data is: ", X_train.shape)
+
+# Batch size: Number of samples that will pass through the network before updating the model parameters
+# Batch size samples go through one full forward and backward propagation
+batch_size=16  #Change batch_size from 8 to 64 to 128 to see how model converges faster with batch size 8. ALso check accuracy. 
+
+#Epochs: All available training data passes through the network per epoch. 
+# All data goes through forward and backward propagation once. 
+epochs = 100  # 
+
+#Data is ivided into batches primarily to make sure it fits the available memory. 
+#Iterations is number of batches per epoch. 
+iterations = X_train.shape[0]/batch_size
+print("Number of iterations per epoch = ", ceil(iterations))
+
+#KEY SUMMARY
+#1. You may be limited to small batch size based on your system hardware.
+#2. Smaller batches mean each step in gradient descent may be less accurate, so it may take longer to converge.
+#3. But, for larger batches the model may not be generalized enough, so smaller batches are preferable. 
+#4. Larger batch sizes result in faster progress but don;t always converge as fast. 
+#5. Smaller batches train slower, but can converge faster. 
+#6. Batch size 32 or 64 is a good starting point.  
 
      
 
+Shape of training data is:  (426, 30)
+Number of iterations per epoch =  27
+
+
+# Restart session to remove model from memory and start training from scratch.
+# This is the only way for true comparison of the effect of various parameters. 
+     
+
 #Fit with no early stopping or other callbacks
-history = model.fit(X_train, y_train, verbose=1, epochs=100, batch_size=64,
+
+history = model.fit(X_train, y_train, verbose=1, epochs=300, batch_size=batch_size,
                     validation_data=(X_test, y_test))
 
      
 
 #plot the training and validation accuracy and loss at each epoch
+#If validation loss is lower than training loss this could be becuase we are applying
+#regularization (Dropout) during training which won't be applied during validation. 
+#Also, training loss is measured during each epoch while validation is done after the epoch. 
+
 loss = history.history['loss']
 val_loss = history.history['val_loss']
 epochs = range(1, len(loss) + 1)
@@ -179,4 +215,19 @@ plt.ylabel('Accuracy')
 plt.legend()
 plt.show()
      
+
+# Predicting the Test set results
+y_pred = model.predict(X_test)
+y_pred = (y_pred > 0.5)
+
+# Making the Confusion Matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+
+sns.heatmap(cm, annot=True)
+     
+
+<matplotlib.axes._subplots.AxesSubplot at 0x7feff44e6550>
+
+   
 '''
