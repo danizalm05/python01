@@ -7,19 +7,24 @@ https://www.youtube.com/watch?v=3FNYvj2U0HM
 import sys
 from datetime import datetime as dt
 import socket
-
+'''
 if len(sys.argv) == 2:
   target = socket.gethostbyname(sys.argv[1]) # translates host to ipv4
 else:
   print("Invalid number of args")
   print("Syntax: python3 port_scanner.py [ip/hostname]")
+'''
+
+host ='192.168.56.1'
+target = socket.gethostbyname(host) # translates host to ipv4
 
 print("Scannning target: " + target)
 print("Time started: " + str(dt.now()))
 print('-' * 50)
 
 try:
-  for port in range(1,65535):
+  for port in range(40,450): #  for port in range(1,65535):
+    print('-' ,port)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     socket.setdefaulttimeout(0.5)
     result = s.connect_ex((target, port))
