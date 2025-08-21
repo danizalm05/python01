@@ -1,0 +1,7 @@
+https://remix.ethereum.org
+
+Solidity Tutorial for Beginners    
+  www.youtube.com/watch?v=AYpftDFiIgk 
+  https://github.com/NazaWEb/ultimate-solidity-course-for-complete-beginners
+  
+  https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
