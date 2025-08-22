@@ -1,7 +1,8 @@
 https://remix.ethereum.org
 
 Solidity Tutorial for Beginners    
-  www.youtube.com/watch?v=AYpftDFiIgk 
-  https://github.com/NazaWEb/ultimate-solidity-course-for-complete-beginners
+  https://www.freecodecamp.org/news/learn-solidity-blockchain-and-smart-contracts-in-a-free/
+  https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
   
+  https://github.com/smartcontractkit/full-blockchain-solidity-course-py/tree/main?tab=readme-ov-file#making-your-first-transaction
   https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
