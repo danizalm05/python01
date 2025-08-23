@@ -4,5 +4,19 @@ Solidity Tutorial for Beginners
   https://www.freecodecamp.org/news/learn-solidity-blockchain-and-smart-contracts-in-a-free/
   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
   
+  
+  https://metamask.io/
+  1. wall      2. fossil   3.  arrive  
+  4. risk      5. auction  6. reform 
+  7. eyebrow   8. convince 9. decline 
+  10. enlist  11.  truck   12. mercy
+  https://etherscan.io/
+  
+  Add rinkeby network to metamask 
+         https://expertbeacon.com/how-to-add-rinkeby-network-to-metamask/  
+   
+   34:00 https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
+   
+   
    https://github.com/smartcontractkit/full-blockchain-solidity-course-py/tree/main?tab=readme-ov-file#making-your-first-transaction
   https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
