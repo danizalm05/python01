@@ -3,7 +3,10 @@ https://remix.ethereum.org
 Solidity Tutorial for Beginners    
   https://www.freecodecamp.org/news/learn-solidity-blockchain-and-smart-contracts-in-a-free/
   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
-  
+
+faucets:
+      https://www.alchemy.com/faucets/ethereum-sepolia
+	  https://sepolia-faucet.pk910.de/
   Learn Cryptocurrency with CoinGecko 
                    https://www.coingecko.com/learn/sepolia-eth
   
