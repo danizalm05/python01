@@ -17,13 +17,14 @@ faucets:
    enlist     truck      mercy
   https://etherscan.io/
   
-  Add rinkeby network to metamask 
-         https://expertbeacon.com/how-to-add-rinkeby-network-to-metamask/  
-   
-   01:30:00  
+ 
+ 
    
    
   https://github.com/smartcontractkit/full-blockchain-solidity-course-py/tree/main?tab=readme-ov-file#making-your-first-transaction
   https://docs.soliditylang.org/en/v0.8.30/types.html
+  https://solidity-by-example.org/
+  
+  
   
   01:42:00 https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s 
