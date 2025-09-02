@@ -11,9 +11,6 @@ Medium: https://medium.com/remix-ide
 
   		
 
-
-
-
 Solidity Tutorial for Beginners    
   https://www.freecodecamp.org/news/learn-solidity-blockchain-and-smart-contracts-in-a-free/
   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
@@ -44,5 +41,10 @@ faucets:
   
   
  
-   (02:09:32) Lesson 2: Storage Factory https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s 
-  https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
+   (02:09:32) -------------  Lesson 2: Storage Factory  ----------
+   ---------------------------------------------------------------
+   https://github.com/PatrickAlphaC/storage_factory
+   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
+   
+   https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
+   02:14:00
