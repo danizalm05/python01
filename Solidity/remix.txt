@@ -46,5 +46,8 @@ faucets:
    https://github.com/PatrickAlphaC/storage_factory
    https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
    
+   
    https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
-   02:14:00
+   
+  
+   02:26:00
