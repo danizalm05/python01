@@ -41,13 +41,16 @@ faucets:
   
   
  
-   (02:09:32) -------------  Lesson 2: Storage Factory  ----------
-   ---------------------------------------------------------------
-   https://github.com/PatrickAlphaC/storage_factory
-   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
+   (02:09:32) 2: Storage Factory  github.com/PatrickAlphaC/storage_factory
+   (02:26:00) 3: FundMe.sol       github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
+ 
+
+ https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
    
    
+   (03:26:48) Lesson 4: Web3.py Simple Storage
+   (03:31:00)
    https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
    
   
-   02:26:00
+  
