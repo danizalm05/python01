@@ -43,9 +43,9 @@ faucets:
  
    (02:09:32) 2: Storage Factory  github.com/PatrickAlphaC/storage_factory
    (02:26:00) 3: FundMe.sol       github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
- 
+  
 
- https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
+ https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s    (02:44:00)
    
    
    (03:26:48) Lesson 4: Web3.py Simple Storage
