@@ -45,7 +45,7 @@ faucets:
    (02:26:00) 3: FundMe.sol       github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
   
 
- https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s    (02:44:00)
+ https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s    (02:40:00)
    
    
    (03:26:48) Lesson 4: Web3.py Simple Storage
@@ -53,6 +53,6 @@ faucets:
    https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
    
    
-   
+   https://docs.chain.link/data-feeds/using-data-feeds
   
   
