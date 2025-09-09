@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+ //SPDX-License-Identifier: MIT
  
 //https://github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
 // Smart contract that lets anyone deposit ETH into the contract
@@ -10,7 +10,8 @@ pragma solidity  ^0.8.30;
 // IMPORTANT: This contract has been updated to use the Goerli testnet
 // Please see: https://docs.chain.link/docs/get-the-latest-price/
 // For more information
-
+import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
+//import "@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol";
 
 contract FundMe {
 
@@ -22,6 +23,16 @@ contract FundMe {
      
         addressToAmountFunded[msg.sender] += msg.value;
        
+    }
+     //function to get the version of the chainlink pricefeed
+     // https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=2
+     // serach for ETH / USD
+     // 0x694AA1769357215DE4FAC081bf1f309aDC325306
+   function getVersion() public view returns (uint256) {
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(
+            0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e
+        );
+        return priceFeed.version();
     }
 
 
