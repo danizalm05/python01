@@ -25,12 +25,13 @@ contract FundMe {
        
     }
      //function to get the version of the chainlink pricefeed
-     // https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=2
+     // Price Feed Contract Addresses:
+     //    https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=2
      // serach for ETH / USD
      // 0x694AA1769357215DE4FAC081bf1f309aDC325306
    function getVersion() public view returns (uint256) {
         AggregatorV3Interface priceFeed = AggregatorV3Interface(
-            0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e
+             0x694AA1769357215DE4FAC081bf1f309aDC325306
         );
         return priceFeed.version();
     }
