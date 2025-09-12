@@ -1,4 +1,4 @@
- //SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
  
 //https://github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
 // Smart contract that lets anyone deposit ETH into the contract
@@ -25,15 +25,32 @@ contract FundMe {
        
     }
      //function to get the version of the chainlink pricefeed
-     // Price Feed Contract Addresses:
-     //    https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=2
+     // https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=2
      // serach for ETH / USD
      // 0x694AA1769357215DE4FAC081bf1f309aDC325306
+     // The above address changes all the time,so you must update it 
    function getVersion() public view returns (uint256) {
         AggregatorV3Interface priceFeed = AggregatorV3Interface(
              0x694AA1769357215DE4FAC081bf1f309aDC325306
         );
         return priceFeed.version();
+    }
+
+    //function to get the getPrice of the chainlink pricefeed
+     // https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=2
+     // serach for ETH / USD
+     // 0x694AA1769357215DE4FAC081bf1f309aDC325306
+     // The above address changes all the time,so you must update it 
+
+   function getPrice() public view returns (uint256) {
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(
+            0x694AA1769357215DE4FAC081bf1f309aDC325306
+        );
+        (, int256 answer, , , ) = priceFeed.latestRoundData();
+        // the latestRoundData returns 5 number but we need just 'answer' 
+        //so we ignore all the others
+        // ETH/USD rate in 18 digit
+        return uint256(answer * 10000000000);
     }
 
 
