@@ -10,11 +10,16 @@ pragma solidity  ^0.8.30;
 // IMPORTANT: This contract has been updated to use the Goerli testnet
 // Please see: https://docs.chain.link/docs/get-the-latest-price/
 // For more information
+
 import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 //import "@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol";
+import "@openzeppelin/contracts/utils/math/SafeCast.sol";
+
 
 contract FundMe {
-
+   
+   // safe math library check uint256 for integer overflows
+    using SafeCast for uint256;
   //mapping to store which address depositeded how much ETH
    mapping(address => uint256) public addressToAmountFunded;
   
