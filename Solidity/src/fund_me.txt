@@ -34,6 +34,7 @@ contract FundMe {
         // 18 digit number to be compared with donated amount
         uint256 minimumUSD = 50 * 10**18;
         //is the donated amount less than 50USD?
+		// In remix   value window put write :      100000000000000000  wei
         require(
             getConversionRate(msg.value) >= minimumUSD,
             "You need to spend more ETH!"
