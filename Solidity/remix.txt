@@ -45,7 +45,7 @@ faucets:
    (02:26:00) 3: FundMe.sol       github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
    https://github.com/smartcontractkit/chainlink-evm#readme
 
- https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s    (03:07:00)
+ https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s    (03:10:00)
    
    
    (03:26:48) Lesson 4: Web3.py Simple Storage

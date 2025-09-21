@@ -88,4 +88,15 @@ contract FundMe {
         return ethAmountInUsd;
 
     }
+  // onlyOwner modifer will first check the condition inside it
+    // and
+    // if true, withdraw function will be executed
+    function withdraw()  payable  public {
+	    //Change the line in your contract from: msg.sender.transfer(address(this).balance);
+	    //   to the next command
+         payable(msg.sender).transfer(address(this).balance);
+       
+          
+    }
+
 }//FundMe
