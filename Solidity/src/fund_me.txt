@@ -1,4 +1,4 @@
-//SPDX-License-Identifier: MIT
+ //SPDX-License-Identifier: MIT
  
 //https://github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
 // Smart contract that lets anyone deposit ETH into the contract
@@ -93,13 +93,24 @@ contract FundMe {
         return ethAmountInUsd;
 
     }
-  // onlyOwner modifer will first check the condition inside it
-    // and
-    // if true, withdraw function will be executed
-    function withdraw()  payable  public {
+   
+      //modifier: https://medium.com/coinmonks/solidity-tutorial-all-about-modifiers-a86cf81c14cb
+    modifier onlyOwner() {
+        //is the message sender owner of the contract?
+        require(msg.sender == owner);
+       _;
+     /* If  msg.sender == owner passes, the function logic that uses
+       this modifier will execute at the position of the _;.
+      */
+    }//onlyOwner
+
+
+    // onlyOwner modifer will first check the condition inside it
+    // and  if true, withdraw function will be executed
+    function withdraw()  payable  onlyOwner public {
 	    //Change the line in your contract from: msg.sender.transfer(address(this).balance);
 	    //   to the next command
-         require(msg.sender==owner);
+         
          payable(msg.sender).transfer(address(this).balance);
          
           
