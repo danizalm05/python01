@@ -4,12 +4,47 @@ DemmSec
  route -n it will show you your IP address and interface  (linux)
  route print  (win)
  
+ ip a:  List all all connections.
+ ip n:
+ ip route:  where the traffic is routing
+ 
+ ifconfig: showes only the ethernet connections(hardwired connection)
+ iwconfig: shows only wireless connection
  ipconfig :list of network interfaces
+ 
  tracert d www.google.com  : trace routhe 
  nslookup www.google.com
  https://www.yougetsignal.com/tools/visual-tracert/
  https://www.yougetsignal.com/what-is-my-ip-address/
+
+ arp -a: Displays the current ARP table for all interfaces. Address Resolution Protocol (ARP) table. 
  
+ arp-scan:  identify active devices on a network. 
+     arp-scan --localnet:  scan the entire local network. 
+
+  netdiscover -r 10.0.2.0/24
+ nbtscan 10.40.1.120 : providing information  about NetBIOS like NetBIOS name and the User ,services  
+	 
+ 
+ 
+ ping:
+ netstat: displays active connections and ports
+ route
+   
+ 
+ enumerating ports
+ 
+nikto -h  http://10.0.2.4 
+   The ouptut is a long list of problem with the server.
+
+  burpsuite
+    in firefox goto settings/Network Settings  (on the bottom )
+    chose manual proxy
+		   switch from:   'Use system proxy settings' 
+		            to:   'use manul proxy' 127.0.0.1 port 8080
+
+
+ msfconsole
  
  C:\Windows\System32
  nmap 192.168.43.1    scan single IP address
