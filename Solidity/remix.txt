@@ -43,8 +43,18 @@ faucets:
  
    (02:09:32) 2: Storage Factory  github.com/PatrickAlphaC/storage_factory
    (02:26:00) 3: FundMe.sol       github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
+   
+          Visual Studio Code
+   ===========================
    (03:26:48) 4: Web3.py Simple Storage 
                       github.com/PatrickAlphaC/storage-factory-fcc/blob/main/SimpleStorage.sol
+  
+   03:29:48 open visual studio code and 
+      install  
+	    1. python extension (intelsence(pylance)linting
+		2. solidity Juan Blanco
+    03:30:00 
+  
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-js
   https://github.com/smartcontractkit/chainlink-evm#readme
