@@ -53,7 +53,7 @@ faucets:
       install  
 	    1. python extension (intelsence(pylance)linting
 		2. solidity Juan Blanco
-    03:30:00 
+    03:30:00  03:38:00 
   
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-js
