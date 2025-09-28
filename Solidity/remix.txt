@@ -1,5 +1,5 @@
 https://remix.ethereum.org
-		https://www.itechtics.com/download-windows-11-23h2/	
+	
   					
 CTRL + S: Compile the current contract
 CTRL + Shift + F : Open the File Explorer
@@ -14,14 +14,14 @@ Medium: https://medium.com/remix-ide
 Solidity Tutorial for Beginners    
   https://www.freecodecamp.org/news/learn-solidity-blockchain-and-smart-contracts-in-a-free/
   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
-
+  https://github.com/smartcontractkit/full-blockchain-solidity-course-py
 faucets:
       https://faucets.chain.link/
 
       https://www.alchemy.com/faucets/ethereum-sepolia
+	  https://faucets.chain.link/sepolia
 	  https://sepolia-faucet.pk910.de/
-  Learn Cryptocurrency with CoinGecko 
-                   https://www.coingecko.com/learn/sepolia-eth
+ 
   
   https://metamask.io/
    wall       fossil     arrive  
@@ -33,8 +33,8 @@ faucets:
  
  
    
+  https://github.com/smartcontractkit/full-blockchain-solidity-course-py
    
-  https://github.com/smartcontractkit/full-blockchain-solidity-course-py/tree/main?tab=readme-ov-file#making-your-first-transaction
   https://docs.soliditylang.org/en/v0.8.30/types.html
   https://solidity-by-example.org/
   
@@ -53,7 +53,10 @@ faucets:
       install  
 	    1. python extension (intelsence(pylance)linting
 		2. solidity Juan Blanco
-    03:30:00  03:38:00 
+		3. pip install py-solc-x
+		   Python wrapper and version management tool for Solidity
+	      (https://pypi.org/project/py-solc-x/)
+    03:30:00  03:42:00 
   
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-js
