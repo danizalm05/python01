@@ -13,11 +13,8 @@ format  JSON : Shift+Alt+F or Format Document from the context menu.
 
 Solidity Tutorial for Beginners    
   https://www.freecodecamp.org/news/learn-solidity-blockchain-and-smart-contracts-in-a-free/
- 
   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s
   https://github.com/smartcontractkit/full-blockchain-solidity-course-py
-  
-  
 faucets:
       https://faucets.chain.link/
 
@@ -59,8 +56,7 @@ faucets:
 		3. pip install py-solc-x
 		   Python wrapper and version management tool for Solidity
 	      (https://pypi.org/project/py-solc-x/)
-	    4.install  	ganache  (https://archive.trufflesuite.com/ganache/)
-      03:50:00 
+    03:30:00  03:42:00 
   
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-js
