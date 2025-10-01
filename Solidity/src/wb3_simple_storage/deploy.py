@@ -56,10 +56,14 @@ abi = json.loads(
 # For connecting to ganache
 # The next values  are taken from Ganache
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+
+
 # the chain id for gaunch is 1337 . the network is 5777
-chain_id = 1337     
-my_address =  "0x9464257eB4a5904A5D9D7d687f12C0fdFf0E237c"
-private_key = "0x588b57422ace77ce5255cfa40f0a4df3520d5b6bca1bce0e2a6cdad45d8301bc"
+chain_id = 1337    
+my_address =  "0x2cAB059E3Cf510FcdA895144840A0Fc655156664"
+private_key = "0x8a57934073921bd9c740e1f538b74c08633db262176161a1dc7881bcd731cd3b"
+#The 'my_address' and  'private_key' are changing for every time we are running Ganush
+
 
 # Create the contract in Python
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
@@ -78,3 +82,32 @@ transaction = SimpleStorage.constructor().build_transaction(
 )
 print ("transaction \n= ",transaction)
 #043:01:00 
+
+# Sign the transaction
+signed_txn = w3.eth.account.sign_transaction(transaction, private_key=private_key)
+print("Deploying Contract!")
+
+# Send it!
+tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
+#changing from rawTransaction to raw_transaction
+
+# Wait for the transaction to be mined, and get the transaction receipt
+print("Waiting for transaction to finish...")
+tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+print(f"Done! Contract deployed to {tx_receipt.contractAddress}")
+
+# Working with deployed Contracts
+simple_storage = w3.eth.contract(address=tx_receipt.contractAddress, abi=abi)
+#  'retrieve' is a function in the 'simple_storage.sol' file
+print(f"Initial Stored Value {simple_storage.functions.retrieve().call()}")
+
+#43:14:00 
+greeting_transaction = simple_storage.functions.store(15).build_transaction(
+    {
+        "chainId": chain_id,
+        "gasPrice": w3.eth.gas_price,
+        "from": my_address,
+        "nonce": nonce + 1,
+    }
+)
+
