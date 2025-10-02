@@ -64,13 +64,17 @@ faucets:
 	    4.install ganache  (https://archive.trufflesuite.com/ganache/)   03:50:00 
         5.install web3.py     pip install web3  03:53:00 
  
-        6.install nodejs        04:19:13
-
+        6.install nodejs           (https://nodejs.org/en/)  04:19:13
+        7. install yarn     npm install --global yarn
+          yarn is a package manager similer to pip
+		8 install  ganache-cli    npm install ganache --global   04:20:13
+              running: ganache-cli
+   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
   
-  https://github.com/smartcontractkit/full-blockchain-solidity-course-js
+  https://github.com/smartcontractkit/full-blockchain-solidity-course-py
   https://github.com/smartcontractkit/chainlink-evm#readme
 
- https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s   
+ 
    
   
    https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js
