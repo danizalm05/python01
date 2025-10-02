@@ -64,7 +64,7 @@ faucets:
 	    4.install ganache  (https://archive.trufflesuite.com/ganache/)   03:50:00 
         5.install web3.py     pip install web3  03:53:00 
  
-
+        6.install nodejs        04:19:13
 
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-js

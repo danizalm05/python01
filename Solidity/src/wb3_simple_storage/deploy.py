@@ -60,8 +60,8 @@ w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 
 # the chain id for gaunch is 1337 . the network is 5777
 chain_id = 1337    
-my_address =  "0x2cAB059E3Cf510FcdA895144840A0Fc655156664"
-private_key = "0x8a57934073921bd9c740e1f538b74c08633db262176161a1dc7881bcd731cd3b"
+my_address =  "0x8C00cf70BE2cbbF61076720De660Ac0392B98171"
+private_key = "0xda8c523063763a7991b7fb7e2b208b3b39b4080185bdf973a43705ab737cb9ca"
 #The 'my_address' and  'private_key' are changing for every time we are running Ganush
 
 
@@ -111,3 +111,12 @@ greeting_transaction = simple_storage.functions.store(15).build_transaction(
     }
 )
 
+signed_greeting_txn = w3.eth.account.sign_transaction(
+    greeting_transaction, private_key=private_key
+)
+tx_greeting_hash = w3.eth.send_raw_transaction(signed_greeting_txn.raw_transaction)
+#changing from rawTransaction to raw_transaction
+print("Updating stored Value...")
+tx_receipt = w3.eth.wait_for_transaction_receipt(tx_greeting_hash)
+
+print(simple_storage.functions.retrieve().call())
