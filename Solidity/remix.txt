@@ -68,7 +68,10 @@ faucets:
         7. install yarn     npm install --global yarn
           yarn is a package manager similer to pip
 		8 install  ganache-cli    npm install ganache --global   04:20:13
-              running: ganache-cli
+              running: 
+			  ganache-cli      # Random private key
+			  ganache-cli --deterministic     # non- Random private key
+			  04:23:13
    https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-py

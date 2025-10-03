@@ -55,13 +55,13 @@ abi = json.loads(
 #         ============   Deploy the contract ================== 03:53:00
 # For connecting to ganache
 # The next values  are taken from Ganache
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:8545")) 
 
 
 # the chain id for gaunch is 1337 . the network is 5777
 chain_id = 1337    
-my_address =  "0x8C00cf70BE2cbbF61076720De660Ac0392B98171"
-private_key = "0xda8c523063763a7991b7fb7e2b208b3b39b4080185bdf973a43705ab737cb9ca"
+my_address =  "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+private_key = "0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"
 #The 'my_address' and  'private_key' are changing for every time we are running Ganush
 
 
