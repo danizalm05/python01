@@ -71,7 +71,14 @@ faucets:
               running: 
 			  ganache-cli      # Random private key
 			  ganache-cli --deterministic     # non- Random private key
-			  04:23:13
+	
+                                   Infura 
+								============   
+	Deploying to a real network	04:23:13     dani Pas 
+	   infura.io/dashborad
+	    	04:22:13
+	   https://developer.metamask.io/   
+	
    https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-py
