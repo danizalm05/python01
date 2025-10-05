@@ -24,7 +24,7 @@ faucets:
       https://www.alchemy.com/faucets/ethereum-sepolia
 	  https://faucets.chain.link/sepolia
 	  https://sepolia-faucet.pk910.de/
- 
+      https://cloud.google.com/application/web3/faucet
   
   https://metamask.io/
    wall       fossil     arrive  
@@ -78,8 +78,13 @@ faucets:
 	   infura.io/dashborad
 	    	04:22:13
 	   https://developer.metamask.io/   
+	   https://developer.metamask.io/key/active-endpoints # Active Endpoints  Key HTTP
 	
-   https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
+  
+
+    brownie   04:27:00
+==================================
+  https://www.youtube.com/watch?v=M576WGiDBdQ&t=44s  
   
   https://github.com/smartcontractkit/full-blockchain-solidity-course-py
   https://github.com/smartcontractkit/chainlink-evm#readme
