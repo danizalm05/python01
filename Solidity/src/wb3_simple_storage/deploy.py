@@ -54,14 +54,16 @@ abi = json.loads(
 
 #         ============   Deploy the contract ================== 03:53:00
 # For connecting to ganache
-# The next values  are taken from Ganache
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:8545")) 
+# https://developer.metamask.io/key/active-endpoints  'Linea Sepolia' 
+
+w3 = Web3(Web3.HTTPProvider("https://linea-mainnet.infura.io/v3/5808951b3b634fabbcc238ba2be88de6")) 
 
 
 # the chain id for gaunch is 1337 . the network is 5777
-chain_id = 1337    
-my_address =  "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
-private_key = "0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"
+chain_id = 59144 #59141    # serach for 'Linea Sepolia' in  https://chainlist.org/ or https://chainid.network/
+my_address =  "0xBa5Bb12E154d5bAFa48eDbd21F68F69B4bDfd57B"
+private_key = "0xe7326b4b21f2bc7980fa956491873ddb595bc505291d2a704873e0c10c4f3ecd"
+
 #The 'my_address' and  'private_key' are changing for every time we are running Ganush
 
 
