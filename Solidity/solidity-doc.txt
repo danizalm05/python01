@@ -17,7 +17,7 @@ format  JSON : Shift+Alt+F or Format Document from the context menu.
  https://www.youtube.com/watch?v=umepbfKp5rI
  https://github.com/Cyfrin/foundry-full-course-cu
   
-https://youtu.be/umepbfKp5rI?t=5763    1:36:00
+https://youtu.be/umepbfKp5rI?t=6138   1:42:00
 
 https://andersbrownworth.com/blockchain/public-private-keys/keys
 https://andersbrownworth.com/blockchain/hash  # blockchain demo
