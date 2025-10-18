@@ -21,7 +21,7 @@ format  JSON : Shift+Alt+F or Format Document from the context menu.
  
 https://eth-converter.com/
 =======
-https://youtu.be/umepbfKp5rI?t=7502 2:04:00
+https://youtu.be/umepbfKp5rI?t=7851    2:10:00
 
  
 https://andersbrownworth.com/blockchain/public-private-keys/keys
