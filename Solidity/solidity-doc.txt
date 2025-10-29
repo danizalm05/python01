@@ -16,7 +16,7 @@ format  JSON : Shift+Alt+F or Format Document from the context menu.
 
  
  https://github.com/Cyfrin/foundry-full-course-cu
-https://youtu.be/umepbfKp5rI?t=10266    2:51:00     Arrays
+https://youtu.be/umepbfKp5rI?t=10509     Arrays
 https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js 
  
 https://eth-converter.com/
