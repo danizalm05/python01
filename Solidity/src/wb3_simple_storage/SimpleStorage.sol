@@ -1,6 +1,9 @@
 // github.com/Cyfrin/remix-storage-factory-cu/blob/main/SimpleStorage.sol
 // SPDX-License-Identifier: MIT
-//https://youtu.be/umepbfKp5rI?t=11143
+ 
+//https://youtu.be/umepbfKp5rI?t=11723
+
+
 
 pragma solidity 0.8.30;
 
@@ -28,7 +31,7 @@ contract SimpleStorage {
     function retrieve() public view returns (uint256) {
         return myFavoriteNumber;
     }
-
+   // calldata ,memory ,storage
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         listOfPeople.push(Person(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
