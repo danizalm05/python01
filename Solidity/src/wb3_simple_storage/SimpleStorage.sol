@@ -1,8 +1,7 @@
 // github.com/Cyfrin/remix-storage-factory-cu/blob/main/SimpleStorage.sol
 // SPDX-License-Identifier: MIT
  
-//https://youtu.be/umepbfKp5rI?t=11723
-
+// https://youtu.be/umepbfKp5rI?t=11948
 
 
 pragma solidity 0.8.30;
