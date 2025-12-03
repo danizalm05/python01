@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MIT
 //https://github.com/Cyfrin/remix-storage-factory-cu/blob/main/StorageFactory.sol
-//https://youtu.be/umepbfKp5rI?t=13279
+//https://youtu.be/umepbfKp5rI?t=13846
 pragma solidity ^0.8.19;
 
 // import {SimpleStorage, SimpleStorage2} from "./SimpleStorage.sol";
 import {SimpleStorage} from "./SimpleStorage.sol";
+ //Import only SimpleStorage  ignore all the other contracts
 
 contract StorageFactory {
     SimpleStorage[] public listOfSimpleStorageContracts;
