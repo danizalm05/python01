@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 //https://github.com/Cyfrin/remix-storage-factory-cu/blob/main/StorageFactory.sol
-//https://youtu.be/umepbfKp5rI?t=13846
+//https://youtu.be/umepbfKp5rI?t=14280
 pragma solidity ^0.8.19;
 
 // import {SimpleStorage, SimpleStorage2} from "./SimpleStorage.sol";
@@ -15,14 +15,11 @@ contract StorageFactory {
         // SimpleStorage simpleStorage = new SimpleStorage();
         listOfSimpleStorageContracts.push(simpleStorageContractVariable);
     }
-
-    function sfStore(
-        uint256 _simpleStorageIndex,
-        uint256 _simpleStorageNumber
-    ) public {
+      //stfStore storage factore Store
+  function sfStore(uint256 _simpleStorageIndex,uint256 _simpleStorageNumber) public {
         // Address
-        // ABI
-        // SimpleStorage(address(simpleStorageArray[_simpleStorageIndex])).store(_simpleStorageNumber);
+        // ABI Aplication Binary Interface. 
+       SimpleStorage(address(simpleStorageArray[_simpleStorageIndex])).store(_simpleStorageNumber);
         listOfSimpleStorageContracts[_simpleStorageIndex].store(
             _simpleStorageNumber
         );
