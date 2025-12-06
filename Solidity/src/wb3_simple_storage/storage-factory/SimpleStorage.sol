@@ -3,7 +3,8 @@
  
 // https://youtu.be/umepbfKp5rI?t=11948
 
-
+       
+       
 pragma solidity 0.8.30;
 
 // pragma solidity ^0.8.0;
@@ -24,6 +25,7 @@ contract SimpleStorage {
     mapping(string => uint256) public nameToFavoriteNumber;
 
     function store(uint256 _favoriteNumber) public virtual {
+        //The 'virtual' key word enable the overiding this 'store' function.
         myFavoriteNumber = _favoriteNumber;
     }
 
