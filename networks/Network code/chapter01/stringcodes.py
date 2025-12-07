@@ -24,6 +24,8 @@ if __name__ == '__main__':
     output_string =  We copy you down, Eagle.
     
     
+	byte strings start with the letter b and look like b'Hello
+	
     '''
    
     #with open('eagle.txt', 'wb') as f:
