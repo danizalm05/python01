@@ -4,17 +4,68 @@
 # Foundations of Python Network Programing - page 21
 
 # UDP client and server on localhost
+#  The sever write a message from the client 
+#  the client send a message to the server
+'''
+1. run the server  from a consol  ' python udp_local.py server
+2. run client  from another consol  'python udp_local.py client' 
+  twice
+output
+ consol 1  Server:  
+  Listening at ('127.0.0.1', 1060)
+  After starting clinet twice you'll get the next two messages  :
+   The client at ('127.0.0.1', 46056) says 'The time is 2014-06-05 10:34:53.448338'
+   The client at ('127.0.0.1', 39288) says 'The time is 2014-06-05 10:34:54.065836'
 
+  consol 2 Client:
+   $ python udp_local.py client
+   The OS assigned me the address ('0.0.0.0', 46056)
+   The server ('127.0.0.1', 1060) replied 'Your data was 46 bytes long'
+
+   $ python udp_local.py client
+   The OS assigned me the address ('0.0.0.0', 39288)
+   The server ('127.0.0.1', 1060) replied 'Your data was 46 bytes long'  
+    
+'''
 
 import argparse, socket
 from datetime import datetime
 MAX_BYTES = 65535 
 
 def server(port):
- print("Server")
+    
+ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+ 
+ # AF_INET:Internet family of protocols, and it is of SOCK_DGRAM 
+ # datagram type,  which means it will use UDP on an IP network
+  
+ sock.bind(('127.0.0.1', port))
+ # This step fails if another program is already using that UDP port 
+ # So you can run using a '–p' option to select a different port number
+ 
+ s = sock.getsockname()
+ # getsockname(): method to retrieve a tuple that contains
+ # the current IP address and port to which the socket is bound.
+ print('Listening at {}'.format(s))   
+ 
+ while True:
+     
+   data, address = sock.recvfrom(MAX_BYTES)
+   text = data.decode('ascii')
+   print('The client at {} says {!r}'.format(address, text))
+   text = 'Your data was {} bytes long'.format(len(data))
+   data = text.encode('ascii')
+   sock.sendto(data, address) 
 
 def client(port): 
- print("Client")   
+   sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+   text = 'The time is {}'.format(datetime.now())
+   data = text.encode('ascii')
+   sock.sendto(data, ('127.0.0.1', port))
+   print('The OS assigned me the address {}'.format(sock.getsockname()))
+   data, address = sock.recvfrom(MAX_BYTES) # Danger!
+   text = data.decode('ascii')
+   print('The server {} replied {!r}'.format(address, text))
  
 if __name__ == '__main__':
  choices = {'client': client, 'server': server}
