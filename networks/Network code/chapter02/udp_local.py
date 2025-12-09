@@ -47,12 +47,14 @@ def server(port):
  # getsockname(): method to retrieve a tuple that contains
  # the current IP address and port to which the socket is bound.
  print('Listening at {}'.format(s))   
- 
+ #  .format() method  embedding variables or values into placeholders within a template string.
  while True:
      
    data, address = sock.recvfrom(MAX_BYTES)
-   text = data.decode('ascii')
+   text = data.decode('ascii')#convert bytes object into a string using 'ascii''
    print('The client at {} says {!r}'.format(address, text))
+   #{!r} shows the full structure, including quotes and escape characters.
+   
    text = 'Your data was {} bytes long'.format(len(data))
    data = text.encode('ascii')
    sock.sendto(data, address) 
