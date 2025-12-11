@@ -2,7 +2,8 @@
 //https://github.com/Cyfrin/remix-fund-me-cu/blob/main/FundMe.sol
  
 //https://youtu.be/umepbfKp5rI?t=15149
-
+//https://youtu.be/umepbfKp5rI?t=15498
+//eth-converter.com
 // Get funds from 
 // Withdraw funds
 // Set a minimum  funding value in USD
@@ -94,3 +95,6 @@ contract FundMe {
 // 5. abi.encode / decode
 // 6. Hash with keccak256
 // 7. Yul / Assembly
+
+
+
