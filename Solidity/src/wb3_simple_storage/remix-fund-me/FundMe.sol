@@ -2,6 +2,12 @@
 //https://github.com/Cyfrin/remix-fund-me-cu/blob/main/FundMe.sol
  
 //https://youtu.be/umepbfKp5rI?t=15149
+
+// Get funds from 
+// Withdraw funds
+// Set a minimum  funding value in USD
+
+
 pragma solidity ^0.8.18;
 
 // Note: The AggregatorV3Interface might be at a different location than what was in the video!
