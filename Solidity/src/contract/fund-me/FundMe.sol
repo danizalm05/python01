@@ -2,7 +2,8 @@
 //https://github.com/Cyfrin/remix-fund-me-cu/blob/main/FundMe.sol
  
 //https://youtu.be/umepbfKp5rI?t=15149
-//https://youtu.be/umepbfKp5rI?t=15728
+//https://youtu.be/umepbfKp5rI?t=16628
+
 //eth-converter.com
 // Get funds from 
 // Withdraw funds
@@ -30,6 +31,9 @@ contract FundMe {
     constructor() {
         i_owner = msg.sender;
     }
+
+ //In order for a function to recive native blockchin token it must
+ // be marked  as payable
 
     function fund() public payable {
         require(msg.value.getConversionRate() >= MINIMUM_USD, "You need to spend more ETH!");
