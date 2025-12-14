@@ -9,26 +9,39 @@
 #  the client send a message to the server
 '''
 
-1. run the server  from a consol  ' python udp_remote.py server ""
- specifying the server IP address as the empty string  means
-      “any local interface”
-  output: 
-      Namespace(role='server', host='', p=1060)
-      Server Listening at ('0.0.0.0', 1060)  
+1. run the server  from a consol:
+            python udp_remote.py server ""
+ specifying the server IP address as the empty string  means “any local interface”
+ 
+ output: 
+        Namespace(role='server', host='', p=1060)
+        Server Listening at ('0.0.0.0', 1060)  
+        
+  output after the client is activate: 
+        Pretending to drop packet from ('127.0.0.1', 50283)
+        Pretending to drop packet from ('127.0.0.1', 50283)
+        Pretending to drop packet from ('127.0.0.1', 50283)
+        Pretending to drop packet from ('127.0.0.1', 50283)
+        The client at ('127.0.0.1', 50283) says 'This is another message' 
+  
       
-2. run client  from another consol  'python udp_remote.py client guinness' 
-  twice
-output
- consol 1  Server:  
-   
-
-  consol 2 Client:
-    
-   
-    
+      
+2. run client  from another consol:  
+   output:
+          python udp_remote.py client 127.0.0.1
+          Namespace(role='client', host='127.0.0.1', p=1060)
+          127.0.0.1
+          Client socket name is ('127.0.0.1', 50283)
+          Waiting up to 0.1 seconds for a reply
+          Waiting up to 0.2 seconds for a reply
+          Waiting up to 0.4 seconds for a reply
+          Waiting up to 0.8 seconds for a reply
+          Waiting up to 1.6 seconds for a reply
+          The server says 'Your data was 23 bytes long'
+      
 '''
-
-import argparse, socket
+import argparse, random, socket, sys
+ 
 from datetime import datetime
 MAX_BYTES = 65535 
 
@@ -46,22 +59,23 @@ def  server(interface, port):
  print('Server Listening at', sock.getsockname())
  while True:
      data, address = sock.recvfrom(MAX_BYTES)
-     #if random.random() > 2:
-     #    print('Pretending to drop packet from {}'.format(address))
-     #    continue
+     if random.random() < 0.5:
+        print('Pretending to drop packet from {}'.format(address))
+        continue
      text = data.decode('ascii')
      print('The client at {} says {!r}'.format(address, text))
      message = 'Your data was {} bytes long'.format(len(data))
      sock.sendto(message.encode('ascii'), address) 
 
+
 def  client(hostname, port): 
-  print(hostname) 
+   
   sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-  #hostname = sys.argv[2]
+  hostname = sys.argv[2]
   sock.connect((hostname, port))
   print('Client socket name is {}'.format(sock.getsockname()))
   delay = 0.1 # seconds
-  text = 'This is another message'
+  text = 'Another message'
   data = text.encode('ascii') 
   while True:
     sock.send(data)
@@ -77,12 +91,11 @@ def  client(hostname, port):
        break # we are done, and can stop looping
 
 
-  print('The server says {!r}'.format(data.decode('ascii')))
+  print('The server says {!r}'.format(data.decode('ascii')))#'Another message'
 
 if __name__ == '__main__':
  choices = {'client': client, 'server': server}
- parser = argparse.ArgumentParser(description='Send and receive UDP,'
-   ' pretending packets are often dropped')  
+ 
  parser = argparse.ArgumentParser(description='Send and receive UDP,'
     ' pretending packets are often dropped')
  parser.add_argument('role', choices=choices, help='which role to take')
