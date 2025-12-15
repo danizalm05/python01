@@ -5,11 +5,11 @@
 //https://docs.chain.link/data-feeds/price-feeds/addresses
 //https://docs.chain.link/data-feeds/price-feeds/addresses?networkType=testnet
 //https://docs.chain.link/data-feeds/price-feeds/addresses?page=7  eth /usd
-
+//https://docs.chain.link/data-feeds/price-feeds/addresses?networkType=testnet&testnetSearch=eth+%2Fusd&testnetPage=1
 //https://youtu.be/umepbfKp5rI?t=15149
-//https://youtu.be/umepbfKp5rI?t=16628
-//https://youtu.be/umepbfKp5rI?t=17011
 
+//https://youtu.be/umepbfKp5rI?t=17011
+// https://youtu.be/umepbfKp5rI?t=16720
 //eth-converter.com
 // Get funds from 
 // Withdraw funds
@@ -21,6 +21,7 @@ pragma solidity ^0.8.18;
 // Note: The AggregatorV3Interface might be at a different location than what was in the video!
 
 //https://coinsbench.com/walkthrough-using-chainlink-data-feeds-for-computation-in-cryptozombies-71ac9bb7abba
+
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
 
