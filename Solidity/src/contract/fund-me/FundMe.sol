@@ -6,10 +6,10 @@
 //https://docs.chain.link/data-feeds/price-feeds/addresses?networkType=testnet
 //https://docs.chain.link/data-feeds/price-feeds/addresses?page=7  eth /usd
 //https://docs.chain.link/data-feeds/price-feeds/addresses?networkType=testnet&testnetSearch=eth+%2Fusd&testnetPage=1
-//https://youtu.be/umepbfKp5rI?t=15149
+
 
 //https://youtu.be/umepbfKp5rI?t=17011
-// https://youtu.be/umepbfKp5rI?t=17289
+//https://youtu.be/umepbfKp5rI?t=17519
 //eth-converter.com
 // Get funds from 
 // Withdraw funds
