@@ -9,7 +9,7 @@
 
 
 //https://youtu.be/umepbfKp5rI?t=17011
-//https://youtu.be/umepbfKp5rI?t=18189
+//https://youtu.be/umepbfKp5rI?t=18350
 //eth-converter.com
 // Get funds from 
 // Withdraw funds
