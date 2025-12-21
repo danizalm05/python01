@@ -1,4 +1,8 @@
 //SPDX-License-Identifier: MIT
+
+https://github.com/Cyfrin/foundry-full-course-cu?tab=readme-ov-file#solidity-101-section-3-remix-fund-me
+
+https://updraft.cyfrin.io/courses/solidity/fund-me/ 
 //https://github.com/Cyfrin/remix-fund-me-cu/blob/main/FundMe.sol
 
 //https://docs.chain.link/data-feeds 
@@ -9,7 +13,7 @@
 
 
 //https://youtu.be/umepbfKp5rI?t=17011
-//https://youtu.be/umepbfKp5rI?t=18350
+//https://youtu.be/umepbfKp5rI?t=18666
 //eth-converter.com
 // Get funds from 
 // Withdraw funds
