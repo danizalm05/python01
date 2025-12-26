@@ -22,6 +22,7 @@ https://updraft.cyfrin.io/courses/solidity/fund-me/
 
 pragma solidity ^0.8.18;
 
+//browser extension - injected provider metamask
 // Note: The AggregatorV3Interface might be at a different location than what was in the video!
 
 //https://coinsbench.com/walkthrough-using-chainlink-data-feeds-for-computation-in-cryptozombies-71ac9bb7abba
