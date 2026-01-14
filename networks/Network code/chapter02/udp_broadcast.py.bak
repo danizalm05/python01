@@ -45,30 +45,13 @@ the following:
  a.  python udp_broadcast.py server ""
          output: Listening for broadcasts at ('0.0.0.0', 1060)
  b. python udp_broadcast.py server 192.168.56.1
-         output: Listening for datagrams at ('192.168.56.1', 1060)
+         output: 
 
 2. Then, while those servers are running, first use the client to send messages
- to each server. You will see that only one server gets each message.
- 
-    for command:   "python udp_broadcast.py client 127.0.0.1"
-    output of this  secver  is: 
-     The client at ('127.0.0.1', 55353) says: 'Broadcast datagram!'
-      No respond on the other server
- 
-   for command:    "python udp_broadcast.py client '192.168.56.1'"
-   output of this  secver  is: 
-     The client at ('192.168.56.1', 62860) says: 'Broadcast datagram!'
-      No respond on the other server
-      
-      
-3.         Using the local network’s broadcast address   "<broadcast>"
-       -------------------------------------------
- Use the local network’s broadcast address, and you will see that all of 
-the broadcast servers get the packet at the same time!
- for command: python udp_broadcast.py client "<broadcast>"
- both server will output the same message
- 
-$ python
+ to each server. You will see that only
+one server gets each message.
+    
+$ python udp_broadcast.py client 192.168.56.1
     
     
     
