@@ -4,6 +4,8 @@
  						  
 https://youtu.be/umepbfKp5rI?t=23386  install vscode
 https://youtu.be/umepbfKp5rI?t=23642 WSL  Windows Subsystem for Linux
+   in 'powershell'   run  'wsl --install -d Ubuntu'
+https://www.youtube.com/watch?v=umepbfKp5rI&t=23642s   
 https://youtu.be/umepbfKp5rI?t=24031  Gitpod
   
 https://youtu.be/umepbfKp5rI?t=24368 install foundry 
