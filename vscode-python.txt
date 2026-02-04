@@ -1,0 +1,16 @@
+        vscode  python
+
+https://marketplace.visualstudio.com/items?itemName=ms-python.python
+https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites
+
+1. Open the Command Palette (Ctrl+Shift+P), start typing the Python: Create Environment command to search, and then select the command.
+
+2. The command presents a list of environment types, Venv or Conda. select Venv.
+
+3. Select the yor interpreter.
+
+4. After selecting the interpreter, a notification will show the progress of the environment creation and the environment folder (/.venv) will appear in your workspace.
+
+5. Ensure your new environment is selected by using the Python: Select Interpreter command from the Command Palette.
+
+             Create a Python source code file
