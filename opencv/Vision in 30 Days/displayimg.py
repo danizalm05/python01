@@ -19,14 +19,10 @@ path = BASE_FOLDER+img
 print("Image  = ",path) 
 print("Image  shape  = ",path) 
 img = cv.imread(path)
+if img is None:
+    sys.exit("Could not read the image.")
 print("Image  shape  = ",img.shape) 
 cv.imshow("Display window", img)
 key = cv.waitKey(0)
-'''
-if img is None:
-    sys.exit("Could not read the image.")
-cv.imshow("Display window", img)
-key = cv.waitKey(1)
-#cv2.destroyAllWindows()
 
-'''
+cv.destroyAllWindows()
