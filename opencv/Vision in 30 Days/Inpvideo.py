@@ -6,7 +6,7 @@ https://github.com/murtazahassan/Learn-OpenCV-in-3-hours/blob/master/chapter1.py
 
 import cv2
 import getpass
-import os
+ 
 
 
 frameWidth = 640
@@ -20,18 +20,31 @@ BASE_FOLDER = BASE_FOLDER +'/Videos/Captures/'
  
 path = BASE_FOLDER+'dog.mp4'
 print(path)
+cap = cv2.VideoCapture(path)
 
+while True:
+   success, img = cap.read()
+   img = cv2.resize(img, (frameWidth, frameHeight))
+   cv2.imshow("Result", img)
+   if cv2.waitKey(30) & 0xFF == ord('q'):
+          break
+cap.release() 
+
+cv2.destroyAllWindows()    
+
+
+'''
 if os.path.isfile(path):
-   success =  True
+   
    cap = cv2.VideoCapture(path)
-   while success:
-     success, img = cap.read()
+   while True:
+     ret, img = cap.read()
      img = cv2.resize(img, (frameWidth, frameHeight))
      cv2.imshow("Result", img)
      if cv2.waitKey(40) & 0xFF == ord('q'):
          break
 else:
     print("ERROR --> Missing File: " + path   )
-   
-cv2.destroyAllWindows()    
-cap.realse() 
+     
+
+'''
