@@ -23,6 +23,6 @@ if img is None:
     sys.exit("Could not read the image.")
 print("Image  shape  = ",img.shape) 
 cv.imshow("Display window", img)
-key = cv.waitKey(0)
+cv.waitKey(0)
 
 cv.destroyAllWindows()
