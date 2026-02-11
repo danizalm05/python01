@@ -1,8 +1,8 @@
 '''
                                  Color Spaces
-https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=2338
-https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=2846 
+https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=3099 
 
+https://github.com/jasmcaus/opencv-course/blob/master/Section%20%232%20-%20Advanced/blurring.py
 '''
 
 import cv2 as cv
@@ -20,22 +20,7 @@ if img is None:
 print("Image  shape  = ",img.shape) 
 cv.imshow("Display window", img)
 
-
-gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-cv.imshow('Gray', gray) 
-
-rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
-cv.imshow('RGB', rgb)
  
-# BGR to   HSV (hue, saturation, value
-hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
-cv.imshow('HSV', hsv)
-
- 
-
- 
-
-
 cv.waitKey(0)
 
 cv.destroyAllWindows() 
