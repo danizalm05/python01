@@ -1,7 +1,7 @@
 '''
-                                 Color Spaces
-https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=3099 
-https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=3528
+                                Threshold
+https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=4017
+https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t= 
 https://github.com/jasmcaus/opencv-course/blob/master/Section%20%232%20-%20Advanced/blurring.py
 https://docs.opencv.org/4.x/
 https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html#autotoc_md1369
