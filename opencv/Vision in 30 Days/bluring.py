@@ -11,7 +11,7 @@ import cv2 as cv
 #import sys
 import getpass
 
-img='cat.jpg'
+img='1.jpg'
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 path = BASE_FOLDER+img
 print("Image  = ",path) 
