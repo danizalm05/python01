@@ -14,7 +14,7 @@ import cv2 as cv
 import getpass
  
 
-img=  'sudoku.png'  #'2.jpg'
+img=  'book.jpg'  #'2.jpg'
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 path = BASE_FOLDER+img
 print("Image  = ",path) 
@@ -41,7 +41,7 @@ threshold, thresh = cv.threshold(gray, 80, 255, cv.THRESH_BINARY )
 
 # Addaptive  Thresholding 
 th3 = cv.adaptiveThreshold(gray, 255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,\
-            cv.THRESH_BINARY,29,30)
+            cv.THRESH_BINARY,13,17)
  
 scl = .7
 cv.imshow("Source", rescaleFrame(img,  scale = scl))
