@@ -1,35 +1,13 @@
-https://youtu.be/umepbfKp5rI?t=22984
- 
-https://eth-converter.com/
-https://speedrunethereum.com/				
-AI Frens
+  
+  Solidity for Beginners · Smart Contract Development Crash Course
 
-    claude.ai
-    cursor IDE
-    ChatGPT
-    Phind:  https://www.phind.com/
-    Gemini: https://gemini.google.com/
-    
-
-Medium: https://medium.com/remix-ide
-format  JSON : Shift+Alt+F or Format Document from the context menu.
-  		
- 
-    Cyfrin / foundry-full-course-cu
-========================================
-
- 
- https://github.com/Cyfrin/foundry-full-course-cu
-https://youtu.be/umepbfKp5rI?t=10509     Arrays
-https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.30+commit.73712a01.js 
- 
-
-=======
+By Gregory McCubbin · November 25, 2025
+  
+  
+  
+https://www.dappuniversity.com/articles/solidity-tutorial
 
 
- 
-https://andersbrownworth.com/blockchain/public-private-keys/keys
-https://andersbrownworth.com/blockchain/hash  # blockchain demo
 faucets:
       https://faucets.chain.link/
 
@@ -46,54 +24,4 @@ faucets:
   https://etherscan.io/
   https://faucets.chain.link/sepolia
   https://sepolia.etherscan.io/    #ex list
- 
-   
-  https://github.com/smartcontractkit/full-blockchain-solidity-course-py
-   
-  https://docs.soliditylang.org/en/v0.8.30/types.html
-  https://solidity-by-example.org/
-  
-  
-  ------------------------------------
- 
-   (02:09:32) 2: Storage Factory  github.com/PatrickAlphaC/storage_factory
-   (02:26:00) 3: FundMe.sol       github.com/PatrickAlphaC/fund_me/blob/main/FundMe.sol
-   
-          Visual Studio Code
-   ===========================
-   (03:26:48) 4: Web3.py Simple Storage 
-                      github.com/PatrickAlphaC/storage-factory-fcc/blob/main/SimpleStorage.sol
-  
-   03:29:48 open visual studio code and 
-      install  
-	    1. python extension (intelsence(pylance)linting
-		2. solidity Juan Blanco
-		3. pip install py-solc-x
-		   Python wrapper and version management tool for Solidity
-	      (https://pypi.org/project/py-solc-x/)
-		  
-		  
-	    4.install ganache  (https://archive.trufflesuite.com/ganache/)   03:50:00 
-        5.install web3.py     pip install web3  03:53:00 
- 
-        6.install nodejs           (https://nodejs.org/en/)  04:19:13
-        7. install yarn     npm install --global yarn
-          yarn is a package manager similer to pip
-		8 install  ganache-cli    npm install ganache --global   04:20:13
-              running: 
-			  ganache-cli      # Random private key
-			  ganache-cli --deterministic     # non- Random private key
-	
-                                   Infura 
-								============   
-	Deploying to a real network	04:23:13     dani Pas 
-	   infura.io/dashborad
-	    	04:22:13
-	   https://developer.metamask.io/   
-	   https://developer.metamask.io/key/active-endpoints # Active Endpoints  Key HTTP
-	
-   
-  
-   https://docs.chain.link/data-feeds/using-data-feeds
-  
   
