@@ -48,6 +48,7 @@ while True:
     color = (255, 55, 0)
     thickness = -1
     colorBox = cv2.rectangle(colorBox, start_point, end_point, chosenColor, thickness)
+    PutTextOnImage(frame,"txt")
     imgStack = stackImages( scale,  ([colorBox], [frame ])    )
     cv2.imshow("ImageStack", imgStack)
     if cv2.waitKey(1) & 0xFF == ord('q'):
