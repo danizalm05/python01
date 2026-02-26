@@ -12,8 +12,12 @@ https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
 import cv2 as cv
 import getpass
 import numpy as np
-from inpCV import stackImages,PutTextOnImage, inpTrackbar, get_limits
+from outputCV import stackImages,PutTextOnImage
+from inpCV import   inpTrackbar 
 
+
+inpWinName = "Input"
+inpTrackbar(inpWinName)
 img=  '2.jpg'  #'2.jpg'
 BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 path = BASE_FOLDER+img
@@ -32,24 +36,35 @@ def rescaleFrame(frame, scale=0.75):
 img = cv.imread(path)
 assert img is not None, "file could not be read, check with os.path.exists()"
 
-canny = cv.Canny(img, 150, 175) 
-kernel = np.ones((5, 5), dtype = np.uint8)
+
+while True:
+    #scl = .4
+    scl = cv.getTrackbarPos("scale", inpWinName) / 10
+    minVal = cv.getTrackbarPos("minVal", inpWinName)
+    maxVal = cv.getTrackbarPos("maxVal", inpWinName)
+    #minVal = 150
+    #maxVal = 175
+
+    canny = cv.Canny(img, minVal, maxVal) 
+    kernel = np.ones((5, 5), dtype = np.uint8)
 
 #dilate: thickens white regions or objects and fills small holes.
-img_dilation = cv.dilate(canny, kernel, iterations=1)
-img_erode = cv.erode(img_dilation , kernel, iterations=1)
+    img_dilation = cv.dilate(canny, kernel, iterations=1)
+    img_erode = cv.erode(img_dilation , kernel, iterations=1)
  
-scl = .4
+    
 
-PutTextOnImage(img,"Source")
-imgStack = stackImages(scl,
+    PutTextOnImage(img,"Source")
+    PutTextOnImage(canny,"canny")
+    imgStack = stackImages(scl,
                           ( [img, canny, img_dilation],
                             [img_erode, img_erode, img_erode]
                           )    )
  
-cv.imshow("ImageStack", imgStack)
+    cv.imshow("ImageStack", imgStack)
+    if cv.waitKey(1) & 0xFF == ord('q'):
+        break
 
-cv.waitKey(0)
 cv.destroyAllWindows() 
  
  

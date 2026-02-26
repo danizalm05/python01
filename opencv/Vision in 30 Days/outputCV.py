@@ -9,28 +9,7 @@ https://colab.research.google.com/drive/1QeXAHV3-BNaIoidWhSK3MJyVElNv3FLN#scroll
 """
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-import getpass
-
-def empty(a):
-    pass
-
-def inpTrackbar(winName):
-    cv2.namedWindow(winName)
-    cv2.createTrackbar("minVal", winName, 10, 200, empty)   
-    cv2.createTrackbar("maxVal", winName, 30, 255, empty)  # 100
-    cv2.createTrackbar("Blue", winName, 0, 255, empty)  # 100
-    cv2.createTrackbar("scale", winName, 5, 9, empty)
-    # create switch for ON/OFF functionality
-    switch = '0 : OFF \n1 : ON'
-
-    cv2.createTrackbar(switch, winName, 0, 1, empty)
-    cv2.createTrackbar("Contour ID", winName, 0, 100, empty)
-
-
-
-
-
+ 
 
 #Display Group of images in one window
 def stackImages(scale,imgArray):
@@ -74,19 +53,5 @@ def PutTextOnImage(image,txt):
        thickness = 2)
    return im
 
-#-------------------------------
-
-
-def get_limits(color):
-
-    c = np.uint8([[color]])  # here insert the bgr values which you want to convert to hsv
-    hsvC = cv2.cvtColor(c, cv2.COLOR_BGR2HSV)
-    print(hsvC)
-    lowerLimit = hsvC[0][0][0] - 10, 100, 100
-    upperLimit = hsvC[0][0][0] + 10, 255, 255
-
-    lowerLimit = np.array(lowerLimit, dtype=np.uint8)
-    upperLimit = np.array(upperLimit, dtype=np.uint8)
-    #print(color, lowerLimit, upperLimit)
-    return lowerLimit, upperLimit
-
+ 
+ 
