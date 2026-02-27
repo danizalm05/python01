@@ -1,12 +1,9 @@
 '''
-                 edge detection (canny, dilate, erode )
+               Draw line rectangel circle text
 https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=4933
-https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=5493
+ 
 
-https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basics/thresh.py
-
-https://docs.opencv.org/4.x/
-https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+ 
 '''
 
 import cv2 as cv
@@ -36,8 +33,7 @@ while True:
     scl = cv.getTrackbarPos("scale", inpWinName) / 10
     minVal = cv.getTrackbarPos("minVal", inpWinName)
     maxVal = cv.getTrackbarPos("maxVal", inpWinName)
-    #minVal = 150
-    #maxVal = 175
+ 
 
     canny = cv.Canny(img, minVal, maxVal) 
     kernel = np.ones((5, 5), dtype = np.uint8)
