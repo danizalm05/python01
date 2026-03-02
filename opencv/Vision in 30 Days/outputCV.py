@@ -48,7 +48,7 @@ def PutTextOnImage(image,txt):
        text = txt,
        org = (20 , 50 ),
        fontFace = cv2.FONT_HERSHEY_DUPLEX,
-       fontScale = 2.0,
+       fontScale = 1.0,
        color = (255, 226, 25),
        thickness = 2)
    return im
