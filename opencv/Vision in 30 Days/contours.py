@@ -1,95 +1,65 @@
 '''
                   contours 
  https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=6319
+ https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=7094
  
+ https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
 '''
-
+ 
 import cv2 as cv
+import getpass
 import numpy as np
 from outputCV import stackImages,PutTextOnImage
-from drawInp import   inpTrackbar 
-
+from contourInp import   inpTrackbar 
+  
 
 inpWinName = "Input"
 inpTrackbar(inpWinName)
+img=  '3.jpg'  #'2.jpg'
+BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
+path = BASE_FOLDER+img
+print("Image  = ",path) 
+print("Image  shape  = ",path) 
 
 
-# creating array using np.zeroes()
-array = np.zeros([500, 500, 3],
-                 dtype = np.uint8)
 
-# setting RGB color values as 255,255,255
-array[:, :] = [255, 255, 255] 
 
-# displaying the image
-cv.imshow("image", array)
+imgs = cv.imread(path)
 
-#img =array.copy()
+assert img is not None, "file could not be read, check with os.path.exists()"
+img = cv.cvtColor(imgs, cv.COLOR_BGR2GRAY)
 
 while True:
 
     scl = cv.getTrackbarPos("scale", inpWinName) / 10
-    x1 = cv.getTrackbarPos("x1", inpWinName)
-    y1 = cv.getTrackbarPos("y1", inpWinName)
-    x2 = cv.getTrackbarPos("x2", inpWinName)
-    y2 = cv.getTrackbarPos("y2", inpWinName)
-    angle = cv.getTrackbarPos("angle", inpWinName)
-    startAngle = cv.getTrackbarPos("startAngle", inpWinName)
-    endAngle = cv.getTrackbarPos("endAngle", inpWinName)
-    imglin =array.copy()
-    imglin = cv.line( imglin, (x1, y1), (x2, y2), (255, 0, 0), 3)
     
-    title = "line("+ str(x1)+',' + str(y1)+"),(" +str(x2)+',' + str(y2)+"))"
-    PutTextOnImage(imglin,  title)
-    
-    
-    imgrec =array.copy()  
-    cv.rectangle(imgrec, (x1,y1), (x2, y2), (255, 0, 0), -1)
-    
-    title = "rectangle("+ str(x1)+',' + str(y1)+"),(" +str(x2)+',' + str(y2)+"))"
-    PutTextOnImage(imgrec,  title)
-
-    imgcirc =array.copy()  
-    cv.circle(imgcirc,((x1,y1)), x2, (0,0,255), -1)
-    title = "circle("+ str(x1)+',' + str(y1)+")," +str(x2)+")"
-    PutTextOnImage(imgcirc,  title)
-    '''
-   Drawing Ellipse
-cv2.ellipse(image, center, axes, angle, startAngle, endAngle, color, thickness)
-To draw the ellipse, we need to pass several arguments.
-x1,y1   center location (x,y). 
-x2,y2  axes lengths (semi-major axis length, semi-minor axis length).
- angle is the angle of rotation of ellipse in anti-clockwise direction. 
- startAngle and endAngle denotes the starting and ending of ellipse arc measured in 
- clockwise direction from major axis. i.e. giving values 0 and 360 gives the full ellipse. For more details, check the documentation of cv.ellipse(). Below example draws a half ellipse at the center of the image.
-cv.ellipse(img,(256,256),(100,50),0,0,180,255,-1)
-
-    
-'''  
-    imgcelli =array.copy() 
-    cv.ellipse(imgcelli,(x1,y1),(x2,y2),startAngle,endAngle,angle,(255,0,0),-1) 
+    trash = cv.getTrackbarPos("trash", inpWinName)
+    cnt_area =  cv.getTrackbarPos("cnt_area", inpWinName)
    
+    ret, threshImg = cv.threshold(img, trash, 255, cv.THRESH_BINARY_INV)
+  
 
- # Polygon corner points coordinates
-    pts = np.array([[x1, y1], [x2, y2], 
-                [110, 200], [200, 160], 
-                [200, 70], [110, 20]],
-               np.int32)
-    pts = pts.reshape((-1, 1, 2))
-    color = (255, 0, 0)
-
-# Line thickness of 2 px
-    thickness = 2
-    isClosed = True
-    imagPoly  =array.copy() 
-    imagPoly = cv.polylines(imagPoly, [pts], 
-                      isClosed, color, thickness)
-
-   
+    contours, hierarchy = cv.findContours(threshImg, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+    i=0
+    imgout = imgs.copy()
+    for cnt in contours:
+        if cv.contourArea(cnt) > cnt_area:
+           i += 1
+           print(i,".  " ,cv.contourArea(cnt))
+           cv.drawContours( imgout, cnt, -1, (0,255,0), 2)
+    
+    imgg = img.copy()
+    PutTextOnImage(imgs,"source")
+    PutTextOnImage(imgg,"gray")
+    PutTextOnImage( threshImg,"thresh")
+    
+    
+    
     imgStack = stackImages(scl,
-           ( [imglin, imgrec,imgcirc], [imgcelli, imagPoly, imglin]   )    )
+                          ( [imgs, imgg, threshImg],
+                            [ imgout, imgg, imgg]
+                          )    )
  
-
     cv.imshow("ImageStack", imgStack)
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
