@@ -9,9 +9,9 @@ def empty(a):
 
 def inpTrackbar(winName):
     cv2.namedWindow(winName)
-    cv2.createTrackbar("Red", winName, 255, 255, empty)  # 100
-    cv2.createTrackbar("Green", winName,255, 255, empty)  # 100
     cv2.createTrackbar("Blue", winName, 0, 255, empty)  # 100
+    cv2.createTrackbar("Green", winName,255, 255, empty)  # 100
+    cv2.createTrackbar("Red", winName, 255, 255, empty)  # 100
     cv2.createTrackbar("scale", winName, 3, 9, empty)
     # create switch for ON/OFF functionality
     switch = '0 : OFF \n1 : ON'
