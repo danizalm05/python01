@@ -1,12 +1,15 @@
 '''
  Detecting color with Python and OpenCV using HSV colorspace  
- https://www.youtube.com/watch?v=aFNDh5k3SjU&list=PLb49csYFtO2Hpfn8eLnaD9tJ0xYcMVcWe
+ 
+ https://www.youtube.com/watch?v=eDIj5LuIL4A&list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=5493s
+https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=8270
 
 https://colorizer.org/
 '''
 
 
 import cv2
+import numpy as np
 from PIL import Image
 from outputCV import stackImages,PutTextOnImage
 from colorDetectInp import  inpTrackbar ,get_limits
@@ -30,8 +33,9 @@ while True:
      Blue = cv2.getTrackbarPos("Blue", inpWinName)
 
      chosenColor = [Blue, Green, Red]  # chosenColor in BGR colorspace
-    
-     
+     c = np.uint8([[chosenColor]])  #   bgr values  to convert to hsv
+     hsvC = cv2.cvtColor(c, cv2.COLOR_BGR2HSV)
+      
    # ----------------------
      ret, frame = cap.read()
      colorBox = frame.copy()
@@ -47,13 +51,13 @@ while True:
 
      cv2.imshow('frame', frame)
 
-     start_point = (25, 25)
+     start_point = (35, 65)
      end_point = (320, 320)
      color = (255, 55, 0)
      thickness = -1
      colorBox = cv2.rectangle(colorBox, start_point, end_point, chosenColor, thickness)
  
-     PutTextOnImage(colorBox,"bgr :"+ str(chosenColor))
+     PutTextOnImage(colorBox,"bgr:"+ str(chosenColor)+'hsv:'+ str(hsvC))
    
      imgStack = stackImages( scale,  ([colorBox], [frame ])    )
      cv2.imshow("ImageStack", imgStack)

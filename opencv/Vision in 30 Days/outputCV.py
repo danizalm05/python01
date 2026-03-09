@@ -46,10 +46,10 @@ def stackImages(scale,imgArray):
 def PutTextOnImage(image,txt):
    im= cv2.putText (img = image,
        text = txt,
-       org = (20 , 50 ),
+       org = (20 , 30 ),
        fontFace = cv2.FONT_HERSHEY_DUPLEX,
        fontScale = 1.0,
-       color = (255, 226, 25),
+       color = (55, 26, 205),
        thickness = 2)
    return im
 

@@ -31,7 +31,7 @@ def get_limits(color):
  
     
     hsvC = cv2.cvtColor(c, cv2.COLOR_BGR2HSV)
-    print ( color , hsvC)
+   
     lowerLimit = hsvC[0][0][0] - 10, 100, 100
     upperLimit = hsvC[0][0][0] + 10, 255, 255
 
