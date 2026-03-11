@@ -2,7 +2,7 @@
  Detecting color with Python and OpenCV using HSV colorspace  
  
  https://www.youtube.com/watch?v=eDIj5LuIL4A&list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=5493s
-https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=8615
+https://youtu.be/eDIj5LuIL4A?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=8929
 https://colorizer.org/
 '''
 
@@ -40,23 +40,27 @@ while True:
 
      mask = cv2.inRange(hsvImage, lowerLimit, upperLimit)
      mask_ = Image.fromarray(mask)
+     #Convert opencv image to pil image(Image is taken from PIL lib)
+     #So we can use the next 'mask_.getbbox()' function
      bbox = mask_.getbbox()
+     print(bbox)
      if bbox is not None:
          x1, y1, x2, y2 = bbox
-         frame = cv2.rectangle(frame, (x1, y1), (x2, y2), (250,  5, 0), 4)
+         frame = cv2.rectangle(frame, (x1, y1), (x2, y2), (250,  5, 0), 2)
 
-     cv2.imshow('frame', frame)
-
-     start_point = (35, 65)
-     end_point = (320, 320)
+    
+     #Draw a rectangle using the color 'chosenColor'
+     start_point = (45, 100)
+     end_point = (200, 300)
      color = (255, 55, 0)
      thickness = -1
      colorBox = cv2.rectangle(colorBox, start_point, end_point, chosenColor, thickness)
      hsvC = cv2.cvtColor(c, cv2.COLOR_BGR2HSV)
      PutTextOnImage(colorBox,"bgr:"+ str(chosenColor)+'hsv:'+ str(hsvC))
    
-     imgStack = stackImages( scale,  ([colorBox, mask, frame])    )
+     imgStack = stackImages( scale,  ([colorBox, frame, mask])    )
      cv2.imshow("ImageStack", imgStack)
+     #cv2.imshow('frame', frame)
      if cv2.waitKey(1) & 0xFF == ord('q'):
          break
 
