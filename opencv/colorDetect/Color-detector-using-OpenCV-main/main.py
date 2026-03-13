@@ -6,13 +6,14 @@ import math
 import numpy as np
 
 import cv2
+import colorsys
 import matplotlib.pyplot as plt
 
 from tkinter import filedialog as fd
 
 ######
-Optionimage = False
-Optionvideo = True
+Optionimage = True
+Optionvideo = False
 ######
 mouseX, mouseY = 0, 0
 
@@ -107,6 +108,16 @@ while True:
 
     color = rgbToName(pixel)
     r, g, b = int(pixel[0]), int(pixel[1]), int(pixel[2])
+    (rn, gn, bn) = (r / 255, g / 255, b / 255)
+    #convert to hsv
+    (h, s, v) = colorsys.rgb_to_hsv(rn, gn, bn)
+    #expand HSV range
+    (h, s, v) = (int(h * 360), int(s * 100), int(v * 100))
+    
+
+ 
+    
+    
     #######################################
     # show color name UI here
     if x + 10 + 185 >= width:
@@ -127,7 +138,9 @@ while True:
 
     rbginText = (f"RGB : ({r}, {g}, {b})")
     cv2.putText(frame, rbginText, (x+21, y+76), 1, 0.8, (255, 255, 255), 1)
-    cv2.putText(frame, color, (x+15, y+103), 1, 0.8, (255, 255, 255), 1)
+    #cv2.putText(frame, color, (x+15, y+103), 1, 0.8, (255, 255, 255), 1)
+    hsvinText =  (f"HSV : ({h}, {s}, {v})")
+    cv2.putText(frame,  hsvinText, (x+17, y+103), 1, 0.8, (255, 255, 255), 1)
 
     cv2.imshow("IMAGE COLOR ANALYZER", frame)
     key = cv2.waitKey(30)
@@ -146,7 +159,7 @@ while True:
     if key == ord('V') or key == ord('v'):
         Optionimage = False
         Optionvideo = True
-    if key == ord(' ') or key == 27:
+    if key == ord('q') or key == 27:
         break
 inp.release()
 cv2.destroyAllWindows()
