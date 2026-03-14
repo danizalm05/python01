@@ -1,81 +1,24 @@
 '''
 https://github.com/techoflassh/Color-detector-using-OpenCV
+v vidoe   i image file
+
 '''
-
-import math
+ 
 import numpy as np
-
 import cv2
 import colorsys
-import matplotlib.pyplot as plt
-
 from tkinter import filedialog as fd
 
-######
 Optionimage =  False
 Optionvideo =  True
-######
 mouseX, mouseY = 0, 0
 
-rgbColorNameDict = {}
-rgbToNameFile = open("./rgbToName.txt", "r")
-for line in rgbToNameFile.readlines():
-    line = line.replace("\n", "").split(":")
-    rgbColorNameDict[line[0]] = line[1]
-
-
-def rgbToName(rgbTuple):
-    try:
-        r, g, b = rgbTuple
-        diffs = []
-        for color in rgbColorNameDict:
-            cr, cg, cb = (int(x) for x in color.split(","))
-            diff = math.sqrt((abs(r - cr) ** 2 + abs(g - cg) ** 2 + abs(b - cb) ** 2))
-            diffs.append((diff, color))
-        name = rgbColorNameDict[min(diffs)[1]]
-        return name
-    except:
-        return "Unable to get name"
-
-
+ 
 def mousePos(event, x, y, flags, param):
     # print(x, y)
     global mouseX, mouseY
     mouseX, mouseY = x, y
-
-
-def graphy(image):
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-    ploty = [0]*255
-
-    hueList = image[:, :, 0].flatten()
-    for i in range(255):
-        # ploty[i] == np.count_nonzero(x == i)
-        ploty[i] = np.count_nonzero(hueList == i)
-    plotx = list(range(0, 255))
-    print(len(hueList))
-    print(hueList)
-    # print(image)
-    print(ploty)
-    plt.plot(plotx, ploty)
-    plt.show()
-
-
-def hist(image):
-    assert img is not None, "file could not be read, check with os.path.exists()"
-    color = ('b', 'g', 'r')
-    for i, col in enumerate(color):
-        histr = cv2.calcHist([img], [i], None, [256], [0, 256])
-        plt.plot(histr, color=col)
-        plt.xlim([0, 256])
-    plt.show()
-
-
-def hist2(image):
-    plt.hist(img.ravel(), 256, [0, 256])
-    plt.show()
-
-
+ 
 inp = cv2.VideoCapture(0)
 inp.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 inp.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
@@ -106,7 +49,7 @@ while True:
     except:
         pixel = (0, 0, 0)
 
-    color = rgbToName(pixel)
+ 
     r, g, b = int(pixel[0]), int(pixel[1]), int(pixel[2])
     (rn, gn, bn) = (r / 255, g / 255, b / 255)
     #convert to hsv
@@ -114,12 +57,6 @@ while True:
     #expand HSV range
     (h, s, v) = (int(h * 360), int(s * 100), int(v * 100))
     
-
- 
-    
-    
-    #######################################
-    # show color name UI here
     if x + 10 + 185 >= width:
         x = x - 185 - 15
     if y + 10 + 115 >= height:
@@ -143,12 +80,9 @@ while True:
     cv2.putText(frame,  hsvinText, (x+17, y+103), 1, 0.8, (255, 255, 255), 1)
 
     cv2.imshow("IMAGE COLOR ANALYZER", frame)
-    key = cv2.waitKey(30)
-    if key == ord('G') or key == ord('g'):
-        graphy(frame)
-        hist(frame)
-        # hist2(frame)
-
+    key = cv2.waitKey(1)
+    if key & 0xFF == ord('q'):
+        break  
     if key == ord('I') or key == ord('i'):
         Optionimage = True
         Optionvideo = False
@@ -159,6 +93,8 @@ while True:
     if key == ord('V') or key == ord('v'):
         Optionimage = False
         Optionvideo = True
+         
+        
     if key == ord('q') or key == 27:
         break
 inp.release()
