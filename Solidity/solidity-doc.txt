@@ -6,7 +6,8 @@ By Gregory McCubbin · November 25, 2025
   
   
 https://www.dappuniversity.com/articles/solidity-tutorial
-
+1.How to Build Blockchain App - Ethereum Todo List 2019
+   https://www.dappuniversity.com/articles/blockchain-app-tutorial
 
 faucets:
       https://faucets.chain.link/
