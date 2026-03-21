@@ -44,7 +44,7 @@ class MPFaceDetection:
 mp_face_detection = MPFaceDetection(min_detection_confidence=0.5)
 
 # קריאת תמונה לדוגמה
-image = cv2.imread("my_face_image.jpg")
+image = cv2.imread("4.jpg")
 
 # זיהוי הפנים
 faces = mp_face_detection.detect(image)
