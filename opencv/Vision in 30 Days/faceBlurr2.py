@@ -1,58 +1,34 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Mar 20 16:26:05 2026
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
+import mediapipe as mp
+import sys
 
 
-"""
+print ("mp.__version__ = ",mp.__version__)
+print(dir(mp))
+print (mp.__file__)
+print(sys.version) 
+ 
+print(sys.executable)
+'''
+base_options = python.BaseOptions(model_asset_path='face_detection_short_range.tflite')
+options = vision.FaceDetectorOptions(
+    base_options=base_options
+)
 
-import cv2
-from mediapipe.tasks.python.vision import face_detection
-from mediapipe.tasks.python import python
+#detector = vision.FaceDetector.create_from_options(options)
+'''
 
-# --- יצירת mp_face_detection (כמו בקוד הישן) ---
-class MPFaceDetection:
-    def __init__(self, min_detection_confidence=0.5, model_selection=0):
-        options = face_detection.FaceDetectorOptions(
-            model_selection=model_selection,
-            min_detection_confidence=min_detection_confidence
-        )
-        self.detector = face_detection.FaceDetector.create_from_options(options)
-    
-    def detect(self, image):
-        """
-        image: numpy array (BGR כמו OpenCV)
-        מחזיר רשימת bounding boxes של הפנים
-        """
-        mp_image = python.Image(image_format=python.ImageFormat.SRGB, data=image)
-        result = self.detector.detect(mp_image)
-        boxes = []
-        if result.detections:
-            for face in result.detections:
-                # ממיר ל-bbox בפורמט (x, y, width, height)
-                bbox = face.bounding_box
-                boxes.append((
-                    bbox.origin_x,
-                    bbox.origin_y,
-                    bbox.width,
-                    bbox.height
-                ))
-        return boxes
+import urllib.request
 
-# --- שימוש בדימוי ---
-# מחליף את הקוד הישן:
-# mp_face_detection = mp.solutions.face_detection
-mp_face_detection = MPFaceDetection(min_detection_confidence=0.5)
+url = "https://storage.googleapis.com/mediapipe-models/face_detector/face_detector_short_range/float16/1/face_detector_short_range.tflite"
+filename = "face_detector_short_range.tflite"
 
-# קריאת תמונה לדוגמה
-image = cv2.imread("4.jpg")
+urllib.request.urlretrieve(url, filename)
 
-# זיהוי הפנים
-faces = mp_face_detection.detect(image)
+print("Downloaded:", filename)
 
-# הצגת התוצאות
-for (x, y, w, h) in faces:
-    cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-cv2.imshow("Faces", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+
+import os
+print(os.path.exists("face_detector_short_range.tflite"))
