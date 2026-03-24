@@ -1,0 +1,115 @@
+ 
+
+ 
+
+>where python
+D:\prog\anaconda\envs\mediapipe_env\python.exe
+C:\msys64\mingw64\bin\python.exe
+C:\Users\ אך מתקינים annaconda      spyder    python  גירסה 3.10     in windows  10
+
+הנה מדריך ברור, מסודר ופשוט להתקנת Anaconda + Spyder + Python 3.10 על Windows 10:
+ הורדת Anaconda
+
+    היכנס לאתר הרשמי:
+    👉 Anaconda Distribution
+
+    לחץ על Download
+
+   Windows  64-bit
+
+    הורד את קובץ ההתקנה 
+
+⚙️ שלב 2 – התקנה
+
+הרץ את הקובץ שהורדת:
+
+בחר בהגדרות הבאות:
+
+    Just Me (מומלץ)
+    Install to default location
+    אל תסמן "Add Anaconda to PATH" (לא חובה, עדיף שלא)
+    כן לסמן "Register Anaconda as default Python"
+
+לחץ Next עד סיום.
+ שלב 3 – יצירת סביבת Python 3.10
+
+Anaconda מגיע לפעמים עם Python   3.12) 
+so we will create a new  env
+
+פתח: Anaconda Prompt
+
+הרץ:  create -n py310 python=3.10
+
+ outtput:
+  # To activate this environment, use  $ conda activate py310
+# To deactivate an active environment, use  $ conda deactivate
+
+
+
+▶️ שלב 4 – הפעלת הסביבה
+
+conda activate py310
+
+  שלב 5 – התקנת Spyder
+
+בתוך הסביבה: conda install spyder
+
+🚀 שלב 6 – הפעלת Spyder
+
+פשוט הרץ:
+
+spyder
+
+או:
+
+    פתח Anaconda Navigator
+
+    בחר סביבה py310
+
+    לחץ Launch ליד Spyder
+
+
+✅ בדיקה שהכול עובד
+
+ב-Spyder כתוב:
+
+import sys
+print(sys.version)
+
+צריך לראות:
+
+3.10.x
+
+💡 טיפ חשוב (מאוד!)
+
+אם אתה עובד עם mediapipe / dlib (כמו בשאלות שלך):
+
+    Python 3.10 הוא הבחירה הנכונה ✔️
+
+    אל תשתמש ב-3.12+ (עושה הרבה בעיות)
+
+❓ רוצה שאכוון אותך להמשך?
+
+
+
+    להתקין mediapipe בצורה שעובדת בלי שגיאות
+
+    לחבר את Spyder לסביבה נכון
+	
+	----------------
+	
+
+ conda deactivate
+ conda create -n mediapipe_env python=3.10
+ conda activate mediapipe_env
+
+ To activate this environment, use  $ conda activate mediapipe_env
+ To deactivate an active environment, use  $ conda deactivate
+ python -m pip install --upgrade pip
+ pip install mediapipe
+ pip install opencv-python numpy
+ 
+ 
+ 
+  
+  Anaconda Prompt	
