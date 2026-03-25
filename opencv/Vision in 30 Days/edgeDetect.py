@@ -7,6 +7,8 @@ https://github.com/jasmcaus/opencv-course/blob/master/Section%20%231%20-%20Basic
 
 https://docs.opencv.org/4.x/
 https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+
+https://github.com/computervisioneng/
 '''
 
 import cv2 as cv
