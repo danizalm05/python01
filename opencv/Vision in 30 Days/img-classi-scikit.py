@@ -2,7 +2,7 @@
 """
     image-classification-python-scikit-learn
 https://youtu.be/il8dMDlXrIE?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=339
-
+https://youtu.be/il8dMDlXrIE?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=1125
 https://github.com/computervisioneng/image-classification-python-scikit-learn/blob/master/main.py
 
 data:
@@ -36,5 +36,14 @@ for category_idx, category in enumerate(categories):
       catg = (os.path.join(input_dir, category))
       for file in os.listdir(catg  ):
           img_path = os.path.join(input_dir, catg, file)
-          print(img_path)
-     
+          #print(file)
+          img = imread(img_path)
+          img = resize(img, (15, 15)) 
+          data.append(img.flatten())
+          labels.append(category_idx)
+data = np.asarray(data)
+labels = np.asarray(labels)
+
+# train / test split
+x_train, x_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, shuffle=True, stratify=labels)
+       
