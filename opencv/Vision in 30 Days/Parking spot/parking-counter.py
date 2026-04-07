@@ -2,8 +2,9 @@
 """
   
   https://www.youtube.com/watch?v=F-884J2mnOY&list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&index=16
-  https://youtu.be/F-884J2mnOY?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=1830 
-  
+ 
+  https://youtu.be/F-884J2mnOY?list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd&t=2821
+ 
   https://github.com/computervisioneng/parking-space-counter
 
 data:
@@ -16,22 +17,24 @@ data:
 import cv2 
 import getpass
 from util import get_parking_spots_bboxes, empty_or_not
-import matplotlib.pyplot as plt
+ 
 import numpy as np
 
 
-def calc_diff(im1, im2):
+def calc_diff(im1, im2): # Smilarity between two images
     return np.abs(np.mean(im1) - np.mean(im2))
 
 #Read the mask image
-img=  'mask_crop.png'  
+#img=  'mask_crop.png'  
+img = 'mask_1920_1080.png'
 MASK_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 mask = MASK_FOLDER+img
 mask = cv2.imread(mask, 0)# 0 = gray scale
 
 #Open the video  
 VID_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Videos/'
-vid_name = "parking_crop_loop.mp4" 
+vid_name = "parking_1920_1080_loop.mp4" #"parking_1920_1080.mp4" #  "parking_crop_loop.mp4" 
+
 input_file = VID_FOLDER + vid_name
 
 cap = cv2.VideoCapture(input_file)
@@ -64,7 +67,7 @@ while ret:
 
             diffs[spot_indx] = calc_diff(spot_crop, previous_frame[y1:y1 + h, x1:x1 + w, :])
 
-        print([diffs[j] for j in np.argsort(diffs)][::-1])
+        #print([diffs[j] for j in np.argsort(diffs)][::-1])
 
     if frame_nmr % step == 0:
         if previous_frame is None:
