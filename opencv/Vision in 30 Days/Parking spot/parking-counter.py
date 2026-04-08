@@ -13,6 +13,12 @@ data:
    https://github.com/computervisioneng/parking-space-counter/blob/master/mask_1920_1080.png
    https://github.com/computervisioneng/parking-space-counter/blob/master/mask_crop.png
 
+
+next chapter :
+  
+Machine learning web app with Python, Streamlit & Segment Anything Model | Modelbit model deployment 
+      https://www.youtube.com/watch?v=W8OvdQPL7lk&list=PLb49csYFtO2HGELdc-RLRCNVNy0g2UMwc&index=20
+      
 """
 import cv2 
 import getpass
