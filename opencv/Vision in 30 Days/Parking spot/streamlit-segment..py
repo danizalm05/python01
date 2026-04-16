@@ -4,7 +4,12 @@ Machine learning web app with Python, Streamlit & Segment Anything Model
  | Modelbit model deployment 
 
 https://www.youtube.com/watch?v=W8OvdQPL7lk&list=PLb49csYFtO2HGELdc-RLRCNVNy0g2UMwc&index=21
-https://youtu.be/W8OvdQPL7lk?list=PLb49csYFtO2HGELdc-RLRCNVNy0g2UMwc&t=372
+ 
+
+https://youtu.be/W8OvdQPL7lk?list=PLb49csYFtO2HGELdc-RLRCNVNy0g2UMwc&t=555
+
+
+
 https://github.com/computervisioneng/streamlit-segment-anything-model-python/blob/main/BackgroundRemovalWebaPP_Backend.ipynb
 
 https://github.com/facebookresearch/segment-anything
