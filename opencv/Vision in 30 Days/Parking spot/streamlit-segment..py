@@ -18,3 +18,13 @@ colab address
 https://colab.research.google.com/drive/109oevnjECkL-tG5z5T3KPG70wIkjjtAj#scrollTo=2LozyVi_i6rE
 
 '''
+#colab read and show image 
+
+import cv2 as cv
+from google.colab.patches import cv2_imshow
+from skimage import io
+u0 ="https://c8.alamy.com/comp/2M79D5J/fantastic-view-of-the-bahai-gardens-in-haifa-on-the-steep-slope-of-mount-carmel-great-view-of-the-city-and-the-mediterranean-sea-cactus-palm-trees-2M79D5J.jpg "
+u1 =  "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bat_eared_fox_Kenya_crop.jpg"
+url =u0
+img = io.imread(url)
+cv2_imshow(img)
