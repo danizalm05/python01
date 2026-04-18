@@ -28,3 +28,18 @@ u1 =  "https://upload.wikimedia.org/wikipedia/commons/f/ff/Bat_eared_fox_Kenya_c
 url =u0
 img = io.imread(url)
 cv2_imshow(img)
+#-----------
+# load image and select x, y coordinates to test
+import cv2
+
+
+image_path = './test.jpg'
+if not os.path.exists(image_path):
+  #!wget https://utils-computervisiondeveloper.s3.amazonaws.com/media/public/test.jpg
+  !wget https://upload.wikimedia.org/wikipedia/en/0/0e/Mary_Anne_Trump.jpg
+x = 528
+y = 606
+
+image = cv2.imread(image_path)
+u5 ="https://raw.githubusercontent.com/bnsreenu/python_for_microscopists/master/images/monkey.jpg"
+
