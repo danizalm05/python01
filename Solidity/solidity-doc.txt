@@ -1,7 +1,7 @@
   
  https://www.youtube.com/watch?v=08cpMr30jNU
 https://updraft.cyfrin.io/courses
-
+https://updraft.cyfrin.io/courses/blockchain-basics/introduction-to-updraft/best-practices
 
 faucets:
       https://faucets.chain.link/
