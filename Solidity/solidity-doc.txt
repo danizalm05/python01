@@ -3,11 +3,16 @@
 https://updraft.cyfrin.io/courses
 
 https://github.com/Cyfrin/blockchain-basics-cu
-https://updraft.cyfrin.io/courses/blockchain-basics/what-is-a-blockchain/what-is-a-blockchain
+ 
+https://updraft.cyfrin.io/courses/blockchain-basics/what-is-a-blockchain/many-many-chains
 
+Updraft Learning Hub
+
+Interactive demonstrations to learn blockchain technology, cryptography, and decentralized finance:
+https://demos.updraft.cyfrin.io/
  
 
-
+Decentralized Finance (DeFi)
 
 aucets:
       https://faucets.chain.link/
