@@ -14,11 +14,14 @@ https://youtu.be/m9fH9OWn8YM?t=310
 '''
 '''
 במקום להוריד ידנית — משתמשים בכלי הרשמי:
-
-🛠️ OIDv6 Toolkit
+in v7  Find the title of the object you are looking 
+  OIDv6 Toolkit
 pip install oidv6
-הורדת dataset קטן (20 תמונות אלפקה)
-oidv6 downloader --classes Alpaca --type_data train --limit 20
+Downloading  dataset of 100 photo of Alpaca
+start  anconda promper 
+move to    C:\Users\ .....\Pictures 
+and run the next comman to dwonload  100 Alpaca photo
+oidv6 downloader --classes Alpaca --type_data train --limit 100
  output :
      int the directort where run the 'oidv6' you will  get
       OIDv6/
