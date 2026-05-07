@@ -1,0 +1,46 @@
+
+       Automatic number plate recognition with Python, Yolov8 and EasyOCR  
+ https://www.youtube.com/watch?v=fyJB1t0o0ms
+ https://github.com/computervisioneng/automatic-number-plate-recognition-python-
+ 
+Train Yolov8 object detection on a custom dataset   Step by step guide 
+
+https://www.youtube.com/watch?v=m9fH9OWn8YM
+
+https://youtu.be/m9fH9OWn8YM?t=310
+
+
+                         How to Download
+					 ------------------------
+					 
+in v7:  https://storage.googleapis.com/openimages/web/index.html
+1. Press the explore button 
+2. chose type from the menu and detection
+3. chose option from the menu and uncheck everything
+4. In the class window write  the name  of the object you are looking for.
+
+if you find  photos you are looking for you can use  this name in the OIDv6 to the downloadedthe database.
+
+                           OIDv6 Toolkit
+						   --------------
+pip install oidv6
+Downloading  dataset of 100 photo of Alpaca
+1. start  anconda promper 
+2. move to  the location you want to store the data, for example:   C:\Users\ .....\Pictures 
+3. run the next comman to dwonload  100 Alpaca photo
+      oidv6 downloader --classes Alpaca --type_data train --limit 100
+
+ output :
+     int the directort where run the 'oidv6' you will  get
+      OIDv6/
+       └── train/
+             └── Alpaca/
+             ├── img1.jpg
+             ├── img2.jpg
+           └── ...
+ 
+ CVAT: (Computer Vision Annotation Tool)  This is a labling tool 
+ https://www.cvat.ai/
+ 1. log in
+ 2. from project Create a new project( the '+' sign on the right)
+ 3.  Chose name alpaca_detector
