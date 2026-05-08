@@ -31,7 +31,7 @@ Downloading  dataset of 100 photo of Alpaca
       oidv6 downloader --classes Alpaca --type_data train --limit 100
 
  output :
-     int the directort where run the 'oidv6' you will  get
+     in the directory where you run the 'oidv6' you will  get:
       OIDv6/
        └── train/
              └── Alpaca/
@@ -42,5 +42,18 @@ Downloading  dataset of 100 photo of Alpaca
  CVAT: (Computer Vision Annotation Tool)  This is a labling tool 
  https://www.cvat.ai/
  1. log in
- 2. from project Create a new project( the '+' sign on the right)
- 3.  Chose name alpaca_detector
+ 2. From project Create a new project( the '+' sign on the right)
+ 3. Chose name alpaca_detector
+ 4. For labels add one label = 'alpaca'
+ 5. At the bottem left pree '+'  and chose create a new task.
+ 6. chose name 'detect001'
+ 7. Go to the upload section and chose the directory and from this directory chose 
+    the files  you want to upload.
+ 8. Press submit and open.
+ 9. After the photos are uploaded , press the job number.
+10. from the left side chose 'draw ractengle' . 
+11. Chose the shape option and draw the rectangle. chose 'n' as a shortcut for chosing another
+    bounding box. Once finsed save use Ctrl-s
+12 Chpse the '>' to move to the next photo.	
+13 Press 'task'
+14.     https://youtu.be/m9fH9OWn8YM?t=1258
