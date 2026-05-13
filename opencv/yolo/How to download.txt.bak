@@ -55,9 +55,5 @@ Downloading  dataset of 100 photo of Alpaca
 11. Chose the shape option and draw the rectangle. chose 'n' as a shortcut for chosing another
     bounding box. Once finsed save use Ctrl-s
 12 Chpse the '>' to move to the next photo.	
-13 Press 'task' from the main menu
-14. Press action and chose export task database  
-15. From the new window in export format chose  YOLO 1.1
-16. Press OK
-17. In the main menu press request  right click on the task and download.
- https://youtu.be/m9fH9OWn8YM?t=1258
+13 Press 'task'
+14.     https://youtu.be/m9fH9OWn8YM?t=1258
