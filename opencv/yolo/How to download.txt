@@ -61,3 +61,9 @@ Downloading  dataset of 100 photo of Alpaca
 16. Press OK
 17. In the main menu press request  right click on the task and download.
  https://youtu.be/m9fH9OWn8YM?t=1258
+ 
+ Note:   in CVAT you can not chage the data base after creation.
+ but you can create a new task 
+ Go to the main page press project (not the  '+' sign) press the project
+ you will see the options   “Create Task”  
+ 
