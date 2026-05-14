@@ -13,17 +13,7 @@ https://demos.updraft.cyfrin.io/
  
 
 Decentralized Finance (DeFi)
-Decentralized Oracle Networks (DONs):
- A DON is a network of multiple, independent oracle nodes.
- Instead of relying on a single source, a smart contract can query a DON. 
 
-Hybrid Smart Contracts:
-  The combination of secure on-chain code and reliable off-chain data 
-  provided by a DON
-Chainlink:
-  A type of  Decentralized Oracle Network 
-  which is  suite of essential services that enable hybrid smart contracts
- 
 aucets:
       https://faucets.chain.link/
 
