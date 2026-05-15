@@ -3,13 +3,16 @@
  https://www.youtube.com/watch?v=fyJB1t0o0ms
  https://github.com/computervisioneng/automatic-number-plate-recognition-python-
  
-Train Yolov8 object detection on a custom dataset   Step by step guide 
-
+     Train Yolov8 object detection on a custom dataset   Step by step guide 
+-------------------------
 https://www.youtube.com/watch?v=m9fH9OWn8YM
 
 https://youtu.be/m9fH9OWn8YM?t=310
+https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide
 
-
+ 
+https://github.com/ultralytics/ultralytics
+https://github.com/ultralytics/ultralytics/tree/main/docs
                          How to Download
 					 ------------------------
 					 
@@ -56,11 +59,13 @@ Downloading  dataset of 100 photo of Alpaca
     bounding box. Once finsed save use Ctrl-s
 12 Chpse the '>' to move to the next photo.	
 13 Press 'task' from the main menu
-14. Press action and chose export task database  
+14. Press action and choose export task database.  
 15. From the new window in export format chose  YOLO 1.1
 16. Press OK
 17. In the main menu press request  right click on the task and download.
- https://youtu.be/m9fH9OWn8YM?t=1258
+18.  create two directorys 'images' the will contain all the images    and 'labels' that will contain the labels files. 
+     for each image file there is a label file. 
+https://youtu.be/m9fH9OWn8YM?t=1543
  
  Note:   in CVAT you can not chage the data base after creation.
  but you can create a new task 
