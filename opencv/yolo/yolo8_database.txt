@@ -3,8 +3,10 @@
  https://www.youtube.com/watch?v=fyJB1t0o0ms
  https://github.com/computervisioneng/automatic-number-plate-recognition-python-
  
-     Train Yolov8 object detection on a custom dataset   Step by step guide 
--------------------------
+ 
+
+ Train Yolov8 object detection on a custom dataset   Step by step guide 
+                 -------------------------
 https://www.youtube.com/watch?v=m9fH9OWn8YM
 
 https://youtu.be/m9fH9OWn8YM?t=310
@@ -13,8 +15,10 @@ https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-gu
  
 https://github.com/ultralytics/ultralytics
 https://github.com/ultralytics/ultralytics/tree/main/docs
-                         How to Download
-					 ------------------------
+
+
+                         How to Download a data base from V7
+			     		 -----------------------------------
 					 
 in v7:  https://storage.googleapis.com/openimages/web/index.html
 1. Press the explore button 
@@ -40,8 +44,12 @@ Downloading  dataset of 100 photo of Alpaca
              └── Alpaca/
              ├── img1.jpg
              ├── img2.jpg
-           └── ...
- 
+             └── ...
+			 
+			 
+                How to create the database of images
+		------------------------------------------	
+ In this method you have to download all the images and follow the next steaps.		
  CVAT: (Computer Vision Annotation Tool)  This is a labling tool 
  https://www.cvat.ai/
  1. log in
@@ -63,7 +71,9 @@ Downloading  dataset of 100 photo of Alpaca
 15. From the new window in export format chose  YOLO 1.1
 16. Press OK
 17. In the main menu press request  right click on the task and download.
-18.  create two directorys 'images' the will contain all the images    and 'labels' that will contain the labels files. 
+18.  create two directorys 
+      a:  'images' the will contain all the images    
+      b:  'labels' that will contain the labels files. 
      for each image file there is a label file. 
 https://youtu.be/m9fH9OWn8YM?t=1543
  

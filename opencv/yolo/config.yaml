@@ -1,4 +1,4 @@
-path: C:/Users/rockman/Pictures/yolo8  # dataset root dir
+path: C:/Users/rockman/Pictures/y8  # dataset root dir
 train: images/train  # train images (relative to 'path')
 val: images/train  # val images (relative to 'path')
 
