@@ -82,3 +82,11 @@ https://youtu.be/m9fH9OWn8YM?t=1543
  Go to the main page press project (not the  '+' sign) press the project
  you will see the options   “Create Task”  
  
+  Trainig using python 
+ ========================== 
+ Run the 'yolo8Training .py'
+ 
+ Training using command line 
+ =============================
+ https://youtu.be/m9fH9OWn8YM?t=2493
+ 
