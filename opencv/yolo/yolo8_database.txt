@@ -84,9 +84,28 @@ https://youtu.be/m9fH9OWn8YM?t=1543
  
   Trainig using python 
  ========================== 
- Run the 'yolo8Training .py'
+ Run the 'yolo8Training.py'
  
  Training using command line 
  =============================
  https://youtu.be/m9fH9OWn8YM?t=2493
+ 
+ You can use Ultralytics YOLO directly from the Command Line Interface (CLI) with the yolo command:
+ # Predict using a pretrained YOLO model (e.g., YOLO26n) on an image
+ # From anconda prompt run:
+yolo detect train data=D:\python02\opencv\yolo\config.yaml   model="yolov8n.yaml" epochs=1
+ 
+ the result will be the same. Results saved to C:\Users\rockman\runs\detect\train
+ 
+ Training using colab
+========================
+https://youtu.be/m9fH9OWn8YM?t=2585
+https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide/tree/master/google_colab
+
+can't connect to google drive.
+testing 
+=====================
+https://youtu.be/m9fH9OWn8YM?t=3011
+
+
  
