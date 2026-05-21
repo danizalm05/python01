@@ -38,9 +38,10 @@ from ultralytics import YOLO
 model = YOLO("yolov8n.yaml")  # build a new model from scratch
 
 # Use the model
-
-results = model.train(data="config.yaml", epochs=1)  # train the model
+numOfEpo = 40
+results = model.train(data="config.yaml", epochs = numOfEpo)  # train the model
 
 '''
 At the end of process Results saved to:   .\runs\detect\train
+the model is stored in  ........runs\detect\train\weights\last.pt
 '''
