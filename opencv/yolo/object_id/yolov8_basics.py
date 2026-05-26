@@ -7,7 +7,7 @@ https://youtu.be/hg4oVgNq7Do?t=399
 from ultralytics import YOLO
 import numpy
 
-# load a pretrained YOLOv8n model
+#   load a pretrained YOLOv8n   model
 model = YOLO("yolov8n.pt", "v8")  
 
 # predict on an image
