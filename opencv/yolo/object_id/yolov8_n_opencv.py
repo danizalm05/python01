@@ -17,7 +17,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-vid= 'afriq1.MP4' # 'los_angeles.mp4'   'dog.mp4''afriq0.MP4'
+vid= 'afriq1.MP4' #    'los_angeles.mp4'   'dog.mp4''afriq0.MP4'
 BASE_FOLDER = 'C:/Users/'+ getpass.getuser() +'/Videos/'
 #BASE_FOLDER = 'C:/Users/' + getpass.getuser() + '/Pictures/Saved Pictures/'
 video_name = BASE_FOLDER+vid
