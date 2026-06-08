@@ -23,7 +23,14 @@ Hybrid Smart Contracts:
 Chainlink:
   A type of  Decentralized Oracle Network 
   which is  suite of essential services that enable hybrid smart contracts
+
+Chain ID :
+ unique number that serves as a specific identifier for a blockchain network.
+ Ethereum Mainnet   Chain ID = 1.
+ Sepolia Testnet  Chain ID = 11155111.
  
+Ethereum Virtual Machine (EVM)  
+
 aucets:
       https://faucets.chain.link/
 
