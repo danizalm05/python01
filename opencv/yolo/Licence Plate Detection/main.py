@@ -8,7 +8,6 @@
  https://universe.roboflow.com/mochoye/license-plate-detector-ogxxg
 
 ''' 
-  
-Creating Stable Diffusion Illusion Art with Hugging Face and Google Colab:  
- https://www.youtube.com/watch?v=vRos-zleKoc&list=PLmxueiA72TtiGeE_X95mo8DZgQXLwmAyj
-https://huggingface.co/spaces/AP123/IllusionDiffusion
+YOLOv8 Full Tutorial Playlist | Object Detection, Segmentation 
+https://www.youtube.com/watch?v=fhzCwJkDONE&list=PLv8Cp2NvcY8ClWpGlPJ9tmBmUhlA94Umy&index=1
+https://www.youtube.com/watch?v=myle_dNJjqg&list=PLv8Cp2NvcY8ClWpGlPJ9tmBmUhlA94Umy&index=2
