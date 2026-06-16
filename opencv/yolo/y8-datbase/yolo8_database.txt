@@ -42,9 +42,9 @@ Downloading  dataset of 100 photo of Alpaca
       OIDv6/
        └── train/
              └── Alpaca/
-             ├── img1.jpg
-             ├── img2.jpg
-             └── ...
+                 ├── img1.jpg
+                 ├── img2.jpg
+                 └── ...
 			 
 			 
                 How to create the database of images
@@ -58,14 +58,14 @@ Downloading  dataset of 100 photo of Alpaca
  4. For labels add one label = 'alpaca'
  5. At the bottem left pree '+'  and chose create a new task.
  6. chose name 'detect001'
- 7. Go to the upload section and chose the directory and from this directory chose 
-    the files  you want to upload.
+ 7. Go to the upload section and chose the directory and from this directory
+   chose   the files  you want to upload.
  8. Press submit and open.
  9. After the photos are uploaded , press the job number.
 10. from the left side chose 'draw ractengle' . 
 11. Chose the shape option and draw the rectangle. chose 'n' as a shortcut for chosing another
     bounding box. Once finsed save use Ctrl-s
-12 Chpse the '>' to move to the next photo.	
+12 Chose the '>' to move to the next photo.	
 13 Press 'task' from the main menu
 14. Press action and choose export task database.  
 15. From the new window in export format chose  YOLO 1.1
@@ -90,12 +90,14 @@ https://youtu.be/m9fH9OWn8YM?t=1543
  =============================
  https://youtu.be/m9fH9OWn8YM?t=2493
  
- You can use Ultralytics YOLO directly from the Command Line Interface (CLI) with the yolo command:
+ You can use Ultralytics YOLO directly from the Command Line Interface (CLI) 
+ with the yolo command:
  # Predict using a pretrained YOLO model (e.g., YOLO26n) on an image
  # From anconda prompt run:
 yolo detect train data=D:\python02\opencv\yolo\config.yaml   model="yolov8n.yaml" epochs=1
  
- the result will be the same. Results saved to C:\Users\rockman\runs\detect\train
+ the result will be the same.
+ Results saved to C:\Users\rockman\runs\detect\train
  
  Training using colab
 ========================
