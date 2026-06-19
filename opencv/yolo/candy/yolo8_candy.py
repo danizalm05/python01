@@ -55,30 +55,40 @@ There are a couple options for gathering images:
 *   Find a pre-made dataset from sources like [Roboflow Universe](), [Kaggle](), or [Google Images V7]()
 
 
-If you want to build your own dataset, there are several tools available for labeling images. One good option is [Label Studio](https://labelstud.io/?utm_source=youtube&utm_medium=video&utm_campaign=edjeelectronics), a free and open-source labeling tool that has a simple workflow while providing capabilities for more advanced features. My YouTube video that walks through this notebook (link to be added soon) shows how to label images with Label Studio.
+If you want to build your own dataset, there are several tools available for labeling images.
+ One good option is
+ [Label Studio]
+ (https://labelstud.io/?utm_source=youtube&utm_medium=video&utm_campaign=edjeelectronics),
+ a free and open-source labeling tool that has a simple workflow while providing capabilities for 
+ more advanced features. 
+ My YouTube video that walks through this notebook (link to be added soon) shows how to label 
+ images with Label Studio.
 
 <p align=center>
 <img src="https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/doc/label-studio-example.PNG" height="380"><br>
 <i>Example of a candy image labeled with Label Studio.</i>
 </p>
 
-If you used Label Studio to label and export the images, they'll be exported in a `project.zip` file that contains the following:
+If you used Label Studio to label and export the images, they'll be exported in a `project.zip` 
+file that contains the following:
 
 - An `images` folder containing the images
 - A `labels` folder containing the labels in YOLO annotation format
 - A `classes.txt` labelmap file that contains all the classes
 - A `notes.json` file that contains info specific to Label Studio (this file can be ignored)
 
-If you obtained your dataset from another source (like Roboflow Universe) or used another tool to label your dataset, make sure the files are organized in the same folder structure.
+If you obtained your dataset from another source (like Roboflow Universe) or used another tool to 
+label your dataset, make sure the files are organized in the same folder structure.
 
 <p align=center>
 <img src="https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/doc/zipped-data-example.png" height=""><br>
 <i>Organize your data in the folders shown here. See my <a href="https://s3.us-west-1.amazonaws.com/evanjuras.com/resources/candy_data_06JAN25.zip">Candy Detection Dataset</a> for an example.</i>
 </p>
 
-Once you've got your dataset built, put into the file structure shown above, and zipped into `data.zip`, you're ready to move on to the next step.
+Once you've got your dataset built, put into the file structure shown above, and zipped 
+into `data.zip`, you're ready to move on to the next step.
 
-# 2.&nbsp;Upload Image Dataset and Prepare Training Data
+# 2.& Upload Image Dataset and Prepare Training Data
 
 Next, we'll upload our dataset and prepare it for training with YOLO. We'll split the dataset into train and validation folders, and we'll automatically generate the configuration file for training the model.
 

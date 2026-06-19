@@ -47,42 +47,61 @@ Downloading  dataset of 100 photo of Alpaca
                  └── ...
 			 
 			 
-                How to create the database of images
+                How to create the database from the  images
 		------------------------------------------	
  In this method you have to download all the images and follow the next steaps.		
- CVAT: (Computer Vision Annotation Tool)  This is a labling tool 
- https://www.cvat.ai/
- 1. log in
- 2. From project Create a new project( the '+' sign on the right)
- 3. Chose name alpaca_detector
- 4. For labels add one label = 'alpaca'
- 5. At the bottem left pree '+'  and chose create a new task.
- 6. chose name 'detect001'
- 7. Go to the upload section and chose the directory and from this directory
-   chose   the files  you want to upload.
- 8. Press submit and open.
- 9. After the photos are uploaded , press the job number.
-10. from the left side chose 'draw ractengle' . 
-11. Chose the shape option and draw the rectangle. chose 'n' as a shortcut for chosing another
-    bounding box. Once finsed save use Ctrl-s
-12 Chose the '>' to move to the next photo.	
-13 Press 'task' from the main menu
-14. Press action and choose export task database.  
-15. From the new window in export format chose  YOLO 1.1
-16. Press OK
-17. In the main menu press request  right click on the task and download.
-18.  create two directorys 
-      a:  'images' the will contain all the images    
-      b:  'labels' that will contain the labels files. 
-     for each image file there is a label file. 
-https://youtu.be/m9fH9OWn8YM?t=1543
+ Label Studio, 
+ https://labelstud.io/
+
+ 1. Install Label Studio:
+     opene anaconda prompt and run :pip install label-studio
+ 2. Start Label Studio:
+         label-studio start
+		 C:\Users\rockman\AppData\Local\label-studio\label-studio
+ 3. Open Label Studio at http://localhost:8080.
+ 4. Sign up with an email address and password that you create.   da5@g    Pa35
+ 5. Click Create
+ 6. Name the project.
+ 7. Click Data Import and upload the data files that you want to use. 
+    If you want to use data from a local directory, cloud storage bucket, or database, skip this step for now.
+ 8. Click Labeling Setup and choose a template and customize the label names for your use case.
+ 9. Click Save to save your project.
+
+          Labeling guide
+ 10. Open a project in Label Studio and optionally filter or sort the data. 
+ 11. Click Label All Tasks to start labeling.
+ 12.
+
+ http://localhost:8080/
+
+ https://labelstud.io/guide/quick_start?_gl=1*1gwfiir*_gcl_au*MTIwNDM4NTE3Ni4xNzgxNzkxMDk5*_ga*MTAyODI0Mjk1MS4xNzgxNzkxMTAw*_ga_NQELN45JRH*czE3ODE3OTEwOTkkbzEkZzEkdDE3ODE3OTIzMTQkajQ2JGwwJGgw
  
- Note:   in CVAT you can not chage the data base after creation.
- but you can create a new task 
- Go to the main page press project (not the  '+' sign) press the project
- you will see the options   “Create Task”  
  
-  Trainig using python 
+ databae dir structre:
+    database name/
+       └── images
+	   |      └──train/
+       |          ├── img1.jpg
+       |          ├── img2.jpg
+       |          └── ...
+	   |      └──val/
+       |          ├── img1.jpg
+       |          ├── img2.jpg
+       |          └── ...			 
+       └── labels
+	          └──train/
+                 ├── labeimg1.txt
+                 ├── labeimg2.txt
+                 └── ...
+		      └──val/
+                 ├── labeimg1.txt
+                 ├── labeimg2.txt
+                 └── ...			 
+
+
+
+
+ Trainig using python 
  ========================== 
  Run the 'yolo8Training.py'
  
@@ -104,7 +123,7 @@ yolo detect train data=D:\python02\opencv\yolo\config.yaml   model="yolov8n.yaml
 https://youtu.be/m9fH9OWn8YM?t=2585
 https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide/tree/master/google_colab
 
-can't connect to google drive.
+
 
 testing 
 =====================
@@ -112,3 +131,13 @@ https://youtu.be/m9fH9OWn8YM?t=3011
 
 
  
+ @clarky: the error you got was correct tried to tell you that your usage of drive.mount() 
+ is incorrect: the mountpoint argument to drive.mount() must be an empty directory that exists, 
+ or the name of a non-existent file/directory in a directory that does exist so that the 
+ mountpoint can be created as part of the mount operation. Your usage of a relative path in d
+rive.mount('content/drive/') (i.e. content/drive/) implies that the mount should 
+happen at '/content/content/drive' because the interpreter's default path is /content; 
+note the doubled content path component there, and likely you don't already have a directory 
+named /content/content inside of which a mountpoint named drive could be created. The fix to
+ your notebook code is to instead use drive.mount('/content/drive') - 
+ note the leading / making the mountpount path absolute instead of relative.
