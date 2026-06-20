@@ -70,12 +70,34 @@ Downloading  dataset of 100 photo of Alpaca
           Labeling guide
  10. Open a project in Label Studio and optionally filter or sort the data. 
  11. Click Label All Tasks to start labeling.
- 12.
+ 12.  From the label list Select the label you want to apply to the region. 
+ 13.   Click the text, image, audio, or other data object to apply the label to 
+        the   region. Your changes save automatically.
+ 14.   Click Submit to submit the completed annotation and move on to the next task.
 
+ 15.  At the end of process.Export using the option  'YOLOv8 OBB with Images'  
+     the file is downloaded to download dir.
+
+       Upload to colab two options
+ 16 .Option 1:
+        press files  from the left side menu (not file from upper menu)
+     Option 2:   
+	    a. upload the data.zip file to your Google Drive, and make note of the folder you uploaded them to. Replace MyDrive/path/to/data.zip 
+		with the path to your zip file. 
+        b.   following block of code to mount your Google Drive to this Colab        
+		      session and copy the folder to this filesystem.
+		
+		     from google.colab import drive
+            drive.mount('/content/drive')
+		  copy the file :
+		    !cp /content/gdrive/MyDrive/path/to/data.zip /content
+
+        c. Unzip images to a custom data folder
+          !unzip -q /content/data.zip -d /content/custom_data
  http://localhost:8080/
 
  https://labelstud.io/guide/quick_start?_gl=1*1gwfiir*_gcl_au*MTIwNDM4NTE3Ni4xNzgxNzkxMDk5*_ga*MTAyODI0Mjk1MS4xNzgxNzkxMTAw*_ga_NQELN45JRH*czE3ODE3OTEwOTkkbzEkZzEkdDE3ODE3OTIzMTQkajQ2JGwwJGgw
- 
+ https://labelstud.io/guide/hotkeys
  
  databae dir structre:
     database name/
