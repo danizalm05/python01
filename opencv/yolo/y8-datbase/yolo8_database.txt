@@ -47,10 +47,10 @@ Downloading  dataset of 100 photo of Alpaca
                  └── ...
 			 
 			 
-                How to create the database from the  images
+               Label Studio
 		------------------------------------------	
  In this method you have to download all the images and follow the next steaps.		
- Label Studio, 
+ , 
  https://labelstud.io/
 
  1. Install Label Studio:
@@ -79,12 +79,13 @@ Downloading  dataset of 100 photo of Alpaca
      the file is downloaded to download dir.
 
        Upload to colab two options
- 16 .Option 1:
-        press files  from the left side menu (not file from upper menu)
+ 16 .Option 1: Upload data.zip through Google Colab
+         Upload the  file to the Google Colab instance by clicking the "Files" icon on the left hand 
+	      side of the browser, and then the "Upload to session storage" icon. Select the zip folder to upload it.
      Option 2:   
 	    a. upload the data.zip file to your Google Drive, and make note of the folder you uploaded them to. Replace MyDrive/path/to/data.zip 
 		with the path to your zip file. 
-        b.   following block of code to mount your Google Drive to this Colab        
+        b.   Run following block of code to mount your Google Drive to this Colab        
 		      session and copy the folder to this filesystem.
 		
 		     from google.colab import drive
@@ -92,8 +93,27 @@ Downloading  dataset of 100 photo of Alpaca
 		  copy the file :
 		    !cp /content/gdrive/MyDrive/path/to/data.zip /content
 
-        c. Unzip images to a custom data folder
+
+ 17. Unzip images to a custom data folder
           !unzip -q /content/data.zip -d /content/custom_data
+		  
+18. folder structure  root folder is named “data”
+     data		  
+	   └──train
+            └── images	90% of images
+            └── labels  90% of labels
+	   └──validatio
+            └── images	10% of images
+            └── labels  10% of labels		
+			
+  Python script that will automatically create the required folder structure
+  and randomly move 90% of dataset to the "train" folder and 10% to the "validation" folder. 			
+			
+		!wget -O /content/train_val_split.py https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/utils/train_val_split.py
+
+# TO DO: Improve robustness of train_val_split.py script so it can handle nested data folders, etc
+!python train_val_split.py --datapath="/content/custom_data" --train_pct=0.9	
+			
  http://localhost:8080/
 
  https://labelstud.io/guide/quick_start?_gl=1*1gwfiir*_gcl_au*MTIwNDM4NTE3Ni4xNzgxNzkxMDk5*_ga*MTAyODI0Mjk1MS4xNzgxNzkxMTAw*_ga_NQELN45JRH*czE3ODE3OTEwOTkkbzEkZzEkdDE3ODE3OTIzMTQkajQ2JGwwJGgw
