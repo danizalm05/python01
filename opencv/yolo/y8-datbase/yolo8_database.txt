@@ -37,7 +37,7 @@ Downloading  dataset of 100 photo of Alpaca
 3. run the next comman to dwonload  100 Alpaca photo
       oidv6 downloader --classes Alpaca --type_data train --limit 100
 
- output :
+ output :   (the output dir is         C:\Users\<user name>\OIDv6)
      in the directory where you run the 'oidv6' you will  get:
       OIDv6/
        └── train/
@@ -55,7 +55,7 @@ Downloading  dataset of 100 photo of Alpaca
 
  1. Install Label Studio:
      opene anaconda prompt and run :pip install label-studio
- 2. Start Label Studio:
+ 2. from anaconda prompt run  Start Label Studio:
          label-studio start
 		 C:\Users\rockman\AppData\Local\label-studio\label-studio
  3. Open Label Studio at http://localhost:8080.
@@ -97,7 +97,7 @@ Downloading  dataset of 100 photo of Alpaca
  17. Unzip images to a custom data folder
           !unzip -q /content/data.zip -d /content/custom_data
 		  
-18. folder structure  root folder is named “data”
+18. The result is a folder named “data” :
      data		  
 	   └──train
             └── images	90% of images
@@ -106,80 +106,58 @@ Downloading  dataset of 100 photo of Alpaca
             └── images	10% of images
             └── labels  10% of labels		
 			
-  Python script that will automatically create the required folder structure
+  The next command will  download a python script that will automatically create the required folder structure
   and randomly move 90% of dataset to the "train" folder and 10% to the "validation" folder. 			
 			
 		!wget -O /content/train_val_split.py https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/utils/train_val_split.py
 
-# TO DO: Improve robustness of train_val_split.py script so it can handle nested data folders, etc
-!python train_val_split.py --datapath="/content/custom_data" --train_pct=0.9	
-			
- http://localhost:8080/
 
- https://labelstud.io/guide/quick_start?_gl=1*1gwfiir*_gcl_au*MTIwNDM4NTE3Ni4xNzgxNzkxMDk5*_ga*MTAyODI0Mjk1MS4xNzgxNzkxMTAw*_ga_NQELN45JRH*czE3ODE3OTEwOTkkbzEkZzEkdDE3ODE3OTIzMTQkajQ2JGwwJGgw
- https://labelstud.io/guide/hotkeys
+       !python train_val_split.py --datapath="/content/custom_data" --train_pct=0.9	
  
- databae dir structre:
-    database name/
-       └── images
-	   |      └──train/
-       |          ├── img1.jpg
-       |          ├── img2.jpg
-       |          └── ...
-	   |      └──val/
-       |          ├── img1.jpg
-       |          ├── img2.jpg
-       |          └── ...			 
-       └── labels
-	          └──train/
-                 ├── labeimg1.txt
-                 ├── labeimg2.txt
-                 └── ...
-		      └──val/
-                 ├── labeimg1.txt
-                 ├── labeimg2.txt
-                 └── ...			 
+19. !pip install ultralytics
+20  create the file 'data.yaml':
+
+      path: /content/data
+      train: train/images
+      val: validation/images
+      nc: 2
+      names:
+      - Airplane
+      - Car
+
+21:  Run Training:
+                     !yolo detect train data=/content/data.yaml model=yolo11s.pt epochs=60 imgsz=640
+
+22: The 'best.pt' trained model weights will be saved in:
+                            content/runs/detect/train/weights/best.pt
+							
+23 Test Model
+   he commands below run the model on the images in the validation folder and then display the results for
+   the first 10 images. 
+   !yolo detect predict model=runs/detect/train/weights/best.pt source=data/validation/images  
+                                                                                       save=True						
+			 				
 
 
+24.  zip  trained model by running the code block  below.	
 
+        # Create "my_model" folder to store model weights and train results
+		!mkdir /content/my_model
+		!cp /content/runs/detect/train/weights/best.pt /content/my_model/my_model.pt
+		!cp -r /content/runs/detect/train /content/my_model
 
- Trainig using python 
- ========================== 
- Run the 'yolo8Training.py'
+		# Zip into "my_model.zip"
+		%cd my_model
+		!zip /content/my_model.zip my_model.pt
+		!zip -r /content/my_model.zip train
+		%cd /content						
+  
+  
+ 25. download the trained model by running the code block  below.
  
- Training using command line 
- =============================
- https://youtu.be/m9fH9OWn8YM?t=2493
- 
- You can use Ultralytics YOLO directly from the Command Line Interface (CLI) 
- with the yolo command:
- # Predict using a pretrained YOLO model (e.g., YOLO26n) on an image
- # From anconda prompt run:
-yolo detect train data=D:\python02\opencv\yolo\config.yaml   model="yolov8n.yaml" epochs=1
- 
- the result will be the same.
- Results saved to C:\Users\rockman\runs\detect\train
- 
- Training using colab
-========================
-https://youtu.be/m9fH9OWn8YM?t=2585
-https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide/tree/master/google_colab
+    # This takes forever for some reason, you can also just download the model from the sidebar
+    from google.colab import files
 
-
-
-testing 
-=====================
-https://youtu.be/m9fH9OWn8YM?t=3011
-
-
- 
- @clarky: the error you got was correct tried to tell you that your usage of drive.mount() 
- is incorrect: the mountpoint argument to drive.mount() must be an empty directory that exists, 
- or the name of a non-existent file/directory in a directory that does exist so that the 
- mountpoint can be created as part of the mount operation. Your usage of a relative path in d
-rive.mount('content/drive/') (i.e. content/drive/) implies that the mount should 
-happen at '/content/content/drive' because the interpreter's default path is /content; 
-note the doubled content path component there, and likely you don't already have a directory 
-named /content/content inside of which a mountpoint named drive could be created. The fix to
- your notebook code is to instead use drive.mount('/content/drive') - 
- note the leading / making the mountpount path absolute instead of relative.
+    files.download('/content/my_model.zip')
+	
+	
