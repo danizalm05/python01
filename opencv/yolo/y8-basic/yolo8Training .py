@@ -1,0 +1,47 @@
+
+'''
+               Ultralytics YOLO . 
+https://youtu.be/m9fH9OWn8YM?t=1931
+https://youtu.be/m9fH9OWn8YM?t=2095
+https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide
+
+code:
+https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide/blob/master/local_env/train.py
+
+
+https://github.com/ultralytics/ultralytics
+
+pip install ultralytics
+
+ You need to create "config.yaml" https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide/blob/master/local_env/config.yaml
+ ---------------   config.yaml   -----------------
+path: /home/........./code/data  # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/train  # val images (relative to 'path')
+
+# Classes
+names:
+  0: alpaca
+  
+---------------  
+
+uselly the vlidation image sould point to another group of images to do
+the validation process but here we are using the same dir to make the preocss
+simpler.
+''' 
+ 
+
+
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO("yolov8n.yaml")  # build a new model from scratch
+
+# Use the model
+numOfEpo = 40
+results = model.train(data="config.yaml", epochs = numOfEpo)  # train the model
+
+'''
+At the end of process Results saved to:   .\runs\detect\train
+the model is stored in  ........runs\detect\train\weights\last.pt
+'''
