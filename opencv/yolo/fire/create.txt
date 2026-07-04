@@ -1,0 +1,36 @@
+ 
+                      Fire Detector Course
+                       Tech With Nanor
+ ---------------------------------
+
+https://www.youtube.com/watch?v=FBavXyN18K8
+https://youtu.be/FBavXyN18K8?t=993
+https://github.com/Tech-Watt/YOUTUBE-TUTORIAL-CODES/blob/main/Fire%20Detector%20Course/fire.py
+
+
+download the dataset from:
+https://www.kaggle.com/datasets/ankan1998/fire-detection-in-yolo-format
+
+unzip structure is:
+  data
+      test 
+             images
+             labels
+      train
+             images
+             labels
+      valid
+             images
+             labels
+                              data.yamal
+                           -------------------     
+train: ../train/images
+val: ../valid/images
+
+nc: 1
+names: ['fire']
+
+1. from Colab create a new note book
+2 .Mout the drive by chosing files button from the left side of the sccreen 
+   and chose  the mout drive from the upper menu.
+   Now you have access to every file in your googke drive.
