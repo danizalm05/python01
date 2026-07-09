@@ -29,7 +29,9 @@ Chain ID :
  Ethereum Mainnet   Chain ID = 1.
  Sepolia Testnet  Chain ID = 11155111.
  
-Ethereum Virtual Machine (EVM)  
+Ethereum Virtual Machine (EVM)  :  Its primary function is to execute smart contracts.
+EVM Equivalence: An EVM Equivalent chain is designed to behave identically to the Ethereum mainnet in every way. 
+EVM Compatibility: here are some differences in how the chain works "under the hood."
 
 aucets:
       https://faucets.chain.link/
