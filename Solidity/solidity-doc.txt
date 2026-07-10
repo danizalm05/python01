@@ -4,7 +4,7 @@ https://updraft.cyfrin.io/courses
 
 https://github.com/Cyfrin/blockchain-basics-cu
  
-https://updraft.cyfrin.io/courses/blockchain-basics/what-is-a-blockchain/many-many-chains
+ https://updraft.cyfrin.io/courses/blockchain-basics/sending-transactions/setting-up-a-wallet
 
 Updraft Learning Hub
 
