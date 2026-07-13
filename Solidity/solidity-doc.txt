@@ -46,7 +46,27 @@ aucets:
    risk       auction    reform 
    eyebrow    convince   decline 
    enlist     truck      mercy
-  https://etherscan.io/
-  https://faucets.chain.link/sepolia
-  https://sepolia.etherscan.io/    #ex list
+  
+
+ https://etherscan.io/  
+ Blockscout (eth.blockscout.com)# view the activity of any wallet address
+   
+   Testnet Faucets
+  ------------------
+If you receive a flag pop-up requiring you to have 0.001 ETH on mainnet, you may be able to wait 10 to 20 minutes and
+ try again to avoid adding the 0.001 ETH on the mainnet.
+
+  1.  Sepolia PoW Faucet:  
+             https://sepolia-faucet.pk910.de/
+	
+  2. Main (Sepolia): Sepolia GCP Faucet :   
+             https://cloud.google.com/application/web3/faucet/ethereum/sepolia  
+	
+	
+	
+     
+ 
+  https://sepolia.etherscan.io/    # view the activity of any wallet address, 
+  
+ 
   
