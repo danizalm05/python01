@@ -1,0 +1,50 @@
+https://www.youtube.com/watch?v=08cpMr30jNU
+https://updraft.cyfrin.io/courses
+
+https://github.com/Cyfrin/blockchain-basics-cu
+ 
+ https://updraft.cyfrin.io/courses/blockchain-basics/sending-transactions/setting-up-a-wallet
+
+Updraft Learning Hub
+
+Interactive demonstrations to learn blockchain technology, cryptography, and decentralized finance:
+https://demos.updraft.cyfrin.io/
+ 
+
+faucets:
+      https://faucets.chain.link/
+
+      https://www.alchemy.com/faucets/ethereum-sepolia
+	  https://faucets.chain.link/sepolia
+	  https://sepolia-faucet.pk910.de/
+      https://cloud.google.com/application/web3/faucet
+  
+  https://metamask.io/
+   wall       fossil     arrive  
+   risk       auction    reform 
+   eyebrow    convince   decline 
+   enlist     truck      mercy
+  
+
+ https://etherscan.io/  
+ Blockscout (eth.blockscout.com)# view the activity of any wallet address
+   
+   Testnet 
+  ------------------
+If you receive a flag pop-up requiring you to have 0.001 ETH on mainnet, you may be able to wait 10 to 20 minutes and
+ try again to avoid adding the 0.001 ETH on the mainnet.
+
+  1.  Sepolia PoW Faucet:  
+             https://sepolia-faucet.pk910.de/
+	
+  2. Main (Sepolia): Sepolia GCP Faucet :   
+             https://cloud.google.com/application/web3/faucet/ethereum/sepolia  
+	
+ 
+  3. https://faucets.chain.link/sepolia	:    chose  the 2'nd 'Ethereum Sepolia'   from the list
+     
+ 
+  https://sepolia.etherscan.io/    # view the activity of any wallet address, 
+  
+ 
+  
