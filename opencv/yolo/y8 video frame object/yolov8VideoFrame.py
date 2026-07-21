@@ -3,11 +3,14 @@
 https://github.com/DAVIDNYARKO123/yolov8-silva/blob/main/yolov8_n_opencv.py
 https://youtu.be/hg4oVgNq7Do?t=728
 
+online version:
+https://frame-extractor.com/en/extract 
 
- 
+YouTube Video Downloader:
+   https://sceneform.ai/tools/youtube-video-downloader?task_id=4adbf356-63fd-43fa-a5fc-4ce3e66376b9 
 
- 
 
+commands
 'b'   98    backward 1 frame
 'd'  100    backward 'frame_jump' frames
 'f'  102    forward 1 frame

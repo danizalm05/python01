@@ -63,8 +63,10 @@ Downloading  dataset of 100 photo of Alpaca
  5. Click Create
  6. Name the project.
  7. Click Data Import and upload the data files that you want to use. 
-    If you want to use data from a local directory, cloud storage bucket, or database, skip this step for now.
- 8. Click Labeling Setup and choose a template and customize the label names for your use case.
+    If you want to use data from a local directory, cloud storage bucket, or
+	database, skip this step for now.
+ 8. Click Labeling Setup and choose a template and customize the label names 
+ for your use case.
  9. Click Save to save your project.
 
           Labeling guide
@@ -73,20 +75,23 @@ Downloading  dataset of 100 photo of Alpaca
  12.  From the label list Select the label you want to apply to the region. 
  13.   Click the text, image, audio, or other data object to apply the label to 
         the   region. Your changes save automatically.
- 14.   Click Submit to submit the completed annotation and move on to the next task.
+ 14.   Click Submit to submit the completed annotation and move on to the next
+ task.
 
  15.  At the end of process.Export using the option  'YOLOv8 OBB with Images'  
      the file is downloaded to download dir.
 
        Upload to colab two options
  16 .Option 1: Upload data.zip through Google Colab
-         Upload the  file to the Google Colab instance by clicking the "Files" icon on the left hand 
-	      side of the browser, and then the "Upload to session storage" icon. Select the zip folder to upload it.
+         Upload the  file to the Google Colab instance by clicking the "Files"
+		 icon on the left hand  side of the browser, and then the 
+		 "Upload to session storage" icon. Select the zip folder to upload it.
      Option 2:   
-	    a. upload the data.zip file to your Google Drive, and make note of the folder you uploaded them to. Replace MyDrive/path/to/data.zip 
+	    a. upload the data.zip file to your Google Drive, and make note of the 
+		folder you uploaded them to. Replace MyDrive/path/to/data.zip 
 		with the path to your zip file. 
-        b.   Run following block of code to mount your Google Drive to this Colab        
-		      session and copy the folder to this filesystem.
+        b.   Run following block of code to mount your Google Drive to this 
+		Colab    session and copy the folder to this filesystem.
 		
 		     from google.colab import drive
             drive.mount('/content/drive')
@@ -97,22 +102,27 @@ Downloading  dataset of 100 photo of Alpaca
  17. Unzip images to a custom data folder
           !unzip -q /content/data.zip -d /content/custom_data
 		  
-18. The result is a folder named “data” :
+18.	
+			
+  The next command will  download a python script that will automatically
+  create the required folder structure
+  and randomly move 90% of dataset to the "train" folder and 10% to 
+  the "validation" folder. 			
+			
+	 !wget -O /content/train_val_split.py https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/utils/train_val_split.py
+    !python train_val_split.py --datapath="/content/custom_data" --train_pct=0.9	
+ 
+  The result is a folder named “data” :
      data		  
 	   └──train
             └── images	90% of images
             └── labels  90% of labels
 	   └──validatio
             └── images	10% of images
-            └── labels  10% of labels		
-			
-  The next command will  download a python script that will automatically create the required folder structure
-  and randomly move 90% of dataset to the "train" folder and 10% to the "validation" folder. 			
-			
-		!wget -O /content/train_val_split.py https://raw.githubusercontent.com/EdjeElectronics/Train-and-Deploy-YOLO-Models/refs/heads/main/utils/train_val_split.py
-
-
-       !python train_val_split.py --datapath="/content/custom_data" --train_pct=0.9	
+            └── labels  10% of labels	
+ 
+ 
+ 
  
 19. !pip install ultralytics
 20  create the file 'data.yaml':
@@ -126,7 +136,7 @@ Downloading  dataset of 100 photo of Alpaca
       - Car
 
 21:  Run Training:
-                     !yolo detect train data=/content/data.yaml model=yolo11s.pt epochs=60 imgsz=640
+        !yolo detect train data=/content/data.yaml model=yolo11s.pt epochs=60 imgsz=640
 
 22: The 'best.pt' trained model weights will be saved in:
                             content/runs/detect/train/weights/best.pt
