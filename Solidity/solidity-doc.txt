@@ -36,7 +36,7 @@ EVM Compatibility: here are some differences in how the chain works "under the h
  a blockchain must address three core challenges:
 
     a.Sybil Attacks (Sybil Resistance)
-
+         Sybil Resistance (עמידות בפני מתקפות סיביל) היא מנגנון שמונע מאדם אחד ליצור מספר גדול של זהויות מזויפות כדי להשיג יתרון לא הוגן במערכת.
     b.Finality
 
     c.The Consensus Problem (achieving agreement on the valid state)
@@ -76,4 +76,6 @@ The Consensus Problem is the overarching challenge of getting all the computers 
     The correct order of transactions.
     Which transactions are valid and which are fraudulent.
     Which version of the blockchain is the one true, canonical chain.
+	
+https://andersbrownworth.com/blockchain/hash	
  
