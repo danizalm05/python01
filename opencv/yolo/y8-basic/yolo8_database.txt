@@ -79,7 +79,7 @@ Downloading  dataset of 100 photo of Alpaca
  task.
 
  15.  At the end of process.Export using the option  'YOLOv8 OBB with Images'  
-     the file is downloaded to download dir.
+     the file is downloaded to download dir  in your computer.
 
        Upload to colab two options
  16 .Option 1: Upload data.zip through Google Colab
