@@ -77,8 +77,8 @@ if __name__ == '__main__':
  help='UDP port (default 1060)')
  args = parser.parse_args() # Namespace(role='server', p=1060)
 
- action = choices[args.role] # args.role ==>  'client' or 'server' 
+ faction = choices[args.role] # args.role ==>  'client' or 'server' 
  # (function) ==> <function server at 0x000001EFB797D580>
  # type(function) ==> <class 'function'>
  # args.p ==> 1060
- action(args.p)
+ faction(args.p)

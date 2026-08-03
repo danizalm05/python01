@@ -20,7 +20,7 @@ print(vid_file_name)
 
 # Running real time from webcam
 cap = cv2.VideoCapture(vid_file_name)
-model = YOLO('football.pt')#YOLO('best.pt')
+model = YOLO('football.pt')    #YOLO('best.pt')  
 
 
 # Reading the classes
