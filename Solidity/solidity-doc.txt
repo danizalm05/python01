@@ -1,6 +1,8 @@
   
  https://www.youtube.com/watch?v=08cpMr30jNU
 https://updraft.cyfrin.io/courses
+
+
 https://demos.updraft.cyfrin.io/
 https://github.com/Cyfrin/blockchain-basics-cu
  
@@ -52,17 +54,22 @@ Sybil attack:
 
 Sybil resistance mechanisms are:
 
-    1.Proof of Work (PoW): Used by Bitcoin, PoW makes participation expensive through computational effort. 
+ 1. Proof of Work (PoW): Used by Bitcoin, PoW makes participation expensive through computational effort. 
 	To participate in the network's consensus, a node (or "miner") must solve a complex mathematical puzzle that
 	requires immense computing power and electricity. An attacker can create many identities, but they cannot
 	fake the massive real-world cost of energy and hardware required to make those identities influential.
+     
+	 https://andersbrownworth.com/blockchain/hash	
+ 
 
-    2,Proof of Stake (PoS): Used by Ethereum, PoS makes participation expensive through a financial stake. 
+
+ 2. Proof of Stake (PoS): Used by Ethereum, PoS makes participation expensive through a financial stake. 
 	To participate as a validator, a user must lock up a significant amount of the network's native 
 	cryptocurrency as collateral. An attacker is free to create multiple validator nodes, but they would need 
 	a vast amount of capital to stake for all of them. Furthermore, if they are caught acting dishonestly, 
 	their staked funds are forfeited ("slashed").
   
+    https://demos.updraft.cyfrin.io/
 
 Finality
 Finality is the guarantee that once a transaction is confirmed and added to the blockchain, it is irreversible
