@@ -63,11 +63,12 @@ Sybil resistance mechanisms are:
  
 
 
- 2. Proof of Stake (PoS): Used by Ethereum, PoS makes participation expensive through a financial stake. 
-	To participate as a validator, a user must lock up a significant amount of the network's native 
-	cryptocurrency as collateral. An attacker is free to create multiple validator nodes, but they would need 
-	a vast amount of capital to stake for all of them. Furthermore, if they are caught acting dishonestly, 
-	their staked funds are forfeited ("slashed").
+ 2. Proof of Stake (PoS): Used by Ethereum, PoS makes participation expensive through a financial 
+   stake. 
+   To participate as a validator, a user must lock up a significant amount of the network's 
+	native cryptocurrency as collateral. An attacker is free to create multiple validator nodes, 
+	but they would need  a vast amount of capital to stake for all of them. Furthermore, if they 
+	are caught acting dishonestly,  their staked funds are forfeited ("slashed").
   
     https://demos.updraft.cyfrin.io/
 
