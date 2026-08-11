@@ -6,7 +6,7 @@ private and publc key demo:
     https://demos.updraft.cyfrin.io/ecdsa
 https://github.com/Cyfrin/blockchain-basics-cu
  
-https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/how-pos-blockchains-work
+https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/blockchain-vulnerabilities
 
 Updraft Learning Hub
 
