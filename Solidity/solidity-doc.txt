@@ -85,5 +85,8 @@ The Consensus Problem is the overarching challenge of getting all the computers 
     Which transactions are valid and which are fraudulent.
     Which version of the blockchain is the one true, canonical chain.
 	
+Ethereum Improvement Proposal (EIP)	- Changes to Ethereum
+	
+	
 https://andersbrownworth.com/blockchain/hash	
  
