@@ -2,11 +2,11 @@
  https://www.youtube.com/watch?v=08cpMr30jNU
 https://updraft.cyfrin.io/courses
 
+https://andersbrownworth.com/blockchain/hash	
 private and publc key demo:
     https://demos.updraft.cyfrin.io/ecdsa
 https://github.com/Cyfrin/blockchain-basics-cu
  
-https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/blockchain-vulnerabilities
 
 Updraft Learning Hub
 
@@ -15,6 +15,8 @@ https://demos.updraft.cyfrin.io/
  
 
 Decentralized Finance (DeFi)
+
+Validators :participants who run the software that maintains the network.
 Decentralized Oracle Networks (DONs):
  A DON is a network of multiple, independent oracle nodes.
  Instead of relying on a single source, a smart contract can query a DON. 
@@ -84,9 +86,20 @@ The Consensus Problem is the overarching challenge of getting all the computers 
     The correct order of transactions.
     Which transactions are valid and which are fraudulent.
     Which version of the blockchain is the one true, canonical chain.
-	
-Ethereum Improvement Proposal (EIP)	- Changes to Ethereum
-	
-	
-https://andersbrownworth.com/blockchain/hash	
- 
+A hard fork - process used to implement a protocol upgrade on Ethereum.   ( it is not backward-compatible.	)
+
+
+ EIP and  ERC
+https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/eip-vs-erc
+
+  Ethereum Improvement Proposal (EIP):a mechanism through which anyone can suggest changes to
+  Ethereum's core protocol.
+  Ethereum Request for Comment (ERC) : is a specific type of EIP that focuses on creating 
+  standards at the application layer. Its primary goal is to ensure that different applications, 
+   tokens, and smart contracts built on Ethereum can interact with each other seamlessly.
+   
+Gas   
+
+Gas fees  serve two critical functions :
+    1. Compensation for Validators 
+    2. Spam Prevention
