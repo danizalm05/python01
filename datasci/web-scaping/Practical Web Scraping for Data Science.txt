@@ -1,0 +1,5 @@
+
+ site :www.webscrapingfordatascience.com/
+ 
+ Practical Web Scraping for Data Science
+             Seppe vanden Broucke Bart Baesens 

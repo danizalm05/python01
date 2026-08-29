@@ -99,7 +99,7 @@ https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/eip-
    tokens, and smart contracts built on Ethereum can interact with each other seamlessly.
    
 Gas   
-
+https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/gas-in-depth
 Gas fees  serve two critical functions :
     1. Compensation for Validators 
     2. Spam Prevention
