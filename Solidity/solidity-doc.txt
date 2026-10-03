@@ -86,7 +86,8 @@ The Consensus Problem is the overarching challenge of getting all the computers 
     The correct order of transactions.
     Which transactions are valid and which are fraudulent.
     Which version of the blockchain is the one true, canonical chain.
-A hard fork - process used to implement a protocol upgrade on Ethereum.   ( it is not backward-compatible.	)
+A hard fork - process used to implement a protocol upgrade on Ethereum. (it is not 
+backward-compatible.	)
 
 
  EIP and  ERC
@@ -103,3 +104,12 @@ https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/gas-
 Gas fees  serve two critical functions :
     1. Compensation for Validators 
     2. Spam Prevention
+	
+Externally Owned Account(EOA) so your normal Ethereum address, not a wallet contract.
+  There are two types of accounts:
+      1.externally owned accounts, controlled by private keys. You must have   funds in the
+	      acount to pay gas. you have to sign every transaction.
+      2.ontract accounts, controlled by their contract code. no need to pay gas
+	     you can bach transctio togther
+
+https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/temporary-smart-wallets	
