@@ -115,3 +115,5 @@ Externally Owned Account(EOA) , not a wallet contract.
 https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/temporary-smart-wallets	
 
 https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/quiz-2
+
+https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/what-is-defi
