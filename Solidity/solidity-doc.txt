@@ -14,7 +14,8 @@ Interactive demonstrations to learn blockchain technology, cryptography, and dec
 https://demos.updraft.cyfrin.io/
  
 
-Decentralized Finance (DeFi)
+Decentralized Finance (DeFi):   all the applications that allow users to interact with financial 
+services in a decentralized manner.  
 
 Validators :participants who run the software that maintains the network.
 Decentralized Oracle Networks (DONs):
@@ -116,4 +117,4 @@ https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/temp
 
 https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/quiz-2
 
-https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/what-is-defi
+https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/centralized-vs-decentralized-exchanges
