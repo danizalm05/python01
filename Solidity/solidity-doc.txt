@@ -111,7 +111,26 @@ Externally Owned Account(EOA) , not a wallet contract.
       1.externally owned accounts, controlled by private keys. You must have   funds in the
 	      acount to pay gas. you have to sign every transaction.
       2.ontract accounts, controlled by their contract code. no need to pay gas
-	     you can bach transctio togther
+	     you can bach transction togther
+
+
+Token : a digital representation of value or utility that exists on a blockchain. 
+
+Tokenization of Real-World Assets (RWAs):
+This process involves creating a digital token on the blockchain that represents ownership of a 
+physical or traditional financial asset. Tokenization aims to bridge the gap between traditional 
+finance (TradFi) and DeFi.
+
+Examples of Assets Being Tokenized: Real Estate, US Treasury Bonds,Gold,Private Equity
+
+
+Stablecoins:the  cornerstone of the DeFi ecosystem, providing a reliable medium of exchange and 
+store of value without the volatility associated with other cryptocurrencies. 
+ There are three primary types of stablecoins:
+    Fiat-Backed Stablecoins: These are tokens backed 1:1 by fiat currency (like the US dollar) 
+    Crypto-Backed Stablecoins: DAI is the most well-known example. This model is decentralized, with no central party able to freeze assets.
+   Algorithmic Stablecoins: 
+
 
 https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/temporary-smart-wallets	
 
