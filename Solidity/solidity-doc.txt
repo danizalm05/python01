@@ -142,9 +142,20 @@ Decentralized exchanges are not operated by a single company. Instead, they are 
 from smart contracts that run directly on the blockchain. T
 they facilitate peer-to-peer trading without any intermediary.
 
-
-https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/temporary-smart-wallets	
-
-https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-architecture/quiz-2
-
-https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/centralized-vs-decentralized-exchanges
+ Uniswap Demo
+  https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/uniswap-demo
+  
+  1. Goto  app.uniswap.org/swap
+  2. OPen Metamask
+  
+ Decentralized Autonomous Organization (DAO)  
+   Organization where control is distributed not hierarchical
+ 
+      "Skin in the Game"
+ "skin in the game." means  thatUnlike a simple opinion poll, 
+participants in a DAO are voting with their own financial assets 
+on the line.
+If token holders vote for a proposal that harms the protocol, 
+its usage and reputation could decline, causing the value
+ of their tokens to fall.
+ https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/quiz
