@@ -131,7 +131,9 @@ store of value without the volatility associated with other cryptocurrencies.
     Crypto-Backed Stablecoins: DAI is the most well-known example. This model is decentralized, with no central party able to freeze assets.
    Algorithmic Stablecoins: 
 
-
+ERC155 : A standard interface for contracts that manage multiple token types. A single 
+deployed contract may include any combination of fungible tokens, non-fungible tokens or other
+ configurations (e.g., semi-fungible tokens).
 Centralized Exchanges (CEXs) 
 
  private companies that act as trusted intermediaries to facilitate the buying, selling, and trading of cryptocurrencies
@@ -139,7 +141,7 @@ Centralized Exchanges (CEXs)
  Decentralized Exchanges (DEXs) 
 
 Decentralized exchanges are not operated by a single company. Instead, they are protocols built 
-from smart contracts that run directly on the blockchain. T
+from smart contracts that run directly on the blockchain.  
 they facilitate peer-to-peer trading without any intermediary.
 
  Uniswap Demo
@@ -148,7 +150,23 @@ they facilitate peer-to-peer trading without any intermediary.
   1. Goto  app.uniswap.org/swap
   2. OPen Metamask
   
- Decentralized Autonomous Organization (DAO)  
+  Since we are practicing without financial risk, we need to enable testnet mode.
+  Enable Testnet Mode.
+  
+  3. Click on your wallet address in the top-right corner to open the wallet overview panel.
+  4. Click the settings icon (shaped like a cog). in https://app.uniswap.org/swap
+  5. Locate the "Testnet mode" option and toggle it on.
+  6.A notification will appear explaining that testnet tokens have no real value. 
+        You can close this message.
+ To double-check, open MetaMask:
+
+    Navigate to the "Activity" tab. You should see the Execute transaction listed as confirmed.
+    Navigate to the "Tokens" tab. You will see that your ETH balance has decreased 
+	and your USDC balance has increased accordingly.
+
+
+
+ecentralized Autonomous Organization (DAO)  
    Organization where control is distributed not hierarchical
  
       "Skin in the Game"
@@ -158,4 +176,5 @@ on the line.
 If token holders vote for a proposal that harms the protocol, 
 its usage and reputation could decline, causing the value
  of their tokens to fall.
- https://updraft.cyfrin.io/courses/blockchain-basics/blockchain-use-cases/quiz
+ 
+ https://updraft.cyfrin.io/courses/blockchain-basics/scalability/l1s-l2s-and-rollups
