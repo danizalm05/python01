@@ -206,12 +206,31 @@ Eexamples of Layer 2 Blockchains: ZKsync,Optimism (OP),Arbitrum, Polygon
  They work by executing transactions on the L2 chain and then bundling, or "rolling up," 
  hundreds of them into a single, compressed transaction batch.
  This single batch is then posted to the Layer 1 network.
- Rollups:
+ There are two primary types of rollups, distinguished by how they prove the validity of their
+ transaction batches to the L1: 
+ Optimistic Rollups  
     1. Optimistic Rollups
- 
- 
- 
- 
- 
+         After an L2 operator posts a batch to the L1, a Challenge Period begins (about a week).
+		 During this window, any other network participant can scrutinize the batch. If they
+		 identify an invalid transaction, they can submit a Fraud Proof to the L1. 
+		 This triggers a dispute resolution process on the L1 to verify the claim.
+		 If the challenge period ends without a successful challenge: The batch is 
+		 considered final and is permanently recorded on the L1.
+		 
+    2. Zero-Knowledge Rollups.:
+      Instead of assuming validity and waiting for challenges, 
+	  they proactively prove the validity of every transaction batch using advanced cryptography.
+      submit a cryptographic Validity Proof, specifically a Zero-Knowledge Proof (ZKP). 
+	  This proof mathematically guarantees that all the state changes within the batch are
+	  correct and follow the network's rules.
+	  A smart contract on the L1, known as the Verifier, can instantly check this proof. 
+	  If the proof is valid, the batch is accepted and finalized immediately. 
+	  This eliminates the need for a lengthy challenge period, 
+	  allowing for much faster withdrawals and finality compared to Optimistic Rollups.
+	  the proof is very small and fast to verify, even if it represents an immense amount
+	  of computation. For this reason, these are sometimes called Succinct Rollups. תמציתי
+	  
+	  
+	  
 --------------------------------------------	
- https://updraft.cyfrin.io/courses/blockchain-basics/scalability/l1s-l2s-and-rollups
+https://updraft.cyfrin.io/courses/blockchain-basics/scalability/centralized-sequencers
