@@ -37,3 +37,37 @@ what is going on and duplicate it as well as possible in Python.
 '''
 
 
+
+print('\nhttp://www.webscrapingfordatascience.com/redirect/')
+url = 'http://www.webscrapingfordatascience.com/redirect/'
+r = requests.get(url)
+print(r.text)
+print(r.headers)
+
+
+'''
+For the aove URL,two requests are being made by
+your browser: the first to the original URL, which now returns a 302 status code. This
+status code instructs your browser to perform a second request to the “destination.php”
+URL.
+
+Note that we get the HTTP reply corresponding with the final destination (“you’ve
+been redirected here from another page!”).
+
+
+'''
+'''
+if we want to see the contents of the “Location” and
+“SECRET-CODE” headers manually? To do so, you can simply turn off requests
+ default:
+      r = requests.get(url, allow_redirects=False)
+behavior of the following redirects through the allow_redirects argument:
+ 
+'''
+
+print('\n\n  allow_redirects=False')
+ 
+url = 'http://www.webscrapingfordatascience.com/redirect/'
+r = requests.get(url, allow_redirects=False)
+print(r.text)
+print(r.headers)
