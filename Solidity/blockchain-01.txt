@@ -253,6 +253,29 @@ The Solution: The Path to Decentralization
 he end goal for any mature rollup is to have a system with multiple, independent sequencers who 
 work together to order and  process transactions.
 
-right now there are few projects in this problem.
+right now there are few projects in this problem. No pefect soultion yet.
 --------------------------------------------	
-https://updraft.cyfrin.io/courses/blockchain-basics/scalability/rollup-stages
+ 
+ 
+ 
+         Understanding Rollup Stages: A Framework for L2 Maturity    https://l2beat.com/layer2s/summary
+
+Layer 2 scaling solutions, commonly known as rollups, are critical to Ethereum's future. 
+To help users and developers navigate this complex ecosystem, a framework known as:
+  "Rollup Stages" was developed.   implemented by the analysis platform L2BEAT.
+  this system categorizes rollups based on their level of maturity and decentralization.
+They serve as a roadmap, tracking a project's progress
+ 
+Stage 0: Full Training Wheels
+  To qualify for Stage 0, a project must meet two key criteria:
+    1. Open-Source Data Reconstruction: The rollup's software must be open-source, 
+	   allowing anyone to use the data published on the Layer 1 (L1) chain to reconstruct the 
+	   rollup's state.  
+    2. Limited User Exit: In the event of an unwanted upgrade or system failure, users have a
+    	short window (typically less than 7 days) to exit the system and withdraw their funds.
+
+	
+Stage 1: Enhanced Rollup Governance
+
+shifting key functions from a trusted team to on-chain smart contracts. The Security 
+Council may still exist, but its role is often reduced to handling emergency bug fixes.
