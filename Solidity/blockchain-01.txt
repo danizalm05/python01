@@ -301,7 +301,3 @@ A Practical Analysis: zkSync Era's Stage 0 Risks
 To see how this framework applies in practice, we can analyze zkSync Era,
  a prominent rollup currently at Stage 0, using the detailed risk analysis on L2BEAT. 
   https://l2beat.com/layer2s/summary
-
-
-https://updraft.cyfrin.io/courses/blockchain-basics/scalability/making-your-first-transaction-on-zksync
-  

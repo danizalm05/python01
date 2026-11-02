@@ -1,0 +1,28 @@
+  
+ https://www.youtube.com/watch?v=08cpMr30jNU
+https://updraft.cyfrin.io/courses
+
+
+
+                                         Transaction on zkSync
+https://updraft.cyfrin.io/courses/blockchain-basics/scalability/making-your-first-transaction-on-zksync
+  
+ Step 1: Adding the zkSync Sepolia Network to MetaMask 
+     1.0 start  MetaMask
+     1.1 Navigate to chainlist.org.
+     1.2 Enable the "Include Testnets" option, usually a checkbox near the search bar.
+     1.3 In the search bar, type zkSync.
+     1.4 From the search results, locate "zkSync Sepolia Testnet" (ChainID of 300)
+	     Force Refresh a Webpage Ctrl + Shift + R 
+     1.5 "Connect Wallet" button. A MetaMask pop-up will ask for permission to connect;
+     1.6  MetaMask will then prompt you to add the network. 
+     1.7 Finally, click "Switch network" to make zkSync Sepolia the active network in your wallet.
+	 
+Step 2: Using the zkSync Block Explorer
+
+A block explorer is an essential tool for inspecting transactions, accounts, and smart contracts
+ on a blockchain. For Ethereum, the most common explorer is Etherscan. 
+For zkSync, we will use the official zkSync Explorer.
+
+Open your browser and navigate to the
+    zkSync Sepolia Testnet Explorer: https://sepolia.explorer.zksync.io/.	 
