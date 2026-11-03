@@ -14,15 +14,41 @@ https://updraft.cyfrin.io/courses/blockchain-basics/scalability/making-your-firs
      1.3 In the search bar, type zkSync.
      1.4 From the search results, locate "zkSync Sepolia Testnet" (ChainID of 300)
 	     Force Refresh a Webpage Ctrl + Shift + R 
+		 if error change thr RPC   url im metamsk to :https://sepolia.era.zksync.dev
      1.5 "Connect Wallet" button. A MetaMask pop-up will ask for permission to connect;
      1.6  MetaMask will then prompt you to add the network. 
      1.7 Finally, click "Switch network" to make zkSync Sepolia the active network in your wallet.
 	 
 Step 2: Using the zkSync Block Explorer
 
-A block explorer is an essential tool for inspecting transactions, accounts, and smart contracts
- on a blockchain. For Ethereum, the most common explorer is Etherscan. 
-For zkSync, we will use the official zkSync Explorer.
 
-Open your browser and navigate to the
-    zkSync Sepolia Testnet Explorer: https://sepolia.explorer.zksync.io/.	 
+1. Open your browser and navigate to the
+    zkSync Sepolia Testnet Explorer: https://sepolia.explorer.zksync.io/.	
+2. Copy your wallet address into the explorer's search bar and press Enter.
+   
+  At this point, the explorer will display a summary of your account, showing no ETH balance and 
+  no transaction history.
+  We will return to this page later to verify our transaction.
+
+Step 3: Acquiring Testnet Funds
+
+To perform any transaction, you need cryptocurrency to pay for gas fees and to transact with. 
+Since native zkSync faucets can sometimes be unreliable or require API keys, we will use 
+a more consistent method: acquiring funds on the Ethereum Sepolia testnet (L1) and bridging 
+them over to the zkSync Sepolia testnet (L2).	
+
+1. Open MetaMask and switch your network from zkSync Sepolia back to the Sepolia testnet.
+
+(Token Menu in MetaMask)
+2. Navigate to a reliable Sepolia faucet, such as:
+  https://cloud.google.com/application/web3/faucet/ethereum/sepolia. 
+(Note: Faucet links can change over time).
+
+3. Paste your wallet address into the provided input field.
+4. Complete any required verification steps and click the button to receive your testnet ETH. 
+ The Google faucet typically sends 0.05 Sepolia ETH.
+5. Wait a few moments. The funds will soon appear in your MetaMask wallet on the Sepolia network.
+
+Step 4: Bridging Funds from Sepolia to zkSync Sepolia
+
+
