@@ -38,8 +38,8 @@ a more consistent method: acquiring funds on the Ethereum Sepolia testnet (L1) a
 them over to the zkSync Sepolia testnet (L2).	
 
 1. Open MetaMask and switch your network from zkSync Sepolia back to the Sepolia testnet.
-
-(Token Menu in MetaMask)
+     (in the Token Menu in MetaMask)
+	 
 2. Navigate to a reliable Sepolia faucet, such as:
   https://cloud.google.com/application/web3/faucet/ethereum/sepolia. 
 (Note: Faucet links can change over time).
@@ -51,4 +51,56 @@ them over to the zkSync Sepolia testnet (L2).
 
 Step 4: Bridging Funds from Sepolia to zkSync Sepolia
 
+With testnet ETH secured on the L1 Sepolia network, we can now perform our primary transaction: 
+                 bridging.
 
+Understanding Bridging
+
+Bridging is the process of moving assets from one blockchain to another. It doesn't literally 
+transfer the tokens across networks. Instead, it relies on smart contracts 
+to create the illusion of a transfer through one of two common mechanisms:
+          Lock & Unlock: 
+	     Your tokens are locked in a smart contract on the source chain Ethereum Sepolia). 
+	     A message is then sent to the destination chain (zkSync Sepolia), which triggers a 
+	     corresponding smart contract to release or unlock  an equivalent amount of tokens
+		 to your address. The native zkSync bridge uses this method.
+		 
+	 	Mint & Burn:
+	    Your tokens are destroyed ("burned") on the source chain. Upon confirmation of the burn,
+	    an equal number of new tokens are created ("minted") on the destination chain and sent to
+	    your wallet. This mechanism is often used by  protocols that control a token's total supply,
+	    such as Circle's CCTP for the USDC stablecoin. 
+ 
+ Executing the Bridge Transaction
+    4.0  open browser in private mode
+    4.1  Navigate to the official zkSync Portal: portal.zksync.io/bridge/.
+    4.2  In the top right corner, ensure the portal is set to the zkSync Sepolia Testnet.
+    4.3  Click "Connect wallet" and approve the connection request from MetaMask.
+	4.4 The bridging interface will be configured to transfer From "Ethereum Sepolia Testnet" 
+	   To "zkSync Sepolia Testnet".
+    4.5  Enter the amount of ETH you wish to bridge. For this example, we'll use 0.025.
+	4.6 Click "Continue".
+    4.7 Acknowledge any wallet security warnings by clicking "I understand, proceed to bridge".
+	4.8  Review the transaction summary, including the estimated fees, and click "Bridge now".
+    4.9  A MetaMask pop-up will appear asking you to confirm the L1 transaction. Click "Confirm".
+
+ 
+        NOT     WORKING
+    Error messge in https://portal.zksync.io/bridge/ 
+	    "Address screening is temporarily unavailable. Please try again later."
+ You bridge
+0.025 ETH
+$58.19
+ETH token icon
+From
+Your Ethereum Sepolia Testnet account
+0xd 46
+Ethereum Sepolia Testnet
+To
+Your ZKsync Era Testnet account
+0xd6 46
+
+	
+	
+	
+	
