@@ -9,6 +9,6 @@ https://github.com/Cyfrin/remix-storage-factory-cu/
 https://app.remix.live/#lang=en
 ---------------------------------------------------------  
   
- https://updraft.cyfrin.io/courses/solidity/simple-storage/create-solidity-smart-contract 
+https://updraft.cyfrin.io/courses/solidity/simple-storage/quiz-simple-storage-intro
   
   
