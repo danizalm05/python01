@@ -3,12 +3,16 @@
 https://updraft.cyfrin.io/courses
 https://updraft.cyfrin.io/courses/solidity/simple-storage/welcome-to-solidity-fundamentals
  
-https://github.com/Cyfrin/ 
+ 
+ 
+https://docs.soliditylang.org/en/v0.8.38/
+https://docs.soliditylang.org/en/v0.8.38/types.html 
+
 https://github.com/Cyfrin/foundry-full-course-cu
-https://github.com/Cyfrin/remix-storage-factory-cu/  
+https://github.com/Cyfrin/remix -storage-factory-cu/  
 https://app.remix.live/#lang=en
 ---------------------------------------------------------  
   
-https://updraft.cyfrin.io/courses/solidity/simple-storage/quiz-simple-storage-intro
+https://updraft.cyfrin.io/courses/solidity/simple-storage/solidity-functions
   
   
