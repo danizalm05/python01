@@ -1,46 +1,39 @@
-// github.com/Cyfrin/remix-storage-factory-cu/blob/main/SimpleStorage.sol
 // SPDX-License-Identifier: MIT
- 
-// https://youtu.be/umepbfKp5rI?t=11948
+//SimpleStorage.sol
+//https://github.com/Cyfrin/remix-simple-storage-cu/blob/main/SimpleStorage.sol
+//https://www.youtube.com/watch?v=umepbfKp5rI&t=7842s
 
-       
-       
-pragma solidity 0.8.30;
+//https://youtu.be/umepbfKp5rI?t=8758
+
+pragma solidity 0.8.34;
 
 // pragma solidity ^0.8.0;
 // pragma solidity >=0.8.0 <0.9.0;
 
- 
-
 contract SimpleStorage {
-    uint256 myFavoriteNumber;
+
+   uint256 myFavoriteNumber;
 
     struct Person {
         uint256 favoriteNumber;
         string name;
     }
-    // uint256[] public anArray;
+
+       // uint256[] public anArray;
     Person[] public listOfPeople;
 
     mapping(string => uint256) public nameToFavoriteNumber;
 
-    function store(uint256 _favoriteNumber) public virtual {
-        //The 'virtual' key word enable the overiding this 'store' function.
-        myFavoriteNumber = _favoriteNumber;
+    function store(uint256 _favoriteNumber) public {
+        myFavoriteNumber = _favoriteNumber +1 ;
     }
 
     function retrieve() public view returns (uint256) {
         return myFavoriteNumber;
     }
-   // calldata ,memory ,storage
+
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         listOfPeople.push(Person(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
-
-contract SimpleStorage2 {}
-
-contract SimpleStorage3 {}
-
-contract SimpleStorage4 {}
