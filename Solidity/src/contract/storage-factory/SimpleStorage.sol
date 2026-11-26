@@ -4,7 +4,8 @@
 //https://www.youtube.com/watch?v=umepbfKp5rI&t=7842s
 
 //https://youtu.be/umepbfKp5rI?t=8758
-//https://youtu.be/umepbfKp5rI?t=11011
+ 
+//https://youtu.be/umepbfKp5rI?t=11610
 pragma solidity 0.8.34;
 
 // pragma solidity ^0.8.0;
